@@ -103,7 +103,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 ## Reliability & Resilience
 
 - [011 Atomicity](skills/011-atomicity/SKILL.md) — todo
-- [015 Availability](skills/015-availability/SKILL.md) — todo
+- [015 Availability](skills/015-availability/SKILL.md) — draft
 - [037 Dependability](skills/037-dependability/SKILL.md) — todo
 - [039 Durability](skills/039-durability/SKILL.md) — todo
 - [048 Fault/Failure Tolerance](skills/048-fault-failure-tolerance/SKILL.md) — todo
@@ -124,7 +124,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [035 Defensibility](skills/035-defensibility/SKILL.md) — todo
 - [054 Immunity](skills/054-immunity/SKILL.md) — todo
 - [057 Integrity](skills/057-integrity/SKILL.md) — todo
-- [075 Privacy](skills/075-privacy/SKILL.md) — todo
+- [075 Privacy](skills/075-privacy/SKILL.md) — draft
 - [089 Security/Control and Security](skills/089-security-control-and-security/SKILL.md) — todo
 - [098 Susceptibility](skills/098-susceptibility/SKILL.md) — todo
 - [105 Trustability](skills/105-trustability/SKILL.md) — todo
@@ -140,7 +140,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [059 Learnability](skills/059-learnability/SKILL.md) — todo
 - [060 Legibility](skills/060-legibility/SKILL.md) — todo
 - [061 Likeability](skills/061-likeability/SKILL.md) — todo
-- [078 Readability](skills/078-readability/SKILL.md) — todo
+- [078 Readability](skills/078-readability/SKILL.md) — draft
 - [090 Self-Descriptiveness](skills/090-self-descriptiveness/SKILL.md) — todo
 - [103 Trainability](skills/103-trainability/SKILL.md) — todo
 - [106 Understandability](skills/106-understandability/SKILL.md) — todo

@@ -30,6 +30,11 @@ class FoundationTests(unittest.TestCase):
         shutil.copytree(ROOT / "templates", self.root / "templates")
         (self.root / "skills").mkdir()
         self.catalog = load_catalog(self.root)
+        # Empty-scaffold scenarios need an explicit todo baseline independent of
+        # the real catalogue's authoring progress. Validate the source above first.
+        for row in self.catalog:
+            row["status"] = "todo"
+        self.save_catalog()
 
     def clean_fixture(self):
         target = self.root.resolve()

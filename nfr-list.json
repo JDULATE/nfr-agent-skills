@@ -134,7 +134,7 @@
     "slug": "availability",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 6
   },
   {
@@ -687,7 +687,7 @@
     "slug": "privacy",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 8
   },
   {
@@ -714,7 +714,7 @@
     "slug": "readability",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 4
   },
   {
