@@ -98,7 +98,7 @@
     "slug": "atomicity",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 7
   },
   {
@@ -353,7 +353,7 @@
     "slug": "durability",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 7
   },
   {
@@ -593,7 +593,7 @@
     "slug": "maturity",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 7
   },
   {
@@ -732,7 +732,7 @@
     "slug": "recoverability",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 7
   },
   {
@@ -843,7 +843,7 @@
     "slug": "stability",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 7
   },
   {
@@ -892,7 +892,7 @@
     "slug": "survivability",
     "aliases": [],
     "category": "Reliability & Resilience",
-    "status": "todo",
+    "status": "draft",
     "batch": 7
   },
   {

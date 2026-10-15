@@ -102,18 +102,18 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Reliability & Resilience
 
-- [011 Atomicity](skills/011-atomicity/SKILL.md) — todo
+- [011 Atomicity](skills/011-atomicity/SKILL.md) — draft
 - [015 Availability](skills/015-availability/SKILL.md) — draft
 - [037 Dependability](skills/037-dependability/SKILL.md) — draft
-- [039 Durability](skills/039-durability/SKILL.md) — todo
+- [039 Durability](skills/039-durability/SKILL.md) — draft
 - [048 Fault/Failure Tolerance](skills/048-fault-failure-tolerance/SKILL.md) — draft
-- [065 Maturity](skills/065-maturity/SKILL.md) — todo
-- [080 Recoverability](skills/080-recoverability/SKILL.md) — todo
+- [065 Maturity](skills/065-maturity/SKILL.md) — draft
+- [080 Recoverability](skills/080-recoverability/SKILL.md) — draft
 - [081 Reliability](skills/081-reliability/SKILL.md) — draft
 - [086 Robustness](skills/086-robustness/SKILL.md) — draft
 - [087 Safety](skills/087-safety/SKILL.md) — draft
-- [092 Stability](skills/092-stability/SKILL.md) — todo
-- [097 Survivability](skills/097-survivability/SKILL.md) — todo
+- [092 Stability](skills/092-stability/SKILL.md) — draft
+- [097 Survivability](skills/097-survivability/SKILL.md) — draft
 
 ## Security & Privacy
 
