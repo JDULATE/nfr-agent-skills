@@ -17,7 +17,7 @@
     "slug": "accountability",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {
@@ -116,7 +116,7 @@
     "slug": "auditability",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {
@@ -317,7 +317,7 @@
     "slug": "defensibility",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {
@@ -494,7 +494,7 @@
     "slug": "immunity",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {
@@ -901,7 +901,7 @@
     "slug": "susceptibility",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {
@@ -937,7 +937,7 @@
     "slug": "traceability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {
@@ -964,7 +964,7 @@
     "slug": "trustability",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 9
   },
   {

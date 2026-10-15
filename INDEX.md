@@ -76,7 +76,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [066 Measurability](skills/066-measurability/SKILL.md) — todo
 - [070 Observability](skills/070-observability/SKILL.md) — todo
 - [071 Operability](skills/071-operability/SKILL.md) — todo
-- [102 Traceability](skills/102-traceability/SKILL.md) — todo
+- [102 Traceability](skills/102-traceability/SKILL.md) — draft
 - [113 Visibility](skills/113-visibility/SKILL.md) — todo
 
 ## Performance & Efficiency
@@ -117,17 +117,17 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Security & Privacy
 
-- [002 Accountability](skills/002-accountability/SKILL.md) — todo
+- [002 Accountability](skills/002-accountability/SKILL.md) — draft
 - [010 Anonymity](skills/010-anonymity/SKILL.md) — draft
-- [013 Auditability](skills/013-auditability/SKILL.md) — todo
+- [013 Auditability](skills/013-auditability/SKILL.md) — draft
 - [026 Confidentiality](skills/026-confidentiality/SKILL.md) — draft
-- [035 Defensibility](skills/035-defensibility/SKILL.md) — todo
-- [054 Immunity](skills/054-immunity/SKILL.md) — todo
+- [035 Defensibility](skills/035-defensibility/SKILL.md) — draft
+- [054 Immunity](skills/054-immunity/SKILL.md) — draft
 - [057 Integrity](skills/057-integrity/SKILL.md) — draft
 - [075 Privacy](skills/075-privacy/SKILL.md) — draft
 - [089 Security/Control and Security](skills/089-security-control-and-security/SKILL.md) — draft
-- [098 Susceptibility](skills/098-susceptibility/SKILL.md) — todo
-- [105 Trustability](skills/105-trustability/SKILL.md) — todo
+- [098 Susceptibility](skills/098-susceptibility/SKILL.md) — draft
+- [105 Trustability](skills/105-trustability/SKILL.md) — draft
 
 ## Usability & Comprehension
 
