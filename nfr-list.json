@@ -245,7 +245,7 @@
     "slug": "configurability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 3
   },
   {
@@ -290,7 +290,7 @@
     "slug": "customizability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 3
   },
   {
@@ -575,7 +575,7 @@
     "slug": "maintainability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 3
   },
   {
@@ -723,7 +723,7 @@
     "slug": "reconfigurability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 3
   },
   {
@@ -883,7 +883,7 @@
     "slug": "supportability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 3
   },
   {
@@ -919,7 +919,7 @@
     "slug": "tailorability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 3
   },
   {
