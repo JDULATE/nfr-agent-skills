@@ -1,7 +1,7 @@
 # Availability measurement contract
 
-Use this worksheet to make an availability claim reproducible. Treat its rules
-as proposals until the service owner accepts them, not as standard mandates.
+Use this worksheet to make an availability claim reproducible. Confirm the
+service boundary and accounting decisions before using them as acceptance criteria.
 
 ## Resolve the boundary
 
@@ -41,6 +41,34 @@ Show coverage as (good + bad) / eligible alongside either ratio.
 Ask the user whether unknown time blocks acceptance or is charged as unavailable.
 Do not approve a target because a good / observed-only calculation looks favorable.
 If the policy is unresolved, report the bounds and mark attainment unverified.
+
+## Illustrative numeric calculation
+
+Illustrative example only — confirm with the user/stakeholder before adopting
+this window or accounting policy. Assume continuous eligible service, no calendar
+exclusions, fixed-duration days, and non-overlapping classified intervals:
+
+| Illustrative input | Minutes |
+| --- | --- |
+| Window: 30 days | 43,200 |
+| Good time | 43,140 |
+| Bad time | 30 |
+| Unknown time | 30 |
+
+Check the partition: 43,140 + 30 + 30 = 43,200 minutes.
+Compute these illustrative ratios, rounded to four decimal places:
+
+- Lower: 43,140 / 43,200 = 99.8611%.
+- Upper: (43,140 + 30) / 43,200 = 99.9306%.
+- Coverage: (43,140 + 30) / 43,200 = 99.9306%.
+
+Upper and coverage coincide here because bad and unknown durations are equal,
+but their numerators mean different things. Keep unknown time visible; these are
+bin-accounting bounds, not evidence about unsampled interruptions. If comparing
+against the illustrative target of 99.9%, confirm with the user/stakeholder:
+the lower ratio falls short while the upper exceeds it. Counting unknown time
+against attainment fails that illustrative target; an unresolved unknown policy
+does not support a pass. Do not select a policy after seeing the favorable bound.
 
 ## Request accounting worksheet
 

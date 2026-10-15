@@ -47,7 +47,49 @@ def citation_errors(text, allowed):
             + [f"Standard ID not in standards allowlist: {item}" for item in sorted(standards - allowed_standards)])
 
 
-def reference_errors(root, path, text, allowed):
+def sibling_errors(text, known_slugs):
+    """Check explicit sibling pointers, not arbitrary variable names or prose.
+
+    Recognize (see slug), parenthesized code-form slugs, Route ... to `slug`,
+    named sibling labels, and local numbered skill paths in links or code spans.
+    Catalogue membership is required; authoring the destination is not.
+    """
+    candidates = set()
+    for group in re.findall(r"\(\s*see\s+([^)]*)\)", text, re.I):
+        for item in re.split(r"\s*,\s*|\s+(?:and|or)\s+", group):
+            candidates.add(item.strip().strip("`"))
+    slug = r"([A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)"
+    patterns = (
+        r"\bsibling(?:\s+skill)?\s+`" + slug + r"`",
+        r"`" + slug + r"`\s+sibling(?:\s+skill)?\b",
+        r"\bthe\s+" + slug + r"\s+sibling(?:\s+skill)?\b",
+    )
+    for pattern in patterns:
+        candidates.update(re.findall(pattern, text, re.I))
+    for paragraph in re.split(r"\n\s*\n", text):
+        if re.search(r"\b(?:distinguish|separate|not for)\b", paragraph, re.I):
+            candidates.update(re.findall(r"\(\s*`" + slug + r"`\s*\)", paragraph))
+        if re.search(r"\bRoute\b", paragraph):
+            candidates.update(re.findall(r"\bto\s+`" + slug + r"`", paragraph))
+        candidates.update(re.findall(r"\brather than\s+`" + slug + r"`", paragraph, re.I))
+    destinations = links(text) + re.findall(r"`([^`\n]+)`", text)
+    for destination in destinations:
+        parsed = urlsplit(destination)
+        if parsed.scheme or parsed.netloc:
+            continue
+        path = unquote(parsed.path).replace("\\", "/")
+        match = re.search(r"(?:^|/)(?:\d{3}-)?" + slug + r"/SKILL\.md$", path)
+        if match:
+            candidates.add(match[1])
+        else:
+            match = re.fullmatch(r"(?:skills/)?\d{3}-" + slug, path)
+            if match:
+                candidates.add(match[1])
+    return [f"Sibling slug not in nfr-list.json: {name}"
+            for name in sorted(candidates - known_slugs)]
+
+
+def reference_errors(root, path, text, allowed, known_slugs):
     errors, seen = [], set()
     reference_roots = {(path.parent / "references").resolve(), (root / "references").resolve()}
 
@@ -74,6 +116,7 @@ def reference_errors(root, path, text, allowed):
                 if UNFINISHED.search(ref_text):
                     errors.append(f"Unfinished content in reference: {destination}")
                 errors.extend(f"{destination}: {message}" for message in citation_errors(ref_text, allowed))
+                errors.extend(f"{destination}: {message}" for message in sibling_errors(ref_text, known_slugs))
                 inspect(target, ref_text, depth + 1)
         # A reference can link another reference by basename, without repeating references/.
         if depth:
@@ -99,7 +142,7 @@ def reference_errors(root, path, text, allowed):
     return errors
 
 
-def check_skill(root, row, path, text, allowed):
+def check_skill(root, row, path, text, allowed, known_slugs):
     errors = []
     try:
         fields, body = frontmatter(text)
@@ -123,7 +166,8 @@ def check_skill(root, row, path, text, allowed):
     if UNFINISHED.search(text):
         errors.append("Unfinished content: TODO, TBD, lorem, citation marker, or angle-bracket placeholder")
     errors.extend(citation_errors(text, allowed))
-    errors.extend(reference_errors(root, path, text, allowed))
+    errors.extend(sibling_errors(text, known_slugs))
+    errors.extend(reference_errors(root, path, text, allowed, known_slugs))
     return errors
 
 
@@ -139,6 +183,7 @@ def jaccard(left, right):
 
 def validate(root, only=None):
     entries = load_catalog(root)
+    known_slugs = {row["slug"] for row in entries}
     selected = select_ids(only, entries)
     allowlist = root / "references" / "standards-allowlist.md"
     allowed = citations(allowlist.read_text(encoding="utf-8")) if allowlist.exists() else None
@@ -161,7 +206,7 @@ def validate(root, only=None):
         if row["id"] in selected:
             checked += 1
             errors.extend(f"{row['id']:03d}-{row['slug']}: {item}"
-                          for item in check_skill(root, row, path, text, allowed))
+                          for item in check_skill(root, row, path, text, allowed, known_slugs))
         try:
             _, body = frontmatter(text)
         except ValueError:

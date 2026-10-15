@@ -1,21 +1,22 @@
 ---
 name: privacy
 description: >-
-  Defines and verifies personal-data handling boundaries when users say "stop
-  collecting this field", "set data retention", "delete my account data", or
-  "review analytics tracking". Not for disclosure protection alone (see
-  confidentiality) or identity-unlinkability claims alone (see anonymity).
+  Improves and verifies personal-data handling when users say "review privacy",
+  "minimize personal data", "stop collecting this field", "set data retention",
+  "delete my account data", or "review analytics tracking". Not for disclosure
+  protection alone (see confidentiality) or identity-unlinkability claims alone
+  (see anonymity).
 status: draft
 ---
 # Privacy
 
 ## Definition and scope
 
-Limit handling of personal information to agreed purposes, people, recipients,
-and lifecycle boundaries, including collection, derived data, retention, and disposal.
-Distinguish `confidentiality`, which controls disclosure, from whether the handling
-should occur at all; route identity-unlinkability claims to `anonymity` rather than
-treating masking or a replaced identifier as proof of them.
+Privacy concerns how personal information is collected, used, shared, kept, and removed.
+Limit those activities to agreed purposes, people, recipients, and lifecycle boundaries,
+including derived data. Separate the reason to handle personal data from disclosure
+control (`confidentiality`) and identity unlinkability (`anonymity`); masking a name
+does not establish either an approved purpose or an unlinkability result.
 
 ## Use when / Don't use when
 
@@ -33,16 +34,40 @@ treating masking or a replaced identifier as proof of them.
 1. Clarify: Read collection code, data models, schema docs, event payloads, vendor
    configuration, retention jobs, and existing data-handling decisions first.
    Trace a synthetic person's data from collection to copies and derived outputs.
-   Ask the user which regulations apply and request the relevant policy or source
-   text; do not infer a legal duty or deadline from this skill's examples.
-   If purpose, permitted recipients, or applicable policy is unknown, then
-   Ask the user and mark the affected flow undecided before specifying it.
+   If an improvement is requested, then group missing purpose, recipient, and policy
+   decisions into the fast path below; otherwise Ask the user which regulations
+   apply and request relevant policy or source text before specifying obligations.
 
 2. Specify: Make a field-to-purpose record with allowed operations, recipients,
    choice behavior, retention start event, disposal action, and exception owner.
    Include intermediate stores, exports, processors, and backup restoration.
-   If the user provides no duration, then propose the labeled illustrative
-   deletion target below and confirm with the user/stakeholder before acceptance.
+   If a formal duration is missing, then offer the illustrative deletion target
+   below and confirm with the user/stakeholder before declaring it accepted.
+   For an improvement request, put the complete handling record in one defaults block:
+
+   ```text
+   Illustrative defaults — confirm with the user/stakeholder:
+   Data/subjects: personal fields and derived outputs in the requested feature flow.
+   Producer/start: discovered collection path; existing documented retention trigger.
+   Purpose/authority: existing approved use; if absent, Ask the user; no new optional collection.
+   Choice: follow the documented condition; design optional collection off if undecided.
+   Recipients/operations: existing approved destinations; no new sharing or cross-purpose joins.
+   Fields: retain only fields needed for the stated purpose in each recipient payload.
+   Copies: inventory stores, queues, indexes, caches, exports, processors, and backups.
+   End/disposal: verified deletion request; active-store erasure within 7 days.
+   Other retention: existing documented rule; if absent, Ask the user, not indefinite storage.
+   Backups/replay: identify expiry and suppression before restored data is served.
+   Exceptions: preserve documented decisions; add no new exception by default.
+   Evidence/owner: synthetic payload and lifecycle checks, copy ledger, existing data owner.
+   Status: design assumptions; missing policy and recipient evidence remain unresolved.
+   ```
+
+   Ask at most three questions total: which personal-data purpose and policy or
+   regulations apply; which recipients, retention exceptions, and backup constraints
+   must remain; and which user-choice behavior or illustrative defaults should change.
+   Continue to reversible design using available answers while others are pending.
+   If purpose authority or retention is undecided, then design alternatives and
+   mark that policy decision open instead of inventing permission or a legal deadline.
 
 3. Design/Implement: Remove unjustified collection from producers and downstream
    contracts; constrain recipient payloads and implement the confirmed lifecycle.
@@ -61,7 +86,7 @@ treating masking or a replaced identifier as proof of them.
 
 ## Specification patterns
 
-Treat braces as decision fields; resolve them with the data owner before acceptance.
+Use braces for decision fields; confirm the handling policy with the data owner.
 
 - **Collection:** For `{feature_and_purpose}`, the system shall collect only
   `{approved_fields}` after `{approved_choice_or_authority_condition}` and send
@@ -75,10 +100,9 @@ Treat braces as decision fields; resolve them with the data owner before accepta
   track `{remaining_copy_expiry}`, and suppress reintroduction during
   `{restore_or_replay_path}`, verified by `{synthetic_subject_lifecycle_test}`.
 
-Illustrative example only: propose deletion from inventoried active stores within
-7 days of `{verified_request_event}`; confirm with the user/stakeholder.
-Ask the user to confirm backup expiry, downstream recipient handling, exceptions,
-and the verification event separately; do not turn that proposal into a legal rule.
+For a missing deletion deadline, use the illustrative active-store default in
+Specify and confirm with the user/stakeholder. Keep backup expiry, recipient
+handling, and policy exceptions separate from that illustrative duration.
 
 ## Rules of thumb
 

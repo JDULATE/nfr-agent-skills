@@ -1,29 +1,23 @@
-# Phase 3 pilot self-review
+# Phase 3 pilot revision review
 
-Review only the availability, privacy, and readability pilots. Treat these scores
-as the author's rubric assessment, not user approval or an independent evaluation.
-Keep all three catalogue entries at `draft` until the user reviews them.
+Review the availability, privacy, and readability drafts only. No batch was started.
+These are author-assigned scores, not user approval or an independent evaluation.
+The earlier perfect scores were too confident about cross-NFR specificity; the
+follow-up audit corrected eight rules. Retain the pilots as drafts for user review.
 
-## Artifacts reviewed
+## Current rubric scores
 
-- [Availability](../skills/015-availability/SKILL.md): service boundary, accounting,
-  dependency and deployment exercises, measurement contract, and deployment example.
-- [Privacy](../skills/075-privacy/SKILL.md): purpose and lifecycle inventory,
-  recipient boundaries, subject-scoped disposal, and analytics example.
-- [Readability](../skills/078-readability/SKILL.md): reading tasks, preserved meaning,
-  unaided reader evidence, review protocol, and calculation example.
-
-Use the exact criteria in `references/quality-rubric.md`. Score each criterion
-0-2; require at least 17/20 and no zeros. Phase 3 additionally requires fixing
-every weakness scoring below 2.
-
-## Final rubric scores
+Use the criteria in `references/quality-rubric.md`, scored 0-2 with at least
+17/20 and no zeros required. Assign a provisional 1 for workflow execution
+confidence: the fast paths are specified but have not been forward-tested with
+an independent agent on incomplete requests. Do not claim that author inspection
+proves the agent will honor the question ceiling or continue to design correctly.
 
 | Criterion | Availability | Privacy | Readability |
 | --- | --- | --- | --- |
 | 1. Description has clear WHAT + WHEN + triggers + a "Not for" pointer | 2 | 2 | 2 |
 | 2. Definition is correct and distinguishes siblings | 2 | 2 | 2 |
-| 3. Workflow is executable: an agent could follow it without extra context | 2 | 2 | 2 |
+| 3. Workflow is executable: an agent could follow it without extra context | 1 | 1 | 1 |
 | 4. Specification patterns are measurable and testable | 2 | 2 | 2 |
 | 5. Rules of thumb are specific to this NFR (not interchangeable with another skill) | 2 | 2 | 2 |
 | 6. Verification names concrete, real checks | 2 | 2 | 2 |
@@ -31,201 +25,134 @@ every weakness scoring below 2.
 | 8. No invented facts, standards, or unlabeled numbers | 2 | 2 | 2 |
 | 9. Concise: no filler, no repetition, imperative voice | 2 | 2 | 2 |
 | 10. Progressive disclosure: depth lives in references/, linked with "read when" guidance | 2 | 2 | 2 |
-| **Total** | **20/20** | **20/20** | **20/20** |
+| **Provisional total** | **19/20** | **19/20** | **19/20** |
 
-## Evidence for the scores
+The latest request explicitly asks for an honest weaknesses list rather than
+unsupported perfect scores. Keep this execution-confidence weakness visible;
+do not promote the pilots to approved gold examples on these scores alone.
+Criterion 6 assesses the concrete checks named by the skill, not a claim that
+those checks were performed against a deployed application.
 
-- **Description and boundary:** Each description contains four natural trigger
-  phrases and explicit sibling exclusions. Check the availability distinction from
-  reliability and recoverability, privacy from confidentiality and anonymity,
-  and readability from legibility and comprehensibility against the repository map.
-- **Executable workflow:** Each pilot begins by reading the relevant project
-  artifacts and has the required five steps with explicit conditional decisions.
-  Missing service, data-policy, or audience context prompts "Ask the user".
-- **Specification:** Each pilot has three requirement patterns with named decision
-  fields, evidence, and acceptance boundaries. Every numeric target proposal in
-  the bodies and examples is labeled illustrative and paired with
-  "confirm with the user/stakeholder". No target is reported as universally required.
-- **Specific design rules:** Availability addresses journey probes, shared outage
-  paths, draining, and denominator exclusions. Privacy addresses producer and
-  recipient minimization, derived copies, withdrawal, and restored data. Readability
-  addresses domain names, intermediate meanings, local reasoning, effect order,
-  public names, and prose qualifiers. Retain these concrete distinctions rather
-  than substituting generic recommendations to test, document, or monitor.
-- **Verification and completion:** Each checklist has eight checkable actions.
-  Availability names journey, handoff, dependency-loss, and missing-monitor checks.
-  Privacy names negative payload, timing, disposal failure, subject isolation, and
-  restore/replay checks. Readability names behavioral comparison, obligation mapping,
-  keyword compatibility, and unaided reader questions, with correctness separated
-  from speed and static scores.
-- **Grounding and voice:** Use the repository's proposed definitions and original
-  hypothetical examples; do not assert standards mappings, laws, quotations, tool
-  versions, external statistics, or project observations. Use imperative bodies and
-  third-person discovery descriptions. Keep examples explicitly hypothetical.
-- **Progressive disclosure:** Link each pilot directly to its two supporting files
-  with "Read ... when" guidance. Place detailed worksheets, requirement records,
-  expanded checks, anti-patterns, and worked examples there. Keep all references
-  under 150 lines and avoid outgoing reference chains.
+## Changes in this revision
 
-## Weaknesses found and fixed
+- [Availability](../skills/015-availability/SKILL.md): open with the plain meaning,
+  broaden discovery to uptime, downtime, zero-downtime deployment, high availability,
+  and SLA/SLO requests, and retain exclusions for reliability and recoverability.
+  Add a complete labeled defaults block, at most three grouped questions, and a
+  path to reversible design while answers are pending. Route design choices through
+  the new [pattern guide](../skills/015-availability/references/design-patterns.md).
+- Cover graceful shutdown/draining, readiness versus liveness, rolling, blue-green,
+  canary, schema compatibility, timeouts/bounded retries, shedding, and shared failure
+  mapping. Give every pattern a use condition, trade-off, and controlled verification
+  exercise. Do not prescribe a tool, version, flag, capacity count, or universal timeout.
+- Add the requested illustrative time-accounting arithmetic to the
+  [measurement contract](../skills/015-availability/references/measurement-contract.md).
+  Keep its example window, durations, percentages, and comparison inside explicitly
+  illustrative guidance with stakeholder confirmation. Distinguish accounting bounds
+  from measurement coverage and from interruptions between samples.
+- [Privacy](../skills/075-privacy/SKILL.md) and
+  [readability](../skills/078-readability/SKILL.md): apply only the requested fast-path,
+  discovery, definition, and hedging revisions. Keep the earlier purpose, anonymity,
+  disclosure, visual-legibility, and conceptual-explanation boundaries intact.
+- Remove redundant numeric proposals from the Specification patterns sections;
+  point to each skill's labeled defaults block instead. Preserve explicit confirmation
+  where defaults become acceptance criteria, policy decisions, or reported attainment.
+- Keep `status: draft` in frontmatter: the current `SKILL.template.md` explicitly
+  contains `status: todo`. The conditional instruction to remove it therefore did
+  not trigger. Keep all three catalogue statuses unchanged at `draft`; do not edit
+  the template, generator, categories, batches, or other skills.
+- Extend the validator to reject sibling pointers absent from the catalogue.
+  Cover descriptions, distinction and routing text, explicit sibling labels, local
+  skill paths, and directly linked supporting references. Accept registered siblings
+  that have not yet been authored. Add positive, negative, ordinary-code, reference,
+  and CLI exit-code checks in two new test methods.
 
-Initial content assessment: availability 20/20, privacy 19/20, readability 20/20.
+## Prior nine-rule transfer audit retained
 
-- **Privacy, criterion 6, initially 1/2:** Disposal checks covered completion and
-  remaining copies but did not explicitly challenge request verification or prove
-  that another subject was untouched. Add an unverified-request negative case and
-  an unrelated synthetic subject control to the main Verification section, done
-  checklist, lifecycle matrix, and worked example. Reassess criterion 6 as 2/2.
+Ask: could each selected rule sit in Security or Reliability unchanged?
 
-The follow-up checklist audit below found that the initial specificity assessment
-was too generous. Its corrections supersede the initial criterion 5 judgments;
-the final table above describes the revised content. Retain the limitations below
-rather than presenting rubric completion as operational evidence.
+| Pilot/rule | Finding before the transfer audit | Current boundary |
+| --- | --- | --- |
+| Availability 1 | General journey probes could fit reliability. | Admission to good eligible time requires the business result. |
+| Availability 2 | Traffic draining alone was general deployment advice. | Measure loss and return of usable service, including in-flight work. |
+| Availability 4 | Shared-failure mapping alone could fit reliability. | Replica health does not establish good journey time through shared dependencies. |
+| Privacy 2 | Recipient filtering could become confidentiality-only guidance. | Limit even an authorized recipient to purpose-needed personal fields. |
+| Privacy 5 | Already specific; retained. | Restores must respect the personal-data disposal decision and evidence lifetime. |
+| Privacy 6 | Omitting raw payloads was generic secure logging advice. | Give disposal evidence its own minimization purpose and expiry. |
+| Readability 1 | Already specific; retained. | Reduce the intended reader's domain-term decoding burden. |
+| Readability 3 | Effect preservation alone could fit correctness or reliability. | Use guards only when they reduce tracing and backtracking burden. |
+| Readability 5 | Preserving external names alone could fit compatibility. | Expose an opaque key's meaning locally for the reader without changing the contract. |
 
-## Initial validation and integration record (before checklist audit)
+The eighth rule changed in that audit was availability's optional-dependency rule:
+classify its outage by whether the accepted journey still earns good time.
+The earlier privacy audit also added unverified-request and unrelated-subject
+controls; keep those checks and the concrete before/after analytics JSON.
 
-- `python scripts/validate_skills.py --only 15,75,78`: checked three skills,
-  no missing selected files, zero errors; citation checks active.
-- `python scripts/validate_skills.py`: checked three skills, reported the other
-  111 as absent `todo` entries, zero errors.
-- `python -m unittest discover -s tests -v`: all 17 tests passed after repairing
-  the fixture baseline described below.
-- `python scripts/build_index.py`: regenerated the index with only the pilot
-  statuses changed to `draft`; category and batch assignments are preserved.
-- Body lengths: availability 122 lines, privacy 127, readability 127. Description
-  lengths: 285, 293, and 299 characters respectively. Each has four quoted triggers.
-- Direct supporting-file lengths: availability 86 and 59; privacy 82 and 63;
-  readability 76 and 72 lines. Each pilot has only those two direct references.
-- Body word-five-gram Jaccard similarities: availability/privacy 0.005288,
-  availability/readability 0.005233, privacy/readability 0.006629; all below 0.35.
-- Both Python blocks in the readability example compiled. Outputs or exception
-  outcomes matched across six synthetic keyword-call cases, including no items,
-  several items, discount and fee handling, a fractional price, and a missing key.
-  These checks support preservation for those cases only, not a reader outcome.
+## Validation evidence
 
-The foundation tests initially copied the advancing production statuses into
-their empty-scaffold fixtures, causing three failures when the pilots became
-drafts. Normalize only those temporary fixture statuses to `todo` after validating
-the source catalogue. Preserve assertions about missing drafted files and
-non-overwrite behavior. Do not weaken or modify the skill validator.
+- Selected validation checked the three pilots with zero errors. Full validation
+  checked the same three with zero errors and 111 absent `todo` entries.
+- All 19 foundation tests passed, including the two sibling-check methods.
+- Current body lengths: availability 155 lines; privacy 154; readability 152.
+  Description lengths: 308, 327, and 314 characters, with five, six, and five quoted
+  trigger phrases respectively. All use real catalogue slugs in their exclusions.
+- Supporting lengths: availability measurement 114, deployment example 59, design
+  patterns 102; privacy lifecycle 84 and analytics example 82; readability protocol
+  76 and calculation example 72. Each file is under 150 lines and directly linked
+  with Read/when guidance; none links to a further reference.
+- Body word-five-gram Jaccard similarities: availability/privacy 0.008120,
+  availability/readability 0.007332, privacy/readability 0.011900; all below 0.35.
+- All workflows retain the five required steps and explicit If/then decisions.
+  Each fast path has a single labeled full-record block and a three-question ceiling.
+  Each Clarify step reads existing source and documentation before specification.
+- Decimal arithmetic recomputed the illustrative window partition and each ratio
+  in the measurement contract; the displayed four-decimal-place results match.
+  The upper and coverage numerators mean different things despite equal results here.
+- The earlier readability example compiled and matched outcomes in six synthetic
+  keyword-call cases, including a missing-key exception. The analytics before/after
+  JSON parsed and matched its stated field allowlist. Those examples are unchanged.
+- The only named source of standards permissions remains the URL-free repository
+  allowlist. No legal duties, standards characteristic lists, external URLs, editions,
+  or tool-specific commands were introduced in the pilot artifacts.
 
-## Uncertain claims and human review
+## Honest weaknesses and limitations
 
-- **Availability:** Ask the user for service calendars, accepted degraded results,
-  deadlines, sampling and aggregation rules, target approval, and the unknown-data
-  policy in the project where the skill is used. The sample deployment is invented;
-  its outage cause and proposed repair are not findings about an actual system.
-- **Privacy:** Ask the user for personal-information scope, purpose authority,
-  recipient boundaries, disposal deadlines, backup expiry, and exception decisions.
-  Actual processor deletion and restored-data suppression require destination
-  evidence; this pilot does not claim either has been performed in a real service.
-- **Readability:** Ask the user for audience familiarity, authoritative meaning,
-  reading questions, acceptable evidence, and timing decisions. No representative
-  reader sessions were conducted. The synthetic arithmetic checks do not establish
-  that a reader understands the revised code better.
-- **Approval:** Ask the user to review the pilot definitions, specificity, and depth.
-  Keep them as drafts; use them as approved gold examples only after that review.
+- **Fast-path execution is untested:** No independent agent has applied these
+  instructions to a vague improvement request, been asked a formal-spec request,
+  or been interrupted by missing policy answers. The three-question ceiling is an
+  instruction, not automatically enforced. Withhold full workflow confidence until
+  such runs show both nonblocking design and correct handling of unresolved decisions.
+- **Defaults are not contextual requirements:** Continuous service, the accounting
+  window, deletion timing, and the reading budget are examples. They may be unsuitable
+  for a real service, retention policy, or audience. Ask the user for the actual
+  boundary; do not implement irreversible disposal or claim an accepted target from
+  the block alone. Improvement mode permits reversible design, not invented authority.
+- **Availability pattern selection is not exercised:** The guide states design and
+  verification choices, but no real routing handoff, schema transition, timeout
+  budget, overload experiment, or failover was run. Long-lived sessions and shared
+  state can invalidate a proposed rollback; inspect the actual implementation.
+- **Availability sampling still has blind spots:** Arithmetic checks classified
+  durations only. Successful probes do not demonstrate continuous service between
+  samples. Ask the user for cadence, locations, workload coverage, and unknown-data
+  acceptance; collect a real observation window before reporting attainment.
+- **Privacy inventory and authority are unknown:** The synthetic payload does not
+  discover SDK-enriched fields, production joins, backup copies, or processor erasure.
+  Ask the user which regulations apply and request relevant source text and policy
+  decisions. Verify the real copy inventory and deletion evidence per destination.
+- **Readability has no audience evidence:** The worked example exposes a subtotal;
+  it does not demonstrate a prose rewrite, a guard transformation, or a measured
+  reduction in reader mistakes. Six synthetic arithmetic cases do not cover arbitrary
+  numeric objects or all exceptions. Ask the user for representative reader tasks,
+  meaning-preservation boundaries, and unaided audience observations.
+- **Sibling validation is syntactic:** Recognize explicit pointers such as
+  `(see slug)`, distinction labels, Route-to-code-form references, sibling labels,
+  and local skill paths. Do not claim natural-language understanding of an unmarked
+  prose mention or dynamically constructed name. Prefer explicit `(see slug)`
+  pointers when introducing a sibling. The check validates catalogue membership,
+  not sibling appropriateness or the existence of an authored destination file.
+- **Routing and approval remain open:** The six description exclusions are valid
+  catalogue entries whose skills remain `todo`. These are routing pointers, not
+  loadable sibling skills today. No batch, trigger evaluation, or release work is
+  authorized by this revision; the pilots still need user approval.
 
-## Follow-up checklist audit
-
-Ask of each selected rule: **Could this sit in Security or Reliability unchanged,
-or does its acceptance decision belong specifically to the named NFR?** Inspect
-the other rules too; replacing the NFR's name in generic advice is not a fix.
-
-### Three sampled rules per pilot
-
-| Pilot and rule position | Rule before this audit, abbreviated | Could it fit a different NFR unchanged? | Decision and resulting acceptance question |
-| --- | --- | --- | --- |
-| Availability 1 | Probe a business result rather than process health. | Yes: reliability checks can use the same advice. | Rewrite around admission to good eligible time: did this observation satisfy the journey's availability boundary? |
-| Availability 2 | Drain traffic and include in-flight work. | Yes: general reliability or deployment advice. | Rewrite around measuring the interruption from lost usable service through its return, including in-flight work. |
-| Availability 4 | Map shared dependencies; do not assume replicas are independent. | Yes: reliability failure modeling. | Rewrite around whether replica health histories establish customer-visible good time through a shared dependency outage. |
-| Privacy 2 | Derive a recipient-specific payload for its approved purpose. | Potentially: recipient filtering can remain a general confidentiality rule. | Rewrite to constrain even an authorized recipient: are unused personal fields being sent despite access permission? |
-| Privacy 5 | Prevent restored data from repopulating deleted records; bound suppression evidence. | No: the accepted personal-data deletion decision and evidence expiry define the rule. | Keep it; ask whether restoration undoes the agreed disposal lifecycle, rather than merely restoring valid stored state. |
-| Privacy 6 | Omit raw personal payloads from disposal logs. | Yes: secure logging advice can reuse it. | Rewrite around the disposal log's own purpose and expiry: does the log recreate a profile beyond its accepted evidence lifetime? |
-| Readability 1 | Name locals for domain meaning rather than unfamiliar abbreviations. | No: the intended reader's decoding burden defines success. | Keep it; ask whether the name exposes the value's meaning to that audience. |
-| Readability 3 | Flatten nesting only while preserving effect and exit order. | Yes: behavioral preservation fits reliability or correctness. | Rewrite around reader tracing and backtracking; retain nesting when scattered exits make following outcomes harder. |
-| Readability 5 | Preserve external names and keyword contracts while renaming. | Yes: compatibility and regression prevention can reuse it. | Rewrite around exposing an opaque key's meaning locally so the reader benefits without changing the external contract. |
-
-Also rewrite availability rule 3, found during the full rules scan: classify an
-optional-dependency outage by whether the accepted journey still earns good time,
-instead of giving generally reusable advice to isolate dependencies. Seven sampled
-rules and this additional rule changed. Keep purpose, accounting, or reader-task
-decisions in the rule itself rather than merely labeling it with an NFR name.
-
-On this audit, reassess criterion 5 as initially 1/2 for each pilot, then 2/2 after
-the rewrites. The final author-assigned totals remain 20/20; they do not establish
-independent behavioral validity or erase the initial review's missed weaknesses.
-
-### Workflow, numbers, descriptions, and boundaries
-
-- Inspect all 15 steps: each contains an explicit If/then decision. Make inspection
-  of code and documentation explicit in availability and privacy Clarify; readability
-  already requires surrounding source and adjacent documentation before specifying.
-- Inspect every digit occurrence in the nine skill and supporting files: all nine
-  requirement-target occurrences have an illustrative label and an adjacent
-  "confirm with the user/stakeholder" instruction. Other digit occurrences in those
-  files are the workflow step numbers. Find no unqualified numeric requirement.
-- Find no named regulation or asserted legal deadline in the privacy artifacts.
-  Add "Ask the user which regulations apply" and require relevant source text.
-  Keep collection purpose and lifecycle distinct from permission to disclose, and
-  keep identity-unlinkability claims in the anonymity sibling.
-- Read all descriptions as discovery text: retain four plausible user phrases
-  per pilot and explicit Not-for exclusions. Check all six exclusion slugs against
-  `nfr-list.json`: they exist as canonical entries. Their skill files do not yet
-  exist because they remain `todo`; this audit does not pretend otherwise or create
-  out-of-phase stubs. Treat them as catalogue routing pointers until authored.
-- Keep readability focused on code and text organization, meaning, and reader
-  tracing. Keep character recognition and display contrast with legibility and
-  accessibility concerns with the sibling boundaries in the disambiguation map.
-- Open every reference and check its use: availability supplies a checkout handoff
-  and mandatory-store failure; readability supplies executable before/after code;
-  privacy now supplies concrete before/after event JSON and names forbidden fields.
-  The privacy example previously named a flow but left its exact payload abstract.
-  Parse the revised JSON and check the stated field boundary; do not treat that
-  parser check as a production data-flow or disposal test.
-- Confirm both direct links in each pilot have Read/when guidance, each target
-  exists, and none of the six supporting files links onward to another reference.
-
-### Current artifact evidence
-
-| Pilot | Body lines | Description characters | Supporting file line counts |
-| --- | --- | --- | --- |
-| Availability | 124 | 285 | measurement contract 86; deployment example 59 |
-| Privacy | 131 | 293 | lifecycle contract 84; analytics example 82 |
-| Readability | 129 | 299 | review protocol 76; calculation example 72 |
-
-All supporting files remain under 150 lines. Current body word-five-gram Jaccard
-similarities are availability/privacy 0.005074, availability/readability 0.005092,
-and privacy/readability 0.006404. Re-run selected and full validation after this
-audit; both must report zero errors before committing.
-
-### Concrete limitations remaining
-
-- **Availability sampling:** The contract's lower and upper ratios describe its
-  classified bins. They do not bound interruptions between successful probes.
-  No real observation window or monitor-failure dataset has been collected; Ask
-  the user for cadence, coverage, and unknown-bin acceptance in the target project.
-- **Availability example scope:** The worked example covers order acceptance during
-  a deployment and a mandatory-store outage. It does not demonstrate long-lived
-  session continuity, regional failover, or recovery of in-flight streaming work.
-  If those are required, extend the project's journey and interruption exercises.
-- **Privacy scope evidence:** The payload example proves only what its synthetic
-  before/after objects contain. No production serializers, SDK-enriched fields,
-  cross-store subject matching, or external recipient erasure have been exercised.
-  Ask the user for the real destination inventory and evidence for each copy.
-- **Privacy policy:** No regulation-specific source text or applicable-policy
-  decision is established by these artifacts. Ask the user which regulations apply
-  and how collection, exceptions, and disposal are authorized; the illustrative
-  durations must never substitute for those decisions.
-- **Readability evidence:** There are no unaided reader observations. The example
-  demonstrates a single intermediate calculation, not a prose rewrite or a guard
-  transformation. The six earlier synthetic execution cases do not cover arbitrary
-  numeric objects, side effects, or every exception; Ask the user for representative
-  reader tasks and preserve the actual project's behavioral contract when applying it.
-- **Routing and approval:** The six excluded sibling skills are catalogue entries
-  awaiting their own batches. A routing pointer is not a loadable skill today.
-  These pilots remain drafts, and author-assigned rubric scores do not constitute
-  the user's approval for gold examples or batch production.
-
-Stop here. Do not author other skills, batch reviews, trigger evaluations, or release
-artifacts as part of this phase.
+Stop after validation and the requested `phase 3: pilot revisions` commit.

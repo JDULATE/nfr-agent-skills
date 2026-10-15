@@ -242,6 +242,44 @@ class FoundationTests(unittest.TestCase):
         self.assertEqual(jaccard(five_grams("a b c d e"), five_grams("a b c d f")), 0)
         self.assertEqual(jaccard(set(), set()), 0)
 
+    def test_sibling_slugs_must_exist_in_catalogue(self):
+        original = self.fixture()
+        # A registered sibling is valid even before its skill has been authored.
+        self.write_skill(text=original + "\nNot for continuity (see reliability).\n")
+        self.assertEqual(self.errors(), [])
+        self.assertFalse(skill_path(self.root, self.catalog[80]).exists())
+        bad_pointers = (
+            "Not for continuity (see missing-sibling).",
+            "Distinguish service continuity (`missing-sibling`).",
+            "Route continuity work to `missing-sibling`.",
+            "Use the missing-sibling sibling instead.",
+            "Choose the matching NFR rather than `missing-sibling`.",
+            "Read [sibling](../081-missing-sibling/SKILL.md).",
+        )
+        for pointer in bad_pointers:
+            with self.subTest(pointer=pointer):
+                self.write_skill(text=original + "\n" + pointer + "\n")
+                self.assertIn("Sibling slug not in nfr-list.json: missing-sibling", "\n".join(self.errors()))
+        # Ordinary code and variables must not be mistaken for routing labels.
+        self.write_skill(text=original + "\nUse `subtotal` to calculate the result. Inspect the result (`subtotal`).\n")
+        self.assertEqual(self.errors(), [])
+
+    def test_unknown_description_or_reference_sibling_fails_cli(self):
+        original = self.fixture()
+        lines = original.splitlines()
+        lines[2] = 'description: "Checks synthetic fixture content when selecting a boundary. Not for other work (see unknown-sibling)."'
+        self.write_skill(text="\n".join(lines))
+        command = [sys.executable, str(ROOT / "scripts" / "validate_skills.py"),
+                   "--root", str(self.root), "--only", "15"]
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("Sibling slug not in nfr-list.json: unknown-sibling", result.stdout)
+        path = self.write_skill(text=original + "\nRead [notes](./references/check.md) when routing.\n")
+        refs = path.parent / "references"
+        refs.mkdir()
+        (refs / "check.md").write_text("Route this to `unknown-sibling`.\n", encoding="utf-8")
+        self.assertIn("Sibling slug not in nfr-list.json: unknown-sibling", "\n".join(self.errors()))
+
     def test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run(self):
         for only in ("0", "115", "15,", "abc", ""):
             with self.subTest(only=only), self.assertRaises(ValueError):

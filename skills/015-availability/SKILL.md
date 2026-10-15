@@ -1,21 +1,21 @@
 ---
 name: availability
 description: >-
-  Specifies and verifies service availability when users say "keep checkout usable",
-  "stop deployment outages", "set an uptime objective", or "measure customer-visible
-  downtime". Not for failure-free operation alone (see reliability) or restoration
-  procedures alone (see recoverability).
+  Improves, specifies, and verifies service availability when users ask to "improve
+  uptime", "reduce downtime", deliver a "zero-downtime deploy", design for "high
+  availability", or "define an SLA/SLO". Not for failure-free operation alone
+  (see reliability) or restoration procedures alone (see recoverability).
 status: draft
 ---
 # Availability
 
 ## Definition and scope
 
-Treat availability as the readiness of an agreed service to complete required user
-journeys during agreed service times, including explicitly accepted degraded modes.
-Include service boundaries, outage accounting, and continuity through changes;
-distinguish failure-free operation (`reliability`) and restoration after disruption
-(`recoverability`) from whether users can use the service now.
+Availability means users can use a service when they need it.
+Define that service through named journeys, required results, audiences, and service
+times, including accepted degraded modes. Distinguish failure-free operation
+(`reliability`) and restoration after disruption (`recoverability`) from whether
+the required service is usable now.
 
 ## Use when / Don't use when
 
@@ -32,18 +32,48 @@ distinguish failure-free operation (`reliability`) and restoration after disrupt
 1. Clarify: Read existing routes and deployment code alongside dependency maps,
    incident reports, service docs, and monitoring definitions before specifying.
    Identify the user journey, audience, service calendar, and usable result.
-   If the calendar, deadline, or permitted degraded behavior is missing, then
-   Ask the user; record a proposed boundary instead of assuming continuous service.
+   If the user wants a practical improvement rather than a formal specification,
+   then use the fast path in Specify; otherwise Ask the user for missing calendar,
+   deadline, or degraded-mode decisions before accepting a service contract.
 
 2. Specify: Select time-based or request-based accounting and write the eligibility,
    success, exclusion, unknown-data, and aggregation rules before proposing a target.
    Name the observation window, sampling resolution, affected locations, and owner.
-   If the user supplies no number, then offer the illustrative proposal below and
-   confirm with the user/stakeholder; leave acceptance pending until confirmed.
+   If a formal target is missing, then offer the illustrative proposal below and
+   confirm with the user/stakeholder before declaring the contract accepted.
+   For the improvement fast path, propose the entire record in this single block:
 
-3. Design/Implement: Trace each journey through shared dependencies; change the
-   outage-producing path with traffic draining, dependency isolation, or a fallback
-   only where the agreed service result permits it.
+   ```text
+   Illustrative defaults — confirm with the user/stakeholder:
+   Journey/result: the requested journey and documented business success result.
+   Audience/calendar: documented audience; continuous service if no calendar exists.
+   Metric/target/window: good eligible time / eligible time; 99.9%; rolling 30 days.
+   Sampling: journey probes each 1 minute at the affected documented locations.
+   Bin rule: any failed sample makes a bin bad; absent trustworthy samples mean unknown.
+   Deadline: existing end-to-end journey deadline; if absent, Ask the user.
+   Exclusions/retries: no maintenance exclusion; retain the original attempt outcome.
+   Unknowns: charge unknown time against attainment and report coverage separately.
+   Degraded mode: retain every required journey result; no new relaxation by default.
+   Evidence/owner: probe outcomes, outage ledger, query revision, existing service owner.
+   Status: design assumptions pending answers; no claim that an objective is met.
+   ```
+
+   Ask at most three questions total on this path: which journey/result/deadline
+   matters; which audiences, service hours, or accounting defaults need changes;
+   and which deployment, data-loss, cost, or rollback constraints must be preserved.
+   Use available answers and proceed to reversible design while answers are pending.
+   If a missing decision blocks a concrete change, then design the options and
+   identify that decision without inventing a service promise.
+
+3. Design/Implement: Trace the journey's outage-producing path. Read
+   [design patterns](./references/design-patterns.md) when choosing a continuity
+   mechanism and its verification evidence.
+   If deployment causes interruption, then evaluate draining, readiness, rollout
+   strategy, and schema compatibility using the deployment patterns in that file.
+   If dependency delays or overload block the journey, then evaluate deadline-bound
+   retries and shedding using its dependency and overload patterns.
+   If a mandatory component has no usable alternative, then map that failure point
+   and evaluate a fallback or redundancy without assuming replica independence.
    If a fallback loses required freshness, authorization, or write behavior, then
    classify that journey as unavailable and Ask the user before redefining success.
 
@@ -72,9 +102,8 @@ Substitute confirmed values for braces; retain unconfirmed fields as open decisi
   shall keep `{critical_journey}` usable from `{audience_locations}`, allowing at
   most `{confirmed_interruption}` measured by `{journey_probe_and_time_resolution}`.
 
-Illustrative example only: propose 99.9% good eligible time over `{agreed_window}`;
-confirm with the user/stakeholder. Ask the user for the window, probe cadence,
-completion deadline, locations, and treatment of maintenance before accepting it.
+For a missing target, use the illustrative accounting defaults in Specify and
+confirm with the user/stakeholder; adjust the record to the actual service boundary.
 
 ## Rules of thumb
 
@@ -131,3 +160,5 @@ selected metric from retained observations; do not combine unlike denominators.
   the denominator, unknown-data policy, probes, or outage review evidence.
 - Read [deployment worked example](./references/deployment-example.md) when turning
   a deployment-outage request into a requirement and an executable verification plan.
+- Read [design patterns](./references/design-patterns.md) when selecting a shutdown,
+  rollout, schema, timeout, shedding, or shared-failure mitigation and its checks.

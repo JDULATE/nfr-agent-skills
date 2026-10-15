@@ -1,21 +1,22 @@
 ---
 name: readability
 description: >-
-  Improves and checks how readers follow text or code when users say "make this
-  code easier to read", "clarify these variable names", "break up this dense
-  paragraph", or "reduce nesting". Not for visual character recognition (see
-  legibility) or missing conceptual explanations (see comprehensibility).
+  Improves and checks how readers follow code or text when users say "improve
+  readability", "make this code easier to read", "rename confusing variables",
+  "simplify this paragraph", or "reduce nesting". Not for visual character
+  recognition (see legibility) or missing conceptual explanations
+  (see comprehensibility).
 status: draft
 ---
 # Readability
 
 ## Definition and scope
 
-Make existing meaning easier for the intended reader to follow through naming,
-ordering, grouping, and locally visible control flow while preserving its substance.
-Separate these reading decisions from visual symbol recognition (`legibility`),
-explaining a missing concept (`comprehensibility`), and removing unnecessary words
-for their own sake (`conciseness`).
+Readability means readers can follow the meaning of code or text without unnecessary
+effort. Improve naming, ordering, grouping, and locally visible control flow while
+preserving the substance. Separate this work from visual symbol recognition
+(`legibility`), explaining a missing concept (`comprehensibility`), and removing
+unnecessary words for their own sake (`conciseness`).
 
 ## Use when / Don't use when
 
@@ -33,14 +34,38 @@ for their own sake (`conciseness`).
 1. Clarify: Read the surrounding source, public contracts, glossary, style rules,
    tests, or adjacent documentation before specifying a rewrite.
    Identify intended readers, reading tasks, and the statements whose meaning must stay.
-   If audience, authoritative meaning, or external name compatibility is unclear,
-   then Ask the user before renaming or reorganizing that material.
+   If the request is for an improvement, then use the fast path below; otherwise
+   Ask the user for unclear audience, meaning, or public-name constraints before
+   accepting a formal reading requirement.
 
 2. Specify: Choose questions a reader should answer, an evidence-backed answer
    key, and the reading conditions; distinguish correct explanation from speed.
    Identify preserved behavior, obligations, public names, and observable ordering.
-   If no threshold is given, then propose the illustrative reading task below and
-   confirm with the user/stakeholder before using it as an acceptance gate.
+   If a formal threshold is missing, then propose the illustrative reading task
+   below and confirm with the user/stakeholder before using it as an acceptance gate.
+   For an improvement request, propose the complete reading record in one block:
+
+   ```text
+   Illustrative defaults — confirm with the user/stakeholder:
+   Artifact/revision: requested passage or function and its current revision.
+   Audience/context: documented readers with the existing surrounding source or glossary.
+   Task: explain value meanings and branch outcomes, or actor/action/condition/exception.
+   Answer key: existing code, tests, or approved prose; resolve contradictions explicitly.
+   Acceptance: required answers correct within an illustrative 2-minute reading budget.
+   Preservation: unchanged behavior, obligation strength, public names, and data keys.
+   Design scope: local naming and grouping; no new behavior or required domain concepts.
+   Verification: focused regression or obligation mapping plus unaided reader questions.
+   Evidence/owner: before/after diff, preservation results, reader answers, artifact owner.
+   Limitations: absent reader evidence remains unverified; static scores are supporting only.
+   Status: design assumptions; timing and audience acceptance await confirmation.
+   ```
+
+   Ask at most three questions total: who must read this and for which task;
+   which meanings or external names must stay fixed; and which reading context,
+   budget, or illustrative defaults should change. Proceed to reversible design
+   using available answers while others are pending.
+   If the authoritative meaning conflicts across sources, then show the conflict
+   and alternative wording or code rather than silently choosing new behavior.
 
 3. Design/Implement: Replace ambiguous local names with domain terms, expose
    intermediate meanings, and arrange conditions or sentences in reading order.
@@ -76,10 +101,9 @@ Tie each pattern to the specific artifact and audience; avoid universal style li
   with `{agreed_domain_meaning}` in `{task_and_scope}`, verified by
   `{reader_explanation_check}` without changing `{external_names_or_data_keys}`.
 
-Illustrative example only: propose a 2-minute reading budget for `{scoped_task}`
-with the required answers correct; confirm with the user/stakeholder.
-Ask the user to confirm the questions, answer key, reader familiarity, available
-context, and handling of incorrect answers before accepting that budget.
+For a missing reading budget, use the illustrative task default in Specify and
+confirm with the user/stakeholder. Ground the answer key and audience in the
+artifact's context before using timing as an acceptance condition.
 
 ## Rules of thumb
 
