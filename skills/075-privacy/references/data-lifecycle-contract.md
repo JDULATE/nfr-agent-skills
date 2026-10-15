@@ -1,16 +1,18 @@
 # Personal-data lifecycle contract
 
-Create a purpose inventory from the project, not a list of assumed legal duties.
-Ask the user for the governing policy, authority for collection, and exception
-decision maker. Do not infer permission from the presence of a field in a schema.
-Ask the user which regulations apply and request applicable source text before
-interpreting an obligation; no retention or deletion example supplies one.
+Build the purpose inventory from project artifacts and stakeholder-approved policy.
+Record named regulations or request labels as stakeholder-supplied constraints;
+ask what their policy or counsel requires of the system. Attribute that behavior
+to the supplied policy rather than stating legal obligations as fact. Produce an
+engineering requirement, not a compliance conclusion; a schema is not permission.
 
 ## Inventory record
 
 Use a row per field group and purpose; split a row when recipients or lifecycle
 rules differ. Treat inferred or derived personal outputs as inventory candidates.
-Ask the user where personal-information scope or identifiability is unresolved.
+Resolve uncertain personal-information scope or identifiability with the owner.
+Ask whether sensitive categories or minors are included; if yes, ask what stricter
+handling the stakeholder requires, without inferring duties from the category.
 
 | Record field | Decision to capture |
 | --- | --- |
@@ -19,7 +21,7 @@ Ask the user where personal-information scope or identifiability is unresolved.
 | Purpose and owner | Accepted use and the person accountable for that decision |
 | Choice or authority | Condition that permits handling and what withdrawal changes |
 | Recipients and operations | Allowed destinations, fields, reads, joins, and transformations |
-| Copies | Primary stores, queues, caches, search indexes, exports, processors, backups |
+| Copies | Primary stores, queues, caches, search indexes, exports, processors, backups; logs, error trackers, URLs and query strings, third-party SDKs/tags, session replay or screenshots |
 | End condition | Retention deadline, deletion request, withdrawal, or another accepted event |
 | Disposal | Erasure, expiry, or another specifically accepted action and its evidence |
 | Exceptions | Approved reason, scope, access restriction, decision owner, and review event |
@@ -28,12 +30,25 @@ Ask the user where personal-information scope or identifiability is unresolved.
 Do not label a transformed dataset anonymous without a separate agreed observer
 and linkage assessment. Route that question to the anonymity sibling.
 
+### Filled illustrative inventory row
+
+Illustrative example only; confirm with the user/stakeholder. Use this synthetic
+support-contact scenario as an example record, not a finding or required policy.
+
+| Data / subjects / producer / start | Purpose / owner / choice or authority | Recipients / operations / copies | End / disposal | Exceptions / reintroduction | Evidence |
+| --- | --- | --- | --- | --- | --- |
+| SYNTHETIC_CONTACT; adult test account; support form; case closure starts retention | Reply to submitted support case; example support owner; hypothetical owner-approved support use | Support worker reads contact; case store, queue, backup; omit contact from logs/errors, URLs/query strings, SDKs/tags, replay/screenshots | Verified deletion request; active contact erased within 7 days (illustrative; confirm with the user/stakeholder) | No exception in this example; backups expire at the approved rotation event; apply suppression before serving restored contact | Synthetic egress/capture checks, per-copy ledger, disposal receipts |
+
+Keep retention after case closure as a separate owner-confirmed rule; the deletion
+deadline above is not a default retention duration. Bind the example's rotation
+event to a concrete expiry boundary before accepting a real backup requirement.
+
 ## Requirement-spec record
 
 Write the subject class, purpose, field and recipient allowlists, start event,
 deadline, disposal action, copy coverage, exception process, and evidence location.
-Use `{decision_pending}` fields until the data owner confirms them. Keep proposed
-requirements separate from implementation evidence and accepted requirements.
+Keep unresolved policy items visible and distinguish a proposed requirement from
+an observed disposal outcome.
 
 If the user gives no number, offer this illustrative example only: deletion of
 inventoried active-store data within 7 days of `{verified_request_event}`;
@@ -55,6 +70,8 @@ Use synthetic subjects and distinguishable marker values, not real user records.
 | Disposal worker fails | Retry record and unresolved destination status | An accepted queue item is treated as an erasure receipt |
 | Deletion requested | Derived outputs, indexes, exports, and processor receipts | Only the primary row has been inspected |
 | Backup restored or events replayed | Disposal decisions applied before affected data is served | A previously deleted active record reappears |
+| Telemetry, navigation, SDKs/tags | Logs, error trackers, URLs and query strings, outgoing third-party payloads | A synthetic personal marker escapes an approved purpose or field allowlist |
+| Replay or screenshot capture | Stored frames, images, and their recipient copies in off/on/withdrawn states | A blocked field was captured before a later display mask was applied |
 
 For controlled-clock tests, exercise just before the accepted deadline and at
 the disposal boundary under the agreed scheduling policy. Ask the user whether

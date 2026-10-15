@@ -1,22 +1,22 @@
 ---
 name: privacy
 description: >-
-  Improves and verifies personal-data handling when users say "review privacy",
-  "minimize personal data", "stop collecting this field", "set data retention",
-  "delete my account data", or "review analytics tracking". Not for disclosure
-  protection alone (see confidentiality) or identity-unlinkability claims alone
-  (see anonymity).
-status: draft
+  Improves and verifies personal-data handling when users ask to "review GDPR/CCPA/DSAR
+  handling", "minimize PII", "apply data minimization", "propagate consent or cookie
+  choices", "handle a right to be forgotten request", or "set retention or deletion".
+  Treats user-named regulations and request labels as stakeholder constraints, without
+  asserting legal obligations. Not for disclosure protection alone (see confidentiality)
+  or identity-unlinkability claims alone (see anonymity).
 ---
 # Privacy
 
 ## Definition and scope
 
-Privacy concerns how personal information is collected, used, shared, kept, and removed.
-Limit those activities to agreed purposes, people, recipients, and lifecycle boundaries,
-including derived data. Separate the reason to handle personal data from disclosure
-control (`confidentiality`) and identity unlinkability (`anonymity`); masking a name
-does not establish either an approved purpose or an unlinkability result.
+Privacy means controlling how information about people is collected, used, shared,
+kept, and removed. Bind those activities, including derived data, to the agreed
+purpose, subject, recipient, choice, and lifecycle. Separate that handling decision
+from disclosure control (`confidentiality`) and identity unlinkability (`anonymity`);
+masking a name establishes neither an approved purpose nor an unlinkability result.
 
 ## Use when / Don't use when
 
@@ -31,48 +31,56 @@ does not establish either an approved purpose or an unlinkability result.
 
 ## Workflow
 
-1. Clarify: Read collection code, data models, schema docs, event payloads, vendor
-   configuration, retention jobs, and existing data-handling decisions first.
-   Trace a synthetic person's data from collection to copies and derived outputs.
-   If an improvement is requested, then group missing purpose, recipient, and policy
-   decisions into the fast path below; otherwise Ask the user which regulations
-   apply and request relevant policy or source text before specifying obligations.
+1. Clarify: Read collection code, schemas, docs, payloads, logging and capture paths,
+   SDK/tag configuration, retention jobs, and existing policy decisions first.
+   Trace synthetic subject data through copies and derived outputs.
+   If sensitive categories or minors are in scope, then ask what stricter handling
+   the stakeholder requires; include this follow-up in the first fast-path question.
+   If the request is a practical change, then use the fast path below; otherwise
+   establish purpose, recipients, choice, and stakeholder-supplied policy before specifying.
 
 2. Specify: Make a field-to-purpose record with allowed operations, recipients,
    choice behavior, retention start event, disposal action, and exception owner.
-   Include intermediate stores, exports, processors, and backup restoration.
-   If a formal duration is missing, then offer the illustrative deletion target
-   below and confirm with the user/stakeholder before declaring it accepted.
-   For an improvement request, put the complete handling record in one defaults block:
+   Include the collection and capture copies listed below, not just primary stores.
+   If a formal deadline is missing, then propose the illustrative duration below and
+   confirm with the user/stakeholder. For a change request, present this single block:
 
    ```text
    Illustrative defaults — confirm with the user/stakeholder:
-   Data/subjects: personal fields and derived outputs in the requested feature flow.
-   Producer/start: discovered collection path; existing documented retention trigger.
-   Purpose/authority: existing approved use; if absent, Ask the user; no new optional collection.
-   Choice: follow the documented condition; design optional collection off if undecided.
-   Recipients/operations: existing approved destinations; no new sharing or cross-purpose joins.
-   Fields: retain only fields needed for the stated purpose in each recipient payload.
-   Copies: inventory stores, queues, indexes, caches, exports, processors, and backups.
-   End/disposal: verified deletion request; active-store erasure within 7 days.
-   Other retention: existing documented rule; if absent, Ask the user, not indefinite storage.
-   Backups/replay: identify expiry and suppression before restored data is served.
-   Exceptions: preserve documented decisions; add no new exception by default.
-   Evidence/owner: synthetic payload and lifecycle checks, copy ledger, existing data owner.
-   Status: design assumptions; missing policy and recipient evidence remain unresolved.
+   Inventory row:
+     Data/subjects: feature fields and derived outputs; sensitive/minor scope unresolved.
+     Producer/start: discovered source; retention starts at the documented policy event.
+     Purpose/owner: existing approved use and named data owner; missing authority stays open.
+     Constraints: user-named labels plus policy/counsel-defined system behavior, attributed.
+     Choice: documented consent/choice condition; no new optional collection while undecided.
+     Recipients/operations: approved destinations and needed fields; no new cross-purpose joins.
+     Copies: stores, queues, caches, indexes, exports, processors, backups; logs/error trackers;
+       URLs/query strings; third-party SDKs/tags; session replay/screenshots.
+   Lifecycle record:
+     End/action/deadline: verified deletion request; active-store erasure within 7 days.
+     Retention: existing documented duration/start event; unspecified retention remains open.
+     Backups/replay: separate expiry and suppression before restored data becomes readable.
+     Exceptions/tombstones: only approved scope, minimal match key, access boundary, and expiry.
+     Evidence/owner: synthetic captures, per-copy outcomes, retry state, and the named owner.
+     Status: design assumptions, not permission to erase or an accepted policy or legal duty.
    ```
 
-   Ask at most three questions total: which personal-data purpose and policy or
-   regulations apply; which recipients, retention exceptions, and backup constraints
-   must remain; and which user-choice behavior or illustrative defaults should change.
-   Continue to reversible design using available answers while others are pending.
-   If purpose authority or retention is undecided, then design alternatives and
-   mark that policy decision open instead of inventing permission or a legal deadline.
+   Ask at most three grouped questions total: which data/purpose is in scope,
+   whether sensitive categories or minors are involved and, if so, what stricter
+   handling applies; what policy or counsel requires for named constraints,
+   recipients, retention, backups, and exceptions; and what choice behavior or
+   defaults need changing. Proceed to reversible design with available answers.
+   If policy is unresolved, then present alternatives and keep affected decisions open.
 
-3. Design/Implement: Remove unjustified collection from producers and downstream
-   contracts; constrain recipient payloads and implement the confirmed lifecycle.
-   If a copy cannot be erased on the active-store schedule, then specify its
-   separate expiry and restore-time suppression before claiming deletion complete.
+3. Design/Implement: Read [design patterns](./references/design-patterns.md) when
+   choosing field controls, choice propagation, expiry, deletion, or capture redaction.
+   If fields cross recipients or schemas change, then use serializers and classification
+   tags; if choice gates collection, then propagate that state to every producer.
+   If retention or deletion applies, then choose TTL or scheduling, hard/soft-delete
+   semantics, tombstone expiry, and a retryable pipeline against the approved lifecycle.
+   If backups or replay can reintroduce data, then design restore-time suppression;
+   if telemetry or capture retains it, then redact at the source and verify recipients.
+   Implement confirmed handling; keep unresolved policy choices as design alternatives.
 
 4. Verify: Follow synthetic records through capture, derived outputs, purge jobs,
    withdrawal, and a controlled restore; inspect allowed and forbidden payloads.
@@ -83,10 +91,11 @@ does not establish either an approved purpose or an unlinkability result.
    receipts, remaining copies, exceptions, and decisions the user still owes.
    If only active stores were checked, then report that boundary explicitly and
    withhold any claim covering backups, exports, or third-party deletion.
+   Produce an engineering requirement, not a compliance conclusion.
 
 ## Specification patterns
 
-Use braces for decision fields; confirm the handling policy with the data owner.
+Fill each pattern from the inventory and its approved lifecycle.
 
 - **Collection:** For `{feature_and_purpose}`, the system shall collect only
   `{approved_fields}` after `{approved_choice_or_authority_condition}` and send
@@ -122,12 +131,17 @@ handling, and policy exceptions separate from that illustrative duration.
   the approved deletion-evidence purpose requires.
 - Don't equate encryption, masking, or a replacement identifier with permission
   to collect, indefinite retention, or demonstrated anonymity.
+- Do record user-named regulations or request labels as stakeholder-supplied constraints;
+  ask what their policy or counsel requires of the system, and never state obligations as fact.
 
 ## Verification
 
 Use data-flow review, payload capture, storage inspection, and lifecycle integration
-test categories. Exercise optional-collection off, on, and withdrawn states against
-the accepted policy; assert forbidden fields are absent, not merely hidden in the UI.
+test categories. Inspect logs, error trackers, URLs and query strings, third-party
+SDKs/tags, and session replay or screenshots alongside stores, exports, and backups.
+Exercise initial SDK/tag loading, queued events, navigation, and off/on/withdrawn
+choice states; verify forbidden fields are absent before transmission or capture.
+Inspect replay frames and screenshots as well as structured payloads and error reports.
 Check that an unverified request causes no disposal and a verified request affects
 only its intended synthetic subject; retain unrelated-subject records as controls.
 Use controlled-clock checks around the retention start event and disposal deadline.
@@ -139,7 +153,7 @@ receipt gaps with minimal evidence fields; protect that evidence under its own p
 ## Done checklist
 
 - [ ] Map personal fields and derived outputs to confirmed purposes and owners.
-- [ ] Enumerate producers, recipients, stores, exports, and backup copies in scope.
+- [ ] Inventory storage, telemetry, URL, SDK/tag, replay, screenshot, and backup copies.
 - [ ] Record choice or authority conditions and the behavior after withdrawal.
 - [ ] Confirm retention start events, deadlines, disposal actions, and exception owners.
 - [ ] Check forbidden collection and recipient fields with synthetic payload evidence.
@@ -162,3 +176,5 @@ receipt gaps with minimal evidence fields; protect that evidence under its own p
   collection, retention, exceptions, disposal evidence, or remaining copies.
 - Read [analytics worked example](./references/analytics-example.md) when narrowing
   an event payload and specifying deletion without inventing a retention obligation.
+- Read [design patterns](./references/design-patterns.md) when implementing recipient
+  serializers, classification, choice propagation, retention, deletion, or redaction.

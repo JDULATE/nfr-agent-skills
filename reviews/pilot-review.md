@@ -1,6 +1,8 @@
 # Phase 3 pilot revision review
 
 Review the availability, privacy, and readability drafts only. No batch was started.
+The latest revision changes privacy and this review only; the other pilots retain
+their previous content and assessment.
 These are author-assigned scores, not user approval or an independent evaluation.
 The earlier perfect scores were too confident about cross-NFR specificity; the
 follow-up audit corrected eight rules. Retain the pilots as drafts for user review.
@@ -35,6 +37,32 @@ those checks were performed against a deployed application.
 
 ## Changes in this revision
 
+### Latest privacy-only revision
+
+- Add [privacy design patterns](../skills/075-privacy/references/design-patterns.md):
+  eight mechanisms, each with use conditions, trade-offs, and verification. Cover
+  recipient serializers, field tags, choice propagation, TTL/scheduled retention,
+  hard/soft delete and tombstones, restore suppression, retryable deletion, and
+  log/error redaction. Link the guide from Design/Implement and References.
+- Expand the inventory's Copies row, the defaults block, and Verification to cover
+  logs, error trackers, URLs/query strings, third-party SDKs/tags, and replay or
+  screenshots. Check initial capture and transmission, not just display masking.
+- Broaden discovery with the user's regulation/request labels and personal-data
+  terms. Record those labels as stakeholder-supplied constraints; ask what policy
+  or counsel requires of the system without asserting obligations as facts.
+  State that the output is an engineering requirement, not a compliance conclusion.
+- Include sensitive categories and minors in the first grouped question, together
+  with the conditional request for stricter handling. Keep the complete inventory
+  row and lifecycle record in one labeled defaults block and at most three question
+  groups total, then proceed to reversible design with unresolved policy visible.
+- Add a filled synthetic support-contact inventory row. Distinguish the illustrative
+  deletion deadline from retention after case closure and backup expiry. Do not
+  treat a hypothetical approved rotation event as an established project schedule.
+- Remove only privacy's frontmatter `status` as explicitly requested. Its catalogue
+  status remains `draft`; do not alter the template, the other pilots, or shared tooling.
+
+### Prior pilot revision retained
+
 - [Availability](../skills/015-availability/SKILL.md): open with the plain meaning,
   broaden discovery to uptime, downtime, zero-downtime deployment, high availability,
   and SLA/SLO requests, and retain exclusions for reliability and recoverability.
@@ -57,10 +85,10 @@ those checks were performed against a deployed application.
 - Remove redundant numeric proposals from the Specification patterns sections;
   point to each skill's labeled defaults block instead. Preserve explicit confirmation
   where defaults become acceptance criteria, policy decisions, or reported attainment.
-- Keep `status: draft` in frontmatter: the current `SKILL.template.md` explicitly
-  contains `status: todo`. The conditional instruction to remove it therefore did
-  not trigger. Keep all three catalogue statuses unchanged at `draft`; do not edit
-  the template, generator, categories, batches, or other skills.
+- In the prior revision, keep `status: draft` in frontmatter because `SKILL.template.md`
+  contains `status: todo`. That earlier conditional instruction did not trigger;
+  the current explicit request removes the field from privacy only. All three
+  catalogue statuses remain `draft`; template and generator are unchanged.
 - Extend the validator to reject sibling pointers absent from the catalogue.
   Cover descriptions, distinction and routing text, explicit sibling labels, local
   skill paths, and directly linked supporting references. Accept registered siblings
@@ -90,18 +118,19 @@ controls; keep those checks and the concrete before/after analytics JSON.
 
 ## Validation evidence
 
-- Selected validation checked the three pilots with zero errors. Full validation
+- Selected privacy validation checked one skill with zero errors. Full validation
   checked the same three with zero errors and 111 absent `todo` entries.
-- All 19 foundation tests passed, including the two sibling-check methods.
-- Current body lengths: availability 155 lines; privacy 154; readability 152.
-  Description lengths: 308, 327, and 314 characters, with five, six, and five quoted
+- The unchanged foundation suite passed all 19 tests in the prior pilot revision,
+  including the two sibling-check methods; this privacy-only pass reran validators.
+- Current body lengths: availability 155 lines; privacy 170; readability 152.
+  Description lengths: 308, 480, and 314 characters, with five, six, and five quoted
   trigger phrases respectively. All use real catalogue slugs in their exclusions.
 - Supporting lengths: availability measurement 114, deployment example 59, design
-  patterns 102; privacy lifecycle 84 and analytics example 82; readability protocol
+  patterns 102; privacy lifecycle 101, analytics example 82, and design patterns 92; readability protocol
   76 and calculation example 72. Each file is under 150 lines and directly linked
   with Read/when guidance; none links to a further reference.
-- Body word-five-gram Jaccard similarities: availability/privacy 0.008120,
-  availability/readability 0.007332, privacy/readability 0.011900; all below 0.35.
+- Body word-five-gram Jaccard similarities: availability/privacy 0.007997,
+  availability/readability 0.007332, privacy/readability 0.007277; all below 0.35.
 - All workflows retain the five required steps and explicit If/then decisions.
   Each fast path has a single labeled full-record block and a three-question ceiling.
   Each Clarify step reads existing source and documentation before specification.
@@ -139,6 +168,21 @@ controls; keep those checks and the concrete before/after analytics JSON.
   discover SDK-enriched fields, production joins, backup copies, or processor erasure.
   Ask the user which regulations apply and request relevant source text and policy
   decisions. Verify the real copy inventory and deletion evidence per destination.
+- **Privacy capture coverage is untested:** No real SDK startup, tag injection,
+  URL/query-string logging, error capture, replay frame, or screenshot has been
+  inspected. Structured-field checks alone cannot show that an image or nested
+  diagnostic payload omitted the same personal marker. Exercise actual capture
+  paths and inspect stored recipient copies before claiming coverage.
+- **Privacy mechanism semantics are unconfirmed:** Schema tags may not reach derived
+  outputs; a configured TTL may only mark expiry; soft deletion and tombstones may
+  retain matchable personal data. No store or processor behavior was measured here.
+  Verify the chosen store, job ledger, suppression keys, and retry outcomes against
+  the approved lifecycle rather than treating the pattern name as evidence.
+- **Sensitive/minor scope is unresolved:** No real subject category or stricter
+  handling policy is supplied by this synthetic scenario. The conditional question
+  is not an assessment of who uses a real application, and a user-named regulation
+  or request label does not determine a deadline. Obtain policy/counsel-defined
+  system behavior from the stakeholder and retain its attribution.
 - **Readability has no audience evidence:** The worked example exposes a subtotal;
   it does not demonstrate a prose rewrite, a guard transformation, or a measured
   reduction in reader mistakes. Six synthetic arithmetic cases do not cover arbitrary
@@ -155,4 +199,4 @@ controls; keep those checks and the concrete before/after analytics JSON.
   loadable sibling skills today. No batch, trigger evaluation, or release work is
   authorized by this revision; the pilots still need user approval.
 
-Stop after validation and the requested `phase 3: pilot revisions` commit.
+Stop after validation and the requested `phase 3: pilot revisions (privacy)` commit.
