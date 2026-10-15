@@ -44,7 +44,7 @@
     "slug": "additivity",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
@@ -125,7 +125,7 @@
     "slug": "augmentability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
@@ -383,7 +383,7 @@
     "slug": "enhanceability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
@@ -392,7 +392,7 @@
     "slug": "evolvability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
@@ -401,7 +401,7 @@
     "slug": "expandability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
@@ -419,7 +419,7 @@
     "slug": "extendability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
@@ -428,7 +428,7 @@
     "slug": "extensibility",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 1
   },
   {
