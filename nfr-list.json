@@ -35,7 +35,7 @@
     "slug": "adaptability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 2
   },
   {
@@ -53,7 +53,7 @@
     "slug": "adjustability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 2
   },
   {
@@ -71,7 +71,7 @@
     "slug": "agility",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 2
   },
   {
@@ -152,7 +152,7 @@
     "slug": "changeability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 2
   },
   {
@@ -458,7 +458,7 @@
     "slug": "flexibility",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 2
   },
   {
@@ -620,7 +620,7 @@
     "slug": "modifiability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 2
   },
   {

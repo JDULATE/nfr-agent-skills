@@ -46,12 +46,12 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Maintainability & Evolvability
 
-- [004 Adaptability](skills/004-adaptability/SKILL.md) — todo
+- [004 Adaptability](skills/004-adaptability/SKILL.md) — draft
 - [005 Additivity](skills/005-additivity/SKILL.md) — draft
-- [006 Adjustability](skills/006-adjustability/SKILL.md) — todo
-- [008 Agility](skills/008-agility/SKILL.md) — todo
+- [006 Adjustability](skills/006-adjustability/SKILL.md) — draft
+- [008 Agility](skills/008-agility/SKILL.md) — draft
 - [014 Augmentability](skills/014-augmentability/SKILL.md) — draft
-- [017 Changeability](skills/017-changeability/SKILL.md) — todo
+- [017 Changeability](skills/017-changeability/SKILL.md) — draft
 - [027 Configurability](skills/027-configurability/SKILL.md) — todo
 - [032 Customizability](skills/032-customizability/SKILL.md) — todo
 - [042 Enhanceability](skills/042-enhanceability/SKILL.md) — draft
@@ -59,9 +59,9 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [044 Expandability](skills/044-expandability/SKILL.md) — draft
 - [046 Extendability](skills/046-extendability/SKILL.md) — draft
 - [047 Extensibility](skills/047-extensibility/SKILL.md) — draft
-- [050 Flexibility](skills/050-flexibility/SKILL.md) — todo
+- [050 Flexibility](skills/050-flexibility/SKILL.md) — draft
 - [063 Maintainability](skills/063-maintainability/SKILL.md) — todo
-- [068 Modifiability](skills/068-modifiability/SKILL.md) — todo
+- [068 Modifiability](skills/068-modifiability/SKILL.md) — draft
 - [079 Reconfigurability](skills/079-reconfigurability/SKILL.md) — todo
 - [096 Supportability](skills/096-supportability/SKILL.md) — todo
 - [100 Tailorability](skills/100-tailorability/SKILL.md) — todo
