@@ -1,11 +1,12 @@
-# Phase boundary
+# GLOBAL RULES (apply to every phase)
 
-Follow only the current user-authorized phase. Phase 1 contains data and tooling;
-do not author skill content or start the Phase 2 contract yet.
+Anti-hallucination rules:
 
-Work from repository files and current phase instructions. Ask the user when
-context is unknown. Do not invent citations or numeric requirements. Label any
-numeric target as illustrative and pair it with "confirm with the user/stakeholder".
+1. Work ONLY from files in this repo and from the instructions in the current phase. Do not rely on memory for facts you cannot verify.
+2. Never invent standards, clause numbers, URLs, tool flags, library versions, statistics, or quotes. Cite only items listed in `references/standards-allowlist.md` (created in Phase 2). If unsure, omit the claim.
+3. Numeric targets (e.g. "99.9%", "p95 < 300 ms") are ALWAYS labeled as illustrative examples and must be paired with "confirm with the user/stakeholder". Never present a number as a universal requirement.
+4. If something is unknown or depends on context, write "Ask the user" instead of guessing.
+5. Do only what the current phase says. Do not start the next phase. Do not edit skills outside the current batch.
+6. At the end of each phase, run the validators, commit, print a short report (done / uncertain / needs human review), and STOP.
 
-Run validators, commit, report done / uncertain / needs human review, and stop at
-each phase boundary. Full authoring guidance belongs in the Phase 2 contract.
+Work happens in phases. Do only the phase you are told to run, then stop.
