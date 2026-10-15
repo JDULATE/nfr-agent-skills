@@ -107,7 +107,7 @@
     "slug": "attractiveness",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
@@ -161,7 +161,7 @@
     "slug": "communicativeness",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
@@ -218,7 +218,7 @@
     "slug": "comprehensiveness",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
@@ -539,7 +539,7 @@
     "slug": "learnability",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
@@ -557,7 +557,7 @@
     "slug": "likeability",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
@@ -946,7 +946,7 @@
     "slug": "trainability",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
@@ -991,7 +991,7 @@
     "slug": "usability",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 5
   },
   {
