@@ -209,7 +209,7 @@
     "slug": "comprehensibility",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 4
   },
   {
@@ -227,7 +227,7 @@
     "slug": "conciseness",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 4
   },
   {
@@ -548,7 +548,7 @@
     "slug": "legibility",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 4
   },
   {
@@ -825,7 +825,7 @@
     "slug": "self-descriptiveness",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 4
   },
   {
@@ -973,7 +973,7 @@
     "slug": "understandability",
     "aliases": [],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 4
   },
   {

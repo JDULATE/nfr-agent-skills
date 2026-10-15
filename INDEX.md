@@ -134,14 +134,14 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [001 Accessibility/Access Control](skills/001-accessibility-access-control/SKILL.md) — todo
 - [012 Attractiveness](skills/012-attractiveness/SKILL.md) — todo
 - [018 Communicativeness](skills/018-communicativeness/SKILL.md) — todo
-- [023 Comprehensibility](skills/023-comprehensibility/SKILL.md) — todo
+- [023 Comprehensibility](skills/023-comprehensibility/SKILL.md) — draft
 - [024 Comprehensiveness](skills/024-comprehensiveness/SKILL.md) — todo
-- [025 Conciseness](skills/025-conciseness/SKILL.md) — todo
+- [025 Conciseness](skills/025-conciseness/SKILL.md) — draft
 - [059 Learnability](skills/059-learnability/SKILL.md) — todo
-- [060 Legibility](skills/060-legibility/SKILL.md) — todo
+- [060 Legibility](skills/060-legibility/SKILL.md) — draft
 - [061 Likeability](skills/061-likeability/SKILL.md) — todo
 - [078 Readability](skills/078-readability/SKILL.md) — draft
-- [090 Self-Descriptiveness](skills/090-self-descriptiveness/SKILL.md) — todo
+- [090 Self-Descriptiveness](skills/090-self-descriptiveness/SKILL.md) — draft
 - [103 Trainability](skills/103-trainability/SKILL.md) — todo
-- [106 Understandability](skills/106-understandability/SKILL.md) — todo
+- [106 Understandability](skills/106-understandability/SKILL.md) — draft
 - [108 Usability](skills/108-usability/SKILL.md) — todo
