@@ -42,3 +42,22 @@ Return a cumulative ledger of schema changes, consumer transitions, retained
 bridges, and retirement evidence. Distinguish measured rehearsal work from any
 forecast of future delivery cost. This fictional path is a way to evaluate the
 chosen sequence, not proof of support for every possible invoice change.
+
+## Carry bridge costs into later work
+
+Illustrative accounting only, in person-hours; confirm with the user/stakeholder.
+These are invented rehearsal entries, not an effort prediction or accepted budget.
+
+| Stage | New change work | Inherited bridge upkeep | Retirement work | Stage total |
+| --- | --- | --- | --- | --- |
+| Currency expansion | 3 | 1 | 0 | 4 |
+| Prepare rounding change and retire old reader | 2 | 2 | 1 | 5 |
+
+The illustrative cumulative total is 4 + 5 = 9 person-hours; confirm with the
+user/stakeholder. Charge bridge creation to its introducing change, then charge
+mixed-reader checks and fixes to each stage still carrying it. The later stage's
+upkeep occurs before its retirement gate. Do not drop it just because retirement
+was planned earlier; confirm the exit before recording later upkeep as absent.
+Keep task identities so a shared fix is charged once and forecasts stay separate
+from measured rehearsal work. Compare the cumulative total with the actual agreed
+budget only after the owner chooses the cost unit, scope, and attribution rule.

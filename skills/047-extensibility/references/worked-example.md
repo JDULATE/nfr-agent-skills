@@ -45,3 +45,19 @@ contract, not a general formatter protocol or an asserted host capability.
 If the report model lacks a field required by the requested result, report that
 contract gap and route the foundational core addition to the extendability sibling.
 Report evidence for this contract and host revision only, not universal plugin support.
+
+## Failed activation and cleanup fixture
+
+Assume this fictional pre-existing lifecycle includes activation that acquires a
+subscription and temporary output handle, plus host-invoked cleanup on failure.
+Verify those promises in the real hook; absent support is a contract gap, not a
+reason to silently patch the host and claim admission through the original hook.
+Keep a retained formatter working, record the registry and live resource owners,
+then fail the synthetic formatter after acquisition but before activation completes.
+Invoke the documented failure path. Check the temporary handle is closed, the
+subscription detached, and the failed key unavailable for dispatch; run the
+retained formatter and compare its output with the starting result.
+Retry through the same registration route and inspect for duplicate subscriptions
+or keys. If cleanup cannot finish, require the declared residual-state/restart
+procedure rather than assuming hot removal. New host-specific cleanup edits mean
+this fixture did not fit the pre-existing lifecycle contract.

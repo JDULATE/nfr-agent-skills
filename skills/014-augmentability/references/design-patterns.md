@@ -49,3 +49,17 @@ confirm with the user/stakeholder. Do not assume every augmentation is side-effe
 - Reject a helper whose own success test is the only test of the original journey.
 - Mark original-only behavior unverified when the helper was never disconnected.
 - Revisit the scope if the addition replaces the original actor or decision entirely.
+
+## Decide accepted side effects
+
+Before testing, list each helper-triggered event, allowed original-state change,
+retained original invariant, and acceptance owner. Ask the user whether the
+supplement is optional or required; required support does not imply removability.
+If an adopted suggestion changes only the approved draft under its current-state
+precondition and manual sending retains its contract, compare with that adopted
+expectation, not the no-helper text. If display triggers an unlisted write or send,
+fail preservation even if the helper's suggestion passes its own quality check.
+If the accepted effect replaces the original actor, result, or role, revisit scope
+instead of labeling that replacement a preserved original capability.
+For the support-panel fixture: adopting the suggested draft is an accepted change;
+automatic sending on display is not. Test both event traces separately.

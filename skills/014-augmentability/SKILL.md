@@ -1,11 +1,12 @@
 ---
 name: augmentability
 description: >-
-  Designs supplementary capabilities when users say "add an assistant alongside
-  this workflow", "enrich this without replacing it", "attach an optional helper",
-  or "keep the original feature usable". Not for improving only the existing
-  capability's own results (see enhanceability) or extension-hook contracts alone
-  (see extensibility).
+  Designs a separately accepted supporting result alongside an original
+  capability when users say "add suggestions beside manual replies", "attach
+  an annotation panel", or "add a supporting service without replacing the
+  original role". Covers optional or required supplements, with accepted
+  effects stated separately. Not for refining only the original result (see
+  enhanceability) or a general plugin contract (see extensibility).
 ---
 # Augmentability
 
@@ -18,9 +19,9 @@ result (`enhanceability`) and a general plug-in contract (`extensibility`).
 
 ## Use when / Don't use when
 
-- Apply to an optional assistant, annotation panel, or supporting service with
-  its own useful result alongside an established workflow.
-- Look for a request to remove the helper without losing the original function.
+- Apply to an assistant, annotation panel, or supporting service with its own
+  accepted result; establish whether it is optional or required.
+- Test removal independence only where that property was actually promised.
 - Route changes solely to the original function's output quality to `enhanceability`.
 - Route implementing a named new function inside core source to `extendability`
   when preserving a separately accepted supporting role is not the question.
@@ -33,8 +34,8 @@ result (`enhanceability`) and a general plug-in contract (`extensibility`).
    If those results cannot be separated, then Ask the user whether this is an
    enhancement of the existing capability instead of a supplementary capability.
 
-2. Specify: Set the attachment inputs, optional outputs, activation and removal
-   behavior, data access, and the original contract that must remain intact.
+2. Specify: Set attachment inputs, supporting outputs, required/optional status, and
+   activation/removal behavior, data access, and the original contract to preserve.
    If the user wants a quick augmentation, then offer this bounded record:
 
    ```text
@@ -48,28 +49,28 @@ result (`enhanceability`) and a general plug-in contract (`extensibility`).
    Open choices: recipient/data scope, who may accept helper output, and ownership.
    ```
 
-   Limit initial questions to three groups: what the helper contributes; what the
-   original must still do without it; and what data, authority, and timing it may use.
-   Begin an attachment design with unresolved permissions visibly unimplemented.
-   If a numeric preservation target is absent, then propose the illustrative
-   fixture bound above and confirm with the user/stakeholder before adopting it.
+   Ask up to three groups: helper result; original-role and dependency constraints;
+   and allowed data, adoption effects, and timing. Proceed to attachment design.
+   If a preservation target is absent, then confirm the illustrative bound above
+   with the user/stakeholder before adoption; leave unresolved permissions unimplemented.
 
 3. Design/Implement: Use [attachment patterns](./references/design-patterns.md) when
    choosing separate presentation, a read-only projection, or explicit adoption.
-   If the helper is allowed to modify the original state, then put that action
-   behind the agreed adoption boundary instead of giving every suggestion write authority.
-   If the original waits for the helper without needing its result, then decouple
-   that wait or obtain explicit acceptance of the new dependency.
+   If the helper changes original state, then apply the guide's accepted-side-effect
+   rule: compare adopted effects with the approved event ledger, display-only
+   effects with the untouched original, and role replacements with a revised scope.
+   If required support introduces a dependency, then record its accepted behavior;
+   do not claim optional removal independence from that required arrangement.
 
-4. Verify: Exercise original-only, supplemented, helper-failed, and helper-removed
-   cases with matching original inputs; evaluate the helper's result separately.
-   If the original output changes merely because the helper is installed, then
-   trace that coupling and resolve it before claiming a removable supplement.
+4. Verify: Compare supplemented and failed-helper cases; test original-only and
+   removed-helper cases where promised, judging the helper's result separately.
+   If an original-state difference is outside the approved effect ledger, then
+   fail preservation; do not reject deliberate adopted changes merely for differing.
 
 5. Report: Show the helper's accepted scope, attachment points, original-path
    comparison, adoption authority, and remaining coupling or copied data.
-   If removal has not been exercised, then leave independent original operation
-   unverified even if the supplemented demonstration succeeds.
+   If promised removal is untested, then leave removal independence unverified;
+   required supplements need their own accepted dependency evidence.
 
 ## Specification patterns
 
@@ -82,21 +83,19 @@ result (`enhanceability`) and a general plug-in contract (`extensibility`).
 - **Adoption:** A supplementary recommendation shall change `{original_state}` only
   after `{agreed_adoption_action}`, evidenced by `{state_and_action_trace}`.
 
-Carry the example preservation bound into a proposal only with stakeholder confirmation;
-Ask the user where helper effects are deliberately allowed to alter the original result.
+Confirm the illustrative preservation bound; Ask the user which adoption effects are allowed.
 
 ## Rules of thumb
 
-- Do label helper-derived output separately from the original authoritative result;
-  don't make a suggestion look like a decision the original workflow already made.
-- Do give a support panel its own acceptance cases; don't call it an improvement
-  merely because the original page now contains more material.
-- Do maintain an original-only route through the workflow; don't turn helper
-  initialization into an unexplained prerequisite for completing that route.
-- Do distinguish displaying a recommendation from applying it; don't let a helper
-  write through a read-only attachment under the guise of enrichment.
-- Do track helper-owned projections for removal; don't leave an abandoned projection
-  as a hidden dependency of the original feature.
+- Do accept the supplementary result independently of the original result; a
+  correct original decision cannot stand in for evidence that the helper adds value.
+- Do test the original journey without an optional helper; requiring its startup
+  turns a promised supplement into part of the original capability's prerequisites.
+- Do compare original-state differences with the accepted adoption-effect ledger;
+  a deliberate adopted draft change is not failed preservation, but an unlisted
+  automatic send changes the original role even when the suggestion is useful.
+- Do detach helper projections in a promised removal fixture and rerun original inputs;
+  an original read that still needs them disproves independently removable support.
 - Don't claim augmentation from a replacement that removes the original result;
   identify that changed role and revisit the requested scope.
 
@@ -106,29 +105,33 @@ Use differential journey checks, dependency-isolation exercises, and state-trans
 reviews. Compare original outputs and writes with and without the supplement.
 Check whether slow helper responses delay the original completion path or appear
 after the user has moved to another original record. Verify explicit adoption
-changes the intended state and that mere display does not. Inspect uninstall or
-disable behavior and any helper-owned data left accessible after removal.
+matches the accepted effect ledger while display alone preserves original state.
+Inspect removal where promised and any helper-owned dependency left behind.
 
 ## Done checklist
 
-- [ ] Name original and supplementary results separately.
-- [ ] Identify every attachment read, write, and user-visible output.
-- [ ] Agree helper activation, adoption authority, and data scope.
-- [ ] Record what remains usable when the helper is missing or slow.
-- [ ] Compare original outcomes across helper presence and absence.
-- [ ] Test removal and inspect helper-owned projections and dependencies.
-- [ ] Report helper acceptance independently of original-contract preservation.
+- [ ] Judge the supplementary result against its own accepted cases.
+- [ ] Compare original outputs with helper display only, before any adoption.
+- [ ] Match adopted state changes to the named allowed-effect ledger.
+- [ ] Reject or flag an obsolete suggestion under the agreed original-state precondition.
+- [ ] Complete the original route with an optional helper absent or delayed;
+  for a required supplement, check the separately agreed dependency behavior.
+- [ ] Trace attachment reads and writes against the accepted data/authority scope.
+- [ ] Remove a removable helper and inspect original reads for lingering projections.
+- [ ] Compare the original send/commit action after adoption with its retained contract.
 
 ## Failure modes
 
 - Giving helper output the same status as an approved original decision.
 - Replacing the original journey while describing the change as optional enrichment.
-- Making original completion depend on an unneeded helper response.
+- Claiming an optional original-only route while it requires a helper response.
+- Treating an approved adopted draft change as a preservation failure, or accepting
+  an unlisted automatic send merely because the suggestion itself is useful.
 - Removing the helper UI while its state changes still affect the original path.
 
 ## References
 
 - Read [attachment patterns](./references/design-patterns.md) when choosing the
-  helper's authority, coupling, data projection, or removal strategy.
+  helper's authority, accepted side effects, required status, or removal strategy.
 - Read [support-panel example](./references/worked-example.md) when specifying a
   supplementary result without silently changing the original workflow.

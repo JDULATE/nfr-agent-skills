@@ -1,11 +1,12 @@
 ---
 name: evolvability
 description: >-
-  Plans sustainable sequences of system changes when users say "keep this adaptable
-  over future releases", "avoid painting us into a corner", "plan successive
-  migrations", or "make the next change easier too". Not for the impact of a single
-  implementation change (see modifiability) or one capability addition alone
-  (see extendability).
+  Plans a sequence of changes with prior state and obligations carried forward
+  when users say "plan successive migrations", "keep later releases possible
+  after this migration", or "account for bridges left by earlier changes".
+  Accepts the path across stages, not just a successful edit. Not for one
+  implementation change (see modifiability) or a single existing-capability
+  refinement (see enhanceability).
 ---
 # Evolvability
 
@@ -87,23 +88,22 @@ horizon, and retirement conditions explicit when they cannot yet be quantified.
 
 ## Rules of thumb
 
-- Do replay successive changes against the previous stage's data; don't reset
-  fixtures between stages and thereby remove the history that makes change difficult.
+- Do feed each later scenario the preceding scenario's persisted outputs and bridge
+  obligations; clean snapshots erase the inherited constraints this path must accept.
 - Do tie each bridge exit to the next scenario and the consumers it releases;
   don't price a later change as independent while earlier bridges still dictate its data form.
-- Do isolate the change driver the roadmap actually names; don't substitute a
-  universal abstraction for a concrete decision about likely future variation.
-- Do mark which later scenario an irreversible representation change forecloses;
-  don't call the evolution path reversible merely because routing can select older code.
-- Do include accumulated transitional code in later-change cost; don't price each
-  future release as though previous temporary paths had already disappeared.
-- Don't promote an imagined scenario to a committed requirement without an owner
-  and a trigger for deciding whether it should ever be implemented.
+- Do exercise the named change boundary at successive stages; an abstraction that
+  fits the first release but needs replacement for the next does not establish the path.
+- Do test later scenarios against information discarded by earlier representation
+  choices; rerouting to old code cannot reopen a future option the data no longer permits.
+- Do charge bridge upkeep to every stage that still carries it and removal to its
+  actual exit stage; resetting that ledger makes a costly sequence look sustainable.
 
 ## Verification
 
 Use sequential migration rehearsals, consumer-coexistence matrices, decision review,
-and change-impact analysis categories. Retain intermediate snapshots and compare
+and change-impact analysis categories. Reconcile stage costs with the worked
+ledger, including inherited upkeep and actual retirement. Compare
 declared data meanings before and after each migration. Exercise retirement of an
 old reader and the next planned change after retirement. Inspect shared temporary
 paths, unsupported consumers, and irreversible writes. Report separate evidence
@@ -111,13 +111,12 @@ for a feasible rehearsal and for the unproven likelihood of the chosen roadmap.
 
 ## Done checklist
 
-- [ ] List ordered scenarios, owners, and evidence that makes them credible.
-- [ ] Capture the starting data, contracts, and consumer population.
-- [ ] Name intermediate coexistence and migration obligations.
-- [ ] Mark irreversible decisions and viable options before they are taken.
-- [ ] Rehearse later changes with earlier stages' state retained.
-- [ ] Measure cumulative scope or effort using the same accounting convention.
-- [ ] Test retirement conditions and assign triggers for revisiting uncertain scenarios.
+- [ ] Carry stage outputs and active consumer versions into each subsequent rehearsal.
+- [ ] Exercise declared reader/writer combinations at intermediate stages.
+- [ ] Test a later scenario against each earlier irreversible representation choice.
+- [ ] Remove a bridge only after its declared consumer/data exit evidence is present.
+- [ ] Reconcile cumulative cost with stage work, inherited upkeep, and actual retirement.
+- [ ] Match every claimed stage to retained rehearsal evidence; flag the first gap.
 
 ## Failure modes
 
@@ -131,4 +130,4 @@ for a feasible rehearsal and for the unproven likelihood of the chosen roadmap.
 - Read [evolution patterns](./references/design-patterns.md) when planning change
   boundaries, coexistence, retirement, and irreversible transition decisions.
 - Read [successive-change example](./references/worked-example.md) when checking
-  that an architecture supports the next change with earlier state still present.
+  retained-state changes and a cumulative ledger with inherited bridge costs.

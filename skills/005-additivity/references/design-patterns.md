@@ -45,3 +45,22 @@ measurement is approximate; the illustration does not set a universal tolerance.
 - Mark a comparison inconclusive if isolated and combined workloads differ.
 - Preserve an unexpected interaction rather than renaming it an individual gain.
 - Record whether repeated delivery means repeated effect or the same effect replayed.
+
+## Noisy contribution measurements
+
+- **Use when:** Run-to-run variation could conceal interaction in the combined result.
+- **Trade-off:** More repeats cost time; unstable conditions still cannot be repaired
+  by averaging unmatched runs. Ask the user for the repetition/stopping plan and
+  uncertainty rule before observing whether a candidate passes.
+- **How to verify:** Reuse a frozen input set and measurement duration within each
+  block. Measure the baseline, each isolated increment, and the combination in
+  that block; rotate or randomize run order under the recorded plan to expose drift.
+  For a sum rule with increments A and B, calculate each block's expectation as
+  baseline + (A result - baseline) + (B result - baseline), then retain its residual.
+  Repeat matched blocks rather than pooling unrelated isolated and combined means.
+  Keep raw measurements, order, environmental changes, residual range, and the
+  owner-selected summary/uncertainty method. Compare the supported uncertainty
+  range with the confirmed tolerance under the chosen decision rule; if it crosses
+  that boundary, report inconclusive rather than selecting favorable repeats.
+  If drift prevents matched comparison, stabilize conditions or redesign the
+  experiment before making a preserved-contribution claim.

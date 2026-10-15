@@ -36,12 +36,7 @@ even if the structured renderer's own assertion passes.
 
 ## Inspect an actual change surface
 
-| Candidate change | Acceptance question |
-| --- | --- |
-| New operation selector in core dispatch | Do old selectors still choose text with their original meaning? |
-| Structured renderer at the receipt owner | Does it satisfy the new consumer's distinct field contract? |
-| Old consumer parsing | Can it remain unchanged rather than learning the structured form? |
-| Unsupported selector | Does rejection follow the explicitly accepted interface behavior? |
+Use the owner/interface ledger below instead of counting renderer files alone.
 
 If the implementation reuses the old text selector but returns a structure,
 reject the claim that the old result contract was preserved. If every caller
@@ -50,3 +45,21 @@ where dispatch belongs. A successful structured-render demo does not settle eith
 
 Return the full change ledger, consumer evidence, and any unresolved scope exception.
 This scenario does not establish real module ownership or a universal acceptable diff size.
+
+## Example owner/interface ledger
+
+These are fictional ownership decisions, not modules found in the user's project.
+
+| Surface / owner | Actual addition or retained obligation | Evidence and impact decision |
+| --- | --- | --- |
+| Request dispatch / receipt-core | Add structured selector; keep text dispatch | Old request still selects text; count dispatch core edit |
+| Structured renderer / receipt-core | Implement distinct object result | Accepted fields; count renderer core edit |
+| Generated request schema / interface owner | Add explicit result variant | Diff generator input and output; disclose separate interface coordination |
+| Existing text client / billing-client owner | No new selector branch | Unchanged client contract check; any required edit expands the envelope |
+| New structured client / requesting owner | Opt into new selector | Consumer acceptance fixture; disclose caller work outside core count |
+
+Compare this ledger with the full diff and dependency trace. The illustrative
+owner-module limit stated above covers dispatch and renderer only; it does not
+claim the interface or consumer work disappeared. If the generated schema forces
+old clients to branch, obtain an expanded envelope or revisit dispatch/contract
+placement. Ask the user whether that wider owner coordination is acceptable.

@@ -1,11 +1,12 @@
 ---
 name: extendability
 description: >-
-  Plans bounded core changes for added capabilities when users say "add a new
-  operation here", "extend the core behavior", "support another result type", or
-  "add this without rewriting unrelated modules". Not for additions through an
-  already available extension contract (see extensibility) or deployment capacity
-  additions (see expandability).
+  Plans bounded core or interface changes for a new capability when users say
+  "add a new core operation", "build a plugin hook", or "introduce a result
+  type the current core cannot provide". Applies when no existing hook admits
+  the addition, including when the hook itself must be built. Not for
+  additions that fit an existing extension contract (see extensibility) or
+  resource admission (see expandability).
 ---
 # Extendability
 
@@ -50,12 +51,12 @@ and greater deployment capacity (`expandability`).
 
    Ask at most three groups of questions: what new behavior is required; which old
    callers or meanings must remain; and which modules or interface changes are permitted.
-   Continue with a scoped design using inspected boundaries, not a fictitious module count.
    If a numeric change-scope limit is missing, then offer the labeled module-count
    example above and confirm with the user/stakeholder; do not optimize that count by concealment.
 
 3. Design/Implement: Read [core-addition patterns](./references/design-patterns.md)
-   when choosing an owned branch, internal strategy, or explicit interface evolution.
+   when choosing dispatch ownership; use the receipt example's owner/interface ledger
+   when reconciling core edits with external coordination.
    If the addition forces unrelated consumers to understand the new operation,
    then reconsider dispatch ownership or expose that expanded impact for acceptance.
    If creating an extension point is itself requested, then record that core change
@@ -66,8 +67,7 @@ and greater deployment capacity (`expandability`).
    If the addition meets its own test only after old expectations are weakened,
    then report the contract change and resolve it rather than claiming bounded extension.
 
-5. Report: Explain the added capability, touched owner modules, downstream impact,
-   old-contract evidence, and outstanding migrations or untested callers.
+5. Report: Return the owner/interface ledger, operation checks, and migration gaps.
    If impact escaped the approved surface, then name the extra owners and decisions
    instead of reporting only the modules that were convenient to count.
 
@@ -76,30 +76,26 @@ and greater deployment capacity (`expandability`).
 - **Capability addition:** The core shall support `{new_operation}` producing
   `{new_result_contract}` under `{input_conditions}`, through changes restricted
   to `{approved_owner_surface}`, verified by `{new_and_retained_operation_cases}`.
-- **Impact bound:** Adding `{capability}` shall require no more than
-  `{confirmed_change_scope}` under `{declared_counting_rule}`, measured from
-  `{full_dependency_and_consumer_diff}` including `{approved_exceptions}`.
+- **Impact bound:** Adding `{capability}` shall stay within `{confirmed_owner_surface}`
+  under `{counting_rule}`, verified by `{full_diff}` including `{approved_exceptions}`.
 - **Interface evolution:** Existing consumers of `{old_operation}` shall retain
   `{old_meaning_and_error_contract}` after `{explicit_interface_change}`, checked
   against `{consumer_and_migration_matrix}`.
 
-Treat the example module limit as illustrative scope negotiation; confirm with the
-user/stakeholder. Ask the user when ownership or compatibility obligations are unknown.
+Confirm the illustrative scope with the user/stakeholder; Ask the user which owners count.
 
 ## Rules of thumb
 
-- Do place the new operation's dispatch decision with its owning core boundary;
-  don't spread new result-type checks into every unrelated consumer.
-- Do make an added operation explicit in its input and result contract; don't
-  overload an existing mode so that old callers unknowingly request new behavior.
-- Do price the new operation's interface fan-out, including old callers it would
-  require to branch; don't equate an owner-local implementation with a narrow addition.
-- Do preserve original-operation cases alongside new ones; don't redefine the old
-  result to avoid implementing a genuinely distinct capability.
-- Do separate creating a hook from using it later; don't count the hook-creation
-  core edits as evidence that the first addition required no core change.
-- Don't merge unrelated responsibilities into a large module to satisfy a module
-  count; keep owner impact and semantic changes visible under the counting rule.
+- Do trace the new core operation from selector to owning implementation and callers;
+  consumer branches added to compensate for missing dispatch widen its addition surface.
+- Do assign the new result an explicit operation contract; reinterpreting the old mode
+  changes an existing capability instead of demonstrating that the core admits another.
+- Do include transitive caller and adapter edits in the new-operation impact ledger;
+  an owner-local renderer is not a bounded addition when each consumer must learn its type.
+- Do exercise retained requests through the modified dispatcher; weakening those
+  cases to accept the new result substitutes a replacement for the claimed addition.
+- Do count hook creation in this addition's core surface and name what it admits;
+  a future unchanged-core plugin path does not erase the work needed to create it.
 
 ## Verification
 
@@ -112,13 +108,13 @@ an isolated new-operation demonstration does not establish bounded core impact.
 
 ## Done checklist
 
-- [ ] Establish that the requested addition needs a core or interface change.
-- [ ] Name the new operation and its result contract separately from old behavior.
-- [ ] Identify approved owner boundaries and a transparent scope-counting rule.
-- [ ] Map transitive callers and any required interface migration.
-- [ ] Verify retained operations without weakening their old meaning.
-- [ ] Exercise the new operation and unsupported operation choices.
-- [ ] Report all actual owner impact, exceptions, and remaining consumer evidence.
+- [ ] Confirm from hook code/docs why this result cannot use an existing contract.
+- [ ] Exercise the distinct new operation and reject unsupported operation choices.
+- [ ] Replay old requests through the changed dispatcher with retained expectations.
+- [ ] Trace new dispatch branches to their declared owners rather than caller patches.
+- [ ] Reconcile the owner/interface ledger with production, generated, and consumer diffs.
+- [ ] Check any required consumer migration against its explicitly accepted contract.
+- [ ] Compare actual addition impact with the confirmed surface and expose exceptions.
 
 ## Failure modes
 
@@ -132,4 +128,4 @@ an isolated new-operation demonstration does not establish bounded core impact.
 - Read [core-addition patterns](./references/design-patterns.md) when selecting
   dispatch ownership, interface changes, and a defensible change-scope measure.
 - Read [receipt-operation example](./references/worked-example.md) when adding
-  an explicit core capability while retaining the original callers' result meaning.
+  a core capability and comparing its owner/interface ledger with the full diff.

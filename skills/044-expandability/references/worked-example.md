@@ -43,3 +43,22 @@ the registry entry. These group labels describe the example, not a scheduler API
 Return the observed capacity delta only after running the rehearsal on the target
 installation. If a separate workload sweep is needed to determine scaling, state
 that need rather than presenting the resource-addition demonstration as that sweep.
+
+## Probe a capacity boundary, not just placement
+
+For this fictional worker contract, suppose a worker can reserve an export slot
+while an export waits on a fixture-controlled release signal. Ask the user whether
+concurrent usable export slots are the accepted capacity measure; do not assume
+that this contract or measure exists on the real platform.
+Hold job class, resource limits, payload, and completion criteria constant. Before
+addition, reserve every usable slot with held fixture exports, submit a probe job,
+and record that it queues or is rejected under the accepted admission rule.
+After admission and placement, retain the same held jobs and submit the same probe.
+Check that it starts on the new worker without evicting or moving the held exports.
+Release the fixture signal and verify both the held exports and probe complete.
+The accepted extra occupied slot is evidence of an increased concurrency boundary
+for this contract. If the probe merely moves old work, or the same shared limit
+still queues it, no extra slot was demonstrated. Record an unresolved or failed
+capacity target separately from successful worker registration. Use another
+owner-agreed probe if the resource measure is storage or a different work boundary;
+this experiment makes no workload-growth curve or throughput-proportionality claim.

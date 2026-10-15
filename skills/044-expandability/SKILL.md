@@ -1,10 +1,11 @@
 ---
 name: expandability
 description: >-
-  Designs deployment capacity additions when users say "add another storage unit",
-  "grow this installation", "attach more workers", or "remove the capacity ceiling".
-  Not for workload-to-resource growth behavior alone (see scalability) or a new
-  functional capability inside core code (see extendability).
+  Designs admission of resources into an existing installation when users say
+  "add more workers", "attach another storage unit", or "make this new node
+  usable". Checks admission, placement, transition, and the added usable
+  capacity. Not for workload growth curves (see scalability) or adding a core
+  function (see extendability).
 ---
 # Expandability
 
@@ -60,10 +61,10 @@ curve under workload (`scalability`) and a new function (`extendability`).
    If a shared controller or fixed partition limit blocks useful addition, then
    expose that ceiling and evaluate an approved change rather than merely allocating more units.
 
-4. Verify: Rehearse addition from the real starting shape, direct representative
-   work to the added resource, and measure usable capacity under the named constraints.
-   If an added unit is registered but receives no usable work, then investigate
-   routing, eligibility, or placement before reporting the installation expanded.
+4. Verify: Rehearse addition from the starting shape and use the worked example
+   when choosing a before/after capacity-boundary probe, not just a placement test.
+   If work reaches the new unit but the accepted boundary does not increase, then
+   report placement success separately from an unmet usable-capacity target.
 
 5. Report: Return the admitted resource, observed capacity delta, transition
    effects, remaining ceilings, failed-addition state, and operator actions.
@@ -81,19 +82,18 @@ curve under workload (`scalability`) and a new function (`extendability`).
 - **Ceiling:** The installation shall support additions up to `{confirmed_capacity_limit}`
   with `{declared_shared_constraints}`, evidenced by `{boundary_configuration_and_exercise}`.
 
-Use the example unit count for planning only after confirmation; Ask the user for
-the capacity delta and transition bounds rather than promising linear growth.
+Confirm the illustrative unit scope; Ask the user for capacity and transition bounds.
 
 ## Rules of thumb
 
-- Do count added capacity after representative work can use it; don't equate
-  an allocated or registered unit with a functioning increase in service capacity.
-- Do inspect controller, address, partition, and routing ceilings before admitting
-  more units; don't multiply serving capacity while ignoring a fixed admission limit.
-- Do budget temporary headroom for required data movement; don't spend all spare
-  capacity on new steady-state allocation before the transition can complete.
-- Do distinguish changing placement rules from physically adding resources;
-  an idle added unit needs a placement explanation, not another allocation.
+- Do probe the agreed usable-capacity boundary before and after admission; a job
+  moved from an old worker to the new one proves placement, not extra capacity.
+- Do trace which admission step consumes controller, address, or partition slots;
+  a new unit that exceeds that installation limit cannot count toward the addition.
+- Do reserve movement headroom until the admitted unit contributes usable capacity;
+  assigning that headroom to steady work can prevent the very addition being accepted.
+- Do distinguish an eligibility fix from the capacity addition in the before/after
+  record; redistributing existing work onto an idle unit can hide a zero-capacity gain.
 - Do bind addition checkpoints to the new unit's actual work ownership and admission
   stage; don't call it added while it owns work but cannot join the serving set.
 - Don't infer an equal throughput increase from equal-sized additions; record
@@ -102,25 +102,27 @@ the capacity delta and transition bounds rather than promising linear growth.
 ## Verification
 
 Use deployment rehearsal, capacity accounting, placement inspection, and operational
-failure-injection categories. Compare admitted versus serving units and allocated
-versus usable capacity. Exercise a rejected unit, interrupted registration, state
+failure-injection categories. Probe the same accepted capacity boundary before and
+after admission; trace new work without evicting baseline work. Exercise a rejected unit, interrupted registration, state
 movement, and the installation's declared boundary. Inspect work distribution and
 shared-controller pressure during the transition. Preserve service and capacity
 observations separately so an addition can fail acceptance without hiding its cost.
 
 ## Done checklist
 
-- [ ] Describe the baseline installation and supported addition type.
-- [ ] Confirm the usable capacity measure and intended delta.
-- [ ] Inspect admission, placement, routing, and shared-controller limits.
-- [ ] Record transition headroom and accepted service disruption.
-- [ ] Run representative work on the admitted resource.
-- [ ] Exercise partial admission and identify retry or cleanup ownership.
-- [ ] Report demonstrated capacity separately from untested scaling expectations.
+- [ ] Admit a valid unit and reject an unsupported unit under the inspected contract.
+- [ ] Trace the intended work class onto the new unit using accepted placement rules.
+- [ ] Probe the same usable-capacity boundary before and after addition.
+- [ ] Check that the measured delta is extra usable capacity, not reassigned old work.
+- [ ] Observe existing-service results against the accepted interruption bound.
+- [ ] Verify movement headroom remains sufficient until the addition becomes useful.
+- [ ] Interrupt admission and resume or unwind without losing assigned-work ownership.
+- [ ] Exercise or inspect the installation's limiting slot/partition/controller boundary.
 
 ## Failure modes
 
-- Counting allocated resources that the service cannot route work onto.
+- Counting a registered unit or reassigned job as extra capacity without a
+  before/after change to the accepted usable-work boundary.
 - Hitting a fixed controller limit after adding otherwise valid units.
 - Consuming transition headroom before a required redistribution finishes.
 - Reporting linear throughput growth from resource count alone.

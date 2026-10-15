@@ -1,11 +1,12 @@
 ---
 name: extensibility
 description: >-
-  Designs and checks additions through existing extension contracts when users say
-  "add a plugin", "use the existing hook", "register another provider", or "add
-  behavior without core edits". Not for creating that hook through core changes
-  (see extendability) or combining components without an extension contract
-  (see composability).
+  Checks new implementations through an existing hook when users say "add a
+  plugin through this hook", "register a report template", or "implement
+  another provider against this interface". Requires a pre-existing contract
+  that admits the behavior without per-addition core edits. If the hook must
+  be built or widened, routes that work to extendability. Not for creating the
+  hook (see extendability) or component assembly alone (see composability).
 ---
 # Extensibility
 
@@ -63,8 +64,8 @@ through core edits (`extendability`) and general assembly (`composability`).
 
 4. Verify: Add an independently implemented fixture through the documented route,
    exercise its accepted and rejected contract cases, and compare host source.
-   If only a built-in implementation can pass because it uses private host state,
-   then identify the missing contract instead of certifying the boundary from built-ins alone.
+   If private host access or new cleanup patches are needed for the fixture, then
+   report the existing contract gap instead of certifying unchanged-core admission.
 
 5. Report: Show the contract used, extension-owned changes, host-source comparison,
    registration evidence, retained-extension results, and lifecycle limitations.
@@ -89,37 +90,38 @@ restarts, registration changes, or persistent extension state are part of the al
 
 ## Rules of thumb
 
-- Do test a separately implemented extension through public contract data; don't
-  let a built-in's access to private host state stand in for a usable hook.
+- Do admit a separately implemented fixture using only the pre-existing public data;
+  private built-in access means the claimed existing contract cannot admit that result.
 - Do register behavior through the declared route; don't add a host-side switch
   naming each new implementation and call that independent extensibility.
-- Do state lifecycle and failure obligations at the hook; don't require extension
-  authors to discover host cleanup behavior by reading unrelated internals.
-- Do keep registration data separate from core-source accounting; don't conceal
-  executable host edits in a file that happens to be called configuration.
-- Do declare which existing contract revision admits an extension; don't claim
-  old-host support from tests run only against a modified host.
-- Don't grant undocumented built-in access to satisfy an extension's new output;
-  identify the missing host capability as a contract change instead of calling it conformance.
+- Do fail activation after acquiring extension resources and exercise the existing
+  cleanup contract; host patches needed to undo this fixture defeat per-addition independence.
+- Do classify executable registration changes by whether they alter host dispatch;
+  hiding a per-provider branch in configuration defeats the unchanged-core admission test.
+- Do run the new fixture against the recorded starting host and contract revision;
+  passing only after widening that revision proves a new seam, not admission by the old one.
 
 ## Verification
 
 Use independent-fixture contract testing, host-diff inspection, registration checks,
 and lifecycle exercises. Load a conforming extension and an intentionally rejected
 one, inspect dispatch without concrete host branches, and exercise declared failure
-and cleanup paths. Run retained extensions after registration and removal.
+and cleanup paths, including the worked failed-activation fixture. Run retained
+extensions after failed admission, successful registration, and supported removal.
 Compare host and contract revisions with the starting state; distinguish a new
 boundary design from evidence that the old boundary already admitted the addition.
 
 ## Done checklist
 
-- [ ] Identify a pre-existing contract and its owning host revision.
-- [ ] Define extension inputs, outputs, failure behavior, and authority.
-- [ ] Name allowed registration and extension-owned changes separately from core edits.
-- [ ] Add an independently implemented fixture through the documented route.
-- [ ] Exercise nonconformance, failure, and declared cleanup behavior.
-- [ ] Check retained extensions and any persistent state after removal.
-- [ ] Report actual host changes and keep unsupported old-contract claims unverified.
+- [ ] Load an independent conforming fixture against the recorded starting host.
+- [ ] Inspect host and executable configuration diffs for per-implementation dispatch edits.
+- [ ] Reject nonconforming input/output through the documented failure behavior.
+- [ ] Fail activation after acquisition and compare resource/registry state after cleanup.
+- [ ] Retry activation under the documented lifecycle and inspect duplicate registrations.
+- [ ] Run retained extensions after both failed and successful admission attempts.
+- [ ] Exercise supported removal and inspect remaining owned resources or state.
+- [ ] Trace requested data and authority to public contract provisions; identify
+  requested behavior the existing contract cannot admit.
 
 ## Failure modes
 
@@ -127,10 +129,11 @@ boundary design from evidence that the old boundary already admitted the additio
 - Depending on private host state that an independent implementation cannot access.
 - Adding a concrete host branch for each new provider while claiming an unchanged core.
 - Treating a plugin name as proof of isolation, compatibility, or unload support.
+- Passing activation retry while a failed attempt still owns subscriptions or keys.
 
 ## References
 
 - Read [extension-contract patterns](./references/design-patterns.md) when defining
   a registration route, independent contract fixture, or lifecycle evidence.
 - Read [formatter-hook example](./references/worked-example.md) when checking whether
-  a new implementation genuinely fits the existing host contract without core edits.
+  admission through the existing hook and cleanup after a failed activation.

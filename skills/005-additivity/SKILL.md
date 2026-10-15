@@ -1,19 +1,21 @@
 ---
 name: additivity
 description: >-
-  Specifies and checks preserved contributions when users say "do these gains add
-  up", "combine these increments", "avoid counting the benefit twice", or "check
-  the combined effect". Not for component assembly contracts alone (see composability)
-  or attaching a supplementary capability (see augmentability).
+  Specifies preservation of isolated contributions in a combined result when
+  users say "do these gains add up", "avoid counting the benefit twice", or
+  "compare isolated and combined effects". Uses a declared baseline and
+  aggregation rule. Not for assembly compatibility alone (see composability)
+  or merely adding resources (see expandability).
 ---
 # Additivity
 
 ## Definition and scope
 
 Additivity means combining increments preserves their individual contributions
-under a declared aggregation rule. Define the baseline, units, overlap, and allowed
-interaction for this repository's working meaning; distinguish assembly compatibility
-(`composability`) and a supporting capability's existence (`augmentability`).
+under a declared aggregation rule, verified by isolated-versus-combined measurements.
+Define baseline, units, overlap, and allowed interaction; a combination claim without
+preserved measured contributions belongs to assembly compatibility (`composability`),
+not this repository's additivity convention.
 
 ## Use when / Don't use when
 
@@ -61,6 +63,7 @@ interaction for this repository's working meaning; distinguish assembly compatib
 
 4. Verify: Measure baseline, isolated increments, and their combination with the
    same fixtures and observation procedure; calculate the residual against the rule.
+   For noisy metrics, use the repeated matched-block procedure in the combination guide.
    If residuals depend on input order, resource contention, or measurement drift,
    then expose that interaction instead of hiding it inside a favorable aggregate.
 
@@ -87,16 +90,14 @@ ratios, or bounded resources as quantities whose isolated gains can simply be ad
 
 - Do express contributions relative to the same baseline; don't add full totals
   and thereby include the baseline repeatedly.
-- Do identify overlapping members before adding set sizes; don't turn a union's
-  shared members into multiple contributions.
-- Do state the aggregation operation for the actual metric; don't add percentages,
-  elapsed times, or improvements merely because they share a display format.
+- Do build the combined expectation from contribution identities, including overlap
+  and replay; adding isolated set sizes can manufacture a gain no increment supplied.
+- Do derive the combined-outcome equation in the metric's units before comparing
+  gains; summing displayed percentages can create a false preservation claim.
 - Do retain interaction residuals as a named result; don't silently redistribute
   them to make isolated and combined columns agree.
-- Do exercise repeated increment delivery under its identity policy; don't count
-  a replay as a new contribution when it represents the same increment.
-- Don't assume reversing addition order is harmless when contributions mutate
-  shared state; check order behavior against the declared rule.
+- Do compute a residual for each supported application order; averaging opposite
+  interactions can make the combination look additive when neither order is.
 
 ## Verification
 
@@ -109,13 +110,15 @@ report signed residuals and measurement uncertainty separately from the acceptan
 
 ## Done checklist
 
-- [ ] Identify each increment, its identity, and its measured contribution.
-- [ ] Fix a baseline and matching measurement conditions.
-- [ ] Confirm units and the aggregation operation with the metric owner.
-- [ ] Record overlap, replay, and ordering policies.
-- [ ] Agree a tolerance and its interpretation for exact or noisy results.
-- [ ] Compare isolated and combined cases, including an overlap counterexample.
-- [ ] Preserve the residual calculation and unresolved interactions in the report.
+- [ ] Recompute the combined expectation with the baseline included only once.
+- [ ] Match baseline, isolated, and combined fixtures by inputs and observation units.
+- [ ] Reconcile combined contribution identities against the overlap/replay ledger.
+- [ ] Reproduce signed residuals from retained measurements under the agreed equation.
+- [ ] Check supported orders separately rather than accepting their average.
+- [ ] Challenge the equation with an overlap or shared-limit counterexample.
+- [ ] For noisy metrics, retain repeated matched blocks and evaluate their spread;
+  for exact counts, demonstrate why a noisy-measurement procedure is inapplicable.
+- [ ] Apply the owner-confirmed tolerance and inconclusive rule to the actual residuals.
 
 ## Failure modes
 
@@ -123,10 +126,11 @@ report signed residuals and measurement uncertainty separately from the acceptan
 - Counting an overlapping contribution again because it arrived through another increment.
 - Claiming additivity from a combined result without measuring isolated contributions.
 - Adjusting rounding or the baseline after observing an inconvenient residual.
+- Pooling unmatched runs or stopping at a favorable repeat to hide uncertain interaction.
 
 ## References
 
 - Read [combination patterns](./references/design-patterns.md) when choosing the
-  aggregation operation, overlap attribution, or interaction checks.
+  aggregation operation, overlap attribution, or repeated noisy-contribution checks.
 - Read [increment worked example](./references/worked-example.md) when drafting
   a contribution requirement and checking baseline subtraction with concrete values.

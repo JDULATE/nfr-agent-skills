@@ -1,11 +1,13 @@
 ---
 name: enhanceability
 description: >-
-  Plans refinements to an existing capability when users say "make this feature
-  better without adding another one", "refine the current parser", "improve the
-  existing result", or "make future quality upgrades easier". Not for adding a
-  separately accepted supporting function (see augmentability) or a multi-change
-  lifecycle strategy (see evolvability).
+  Designs the implementation surface for a named refinement of an existing
+  capability under retained acceptance criteria when users say "make this
+  algorithm replaceable for refinement", "let us refine this feature without
+  changing its purpose", or "bound the work of upgrading this computation".
+  Not for judging output error alone (see accuracy), adding a supporting
+  result (see augmentability), or planning successive changes (see
+  evolvability).
 ---
 # Enhanceability
 
@@ -34,8 +36,8 @@ function (`augmentability`) and a sequence of future changes (`evolvability`).
    If no existing criterion distinguishes better from merely different, then
    Ask the user for that criterion before declaring a refinement successful.
 
-2. Specify: Capture baseline, improvement metric, protected input groups,
-   adjustable implementation surface, and the regression trade-off policy.
+2. Specify: Capture baseline, improvement metric, protected inputs, refinement
+   impact bound, adjustable surface, and the regression trade-off policy.
    If the request is practical rather than a formal specification, offer:
 
    ```text
@@ -44,8 +46,8 @@ function (`augmentability`) and a sequence of future changes (`evolvability`).
    Baseline: retained current-version results on the agreed representative corpus.
    Target: 10% fewer errors on the existing criterion, only where that metric applies.
    Constraints: preserve named protected cases; no newly invented output capability.
-   Surface: a named strategy or internal implementation boundary already in use.
-   Evidence: paired old/new outcomes, changed-case explanations, and caller checks.
+   Surface: named computation boundary; list admitted edits and affected callers.
+   Evidence: refinement diff versus agreed impact; paired outcomes and caller checks.
    Open decisions: error definition, corpus mix, accepted trade-offs, and owner.
    ```
 
@@ -57,13 +59,14 @@ function (`augmentability`) and a sequence of future changes (`evolvability`).
 
 3. Design/Implement: Consult [refinement patterns](./references/design-patterns.md)
    when isolating a strategy, comparing candidate results, or staging adoption.
-   If the refinement changes output meaning or adds a new result category, then
-   reassess whether the request has crossed into a new capability.
+   If the candidate requires edits beyond the agreed refinement surface, then
+   expose those edits before claiming that surface admits the refinement.
    If a candidate helps the aggregate but harms a protected group, then expose
    that trade-off and retain the baseline path until the owner resolves it.
 
 4. Verify: Replay a matched corpus through baseline and candidate implementations;
-   compare the existing acceptance measure and protected cases independently.
+   compare quality and protected cases, then reconcile the adoption diff with
+   the agreed refinement surface and impact bound.
    If fixture edits or revised acceptance definitions explain the apparent gain,
    then separate those changes and rerun the original comparison before claiming improvement.
 
@@ -92,38 +95,40 @@ for an absolute or qualitative acceptance criterion when a relative metric is un
   category as an improvement without acknowledging the capability change.
 - Do isolate the part that computes the existing result when it enables the named
   refinement; don't build a general extension platform for an unrequested upgrade.
-- Do retain old outputs for paired review; don't overwrite the baseline corpus
-  while using it to demonstrate a candidate's gain.
-- Do compare protected case groups alongside aggregate quality; don't hide a
-  degraded existing use case inside a favorable average.
-- Do preserve public meaning while changing the internal strategy; don't quietly
-  reinterpret an existing field to make the new result appear better.
-- Don't revise both the scoring rule and implementation in the same improvement
-  claim without showing their separate contributions to the reported difference.
+- Do replay retained outputs through the proposed replacement surface; a better
+  candidate patched into a separate evaluation script does not prove the application
+  can adopt that refinement through its declared boundary.
+- Do exercise protected groups and current callers through the replacement surface;
+  an aggregate gain that requires caller-specific repair hides the refinement's impact.
+- Do separate edits that admit a candidate from changes to its scoring definition;
+  a revised acceptance rule cannot prove the old capability became easier to refine.
 
 ## Verification
 
 Use paired-corpus evaluation, differential contract checks, and strategy-substitution
 review categories. Inspect changed outputs, their original acceptance judgments,
-and protected-case behavior. Exercise a caller using the existing result format.
+and protected-case behavior. Trace adoption edits and affected callers against the
+confirmed refinement-impact envelope; better output alone does not establish it.
 Check empty-error baselines, unsupported input groups, and reversions to the old
 strategy. Attribute metric changes to the candidate, corpus, or scoring definition
 explicitly; a demonstration of swappable code is not evidence of improved results.
 
 ## Done checklist
 
-- [ ] Identify the existing capability and its unchanged result meaning.
-- [ ] Retain baseline implementation, corpus, and acceptance definitions.
-- [ ] Agree the improvement metric and its applicable baseline.
-- [ ] Name protected cases and permitted trade-offs.
-- [ ] Locate the implementation surface that admits the refinement.
-- [ ] Compare candidate outputs, caller behavior, and reversibility.
-- [ ] Report actual improvement evidence separately from ease of substituting code.
+- [ ] Replay matched baseline/candidate cases through the inspected refinement surface.
+- [ ] Reconcile the refinement diff and affected callers with the accepted impact bound.
+- [ ] Compare protected input groups without hiding a regression in the aggregate.
+- [ ] Exercise existing callers without reinterpreting their result fields.
+- [ ] Select and revert the strategy, checking any persisted results afterward.
+- [ ] Attribute the quality difference using unchanged reference/scoring rules and
+  identify inapplicable relative targets when the baseline has no measured errors.
 
 ## Failure modes
 
 - Declaring a new output category to be a better version of the old result.
 - Improving an aggregate while concealing regressions in a required existing case.
+- Showing improved offline results while adopting the candidate still requires
+  unreported edits outside the declared refinement surface.
 - Measuring gain after changing the reference answers or removing difficult inputs.
 - Claiming relative error reduction when the baseline has no measured errors.
 

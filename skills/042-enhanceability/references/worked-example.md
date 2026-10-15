@@ -1,8 +1,9 @@
 # Worked example: refine the existing date parser
 
 Assume a hypothetical parser already accepts a documented set of date strings
-and produces the same structured date result for existing callers. The user wants
-fewer incorrect results for those supported strings, not another parsing feature.
+and produces a structured date result for existing callers. Suppose the user asks
+for a bounded strategy-replacement surface to refine this parser, not just an
+error judgment. Route output-error-only requests to accuracy instead.
 
 ## Read the baseline
 
@@ -26,7 +27,8 @@ project's acceptance criteria or use a relative target with an empty error basel
 
 Keep the public parser's input checks and structured output adapter. Replace the
 internal interpretation strategy as the candidate change, retaining old outputs
-for comparison. Suppose an ambiguous month label improves but an already supported
+for comparison. Inspect the adoption diff: strategy changes belong to the agreed
+surface; edits to each caller's date interpretation expose a wider impact. Suppose an ambiguous month label improves but an already supported
 numeric form regresses. Show both outcomes; an improved total does not settle
 whether that regression is acceptable.
 
@@ -50,5 +52,6 @@ target on the agreed full corpus without changing its reference answers.
 | Unsupported new grammar | Existing rejection behavior | Treat requested support as a separate capability change |
 | Candidate deselected | Existing consumer receives the old result meaning | Verify reversal rather than assuming a strategy flag is enough |
 
-Report a refinement design and measured evidence separately. This fictional
-corpus provides no actual gain, coverage estimate, or proof about a real parser.
+Compare the adoption diff with the confirmed refinement envelope separately from
+quality results. This fictional corpus proves neither bounded refinement work nor
+a real accuracy gain.

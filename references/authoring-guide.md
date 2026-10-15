@@ -34,6 +34,11 @@ current pilot or batch. Phase 2 keeps all 114 entries at `todo` and writes no bo
 
 - Use `templates/SKILL.template.md` for section order. Target 80-180 body lines;
   do not exceed 250. Keep the description between 60 and 1024 characters.
+- Review the combined footprint: use 150-250 lines as a guideline for the complete
+  SKILL.md plus its directly linked reference files, including blank lines and
+  frontmatter. Keep each reference under 150 lines. Report the combined count;
+  do not pad short useful material or duplicate sections to reach a lower bound.
+  Meeting a line budget does not demonstrate distinct decisions or sufficient depth.
 - Keep folder names as a three-digit, zero-padded id plus slug, such as
   `skills/015-availability/SKILL.md`. Use the unprefixed slug in frontmatter `name`.
 - Follow Clarify, Specify, Design/Implement, Verify, Report in that order. Put
