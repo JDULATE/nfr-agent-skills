@@ -87,12 +87,14 @@ context, and handling of incorrect answers before accepting that budget.
   to match an abbreviation that the intended reader does not already use.
 - Do expose a meaningful intermediate result when it removes mental unpacking;
   don't introduce a chain of aliases that makes readers chase the same value.
-- Do flatten nesting only when the resulting exit order and side effects stay
-  intact; don't move a guard ahead of work whose execution is part of the contract.
+- Do use guard clauses when they let intended readers trace branch outcomes with
+  less backtracking; preserve effect and exit order, and keep the nesting when
+  flattening merely moves the reading burden to scattered early returns.
 - Do keep a condition and its consequence visibly connected; don't scatter a
   short explanation across helpers or references just to reduce local line count.
-- Do preserve external field names and keyword-call contracts when renaming locals;
-  don't silently rename serialized keys or a public parameter for aesthetic consistency.
+- Do clarify an opaque external key with a meaningful local name at its use site,
+  so readers can follow the value without changing the wire contract; don't rename
+  a serialized key or public parameter merely to improve its spelling.
 - Do retain an obligation's actor, condition, exception, and strength when splitting
   a sentence; don't turn a conditional requirement into an unconditional instruction.
 - Don't replace a domain-specific expression with a supposedly simpler synonym

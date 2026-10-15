@@ -30,9 +30,11 @@ treating masking or a replaced identifier as proof of them.
 
 ## Workflow
 
-1. Clarify: Read data models, collection handlers, event payloads, vendor
+1. Clarify: Read collection code, data models, schema docs, event payloads, vendor
    configuration, retention jobs, and existing data-handling decisions first.
    Trace a synthetic person's data from collection to copies and derived outputs.
+   Ask the user which regulations apply and request the relevant policy or source
+   text; do not infer a legal duty or deadline from this skill's examples.
    If purpose, permitted recipients, or applicable policy is unknown, then
    Ask the user and mark the affected flow undecided before specifying it.
 
@@ -82,16 +84,18 @@ and the verification event separately; do not turn that proposal into a legal ru
 
 - Do reject optional fields at the producer when their purpose is unconfirmed;
   do not collect them first on the assumption that retention can be decided later.
-- Do derive a separate payload for each recipient's approved purpose; do not
-  reuse a full account object as an analytics or support event.
+- Do send even an authorized recipient only the personal fields needed for its
+  approved purpose; permission to receive an account object does not justify
+  forwarding unused contact fields in an analytics event.
 - Do stop optional collection at its source when the confirmed choice is withdrawn;
   hiding the choice control must not stand in for changing the collection path.
 - Do propagate retention and deletion decisions to indexes, caches, derived
   profiles, and exports; do not let a derived output escape the inventory by renaming it.
 - Do prevent restored or replayed data from repopulating deleted active records;
   retain only the suppression evidence approved for that purpose and its own expiry.
-- Don't include raw personal payloads in disposal logs; retain scoped identifiers,
-  actions, destinations, outcomes, and expiry under an approved evidence purpose.
+- Do give disposal evidence its own purpose, minimal personal fields, and expiry;
+  don't recreate the erased profile in a purge log that is retained longer than
+  the approved deletion-evidence purpose requires.
 - Don't equate encryption, masking, or a replacement identifier with permission
   to collect, indefinite retention, or demonstrated anonymity.
 

@@ -3,6 +3,8 @@
 Create a purpose inventory from the project, not a list of assumed legal duties.
 Ask the user for the governing policy, authority for collection, and exception
 decision maker. Do not infer permission from the presence of a field in a schema.
+Ask the user which regulations apply and request applicable source text before
+interpreting an obligation; no retention or deletion example supplies one.
 
 ## Inventory record
 

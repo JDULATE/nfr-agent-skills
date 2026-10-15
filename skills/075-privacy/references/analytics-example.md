@@ -21,6 +21,25 @@ receipt capability. Do not infer any of these from the event name.
 Suppose the stakeholder proposes retaining the event type and feature context
 while removing contact fields and cross-purpose account identifiers. Build a
 recipient-specific allowlist instead of serializing the account object.
+For this hypothetical approved purpose, compare these synthetic payloads:
+
+Before:
+
+```json
+{"event_type":"help_opened","feature":"order_help","account":{"contact_email":"SYNTHETIC_CONTACT","account_key":"SYNTHETIC_SUBJECT"}}
+```
+
+After:
+
+```json
+{"event_type":"help_opened","feature":"order_help"}
+```
+
+Keep only `event_type` and `feature` for this example's aggregate feature-use
+question. Test that `account`, `contact_email`, and `account_key` are absent at
+both producer egress and the recipient. This is a purpose-specific proposal,
+not a universal analytics schema.
+
 If the analytics use cannot work without an identifier, return that conflict to
 the user; do not introduce an undisclosed replacement identifier as a workaround.
 

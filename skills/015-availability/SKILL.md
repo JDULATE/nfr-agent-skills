@@ -29,8 +29,8 @@ distinguish failure-free operation (`reliability`) and restoration after disrupt
 
 ## Workflow
 
-1. Clarify: Read existing routes, deployment configuration, dependency maps,
-   incident reports, service promises, and monitoring definitions before specifying.
+1. Clarify: Read existing routes and deployment code alongside dependency maps,
+   incident reports, service docs, and monitoring definitions before specifying.
    Identify the user journey, audience, service calendar, and usable result.
    If the calendar, deadline, or permitted degraded behavior is missing, then
    Ask the user; record a proposed boundary instead of assuming continuous service.
@@ -78,14 +78,16 @@ completion deadline, locations, and treatment of maintenance before accepting it
 
 ## Rules of thumb
 
-- Do probe a required business result through the user-facing route; do not count
-  a process health response as evidence that its dependent journey works.
-- Do drain existing traffic before retiring an instance; include in-flight work
-  in the deployment interruption scenario.
-- Do isolate an optional dependency when the agreed journey can succeed without it;
-  do not hide a failed mandatory step behind a successful transport response.
-- Do include shared storage, credentials, routing, and release changes in the
-  failure map; do not count replicas as independent merely because they are separate.
+- Do admit a probe sample to good eligible time only when the user-facing journey
+  produces its required result; a healthy process alone cannot supply that sample.
+- Do measure deployment interruption from the loss of usable service to its return,
+  including in-flight requests; drain traffic to preserve that journey, rather than
+  declaring the handoff outage-free because a replacement instance is healthy.
+- Do count an optional-dependency outage as good time only if the remaining path
+  still meets the accepted service boundary; count a missing mandatory result as bad.
+- Do probe through shared storage and routing when measuring customer-visible
+  good time; separate replica health histories cannot establish that the shared
+  journey was usable during their common dependency's outage.
 - Do preserve the same success boundary during fallback; reject stale or read-only
   operation as available when the agreed journey requires fresh data or writes.
 - Don't remove planned maintenance from the denominator unless the approved
