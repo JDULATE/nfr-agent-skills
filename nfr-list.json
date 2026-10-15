@@ -7,160 +7,180 @@
       "Accessibility",
       "Access Control"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 8
   },
   {
     "id": 2,
     "name": "Accountability",
     "slug": "accountability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 3,
     "name": "Accuracy",
     "slug": "accuracy",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 15
   },
   {
     "id": 4,
     "name": "Adaptability",
     "slug": "adaptability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 2
   },
   {
     "id": 5,
     "name": "Additivity",
     "slug": "additivity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 6,
     "name": "Adjustability",
     "slug": "adjustability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 2
   },
   {
     "id": 7,
     "name": "Affordability",
     "slug": "affordability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 18
   },
   {
     "id": 8,
     "name": "Agility",
     "slug": "agility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 2
   },
   {
     "id": 9,
     "name": "Analyzability",
     "slug": "analyzability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 10,
     "name": "Anonymity",
     "slug": "anonymity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 8
   },
   {
     "id": 11,
     "name": "Atomicity",
     "slug": "atomicity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 7
   },
   {
     "id": 12,
     "name": "Attractiveness",
     "slug": "attractiveness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 13,
     "name": "Auditability",
     "slug": "auditability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 14,
     "name": "Augmentability",
     "slug": "augmentability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 15,
     "name": "Availability",
     "slug": "availability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 6
   },
   {
     "id": 16,
     "name": "Certainty",
     "slug": "certainty",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 15
   },
   {
     "id": 17,
     "name": "Changeability",
     "slug": "changeability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 2
   },
   {
     "id": 18,
     "name": "Communicativeness",
     "slug": "communicativeness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 19,
     "name": "Compatibility",
     "slug": "compatibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 14
   },
   {
     "id": 20,
     "name": "Completeness",
     "slug": "completeness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 15
   },
   {
     "id": 21,
@@ -170,160 +190,180 @@
       "Complexity",
       "Interacting Complexity"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 16
   },
   {
     "id": 22,
     "name": "Composability",
     "slug": "composability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 16
   },
   {
     "id": 23,
     "name": "Comprehensibility",
     "slug": "comprehensibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 4
   },
   {
     "id": 24,
     "name": "Comprehensiveness",
     "slug": "comprehensiveness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 25,
     "name": "Conciseness",
     "slug": "conciseness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 4
   },
   {
     "id": 26,
     "name": "Confidentiality",
     "slug": "confidentiality",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 8
   },
   {
     "id": 27,
     "name": "Configurability",
     "slug": "configurability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 3
   },
   {
     "id": 28,
     "name": "Conformance",
     "slug": "conformance",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 15
   },
   {
     "id": 29,
     "name": "Consistency",
     "slug": "consistency",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 15
   },
   {
     "id": 30,
     "name": "Controllability",
     "slug": "controllability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 31,
     "name": "Correctness",
     "slug": "correctness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 15
   },
   {
     "id": 32,
     "name": "Customizability",
     "slug": "customizability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 3
   },
   {
     "id": 33,
     "name": "Debuggability",
     "slug": "debuggability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 34,
     "name": "Decomposability",
     "slug": "decomposability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 16
   },
   {
     "id": 35,
     "name": "Defensibility",
     "slug": "defensibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 36,
     "name": "Demonstrability",
     "slug": "demonstrability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 37,
     "name": "Dependability",
     "slug": "dependability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 6
   },
   {
     "id": 38,
     "name": "Distributivity",
     "slug": "distributivity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 14
   },
   {
     "id": 39,
     "name": "Durability",
     "slug": "durability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 7
   },
   {
     "id": 40,
     "name": "Effectiveness",
     "slug": "effectiveness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 18
   },
   {
     "id": 41,
@@ -333,56 +373,63 @@
       "Efficiency",
       "Device Efficiency"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Performance & Efficiency",
+    "status": "todo",
+    "batch": 10
   },
   {
     "id": 42,
     "name": "Enhanceability",
     "slug": "enhanceability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 43,
     "name": "Evolvability",
     "slug": "evolvability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 44,
     "name": "Expandability",
     "slug": "expandability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 45,
     "name": "Expressiveness",
     "slug": "expressiveness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 16
   },
   {
     "id": 46,
     "name": "Extendability",
     "slug": "extendability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 47,
     "name": "Extensibility",
     "slug": "extensibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 1
   },
   {
     "id": 48,
@@ -392,192 +439,216 @@
       "Fault",
       "Failure Tolerance"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 6
   },
   {
     "id": 49,
     "name": "Feasibility",
     "slug": "feasibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 18
   },
   {
     "id": 50,
     "name": "Flexibility",
     "slug": "flexibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 2
   },
   {
     "id": 51,
     "name": "Formality",
     "slug": "formality",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 52,
     "name": "Functionality",
     "slug": "functionality",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 18
   },
   {
     "id": 53,
     "name": "Generality",
     "slug": "generality",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 17
   },
   {
     "id": 54,
     "name": "Immunity",
     "slug": "immunity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 55,
     "name": "Installability",
     "slug": "installability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 13
   },
   {
     "id": 56,
     "name": "Integratability",
     "slug": "integratability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 14
   },
   {
     "id": 57,
     "name": "Integrity",
     "slug": "integrity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 8
   },
   {
     "id": 58,
     "name": "Interoperability",
     "slug": "interoperability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 14
   },
   {
     "id": 59,
     "name": "Learnability",
     "slug": "learnability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 60,
     "name": "Legibility",
     "slug": "legibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 4
   },
   {
     "id": 61,
     "name": "Likeability",
     "slug": "likeability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 62,
     "name": "Localizability",
     "slug": "localizability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 13
   },
   {
     "id": 63,
     "name": "Maintainability",
     "slug": "maintainability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 3
   },
   {
     "id": 64,
     "name": "Manageability",
     "slug": "manageability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 65,
     "name": "Maturity",
     "slug": "maturity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 7
   },
   {
     "id": 66,
     "name": "Measurability",
     "slug": "measurability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 67,
     "name": "Mobility",
     "slug": "mobility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 13
   },
   {
     "id": 68,
     "name": "Modifiability",
     "slug": "modifiability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 2
   },
   {
     "id": 69,
     "name": "Nomadicity",
     "slug": "nomadicity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 13
   },
   {
     "id": 70,
     "name": "Observability",
     "slug": "observability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 71,
     "name": "Operability",
     "slug": "operability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 72,
@@ -588,136 +659,153 @@
       "Efficiency",
       "Time or Space Bounds"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Performance & Efficiency",
+    "status": "todo",
+    "batch": 10
   },
   {
     "id": 73,
     "name": "Portability",
     "slug": "portability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 13
   },
   {
     "id": 74,
     "name": "Predictability",
     "slug": "predictability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Performance & Efficiency",
+    "status": "todo",
+    "batch": 10
   },
   {
     "id": 75,
     "name": "Privacy",
     "slug": "privacy",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 8
   },
   {
     "id": 76,
     "name": "Provability",
     "slug": "provability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 77,
     "name": "Quality of Service",
     "slug": "quality-of-service",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Performance & Efficiency",
+    "status": "todo",
+    "batch": 10
   },
   {
     "id": 78,
     "name": "Readability",
     "slug": "readability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 4
   },
   {
     "id": 79,
     "name": "Reconfigurability",
     "slug": "reconfigurability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 3
   },
   {
     "id": 80,
     "name": "Recoverability",
     "slug": "recoverability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 7
   },
   {
     "id": 81,
     "name": "Reliability",
     "slug": "reliability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 6
   },
   {
     "id": 82,
     "name": "Repeatability",
     "slug": "repeatability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 83,
     "name": "Replaceability",
     "slug": "replaceability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 14
   },
   {
     "id": 84,
     "name": "Replicability",
     "slug": "replicability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 85,
     "name": "Reusability",
     "slug": "reusability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 17
   },
   {
     "id": 86,
     "name": "Robustness",
     "slug": "robustness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 6
   },
   {
     "id": 87,
     "name": "Safety",
     "slug": "safety",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 6
   },
   {
     "id": 88,
     "name": "Scalability",
     "slug": "scalability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Performance & Efficiency",
+    "status": "todo",
+    "batch": 10
   },
   {
     "id": 89,
@@ -727,32 +815,36 @@
       "Security",
       "Control and Security"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 8
   },
   {
     "id": 90,
     "name": "Self-Descriptiveness",
     "slug": "self-descriptiveness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 4
   },
   {
     "id": 91,
     "name": "Simplicity",
     "slug": "simplicity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 16
   },
   {
     "id": 92,
     "name": "Stability",
     "slug": "stability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 7
   },
   {
     "id": 93,
@@ -763,175 +855,197 @@
       "Standardization",
       "Standard"
     ],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 14
   },
   {
     "id": 94,
     "name": "Structuredness",
     "slug": "structuredness",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 16
   },
   {
     "id": 95,
     "name": "Suitability",
     "slug": "suitability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 18
   },
   {
     "id": 96,
     "name": "Supportability",
     "slug": "supportability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 3
   },
   {
     "id": 97,
     "name": "Survivability",
     "slug": "survivability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Reliability & Resilience",
+    "status": "todo",
+    "batch": 7
   },
   {
     "id": 98,
     "name": "Susceptibility",
     "slug": "susceptibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 99,
     "name": "Sustainability",
     "slug": "sustainability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 10
   },
   {
     "id": 100,
     "name": "Tailorability",
     "slug": "tailorability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 3
   },
   {
     "id": 101,
     "name": "Testability",
     "slug": "testability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Maintainability & Evolvability",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 102,
     "name": "Traceability",
     "slug": "traceability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 103,
     "name": "Trainability",
     "slug": "trainability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 104,
     "name": "Transferability",
     "slug": "transferability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Portability & Interoperability",
+    "status": "todo",
+    "batch": 13
   },
   {
     "id": 105,
     "name": "Trustability",
     "slug": "trustability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Security & Privacy",
+    "status": "todo",
+    "batch": 9
   },
   {
     "id": 106,
     "name": "Understandability",
     "slug": "understandability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 4
   },
   {
     "id": 107,
     "name": "Uniformity",
     "slug": "uniformity",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 17
   },
   {
     "id": 108,
     "name": "Usability",
     "slug": "usability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Usability & Comprehension",
+    "status": "todo",
+    "batch": 5
   },
   {
     "id": 109,
     "name": "Variability",
     "slug": "variability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 17
   },
   {
     "id": 110,
     "name": "Verifiability",
     "slug": "verifiability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Correctness & Data Quality",
+    "status": "todo",
+    "batch": 11
   },
   {
     "id": 111,
     "name": "Versatility",
     "slug": "versatility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 17
   },
   {
     "id": 112,
     "name": "Viability",
     "slug": "viability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Business & Fitness",
+    "status": "todo",
+    "batch": 18
   },
   {
     "id": 113,
     "name": "Visibility",
     "slug": "visibility",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Observability & Operability",
+    "status": "todo",
+    "batch": 12
   },
   {
     "id": 114,
     "name": "Wrappability",
     "slug": "wrappability",
     "aliases": [],
-    "category": "TBD",
-    "status": "todo"
+    "category": "Design Structure & Flexibility",
+    "status": "todo",
+    "batch": 17
   }
 ]

@@ -2,119 +2,146 @@
 
 Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
-## TBD
+## Business & Fitness
 
-- [001 Accessibility/Access Control](skills/001-accessibility-access-control/SKILL.md) — todo
-- [002 Accountability](skills/002-accountability/SKILL.md) — todo
+- [007 Affordability](skills/007-affordability/SKILL.md) — todo
+- [040 Effectiveness](skills/040-effectiveness/SKILL.md) — todo
+- [049 Feasibility](skills/049-feasibility/SKILL.md) — todo
+- [052 Functionality](skills/052-functionality/SKILL.md) — todo
+- [095 Suitability](skills/095-suitability/SKILL.md) — todo
+- [099 Sustainability](skills/099-sustainability/SKILL.md) — todo
+- [112 Viability](skills/112-viability/SKILL.md) — todo
+
+## Correctness & Data Quality
+
 - [003 Accuracy](skills/003-accuracy/SKILL.md) — todo
+- [016 Certainty](skills/016-certainty/SKILL.md) — todo
+- [020 Completeness](skills/020-completeness/SKILL.md) — todo
+- [028 Conformance](skills/028-conformance/SKILL.md) — todo
+- [029 Consistency](skills/029-consistency/SKILL.md) — todo
+- [031 Correctness](skills/031-correctness/SKILL.md) — todo
+- [036 Demonstrability](skills/036-demonstrability/SKILL.md) — todo
+- [051 Formality](skills/051-formality/SKILL.md) — todo
+- [076 Provability](skills/076-provability/SKILL.md) — todo
+- [082 Repeatability](skills/082-repeatability/SKILL.md) — todo
+- [084 Replicability](skills/084-replicability/SKILL.md) — todo
+- [110 Verifiability](skills/110-verifiability/SKILL.md) — todo
+
+## Design Structure & Flexibility
+
+- [021 Complexity/Interacting Complexity](skills/021-complexity-interacting-complexity/SKILL.md) — todo
+- [022 Composability](skills/022-composability/SKILL.md) — todo
+- [034 Decomposability](skills/034-decomposability/SKILL.md) — todo
+- [038 Distributivity](skills/038-distributivity/SKILL.md) — todo
+- [045 Expressiveness](skills/045-expressiveness/SKILL.md) — todo
+- [053 Generality](skills/053-generality/SKILL.md) — todo
+- [085 Reusability](skills/085-reusability/SKILL.md) — todo
+- [091 Simplicity](skills/091-simplicity/SKILL.md) — todo
+- [093 Standardizability/Standardization/Standard](skills/093-standardizability-standardization-standard/SKILL.md) — todo
+- [094 Structuredness](skills/094-structuredness/SKILL.md) — todo
+- [107 Uniformity](skills/107-uniformity/SKILL.md) — todo
+- [109 Variability](skills/109-variability/SKILL.md) — todo
+- [111 Versatility](skills/111-versatility/SKILL.md) — todo
+- [114 Wrappability](skills/114-wrappability/SKILL.md) — todo
+
+## Maintainability & Evolvability
+
 - [004 Adaptability](skills/004-adaptability/SKILL.md) — todo
 - [005 Additivity](skills/005-additivity/SKILL.md) — todo
 - [006 Adjustability](skills/006-adjustability/SKILL.md) — todo
-- [007 Affordability](skills/007-affordability/SKILL.md) — todo
 - [008 Agility](skills/008-agility/SKILL.md) — todo
-- [009 Analyzability](skills/009-analyzability/SKILL.md) — todo
-- [010 Anonymity](skills/010-anonymity/SKILL.md) — todo
-- [011 Atomicity](skills/011-atomicity/SKILL.md) — todo
-- [012 Attractiveness](skills/012-attractiveness/SKILL.md) — todo
-- [013 Auditability](skills/013-auditability/SKILL.md) — todo
 - [014 Augmentability](skills/014-augmentability/SKILL.md) — todo
-- [015 Availability](skills/015-availability/SKILL.md) — todo
-- [016 Certainty](skills/016-certainty/SKILL.md) — todo
 - [017 Changeability](skills/017-changeability/SKILL.md) — todo
-- [018 Communicativeness](skills/018-communicativeness/SKILL.md) — todo
-- [019 Compatibility](skills/019-compatibility/SKILL.md) — todo
-- [020 Completeness](skills/020-completeness/SKILL.md) — todo
-- [021 Complexity/Interacting Complexity](skills/021-complexity-interacting-complexity/SKILL.md) — todo
-- [022 Composability](skills/022-composability/SKILL.md) — todo
-- [023 Comprehensibility](skills/023-comprehensibility/SKILL.md) — todo
-- [024 Comprehensiveness](skills/024-comprehensiveness/SKILL.md) — todo
-- [025 Conciseness](skills/025-conciseness/SKILL.md) — todo
-- [026 Confidentiality](skills/026-confidentiality/SKILL.md) — todo
 - [027 Configurability](skills/027-configurability/SKILL.md) — todo
-- [028 Conformance](skills/028-conformance/SKILL.md) — todo
-- [029 Consistency](skills/029-consistency/SKILL.md) — todo
-- [030 Controllability](skills/030-controllability/SKILL.md) — todo
-- [031 Correctness](skills/031-correctness/SKILL.md) — todo
 - [032 Customizability](skills/032-customizability/SKILL.md) — todo
-- [033 Debuggability](skills/033-debuggability/SKILL.md) — todo
-- [034 Decomposability](skills/034-decomposability/SKILL.md) — todo
-- [035 Defensibility](skills/035-defensibility/SKILL.md) — todo
-- [036 Demonstrability](skills/036-demonstrability/SKILL.md) — todo
-- [037 Dependability](skills/037-dependability/SKILL.md) — todo
-- [038 Distributivity](skills/038-distributivity/SKILL.md) — todo
-- [039 Durability](skills/039-durability/SKILL.md) — todo
-- [040 Effectiveness](skills/040-effectiveness/SKILL.md) — todo
-- [041 Efficiency/Device Efficiency](skills/041-efficiency-device-efficiency/SKILL.md) — todo
 - [042 Enhanceability](skills/042-enhanceability/SKILL.md) — todo
 - [043 Evolvability](skills/043-evolvability/SKILL.md) — todo
 - [044 Expandability](skills/044-expandability/SKILL.md) — todo
-- [045 Expressiveness](skills/045-expressiveness/SKILL.md) — todo
 - [046 Extendability](skills/046-extendability/SKILL.md) — todo
 - [047 Extensibility](skills/047-extensibility/SKILL.md) — todo
-- [048 Fault/Failure Tolerance](skills/048-fault-failure-tolerance/SKILL.md) — todo
-- [049 Feasibility](skills/049-feasibility/SKILL.md) — todo
 - [050 Flexibility](skills/050-flexibility/SKILL.md) — todo
-- [051 Formality](skills/051-formality/SKILL.md) — todo
-- [052 Functionality](skills/052-functionality/SKILL.md) — todo
-- [053 Generality](skills/053-generality/SKILL.md) — todo
-- [054 Immunity](skills/054-immunity/SKILL.md) — todo
+- [063 Maintainability](skills/063-maintainability/SKILL.md) — todo
+- [068 Modifiability](skills/068-modifiability/SKILL.md) — todo
+- [079 Reconfigurability](skills/079-reconfigurability/SKILL.md) — todo
+- [096 Supportability](skills/096-supportability/SKILL.md) — todo
+- [100 Tailorability](skills/100-tailorability/SKILL.md) — todo
+- [101 Testability](skills/101-testability/SKILL.md) — todo
+
+## Observability & Operability
+
+- [009 Analyzability](skills/009-analyzability/SKILL.md) — todo
+- [030 Controllability](skills/030-controllability/SKILL.md) — todo
+- [033 Debuggability](skills/033-debuggability/SKILL.md) — todo
+- [064 Manageability](skills/064-manageability/SKILL.md) — todo
+- [066 Measurability](skills/066-measurability/SKILL.md) — todo
+- [070 Observability](skills/070-observability/SKILL.md) — todo
+- [071 Operability](skills/071-operability/SKILL.md) — todo
+- [102 Traceability](skills/102-traceability/SKILL.md) — todo
+- [113 Visibility](skills/113-visibility/SKILL.md) — todo
+
+## Performance & Efficiency
+
+- [041 Efficiency/Device Efficiency](skills/041-efficiency-device-efficiency/SKILL.md) — todo
+- [072 Performance/Efficiency/Time or Space Bounds](skills/072-performance-efficiency-time-or-space-bounds/SKILL.md) — todo
+- [074 Predictability](skills/074-predictability/SKILL.md) — todo
+- [077 Quality of Service](skills/077-quality-of-service/SKILL.md) — todo
+- [088 Scalability](skills/088-scalability/SKILL.md) — todo
+
+## Portability & Interoperability
+
+- [019 Compatibility](skills/019-compatibility/SKILL.md) — todo
 - [055 Installability](skills/055-installability/SKILL.md) — todo
 - [056 Integratability](skills/056-integratability/SKILL.md) — todo
-- [057 Integrity](skills/057-integrity/SKILL.md) — todo
 - [058 Interoperability](skills/058-interoperability/SKILL.md) — todo
+- [062 Localizability](skills/062-localizability/SKILL.md) — todo
+- [067 Mobility](skills/067-mobility/SKILL.md) — todo
+- [069 Nomadicity](skills/069-nomadicity/SKILL.md) — todo
+- [073 Portability](skills/073-portability/SKILL.md) — todo
+- [083 Replaceability](skills/083-replaceability/SKILL.md) — todo
+- [104 Transferability](skills/104-transferability/SKILL.md) — todo
+
+## Reliability & Resilience
+
+- [011 Atomicity](skills/011-atomicity/SKILL.md) — todo
+- [015 Availability](skills/015-availability/SKILL.md) — todo
+- [037 Dependability](skills/037-dependability/SKILL.md) — todo
+- [039 Durability](skills/039-durability/SKILL.md) — todo
+- [048 Fault/Failure Tolerance](skills/048-fault-failure-tolerance/SKILL.md) — todo
+- [065 Maturity](skills/065-maturity/SKILL.md) — todo
+- [080 Recoverability](skills/080-recoverability/SKILL.md) — todo
+- [081 Reliability](skills/081-reliability/SKILL.md) — todo
+- [086 Robustness](skills/086-robustness/SKILL.md) — todo
+- [087 Safety](skills/087-safety/SKILL.md) — todo
+- [092 Stability](skills/092-stability/SKILL.md) — todo
+- [097 Survivability](skills/097-survivability/SKILL.md) — todo
+
+## Security & Privacy
+
+- [002 Accountability](skills/002-accountability/SKILL.md) — todo
+- [010 Anonymity](skills/010-anonymity/SKILL.md) — todo
+- [013 Auditability](skills/013-auditability/SKILL.md) — todo
+- [026 Confidentiality](skills/026-confidentiality/SKILL.md) — todo
+- [035 Defensibility](skills/035-defensibility/SKILL.md) — todo
+- [054 Immunity](skills/054-immunity/SKILL.md) — todo
+- [057 Integrity](skills/057-integrity/SKILL.md) — todo
+- [075 Privacy](skills/075-privacy/SKILL.md) — todo
+- [089 Security/Control and Security](skills/089-security-control-and-security/SKILL.md) — todo
+- [098 Susceptibility](skills/098-susceptibility/SKILL.md) — todo
+- [105 Trustability](skills/105-trustability/SKILL.md) — todo
+
+## Usability & Comprehension
+
+- [001 Accessibility/Access Control](skills/001-accessibility-access-control/SKILL.md) — todo
+- [012 Attractiveness](skills/012-attractiveness/SKILL.md) — todo
+- [018 Communicativeness](skills/018-communicativeness/SKILL.md) — todo
+- [023 Comprehensibility](skills/023-comprehensibility/SKILL.md) — todo
+- [024 Comprehensiveness](skills/024-comprehensiveness/SKILL.md) — todo
+- [025 Conciseness](skills/025-conciseness/SKILL.md) — todo
 - [059 Learnability](skills/059-learnability/SKILL.md) — todo
 - [060 Legibility](skills/060-legibility/SKILL.md) — todo
 - [061 Likeability](skills/061-likeability/SKILL.md) — todo
-- [062 Localizability](skills/062-localizability/SKILL.md) — todo
-- [063 Maintainability](skills/063-maintainability/SKILL.md) — todo
-- [064 Manageability](skills/064-manageability/SKILL.md) — todo
-- [065 Maturity](skills/065-maturity/SKILL.md) — todo
-- [066 Measurability](skills/066-measurability/SKILL.md) — todo
-- [067 Mobility](skills/067-mobility/SKILL.md) — todo
-- [068 Modifiability](skills/068-modifiability/SKILL.md) — todo
-- [069 Nomadicity](skills/069-nomadicity/SKILL.md) — todo
-- [070 Observability](skills/070-observability/SKILL.md) — todo
-- [071 Operability](skills/071-operability/SKILL.md) — todo
-- [072 Performance/Efficiency/Time or Space Bounds](skills/072-performance-efficiency-time-or-space-bounds/SKILL.md) — todo
-- [073 Portability](skills/073-portability/SKILL.md) — todo
-- [074 Predictability](skills/074-predictability/SKILL.md) — todo
-- [075 Privacy](skills/075-privacy/SKILL.md) — todo
-- [076 Provability](skills/076-provability/SKILL.md) — todo
-- [077 Quality of Service](skills/077-quality-of-service/SKILL.md) — todo
 - [078 Readability](skills/078-readability/SKILL.md) — todo
-- [079 Reconfigurability](skills/079-reconfigurability/SKILL.md) — todo
-- [080 Recoverability](skills/080-recoverability/SKILL.md) — todo
-- [081 Reliability](skills/081-reliability/SKILL.md) — todo
-- [082 Repeatability](skills/082-repeatability/SKILL.md) — todo
-- [083 Replaceability](skills/083-replaceability/SKILL.md) — todo
-- [084 Replicability](skills/084-replicability/SKILL.md) — todo
-- [085 Reusability](skills/085-reusability/SKILL.md) — todo
-- [086 Robustness](skills/086-robustness/SKILL.md) — todo
-- [087 Safety](skills/087-safety/SKILL.md) — todo
-- [088 Scalability](skills/088-scalability/SKILL.md) — todo
-- [089 Security/Control and Security](skills/089-security-control-and-security/SKILL.md) — todo
 - [090 Self-Descriptiveness](skills/090-self-descriptiveness/SKILL.md) — todo
-- [091 Simplicity](skills/091-simplicity/SKILL.md) — todo
-- [092 Stability](skills/092-stability/SKILL.md) — todo
-- [093 Standardizability/Standardization/Standard](skills/093-standardizability-standardization-standard/SKILL.md) — todo
-- [094 Structuredness](skills/094-structuredness/SKILL.md) — todo
-- [095 Suitability](skills/095-suitability/SKILL.md) — todo
-- [096 Supportability](skills/096-supportability/SKILL.md) — todo
-- [097 Survivability](skills/097-survivability/SKILL.md) — todo
-- [098 Susceptibility](skills/098-susceptibility/SKILL.md) — todo
-- [099 Sustainability](skills/099-sustainability/SKILL.md) — todo
-- [100 Tailorability](skills/100-tailorability/SKILL.md) — todo
-- [101 Testability](skills/101-testability/SKILL.md) — todo
-- [102 Traceability](skills/102-traceability/SKILL.md) — todo
 - [103 Trainability](skills/103-trainability/SKILL.md) — todo
-- [104 Transferability](skills/104-transferability/SKILL.md) — todo
-- [105 Trustability](skills/105-trustability/SKILL.md) — todo
 - [106 Understandability](skills/106-understandability/SKILL.md) — todo
-- [107 Uniformity](skills/107-uniformity/SKILL.md) — todo
 - [108 Usability](skills/108-usability/SKILL.md) — todo
-- [109 Variability](skills/109-variability/SKILL.md) — todo
-- [110 Verifiability](skills/110-verifiability/SKILL.md) — todo
-- [111 Versatility](skills/111-versatility/SKILL.md) — todo
-- [112 Viability](skills/112-viability/SKILL.md) — todo
-- [113 Visibility](skills/113-visibility/SKILL.md) — todo
-- [114 Wrappability](skills/114-wrappability/SKILL.md) — todo
