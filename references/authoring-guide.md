@@ -38,8 +38,10 @@ current pilot or batch. Phase 2 keeps all 114 entries at `todo` and writes no bo
   `skills/015-availability/SKILL.md`. Use the unprefixed slug in frontmatter `name`.
 - Follow Clarify, Specify, Design/Implement, Verify, Report in that order. Put
   an imperative instruction and an explicit conditional decision in every step.
-- Include 2-3 measurable specification patterns, 5-10 NFR-specific rules,
-  6-10 objective done checks, and 3-6 concrete failure modes.
+- Include 2-3 measurable specification patterns. Let content determine item counts:
+  use 5-10 NFR-specific rules, 6-10 objective done checks, and 3-6 concrete
+  failure modes. Do not impose a fixed shape across skills or add filler to reach
+  matching counts; do not vary counts merely to make skills appear different.
 - Use named placeholders such as `{behavior}`, `{condition}`, `{metric}`, and
   `{stakeholder_confirmed_target}` in authored requirement patterns. The current
   validator rejects unresolved angle-bracket template text, including in references.
@@ -94,8 +96,10 @@ if a batch includes an approved pilot, review it as the existing member rather
 than rewriting it without a user request. Do not silently treat it as approved.
 
 Run `python scripts/validate_skills.py --only` followed by the comma-separated
-batch ids. Write `reviews/batch-N-review.md` with a score table and an "Uncertain
-claims" section. Fix any score below 17/20 or any zero. Set the authorized batch
+batch ids. Assess the rubric internally and fix any result below 17/20 or any
+zero. Write `reviews/batch-N-review.md` as findings only: per-skill weaknesses,
+evidence, limitations, and an "Uncertain claims" section. Do not include prompt
+text, task instructions, or self-score tables in batch reviews. Set the authorized batch
 to `draft`, run `python scripts/build_index.py`, commit using the requested Phase 4
 batch message, report done / uncertain / needs human review, and stop.
 
