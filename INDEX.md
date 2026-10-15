@@ -118,20 +118,20 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 ## Security & Privacy
 
 - [002 Accountability](skills/002-accountability/SKILL.md) — todo
-- [010 Anonymity](skills/010-anonymity/SKILL.md) — todo
+- [010 Anonymity](skills/010-anonymity/SKILL.md) — draft
 - [013 Auditability](skills/013-auditability/SKILL.md) — todo
-- [026 Confidentiality](skills/026-confidentiality/SKILL.md) — todo
+- [026 Confidentiality](skills/026-confidentiality/SKILL.md) — draft
 - [035 Defensibility](skills/035-defensibility/SKILL.md) — todo
 - [054 Immunity](skills/054-immunity/SKILL.md) — todo
-- [057 Integrity](skills/057-integrity/SKILL.md) — todo
+- [057 Integrity](skills/057-integrity/SKILL.md) — draft
 - [075 Privacy](skills/075-privacy/SKILL.md) — draft
-- [089 Security/Control and Security](skills/089-security-control-and-security/SKILL.md) — todo
+- [089 Security/Control and Security](skills/089-security-control-and-security/SKILL.md) — draft
 - [098 Susceptibility](skills/098-susceptibility/SKILL.md) — todo
 - [105 Trustability](skills/105-trustability/SKILL.md) — todo
 
 ## Usability & Comprehension
 
-- [001 Accessibility/Access Control](skills/001-accessibility-access-control/SKILL.md) — todo
+- [001 Accessibility/Access Control](skills/001-accessibility-access-control/SKILL.md) — draft
 - [012 Attractiveness](skills/012-attractiveness/SKILL.md) — draft
 - [018 Communicativeness](skills/018-communicativeness/SKILL.md) — draft
 - [023 Comprehensibility](skills/023-comprehensibility/SKILL.md) — draft

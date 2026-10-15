@@ -8,7 +8,7 @@
       "Access Control"
     ],
     "category": "Usability & Comprehension",
-    "status": "todo",
+    "status": "draft",
     "batch": 8
   },
   {
@@ -89,7 +89,7 @@
     "slug": "anonymity",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 8
   },
   {
@@ -236,7 +236,7 @@
     "slug": "confidentiality",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 8
   },
   {
@@ -521,7 +521,7 @@
     "slug": "integrity",
     "aliases": [],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 8
   },
   {
@@ -816,7 +816,7 @@
       "Control and Security"
     ],
     "category": "Security & Privacy",
-    "status": "todo",
+    "status": "draft",
     "batch": 8
   },
   {
