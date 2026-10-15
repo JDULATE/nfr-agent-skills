@@ -51,6 +51,9 @@ current pilot or batch. Phase 2 keeps all 114 entries at `todo` and writes no bo
   Ask the user if their terminology differs; record the chosen boundary.
 - Read `references/standards-allowlist.md` before citing a standard. Check the
   permitted ids and human-review status manually as well as running the validator.
+- Cite ISO/IEC 25010 generically as "ISO/IEC 25010 product quality model". Never
+  attribute specific characteristic names, lists, counts, groupings, or
+  edition-specific mappings to it. Keep the repository taxonomy explicitly local.
 - Link supporting files directly under the skill's `./references/` directory
   with "read when ..." guidance. Do not link from a reference to further references.
   Keep each supporting file under 150 lines. Shared contract files are read
