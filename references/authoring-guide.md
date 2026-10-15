@@ -69,6 +69,20 @@ rubric in `reviews/pilot-review.md`; fix every weakness scoring below 2. Commit
 `phase 3: pilot skills` and stop for approval. Pilot approval is a separate gate
 from validation or a `draft` status.
 
+The pilot is authored in Phase 3 regardless of its production batch assignment:
+
+| Pilot folder | Later production batch |
+| --- | --- |
+| `015-availability` | 6 |
+| `075-privacy` | 8 |
+| `078-readability` | 4 |
+
+Keep these entries in their batches so siblings are still reviewed together.
+When those batches run, count the approved pilot as an existing batch member,
+validate and score it with the batch, and author the remaining members. Preserve
+the approved pilot content unless the user explicitly requests changes. The
+batch assignment neither postpones pilot authoring nor authorizes rewriting it.
+
 For a user-requested Phase 4 batch, first read this guide, the disambiguation map,
 the standards allowlist, the rubric, and all three approved pilot skills. Select
 only the ids assigned to that batch in `nfr-list.json`; create only their bodies

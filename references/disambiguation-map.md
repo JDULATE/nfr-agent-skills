@@ -1,5 +1,7 @@
 # Disambiguation map
 
+All boundaries are proposed repository conventions, not standardized definitions.
+
 Read when choosing between sibling skills, writing exclusions, or reviewing a batch.
 
 These are **proposed repository working meanings for human review**, not claims
@@ -24,13 +26,19 @@ intended local meaning. Do not claim these editorial splits are universal.
 
 | Id and canonical slug | Distinguishing criterion | Use this one vs. a sibling |
 | --- | --- | --- |
-| 46 `extendability` | Adding a capability requires changing the existing implementation under this proposed split. | Use for changes to core code; use `extensibility` for an already provided extension point. |
-| 47 `extensibility` | New behavior attaches through an explicit extension contract. | Use for plugin or hook boundaries; use `extendability` when the core must change. |
+| 46 `extendability` | A new capability can be introduced by changing core source or interfaces within an agreed change surface. | Use when adding behavior requires core edits; use `extensibility` when an existing extension contract admits the addition without those edits. |
+| 47 `extensibility` | New behavior attaches through an existing extension contract while the core implementation stays unchanged. | Use for plugin or hook contract adequacy; use `extendability` when that contract must first be created or the core must be edited. |
 | 44 `expandability` | An installation can gain resources or units through planned capacity additions. | Use for adding capacity to a deployment; use `scalability` for how behavior changes as workload grows. |
-| 42 `enhanceability` | An existing capability can be improved without making it a separate capability. | Use for improving something already present; use `augmentability` for supplementary capability. |
-| 14 `augmentability` | A supplementary component enriches an existing capability while preserving its original role. | Use for adding an assisting capability; use `enhanceability` for improving the original capability itself. |
-| 5 `additivity` | Combined increments retain their intended contributions without unintended interference. | Use for effects of combining increments; use `composability` for general component assembly contracts. |
+| 42 `enhanceability` | An existing capability improves against its existing acceptance criteria without adding a separately accepted capability. | Use when success is a better result from an existing function; use `augmentability` when a separately accepted supporting function is added. |
+| 14 `augmentability` | A supplementary capability has its own acceptance criteria while the original capability remains usable in its original role. | Use for adding an assisting function alongside the original; use `enhanceability` for improving the original function's own results. |
+| 5 `additivity` | Combined increments preserve their separately measured contributions under an explicitly declared aggregation rule. | Use when acceptance compares combined effects with individual contributions; Ask the user for the aggregation rule, and use `composability` when only assembly contracts matter. |
 | 43 `evolvability` | The system can sustain a sequence of changes as needs and constraints develop over time. | Use for a long-term change path; use `extendability` or `enhanceability` for a particular addition or improvement. |
+
+Review the growth distinction using the unit being accepted: core change,
+extension contract, deployment capacity, improvement to an existing function,
+separately accepted supplementary function, aggregate contribution, or a sequence
+of changes. These concerns can coexist in one request; keep their acceptance
+questions separate. Ask the user if the request does not establish that unit.
 
 ## Change and tailoring — batches 2-3
 
@@ -83,6 +91,16 @@ intended local meaning. Do not claim these editorial splits are universal.
 | 39 `durability` | An acknowledged state change remains preserved through the specified subsequent events. | Use for persistence of committed state; use `recoverability` for reconstructing usable state after disruption. |
 | 11 `atomicity` | A defined operation exposes all of its state changes together or none of them. | Use for partial-commit prevention; use `durability` for preserving an already acknowledged commit. |
 | 87 `safety` | The system controls identified paths to harm in the intended context. | Use for hazards and harmful outcomes; use `security-control-and-security` for adversarial misuse and identify overlaps explicitly. |
+
+For this repository, distinguish a failure event from the duration of unavailable
+service: a restart that restores service can end an outage without erasing the
+preceding reliability failure. Separate service continued during a modeled fault
+(`fault-failure-tolerance`) from service restored afterward (`recoverability`).
+Restoring a backup is not by itself evidence that every acknowledged write was
+preserved (`durability`). Count degraded operation as available only when it
+satisfies the stakeholder's agreed service boundary; Ask the user if that boundary
+is missing. Use `dependability` to coordinate the resulting evidence, without
+substituting it for these individual acceptance questions.
 
 ## Security and privacy — batches 8-9
 
