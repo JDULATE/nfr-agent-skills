@@ -374,7 +374,7 @@
       "Device Efficiency"
     ],
     "category": "Performance & Efficiency",
-    "status": "todo",
+    "status": "draft",
     "batch": 10
   },
   {
@@ -660,7 +660,7 @@
       "Time or Space Bounds"
     ],
     "category": "Performance & Efficiency",
-    "status": "todo",
+    "status": "draft",
     "batch": 10
   },
   {
@@ -678,7 +678,7 @@
     "slug": "predictability",
     "aliases": [],
     "category": "Performance & Efficiency",
-    "status": "todo",
+    "status": "draft",
     "batch": 10
   },
   {
@@ -705,7 +705,7 @@
     "slug": "quality-of-service",
     "aliases": [],
     "category": "Performance & Efficiency",
-    "status": "todo",
+    "status": "draft",
     "batch": 10
   },
   {
@@ -804,7 +804,7 @@
     "slug": "scalability",
     "aliases": [],
     "category": "Performance & Efficiency",
-    "status": "todo",
+    "status": "draft",
     "batch": 10
   },
   {
@@ -910,7 +910,7 @@
     "slug": "sustainability",
     "aliases": [],
     "category": "Business & Fitness",
-    "status": "todo",
+    "status": "draft",
     "batch": 10
   },
   {

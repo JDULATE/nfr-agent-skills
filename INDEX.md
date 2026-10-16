@@ -9,7 +9,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [049 Feasibility](skills/049-feasibility/SKILL.md) — todo
 - [052 Functionality](skills/052-functionality/SKILL.md) — todo
 - [095 Suitability](skills/095-suitability/SKILL.md) — todo
-- [099 Sustainability](skills/099-sustainability/SKILL.md) — todo
+- [099 Sustainability](skills/099-sustainability/SKILL.md) — draft
 - [112 Viability](skills/112-viability/SKILL.md) — todo
 
 ## Correctness & Data Quality
@@ -81,11 +81,11 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Performance & Efficiency
 
-- [041 Efficiency/Device Efficiency](skills/041-efficiency-device-efficiency/SKILL.md) — todo
-- [072 Performance/Efficiency/Time or Space Bounds](skills/072-performance-efficiency-time-or-space-bounds/SKILL.md) — todo
-- [074 Predictability](skills/074-predictability/SKILL.md) — todo
-- [077 Quality of Service](skills/077-quality-of-service/SKILL.md) — todo
-- [088 Scalability](skills/088-scalability/SKILL.md) — todo
+- [041 Efficiency/Device Efficiency](skills/041-efficiency-device-efficiency/SKILL.md) — draft
+- [072 Performance/Efficiency/Time or Space Bounds](skills/072-performance-efficiency-time-or-space-bounds/SKILL.md) — draft
+- [074 Predictability](skills/074-predictability/SKILL.md) — draft
+- [077 Quality of Service](skills/077-quality-of-service/SKILL.md) — draft
+- [088 Scalability](skills/088-scalability/SKILL.md) — draft
 
 ## Portability & Interoperability
 
