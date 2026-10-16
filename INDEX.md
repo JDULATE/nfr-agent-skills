@@ -29,16 +29,16 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Design Structure & Flexibility
 
-- [021 Complexity/Interacting Complexity](skills/021-complexity-interacting-complexity/SKILL.md) — todo
-- [022 Composability](skills/022-composability/SKILL.md) — todo
-- [034 Decomposability](skills/034-decomposability/SKILL.md) — todo
+- [021 Complexity/Interacting Complexity](skills/021-complexity-interacting-complexity/SKILL.md) — draft
+- [022 Composability](skills/022-composability/SKILL.md) — draft
+- [034 Decomposability](skills/034-decomposability/SKILL.md) — draft
 - [038 Distributivity](skills/038-distributivity/SKILL.md) — draft
-- [045 Expressiveness](skills/045-expressiveness/SKILL.md) — todo
+- [045 Expressiveness](skills/045-expressiveness/SKILL.md) — draft
 - [053 Generality](skills/053-generality/SKILL.md) — todo
 - [085 Reusability](skills/085-reusability/SKILL.md) — todo
-- [091 Simplicity](skills/091-simplicity/SKILL.md) — todo
+- [091 Simplicity](skills/091-simplicity/SKILL.md) — draft
 - [093 Standardizability/Standardization/Standard](skills/093-standardizability-standardization-standard/SKILL.md) — draft
-- [094 Structuredness](skills/094-structuredness/SKILL.md) — todo
+- [094 Structuredness](skills/094-structuredness/SKILL.md) — draft
 - [107 Uniformity](skills/107-uniformity/SKILL.md) — todo
 - [109 Variability](skills/109-variability/SKILL.md) — todo
 - [111 Versatility](skills/111-versatility/SKILL.md) — todo

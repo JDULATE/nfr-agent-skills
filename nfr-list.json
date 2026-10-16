@@ -191,7 +191,7 @@
       "Interacting Complexity"
     ],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 16
   },
   {
@@ -200,7 +200,7 @@
     "slug": "composability",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 16
   },
   {
@@ -308,7 +308,7 @@
     "slug": "decomposability",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 16
   },
   {
@@ -410,7 +410,7 @@
     "slug": "expressiveness",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 16
   },
   {
@@ -834,7 +834,7 @@
     "slug": "simplicity",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 16
   },
   {
@@ -865,7 +865,7 @@
     "slug": "structuredness",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 16
   },
   {
