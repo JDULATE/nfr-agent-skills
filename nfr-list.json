@@ -485,7 +485,7 @@
     "slug": "generality",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 17
   },
   {
@@ -777,7 +777,7 @@
     "slug": "reusability",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 17
   },
   {
@@ -982,7 +982,7 @@
     "slug": "uniformity",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 17
   },
   {
@@ -1000,7 +1000,7 @@
     "slug": "variability",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 17
   },
   {
@@ -1018,7 +1018,7 @@
     "slug": "versatility",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 17
   },
   {
@@ -1045,7 +1045,7 @@
     "slug": "wrappability",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 17
   }
 ]

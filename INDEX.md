@@ -34,15 +34,15 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [034 Decomposability](skills/034-decomposability/SKILL.md) — draft
 - [038 Distributivity](skills/038-distributivity/SKILL.md) — draft
 - [045 Expressiveness](skills/045-expressiveness/SKILL.md) — draft
-- [053 Generality](skills/053-generality/SKILL.md) — todo
-- [085 Reusability](skills/085-reusability/SKILL.md) — todo
+- [053 Generality](skills/053-generality/SKILL.md) — draft
+- [085 Reusability](skills/085-reusability/SKILL.md) — draft
 - [091 Simplicity](skills/091-simplicity/SKILL.md) — draft
 - [093 Standardizability/Standardization/Standard](skills/093-standardizability-standardization-standard/SKILL.md) — draft
 - [094 Structuredness](skills/094-structuredness/SKILL.md) — draft
-- [107 Uniformity](skills/107-uniformity/SKILL.md) — todo
-- [109 Variability](skills/109-variability/SKILL.md) — todo
-- [111 Versatility](skills/111-versatility/SKILL.md) — todo
-- [114 Wrappability](skills/114-wrappability/SKILL.md) — todo
+- [107 Uniformity](skills/107-uniformity/SKILL.md) — draft
+- [109 Variability](skills/109-variability/SKILL.md) — draft
+- [111 Versatility](skills/111-versatility/SKILL.md) — draft
+- [114 Wrappability](skills/114-wrappability/SKILL.md) — draft
 
 ## Maintainability & Evolvability
 
