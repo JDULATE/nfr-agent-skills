@@ -14,12 +14,12 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Correctness & Data Quality
 
-- [003 Accuracy](skills/003-accuracy/SKILL.md) — todo
-- [016 Certainty](skills/016-certainty/SKILL.md) — todo
-- [020 Completeness](skills/020-completeness/SKILL.md) — todo
-- [028 Conformance](skills/028-conformance/SKILL.md) — todo
-- [029 Consistency](skills/029-consistency/SKILL.md) — todo
-- [031 Correctness](skills/031-correctness/SKILL.md) — todo
+- [003 Accuracy](skills/003-accuracy/SKILL.md) — draft
+- [016 Certainty](skills/016-certainty/SKILL.md) — draft
+- [020 Completeness](skills/020-completeness/SKILL.md) — draft
+- [028 Conformance](skills/028-conformance/SKILL.md) — draft
+- [029 Consistency](skills/029-consistency/SKILL.md) — draft
+- [031 Correctness](skills/031-correctness/SKILL.md) — draft
 - [036 Demonstrability](skills/036-demonstrability/SKILL.md) — draft
 - [051 Formality](skills/051-formality/SKILL.md) — draft
 - [076 Provability](skills/076-provability/SKILL.md) — draft

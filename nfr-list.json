@@ -26,7 +26,7 @@
     "slug": "accuracy",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 15
   },
   {
@@ -143,7 +143,7 @@
     "slug": "certainty",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 15
   },
   {
@@ -179,7 +179,7 @@
     "slug": "completeness",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 15
   },
   {
@@ -254,7 +254,7 @@
     "slug": "conformance",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 15
   },
   {
@@ -263,7 +263,7 @@
     "slug": "consistency",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 15
   },
   {
@@ -281,7 +281,7 @@
     "slug": "correctness",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 15
   },
   {
