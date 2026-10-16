@@ -1,13 +1,7 @@
 ---
 name: comprehensibility
 description: >-
-  Clarifies the meaning of a particular explanation for its intended audience
-  when users say "explain what this requirement means", "people misinterpret
-  this message", or "clarify who can do what in this paragraph". Tests
-  interpretation against source-grounded scenarios. Not for following
-  code/text structure alone (see readability), a whole-system mental model
-  (see understandability), or current interface state cues (see
-  self-descriptiveness).
+  Clarifies a particular explanation when users say "people misunderstand this error", "what does this requirement mean", or "this paragraph leaves the actor unclear". Not for reading flow (see readability), the whole system model (see understandability), or in-context state cues (see self-descriptiveness).
 ---
 # Comprehensibility
 

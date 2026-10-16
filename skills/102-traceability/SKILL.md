@@ -1,7 +1,7 @@
 ---
 name: traceability
 description: >-
-  Connects requirements, decisions, changes, and evidence across revisions when users say "trace this requirement to its implementation and tests", "find what this change affects", or "these decision links are stale". Uses typed, versioned relationships and reverse navigation. Not for actor responsibility alone (see accountability), an independent examination verdict (see auditability), or whether tests can be controlled and observed (see testability).
+  Links versioned artifacts and change impact when users ask "which tests cover this requirement", "what breaks if we delete this function", or "these links point to an old rule". Not for actor identity (see accountability), review conclusions (see auditability), or test control and observation (see testability).
 ---
 # Traceability
 

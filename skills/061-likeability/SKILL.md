@@ -1,7 +1,7 @@
 ---
 name: likeability
 description: >-
-  Assesses and improves subjective response after using a product when users say "people dislike using this tool", "find out why the experience feels frustrating", or "which interaction do users prefer". Records positive and negative judgments separately from observed task outcomes. Not for visual appeal alone (see attractiveness), task success alone (see usability), or task learning alone (see learnability).
+  Evaluates feelings after use when users say "people hate using this tool", "which workflow do users prefer", or "the app feels frustrating after use". Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).
 ---
 # Likeability
 

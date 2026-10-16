@@ -1,7 +1,7 @@
 ---
 name: recoverability
 description: >-
-  Designs and rehearses restoration of service and state after disruption when users say "restore the service after an outage", "prove our backup can be recovered", or "resume interrupted work without replaying it twice". Defines restored usability, lost-state allowance, recovery milestones, and reconciled work. Not for uninterrupted service during a modeled fault (see fault-failure-tolerance), acknowledged-state persistence alone (see durability), or mission continuity during severe disruption (see survivability).
+  Restores usable state after disruption when tickets say "prove we can restore this backup", "the process is up but orders still fail", or "resume work without replaying orders twice". Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).
 ---
 # Recoverability
 

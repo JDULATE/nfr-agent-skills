@@ -1,12 +1,7 @@
 ---
 name: agility
 description: >-
-  Improves how delivery responds to changed priorities when users say "replan
-  after feedback", "respond to new priorities", or "shorten the path from
-  reprioritization to delivery". Accepts a revised delivery plan with retained
-  constraints and displaced-work consequences. Not for shepherding one
-  unchanged request through its lifecycle (see changeability) or bounding a
-  code edit (see modifiability).
+  Handles reprioritized delivery when users say "the roadmap changed again", "swap in this urgent feature", or "feedback changed what we should ship". Not for progressing one unchanged request (see changeability) or reducing code-edit effort (see modifiability).
 ---
 # Agility
 

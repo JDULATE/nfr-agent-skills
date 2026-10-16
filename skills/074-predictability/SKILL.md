@@ -1,7 +1,7 @@
 ---
 name: predictability
 description: >-
-  Bounds variation when asked "consistent completion", "less jitter" or "fewer surprise pauses". Asks whether a tail complaint means spread or an absolute deadline. Not for tail-latency bounds alone (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or family options (see variability).
+  Bounds variation across comparable runs when tickets say "the same job is fast then slow", "completion times jump around", or "rare pauses keep surprising callers". Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).
 ---
 # Predictability
 

@@ -1,13 +1,7 @@
 ---
 name: self-descriptiveness
 description: >-
-  Makes an interface or artifact explain its current state, affected object,
-  and available actions in context when users say "why is this button
-  disabled", "show what state this item is in", or "make the next action
-  explain itself". Checks state/action inference at the point of use. Not for
-  standalone explanation clarity (see comprehensibility), message timing in a
-  conversation (see communicativeness), or backend diagnostic inference alone
-  (see observability).
+  Makes current state and action effects clear in context when users ask "why is this button disabled", "what will clicking this change", or "which report am I editing right now". Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).
 ---
 # Self-Descriptiveness
 

@@ -1,7 +1,7 @@
 ---
 name: attractiveness
 description: >-
-  Judges and improves visual appeal for a stated audience when users say "make this screen more attractive", "compare these visual styles", or "the layout looks uninviting". Uses aesthetic responses under comparable viewing conditions. Not for overall feelings after interaction (see likeability), visual symbol recognition alone (see legibility), or task completion (see usability).
+  Evaluates visual appeal when users say "this screen looks uninviting", "which visual style looks better", or "make this layout more appealing". Not for feelings after use (see likeability), recognizing characters (see legibility), or completing tasks (see usability).
 ---
 # Attractiveness
 

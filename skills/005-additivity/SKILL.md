@@ -1,11 +1,7 @@
 ---
 name: additivity
 description: >-
-  Specifies preservation of isolated contributions in a combined result when
-  users say "do these gains add up", "avoid counting the benefit twice", or
-  "compare isolated and combined effects". Uses a declared baseline and
-  aggregation rule. Not for assembly compatibility alone (see composability)
-  or merely adding resources (see expandability).
+  Tests whether separate contributions combine as claimed when users ask "do these gains add up", "are we counting the benefit twice", or "both changes together help less". Not for assembly contracts (see composability) or admitting resources (see expandability).
 ---
 # Additivity
 

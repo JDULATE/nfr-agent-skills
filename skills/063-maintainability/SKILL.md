@@ -1,13 +1,7 @@
 ---
 name: maintainability
 description: >-
-  Improves continuing diagnosis, repair, and modification across
-  representative upkeep tasks when users say "reduce recurring maintenance
-  work", "make repairs sustainable", or "help future maintainers diagnose and
-  fix this component". Checks repeatable maintenance paths, effort evidence,
-  and retained upkeep obligations. Not for one edit impact estimate (see
-  modifiability), a user support encounter (see supportability), or a future
-  migration sequence (see evolvability).
+  Reduces recurring upkeep effort when tickets say "repairs keep taking too long", "future maintainers cannot diagnose this", or "we redo the same maintenance work". Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).
 ---
 # Maintainability
 

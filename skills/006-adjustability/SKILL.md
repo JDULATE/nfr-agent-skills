@@ -1,12 +1,7 @@
 ---
 name: adjustability
 description: >-
-  Designs bounded tuning of an existing operating parameter when users say
-  "tune the batch size", "change the polling interval", or "adjust this
-  operating threshold". Keeps the operating arrangement fixed and checks the
-  applied value and its effects. Not for defining the menu of settings (see
-  configurability) or moving to a different operating arrangement (see
-  reconfigurability).
+  Tunes existing controls in a fixed arrangement when tickets say "let admins tweak thresholds", "change the polling interval", or "tune the current batch size". Not for defining options (see configurability) or switching arrangements (see reconfigurability).
 ---
 # Adjustability
 

@@ -1,7 +1,7 @@
 ---
 name: dependability
 description: >-
-  Builds an evidence-backed basis for relying on a system across stated failure concerns when users say "can we rely on this service for this mission", "review our combined failure assurance", or "show which reliance claims lack evidence". Connects claims, assumptions, evidence, and unresolved counterexamples. Not for uptime alone (see availability), failure-free operation alone (see reliability), or a hazard analysis alone (see safety).
+  Combines failure evidence for a scoped reliance decision when users ask "can we rely on this for dispatch", "show the gaps across our failure checks", or "uptime looks fine but dispatch is unsafe". Not for usable time (see availability), failure trials (see reliability), or hazard analysis (see safety).
 ---
 # Dependability
 

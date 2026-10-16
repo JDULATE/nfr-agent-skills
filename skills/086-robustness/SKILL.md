@@ -1,7 +1,7 @@
 ---
 name: robustness
 description: >-
-  Bounds behavior under unexpected inputs, stress, or environmental deviations when users say "handle malformed input without losing control", "stop overload from exhausting the process", or "reject pathological requests and keep other work intact". Specifies permitted rejection, resource boundaries, and unaffected-state checks. Not for continued required service under modeled component faults (see fault-failure-tolerance), adversarial threat coordination (see security-control-and-security), or normal-profile failure history (see reliability).
+  Bounds behavior under adverse inputs or conditions when tickets say "bad input leaves jobs running", "huge requests take down healthy work", or "rejected imports leave half-written rows". Not for component faults (see fault-failure-tolerance), threat review (see security-control-and-security), or normal-profile failures (see reliability).
 ---
 # Robustness
 

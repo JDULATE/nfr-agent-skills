@@ -1,13 +1,7 @@
 ---
 name: conciseness
 description: >-
-  Removes unnecessary wording or representation while preserving required
-  meaning when users say "cut repeated wording", "make this shorter without
-  losing conditions", or "remove the redundant explanation". Checks retained
-  propositions, exceptions, and obligation strength rather than length alone.
-  Not for absent subject coverage (see comprehensiveness), visual character
-  recognition (see legibility), or confusing reading structure alone (see
-  readability).
+  Shortens content while preserving meaning when users say "cut the repeated wording", "make this shorter but keep the exceptions", or "remove duplicated explanations". Not for missing topics (see comprehensiveness), recognizing characters (see legibility), or reading structure (see readability).
 ---
 # Conciseness
 

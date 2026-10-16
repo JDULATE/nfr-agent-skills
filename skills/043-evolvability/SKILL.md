@@ -1,12 +1,7 @@
 ---
 name: evolvability
 description: >-
-  Plans a sequence of changes with prior state and obligations carried forward
-  when users say "plan successive migrations", "keep later releases possible
-  after this migration", or "account for bridges left by earlier changes".
-  Accepts the path across stages, not just a successful edit. Not for one
-  implementation change (see modifiability) or a single existing-capability
-  refinement (see enhanceability).
+  Plans successive changes with prior state and obligations carried forward when users say "will this migration block the next release", "plan the next few migrations", or "when can we remove the old bridge". Not for one code edit (see modifiability) or one capability refinement (see enhanceability).
 ---
 # Evolvability
 

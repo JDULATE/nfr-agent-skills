@@ -1,7 +1,7 @@
 ---
 name: susceptibility
 description: >-
-  Maps where a specified adverse influence can affect the system when users say "which inputs expose this operation", "what conditions make this attack path reachable", or "find the prerequisites for this failure to affect us". Tracks entrypoints, reachability, capability, configuration, and unknown preconditions without presuming successful exploitation. Not for proving class exclusion (see immunity), controlled response design (see robustness), or active containment (see defensibility).
+  Maps exposure and enabling conditions without presuming exploitation when users ask "does this dependency issue affect us", "can the importer reach that code", or "is the disabled endpoint our only route". Not for mechanism exclusion (see immunity), bounded adverse response (see robustness), or active containment (see defensibility).
 ---
 # Susceptibility
 

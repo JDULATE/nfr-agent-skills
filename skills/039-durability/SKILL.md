@@ -1,7 +1,7 @@
 ---
 name: durability
 description: >-
-  Preserves acknowledged state across explicitly named subsequent events when users say "do not lose a confirmed save after restart", "verify committed writes survive storage failure", or "check what our success acknowledgement really preserves". Connects acknowledgement, retained versions, and post-event read evidence. Not for all-or-none visibility (see atomicity), reconstructing usable service (see recoverability), or continuous service during failure (see fault-failure-tolerance).
+  Preserves acknowledged state through named faults when tickets say "saved edits vanish after restart", "did we acknowledge before saving", or "failover loses confirmed writes". Not for partial visibility (see atomicity), restoration (see recoverability), or continued operation (see fault-failure-tolerance).
 ---
 # Durability
 

@@ -1,12 +1,7 @@
 ---
 name: modifiability
 description: >-
-  Bounds the impact and effort of a named implementation change when users say
-  "how much code must this edit touch", "limit the ripple effects of this
-  change", or "estimate the work of changing this rule". Checks affected
-  owners, contracts, and measured versus estimated work. Not for ongoing
-  diagnosis and repair (see maintainability), request-to-adoption handoffs
-  (see changeability), or a multi-change future path (see evolvability).
+  Bounds one code change and its ripple effects when tickets say "how much code will this edit touch", "changing this rule breaks other modules", or "estimate the work for this code change". Not for recurring upkeep (see maintainability), request progress (see changeability), or successive changes (see evolvability).
 ---
 # Modifiability
 

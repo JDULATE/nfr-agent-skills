@@ -1,7 +1,7 @@
 ---
 name: efficiency-device-efficiency
 description: >-
-  Optimizes device resources per useful result when asked "less CPU per report", "fewer bytes per result" or "compare compute costs". Not for operation bounds (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or stewardship outcomes (see sustainability).
+  Reduces resources per useful result when users say "less CPU for each completed report", "stop sending the same bytes twice", or "less compute per result". Not for operation bounds (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or resource stewardship (see sustainability).
 ---
 # Efficiency/Device Efficiency
 

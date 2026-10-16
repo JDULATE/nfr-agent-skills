@@ -1,7 +1,7 @@
 ---
 name: reliability
 description: >-
-  Specifies and tests failure-free operation over a declared interval and operating profile when users say "stop recurring failures during normal operation", "run this workload without failing", or "check whether retries hide operational failures". Preserves failure occurrence, exposure, and restart history. Not for usable-time ratios (see availability), continued service during injected faults (see fault-failure-tolerance), or restoration procedures (see recoverability).
+  Measures failures over a defined operating profile when tickets say "the worker keeps crashing overnight", "retries hide the original failures", or "run this workload without restarting". Not for usable time (see availability), operating through held faults (see fault-failure-tolerance), or restoration (see recoverability).
 ---
 # Reliability
 

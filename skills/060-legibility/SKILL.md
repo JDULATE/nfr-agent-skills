@@ -1,13 +1,7 @@
 ---
 name: legibility
 description: >-
-  Improves recognition of displayed characters and symbols under stated
-  viewing conditions when users say "these characters look alike", "the text
-  is hard to distinguish on this display", or "make this identifier visually
-  distinguishable". Checks transcription of rendered content for the intended
-  audience. Not for following code/text meaning (see readability), aesthetic
-  appeal (see attractiveness), or a general accessibility assessment (see
-  accessibility-access-control).
+  Checks character and symbol recognition in the viewing context when tickets say "these characters look the same", "users misread the identifier", or "the font is unreadable on this display". Not for code/text reading flow (see readability), visual appeal (see attractiveness), or broader access barriers (see accessibility-access-control).
 ---
 # Legibility
 

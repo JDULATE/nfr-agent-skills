@@ -1,7 +1,7 @@
 ---
 name: sustainability
 description: >-
-  Evaluates operational energy and device-life choices when asked "use less energy", "keep these devices useful" or "delay replacement". Not for device resource ratios alone (see efficiency-device-efficiency), price alone (see affordability), or business continuation (see viability).
+  Assesses energy and device-life trade-offs when users ask "can we use less energy for these reports", "can we keep these devices useful", or "do we really need replacement hardware". Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).
 ---
 # Sustainability
 

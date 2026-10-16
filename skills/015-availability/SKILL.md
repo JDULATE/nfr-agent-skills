@@ -1,10 +1,7 @@
 ---
 name: availability
 description: >-
-  Improves, specifies, and verifies service availability when users ask to "improve
-  uptime", "reduce downtime", deliver a "zero-downtime deploy", design for "high
-  availability", or "define an SLA/SLO". Not for failure-free operation alone
-  (see reliability) or restoration procedures alone (see recoverability).
+  Improves and measures usable service time when tickets say "users get logged out on deploy", "checkout goes down during releases", or "count our downtime". Not for failure-free operation (see reliability) or restoring usable state (see recoverability).
 status: draft
 ---
 # Availability

@@ -1,12 +1,7 @@
 ---
 name: reconfigurability
 description: >-
-  Designs transitions between operating arrangements with in-progress state
-  carried forward when users say "switch processing arrangements without
-  losing queued work", "move this running service to the new configuration",
-  or "resume an interrupted configuration change". Not for the menu of valid
-  settings (see configurability), scalar tuning in the same arrangement (see
-  adjustability), or independent alternative routes alone (see flexibility).
+  Controls transitions between operating configurations when tickets say "switch modes without losing queued jobs", "resume the interrupted config change", or "who owns work during the switch". Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).
 ---
 # Reconfigurability
 

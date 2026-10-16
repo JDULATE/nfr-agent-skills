@@ -1,12 +1,7 @@
 ---
 name: configurability
 description: >-
-  Defines supported settings and valid combinations when users say "make it
-  configurable", "expose the available settings", or "validate this
-  configuration file". Covers defaults, precedence, scope, and effective
-  choice without source edits. Not for tuning an existing control (see
-  adjustability), applying a stateful arrangement change (see
-  reconfigurability), or adding user-defined behavior (see customizability).
+  Defines supported settings, defaults, and valid combinations when tickets say "which settings do we support", "these config options clash", or "document defaults and overrides". Not for tuning a value (see adjustability), switching state (see reconfigurability), or user-authored behavior (see customizability).
 ---
 # Configurability
 

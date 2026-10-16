@@ -1,7 +1,7 @@
 ---
 name: auditability
 description: >-
-  Makes retained evidence independently examinable for a stated review question when users say "let a reviewer reconstruct this approval", "prove what evidence supports this control review", or "the audit trail cannot answer the examiner's question". Connects provenance, scope, retention, retrieval, and gaps. Not for actor attribution alone (see accountability), artifact relationship navigation alone (see traceability), or a compliance conclusion from logs (see conformance).
+  Defines evidence for independent review when tickets say "the reviewer cannot reconstruct this approval", "our audit trail leaves gaps", or "an export does not answer the audit question". Not for actor identity (see accountability), artifact links (see traceability), or compliance conclusions (see conformance).
 ---
 # Auditability
 

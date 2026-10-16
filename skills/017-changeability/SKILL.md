@@ -1,12 +1,7 @@
 ---
 name: changeability
 description: >-
-  Traces a specific change request through decision, delivery, and actual
-  adoption when users say "why is this approved change stuck", "get this
-  change into use", or "track this request through approval and rollout".
-  Checks handoffs and completion evidence for that request. Not for responding
-  to a changed priority queue (see agility) or implementation impact alone
-  (see modifiability).
+  Traces one request through decision, delivery, and adoption when tickets say "this ticket is stuck after approval", "merged but not rolled out", or "who needs to hand this change over". Not for changing priorities (see agility) or reducing code-edit effort (see modifiability).
 ---
 # Changeability
 

@@ -1,7 +1,7 @@
 ---
 name: confidentiality
 description: >-
-  Controls which recipients can learn protected information when users say "stop leaking private fields in responses", "restrict this export to approved recipients", or "the cache shows another team's data". Traces disclosure through payloads, errors, caches, logs, and alternate paths under the agreed policy. Not for personal-data purpose and retention (see privacy), identity unlinkability (see anonymity), or alteration protection (see integrity).
+  Restricts disclosure to authorized recipients when tickets say "the API leaks internal notes", "a cache shows another team's data", or "errors expose private fields". Not for purpose and retention (see privacy), identity linkage (see anonymity), or alteration protection (see integrity).
 ---
 # Confidentiality
 

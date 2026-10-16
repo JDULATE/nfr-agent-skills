@@ -1,13 +1,7 @@
 ---
 name: customizability
 description: >-
-  Enables stakeholder-defined behavior or presentation beyond built-in choices
-  when users say "let users write their own report templates", "add a
-  customer-defined rule", or "allow a bespoke output layout". Requires a
-  bounded user-authored artifact and its accepted result. Not for selecting
-  built-in settings (see configurability), fitting supported behavior to a
-  team (see tailorability), or existing-hook admission alone (see
-  extensibility).
+  Supports user-authored behavior or presentation when tickets say "let users write report templates", "customers need their own rules", or "allow custom output layouts". Not for built-in choices (see configurability), fitting a work context (see tailorability), or plugin admission (see extensibility).
 ---
 # Customizability
 

@@ -1,11 +1,7 @@
 ---
 name: expandability
 description: >-
-  Designs admission of resources into an existing installation when users say
-  "add more workers", "attach another storage unit", or "make this new node
-  usable". Checks admission, placement, transition, and the added usable
-  capacity. Not for workload growth curves (see scalability) or adding a core
-  function (see extendability).
+  Admits added resources into an existing installation's usable capacity when tickets say "the new worker never picks up jobs", "bring another storage unit online", or "add usable nodes to this cluster". Not for workload growth curves (see scalability) or adding core functionality (see extendability).
 ---
 # Expandability
 

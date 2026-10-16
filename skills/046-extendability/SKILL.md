@@ -1,12 +1,7 @@
 ---
 name: extendability
 description: >-
-  Plans bounded core or interface changes for a new capability when users say
-  "add a new core operation", "build a plugin hook", or "introduce a result
-  type the current core cannot provide". Applies when no existing hook admits
-  the addition, including when the hook itself must be built. Not for
-  additions that fit an existing extension contract (see extensibility) or
-  resource admission (see expandability).
+  Plans bounded core changes or builds missing extension hooks when users say "we need a hook before adding plugins", "this format needs core changes", or "add an operation the core cannot handle". Not for using an existing hook (see extensibility) or admitting resources (see expandability).
 ---
 # Extendability
 

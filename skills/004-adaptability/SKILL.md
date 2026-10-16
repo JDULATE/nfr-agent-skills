@@ -1,13 +1,7 @@
 ---
 name: adaptability
 description: >-
-  Specifies accommodation of a named external environment change when users
-  say "the partner feed changed", "support new operating conditions", or "keep
-  this working after the environment changes". Accepts preserved required
-  behavior across old and changed conditions. Not for choosing already
-  supported task alternatives (see flexibility), moving execution platforms
-  alone (see portability), or a configuration transition alone (see
-  reconfigurability).
+  Preserves required behavior across changed external conditions when tickets say "the supplier changed its feed", "support changed operating conditions", or "keep importing after the upstream change". Not for built-in alternatives (see flexibility), platform moves (see portability), or applying settings (see reconfigurability).
 ---
 # Adaptability
 

@@ -1,7 +1,7 @@
 ---
 name: security-control-and-security
 description: >-
-  Coordinates threat and control work around an explicit adversary and protected assets when users say "review how attackers could misuse this feature", "threat model this integration", or "prioritize security controls for this attack path". Connects trust boundaries, misuse paths, controls, and residual exposure. Not for a disclosure-only property (see confidentiality), an alteration-only property (see integrity), or an active defensive incident response alone (see defensibility).
+  Designs controls against adversary paths when tickets say "how could an attacker abuse this feature", "where should we block this attack", or "the normal route is fixed but retries bypass it". Not for disclosure alone (see confidentiality), alteration alone (see integrity), or incident containment (see defensibility).
 ---
 # Security/Control and Security
 

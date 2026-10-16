@@ -1,7 +1,7 @@
 ---
 name: integrity
 description: >-
-  Protects data or behavior against unauthorized or unintended alteration when users say "detect tampered import data", "stop this update from changing protected fields", or "prevent stale edits from overwriting approved state". Defines permitted transitions, trusted provenance, write boundaries, and alteration evidence. Not for closeness to a real-world value (see accuracy), disclosure restriction (see confidentiality), or all-or-none commit visibility alone (see atomicity).
+  Controls unauthorized or unintended alteration when tickets say "stale edits overwrite approved changes", "block updates to protected fields", or "check whether this import was tampered with". Not for factual error (see accuracy), disclosure (see confidentiality), or partial commits (see atomicity).
 ---
 # Integrity
 

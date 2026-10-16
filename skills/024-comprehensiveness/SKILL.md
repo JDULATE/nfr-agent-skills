@@ -1,7 +1,7 @@
 ---
 name: comprehensiveness
 description: >-
-  Finds missing subject areas in audience-facing explanations when users say "cover the operational topics this guide misses", "does this manual address our readers' questions", or "broaden the explanation beyond the happy path". Reviews breadth against audience needs. Not for missing members of an already fixed required set (see completeness), unclear wording (see comprehensibility), or a causal system model alone (see understandability).
+  Checks topic coverage for an audience when users ask "this guide skips recovery", "are we missing topics for operators", or "our manual only covers the happy path". Not for a fixed inventory (see completeness), unclear passages (see comprehensibility), or the system model (see understandability).
 ---
 # Comprehensiveness
 

@@ -1,13 +1,7 @@
 ---
 name: enhanceability
 description: >-
-  Designs the implementation surface for a named refinement of an existing
-  capability under retained acceptance criteria when users say "make this
-  algorithm replaceable for refinement", "let us refine this feature without
-  changing its purpose", or "bound the work of upgrading this computation".
-  Not for judging output error alone (see accuracy), adding a supporting
-  result (see augmentability), or planning successive changes (see
-  evolvability).
+  Designs implementation changes to refine an existing capability when tickets say "make this parser easier to improve", "swap in a better version of this algorithm", or "upgrade this feature without adding a new one". Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged change paths (see evolvability).
 ---
 # Enhanceability
 

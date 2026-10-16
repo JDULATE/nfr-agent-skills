@@ -1,7 +1,7 @@
 ---
 name: trustability
 description: >-
-  Supports a stakeholder's stated trust decision with inspectable claims, limits, and evidence when users say "what can I safely rely on this claim for", "show me the limitations before I delegate this task", or "the confidence message overstates the evidence". Separates supported scope, unknowns, and decision authority from reassuring presentation. Not for operational failure assurance alone (see dependability), subjective liking (see likeability), or a warranted output-confidence statement alone (see certainty).
+  Supports scoped trust decisions with evidence and limits when users ask "can this tool publish without my review", "show the limits before I delegate", or "this confidence badge promises too much". Not for operational assurance (see dependability), feelings after use (see likeability), or confidence in one output (see certainty).
 ---
 # Trustability
 

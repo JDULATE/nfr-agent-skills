@@ -1,7 +1,7 @@
 ---
 name: accountability
 description: >-
-  Makes system actions attributable under an explicit identity model when users say "show who approved this change", "distinguish the user from the service acting for them", or "our shared account hides responsibility". Binds initiating and executing principals, delegation, action, and outcome to trusted evidence. Not for independent evidence examination alone (see auditability), artifact lineage alone (see traceability), or hiding subject identity (see anonymity).
+  Binds initiating and executing actors under a validated identity model when users ask "who approved this change", "which user queued this job", or "shared accounts hide who acted". Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).
 ---
 # Accountability
 

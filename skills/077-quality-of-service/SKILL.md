@@ -1,7 +1,7 @@
 ---
 name: quality-of-service
 description: >-
-  Sets per-class treatment under contention when asked "protect checkout", "reserve batch progress" or "isolate tenants". Not for one operation's bounds (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or permission grants (see accessibility-access-control).
+  Defines service per competing class when tickets say "batch jobs block checkout", "background jobs never get a turn", or "one tenant hogs the workers". Not for one-operation bounds (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or permissions (see accessibility-access-control).
 ---
 # Quality of Service
 

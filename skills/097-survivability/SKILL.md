@@ -1,7 +1,7 @@
 ---
 name: survivability
 description: >-
-  Keeps explicitly selected essential mission functions operating through a severe scoped disruption when users say "keep essential dispatch working during a site loss", "define the minimum mission service in a major disruption", or "continue the critical mission while normal systems are gone". Prioritizes mission results, degraded authority, and disrupted dependencies. Not for normal-service restoration alone (see recoverability), routine component-fault continuation alone (see fault-failure-tolerance), or all-service uptime accounting (see availability).
+  Preserves essential work through severe disruption when tickets say "keep dispatch running if the site is lost", "what still works without central login", or "reconcile offline assignments when we return". Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).
 ---
 # Survivability
 

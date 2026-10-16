@@ -1,13 +1,7 @@
 ---
 name: tailorability
 description: >-
-  Fits existing supported behavior to a named stakeholder context when users
-  say "allow different workflows per team", "fit this deployment to the night
-  shift", or "adapt the supported process to our department". Maps contextual
-  needs to available choices and checks task fit. Not for new
-  stakeholder-defined behavior (see customizability), the general setting menu
-  (see configurability), alternative coverage alone (see flexibility), or an
-  external environment delta (see adaptability).
+  Fits supported behavior to a work context when tickets say "fit the workflow to the night shift", "let departments use different presets", or "our team needs another supported process". Not for authored behavior (see customizability), defining settings (see configurability), alternatives (see flexibility), or external changes (see adaptability).
 ---
 # Tailorability
 

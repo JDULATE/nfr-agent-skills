@@ -1,13 +1,7 @@
 ---
 name: flexibility
 description: >-
-  Designs meaningful supported alternatives for the same task when users say
-  "keep manual and automated routes", "let us choose another way to do this",
-  or "support both task arrangements". Checks feasibility and outcomes for
-  each alternative, not a response to an external change. Not for
-  accommodating changed environmental conditions (see adaptability), tuning a
-  parameter (see adjustability), or applying a configuration transition (see
-  reconfigurability).
+  Supports alternative ways to perform the same task when tickets say "offer manual and automatic routes", "let users choose another way through", or "keep both workflows supported". Not for external changes (see adaptability), tuning a control (see adjustability), or switching state (see reconfigurability).
 ---
 # Flexibility
 

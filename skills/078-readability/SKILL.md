@@ -1,11 +1,7 @@
 ---
 name: readability
 description: >-
-  Improves and checks how readers follow code or text when users say "improve
-  readability", "make this code easier to read", "rename confusing variables",
-  "simplify this paragraph", or "reduce nesting". Not for visual character
-  recognition (see legibility) or missing conceptual explanations
-  (see comprehensibility).
+  Improves code and text reading flow when tickets say "rename these confusing variables", "this function is buried in nesting", or "reorder this paragraph so it flows". Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).
 status: draft
 ---
 # Readability

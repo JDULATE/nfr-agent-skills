@@ -1,7 +1,7 @@
 ---
 name: communicativeness
 description: >-
-  Designs when and how interaction messages reach users when they say "tell me when the export finishes", "show that my request is still running", or "the error arrives after I have moved on". Connects event, recipient, channel, timing, and next action. Not for current-state context alone (see self-descriptiveness) or interpreting a standalone explanation (see comprehensibility).
+  Defines timely user feedback when tickets say "notify me when the export is done", "the error arrives too late", or "keep users posted while a job runs". Not for explaining current state and actions (see self-descriptiveness) or clarifying a standalone explanation (see comprehensibility).
 ---
 # Communicativeness
 

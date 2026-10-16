@@ -1,7 +1,7 @@
 ---
 name: defensibility
 description: >-
-  Enables authorized operators to detect, contain, and contest active adversarial actions when users say "stop this compromised credential from continuing", "give responders a usable containment path", or "verify that incident controls actually cut off the attacker". Connects observed activity, scoped response authority, control effects, and preserved evidence. Not for design-time threat coordination alone (see security-control-and-security), normal outage restoration (see recoverability), or passive diagnosis alone (see observability).
+  Designs authorized containment during an attack when tickets say "a revoked token still runs jobs", "give responders a kill switch", or "check that containment actually stopped it". Not for full threat/control design (see security-control-and-security), normal restoration (see recoverability), or passive diagnosis (see observability).
 ---
 # Defensibility
 

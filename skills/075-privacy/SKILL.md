@@ -1,12 +1,7 @@
 ---
 name: privacy
 description: >-
-  Improves and verifies personal-data handling when users ask to "review GDPR/CCPA/DSAR
-  handling", "minimize PII", "apply data minimization", "propagate consent or cookie
-  choices", "handle a right to be forgotten request", or "set retention or deletion".
-  Treats user-named regulations and request labels as stakeholder constraints, without
-  asserting legal obligations. Not for disclosure protection alone (see confidentiality)
-  or identity-unlinkability claims alone (see anonymity).
+  Defines personal-data purpose and lifecycle when tickets say "we keep storing data we never use", "stop sending emails to analytics", or "deleted accounts return after restore". Not for read permissions alone (see confidentiality) or preventing identity linkage (see anonymity). Treats policy labels as supplied constraints.
 ---
 # Privacy
 

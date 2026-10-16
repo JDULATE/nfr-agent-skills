@@ -1,7 +1,7 @@
 ---
 name: stability
 description: >-
-  Bounds drift and oscillation within a stated operating envelope when users say "stop this control from flapping", "the behavior drifts even with steady inputs", or "keep repeated adjustments from oscillating". Separates settling, held conditions, directional drift, and recurring reversals. Not for failure occurrence alone (see reliability), general outcome variation (see predictability), or one operation's timing bound (see performance-efficiency-time-or-space-bounds).
+  Controls drift and feedback over time when tickets say "the autoscaler keeps flapping", "the output drifts with steady input", or "our controllers undo each other's changes". Not for failure occurrence (see reliability), run-to-run variation (see predictability), or operation latency (see performance-efficiency-time-or-space-bounds).
 ---
 # Stability
 

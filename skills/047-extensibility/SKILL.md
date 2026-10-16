@@ -1,12 +1,7 @@
 ---
 name: extensibility
 description: >-
-  Checks new implementations through an existing hook when users say "add a
-  plugin through this hook", "register a report template", or "implement
-  another provider against this interface". Requires a pre-existing contract
-  that admits the behavior without per-addition core edits. If the hook must
-  be built or widened, routes that work to extendability. Not for creating the
-  hook (see extendability) or component assembly alone (see composability).
+  Admits additions through an existing hook without core edits when users say "register a plugin with this hook", "add another provider to this interface", or "test plugin activation and cleanup". Not for building or widening the hook (see extendability) or composing component contracts (see composability).
 ---
 # Extensibility
 

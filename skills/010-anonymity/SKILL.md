@@ -1,7 +1,7 @@
 ---
 name: anonymity
 description: >-
-  Defines and tests identity unlinkability for an explicit observer when users say "can recipients identify people in this release", "check whether these pseudonyms can be linked back", or "remove identity clues from this dataset". Inspects direct identifiers, auxiliary knowledge, repeated releases, and linkage paths. Not for personal-data purpose and lifecycle alone (see privacy), recipient permissions alone (see confidentiality), or attribution of actions (see accountability).
+  Assesses identity and linkage exposed to an observer when users ask "can recipients work out who this is", "these fake IDs link back to people", or "repeated exports reveal the same person". Not for data purpose/lifecycle (see privacy), recipient permissions (see confidentiality), or actor attribution (see accountability).
 ---
 # Anonymity
 

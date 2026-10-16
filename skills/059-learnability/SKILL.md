@@ -1,7 +1,7 @@
 ---
 name: learnability
 description: >-
-  Improves acquisition of task ability through product use when users say "newcomers cannot learn this workflow", "help first-time users figure it out", or "users still need help after practicing". Separates initial attempts, practice, and unaided transfer. Not for a course or lesson intervention (see trainability), experienced-user task completion alone (see usability), or reading clarity alone (see readability).
+  Checks learning through product use when tickets say "new users never get the hang of it", "people still need help after practicing", or "can beginners do it unaided next time". Not for courses (see trainability), experienced task performance (see usability), or reading flow (see readability).
 ---
 # Learnability
 

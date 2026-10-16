@@ -1,7 +1,7 @@
 ---
 name: trainability
 description: >-
-  Builds and evaluates instruction that enables task skills when users say "create hands-on training for this workflow", "the course graduates cannot do the task", or "replace the walkthrough with practice exercises". Aligns lessons, exercises, feedback, and unaided assessment. Not for learning through product use without a training intervention (see learnability), documentation breadth alone (see comprehensiveness), or task performance alone (see usability).
+  Designs instruction and independent skill checks when tickets say "replace the demo with practice exercises", "people finish the course but cannot do the job", or "write training with a separate skills check". Not for learning through use (see learnability), topic coverage (see comprehensiveness), or current task success (see usability).
 ---
 # Trainability
 

@@ -1,7 +1,7 @@
 ---
 name: fault-failure-tolerance
 description: >-
-  Designs and verifies continued required service during explicitly modeled component faults when users say "keep serving when a worker crashes", "survive a dependency failure without losing the required result", or "test failover under a network partition". Names fault scope, concurrent limits, and permitted degradation. Not for restoration after interruption (see recoverability), uptime accounting alone (see availability), or arbitrary adverse input handling (see robustness).
+  Keeps a defined service working during modeled faults when users say "keep serving when a worker dies", "fail over while requests are running", or "keep writes working during a partition". Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).
 ---
 # Fault/Failure Tolerance
 

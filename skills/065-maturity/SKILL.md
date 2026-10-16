@@ -1,7 +1,7 @@
 ---
 name: maturity
 description: >-
-  Assesses readiness from actual operational and defect-handling history when users say "is this release proven enough for our intended use", "review recurring defects before wider use", or "show what our operating history supports". Separates demonstrated experience, repair follow-up, and evidence gaps. Not for a future failure-free trial alone (see reliability), a combined reliance argument alone (see dependability), or lifecycle maintenance effort (see maintainability).
+  Assesses demonstrated readiness from operating and defect history when users ask "is this release proven enough", "the same bug came back under a new ticket", or "do we have real use after the fix". Not for future failure trials (see reliability), combined assurance (see dependability), or upkeep effort (see maintainability).
 ---
 # Maturity
 

@@ -1,7 +1,7 @@
 ---
 name: usability
 description: >-
-  Improves end-to-end task interaction for a stated audience and context when users say "users cannot finish checkout", "reduce mistakes in this workflow", or "make this task easier to complete". Verifies the actual goal, effort, errors, and recovery under stated assistance. Not for learning acquisition alone (see learnability), subjective preference alone (see likeability), or visual appeal alone (see attractiveness).
+  Improves end-to-end task performance when tickets say "users cannot finish checkout", "people make mistakes in this workflow", or "make the whole task easier to complete". Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).
 ---
 # Usability
 

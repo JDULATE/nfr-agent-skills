@@ -1,7 +1,7 @@
 ---
 name: immunity
 description: >-
-  Builds a narrowly bounded exclusion claim for a specified attack or fault class when users say "can this input ever reach the command interpreter", "exclude this failure class by construction", or "check the assumptions behind our immunity claim". Requires a mechanism, reachable-path reasoning, and explicit limits; tests alone do not prove universal exclusion. Not for controlled response during exposure (see robustness), exposure mapping alone (see susceptibility), or broad security assurances (see security-control-and-security).
+  Assesses exclusion of a named failure mechanism under explicit premises when users ask "can text still reach the command runner", "remove this failure path completely", or "does the old loader bypass the fix". Not for bounded response (see robustness), exposure mapping (see susceptibility), or threat review (see security-control-and-security).
 ---
 # Immunity
 

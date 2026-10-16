@@ -1,12 +1,7 @@
 ---
 name: augmentability
 description: >-
-  Designs a separately accepted supporting result alongside an original
-  capability when users say "add suggestions beside manual replies", "attach
-  an annotation panel", or "add a supporting service without replacing the
-  original role". Covers optional or required supplements, with accepted
-  effects stated separately. Not for refining only the original result (see
-  enhanceability) or a general plugin contract (see extensibility).
+  Adds a separately accepted supporting capability when users say "add reply suggestions", "put annotations beside reports", or "add a helper without replacing manual work". Not for improving the original capability (see enhanceability) or admitting through an existing hook (see extensibility).
 ---
 # Augmentability
 

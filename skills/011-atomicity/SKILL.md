@@ -1,7 +1,7 @@
 ---
 name: atomicity
 description: >-
-  Defines and verifies all-or-none visibility of a bounded operation when users say "do not leave half an update", "make these state changes commit together", or "avoid partially applied operations". Names participating effects, observers, and the commit boundary. Not for preserving an acknowledged commit after later events (see durability), restoring a disrupted system (see recoverability), or general agreement between representations (see consistency).
+  Specifies all-or-none visible effects when tickets say "we see half an update", "a failed write leaves partial changes", or "rollback happens after users saw the change". Not for preserving acknowledged writes (see durability), restoring service (see recoverability), or agreement between values (see consistency).
 ---
 # Atomicity
 

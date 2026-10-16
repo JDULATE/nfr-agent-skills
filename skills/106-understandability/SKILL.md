@@ -1,13 +1,7 @@
 ---
 name: understandability
 description: >-
-  Builds a correct mental model of system purpose, responsibilities, state,
-  and causal relationships when users say "help maintainers understand how
-  this system works", "explain how these components fit together", or "show
-  why this flow behaves that way". Tests predictions across component
-  boundaries. Not for one explanation alone (see comprehensibility), reading
-  effort of code/text alone (see readability), or breadth of documentation
-  topics (see comprehensiveness).
+  Explains the whole system model when users ask "how do these components fit together", "who owns state in this flow", or "why does this request cross these services". Not for one unclear explanation (see comprehensibility), reading flow (see readability), or topic breadth (see comprehensiveness).
 ---
 # Understandability
 

@@ -1,7 +1,7 @@
 ---
 name: safety
 description: >-
-  Identifies and controls paths to stakeholder-defined harm when users say "prevent this action from causing harm", "check unsafe control paths", or "make the hazardous failure behavior explicit". Connects hazards, unsafe actions, constraints, controls, and residual exposure. Not for adversarial misuse alone (see security-control-and-security), uninterrupted service alone (see availability), or general input resilience without a harm model (see robustness).
+  Prevents named harm when tickets say "do not delete records that are on hold", "can stopping this action cause harm", or "the safety check is only in the UI". Not for adversary controls (see security-control-and-security), usable service time (see availability), or generic bad-input handling (see robustness).
 ---
 # Safety
 

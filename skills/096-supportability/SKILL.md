@@ -1,13 +1,7 @@
 ---
 name: supportability
 description: >-
-  Builds repository-backed diagnosis and resolution paths for a specific user
-  support case when users say "help support explain this failed export", "give
-  the support team a safe diagnostic bundle", or "make this issue resolvable
-  from the runbook". Uses authorized evidence, case reproduction, and verified
-  resolution or escalation. Not for ongoing code upkeep (see maintainability),
-  runtime inference alone (see observability), or a release approval handoff
-  (see changeability).
+  Resolves a specific support encounter when tickets say "support cannot explain this failed export", "give support a safe diagnostic bundle", or "we need a runbook for this customer issue". Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).
 ---
 # Supportability
 

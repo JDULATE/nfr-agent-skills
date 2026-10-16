@@ -1,7 +1,7 @@
 ---
 name: accessibility-access-control
 description: >-
-  Handles two separate branches when users say "keyboard users cannot finish this form", "the screen reader misses the error", "focus gets lost after closing the dialog", "stop cross-team edits", "enforce object permissions on the API", or "revoked access still works". Addresses interaction barriers for the named audience under Accessibility, or actor/action/resource authorization under Access Control; asks which branch an ambiguous access request means. Not for visual appeal (see attractiveness), purpose and lifecycle of personal data (see privacy), or broad threat coordination (see security-control-and-security).
+  Separates interaction barriers from permission checks when tickets say "keyboard users get stuck", "screen reader skips errors", "stop cross-team edits", or "revoked access still works". Asks which branch. Not for looks (see attractiveness), personal-data lifecycle (see privacy), or threat review (see security-control-and-security).
 ---
 # Accessibility/Access Control
 

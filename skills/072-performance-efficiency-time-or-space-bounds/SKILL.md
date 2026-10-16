@@ -1,7 +1,7 @@
 ---
 name: performance-efficiency-time-or-space-bounds
 description: >-
-  Bounds latency, including tail-percentile deadlines, throughput and space at a stated load when asked "faster exports", "response budget" or "memory ceiling". Not for spread/variation (see predictability), resource per result (see efficiency-device-efficiency), or class treatment (see quality-of-service).
+  Sets fixed-load time, throughput, or space bounds when tickets say "our p95 is too high", "the export takes too long", or "this operation uses too much memory". Not for run-to-run variation (see predictability), resources per result (see efficiency-device-efficiency), or competing service classes (see quality-of-service).
 ---
 # Performance/Efficiency/Time or Space Bounds
 
