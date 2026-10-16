@@ -1,0 +1,59 @@
+{
+  "id": 9,
+  "slug": "analyzability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need a dependency or cause map, a replay of one bug, or evidence from the running system?",
+  "should_trigger": [
+    {
+      "prompt": "Help us understand what broke.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need a dependency or cause map, a replay of one bug, or evidence from the running system?"
+    },
+    {
+      "prompt": "What would this change affect?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need a dependency or cause map, a replay of one bug, or evidence from the running system?"
+    },
+    {
+      "prompt": "Map the callers and stored fields affected by removing this customer field before we choose the change.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Work out which service boundaries could explain these failures; we have not isolated a failing request yet.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Help me debug this failure.",
+      "intended_sibling": "debuggability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?"
+    },
+    {
+      "prompt": "Is the worker stuck?",
+      "intended_sibling": "observability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need evidence to infer internal state, a status display, or a replay of one specific defect?"
+    },
+    {
+      "prompt": "Replay this saved failing request and trace where its correct input first becomes the wrong parsed value.",
+      "intended_sibling": "debuggability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Join retries to the original attempt so an operator can infer why the running system produced no result.",
+      "intended_sibling": "observability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

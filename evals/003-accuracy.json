@@ -1,0 +1,59 @@
+{
+  "id": 3,
+  "slug": "accuracy",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are the values wrong against a reference, is the implemented rule wrong, or is the evidence uncertain?",
+  "should_trigger": [
+    {
+      "prompt": "The totals look wrong.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are the values wrong against a reference, is the implemented rule wrong, or is the evidence uncertain?"
+    },
+    {
+      "prompt": "Can we trust these readings?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are the values wrong against a reference, is the implemented rule wrong, or is the evidence uncertain?"
+    },
+    {
+      "prompt": "Compare the reported package weights with the scale readings and show how far each result is off.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The parser accepts the row, but the extracted dates disagree with the reviewed source documents.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "This function returns the wrong result.",
+      "intended_sibling": "correctness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?"
+    },
+    {
+      "prompt": "The report sounds too sure.",
+      "intended_sibling": "certainty",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this about what the evidence warrants, error against a reference, or proving a claim under assumptions?"
+    },
+    {
+      "prompt": "The function takes the wrong branch for the boundary case in our agreed decision table; implement that table.",
+      "intended_sibling": "correctness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The two supplied sources disagree; show that uncertainty instead of silently choosing a confident answer.",
+      "intended_sibling": "certainty",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

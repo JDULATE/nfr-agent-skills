@@ -1,7 +1,7 @@
 ---
 name: adaptability
 description: >-
-  Preserves required behavior across changed external conditions when tickets say "the supplier changed its feed", "support changed operating conditions", or "keep importing after the upstream change". Not for built-in alternatives (see flexibility), platform moves (see portability), or applying settings (see reconfigurability).
+  Preserves required behavior across external changes when tickets say "the supplier changed its feed", "the importer broke after their update", or "keep importing after the upstream change". Not for built-in alternatives (see flexibility), platform moves (see portability), or applying settings (see reconfigurability).
 ---
 # Adaptability
 

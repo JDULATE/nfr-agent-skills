@@ -1,0 +1,59 @@
+{
+  "id": 62,
+  "slug": "localizability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this language or locale adaptation, a platform move, or visual recognition of characters?",
+  "should_trigger": [
+    {
+      "prompt": "We need another language.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this language or locale adaptation, a platform move, or visual recognition of characters?"
+    },
+    {
+      "prompt": "Dates are confusing our customers.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this language or locale adaptation, a platform move, or visual recognition of characters?"
+    },
+    {
+      "prompt": "Move display text into locale resources and format dates for the selected locale without changing stored dates or business rules.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Support decimal-comma input for the chosen locale while keeping canonical exported numeric values unambiguous.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Move this service to the new host.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "People misread these IDs.",
+      "intended_sibling": "legibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle visual character recognition, reading flow, or locale-dependent presentation?"
+    },
+    {
+      "prompt": "Move the software to the target runtime, track the platform-specific edits, and check that the same behavior still works.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Change the rendering so readers can distinguish the characters without changing the wording or its structure.",
+      "intended_sibling": "legibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

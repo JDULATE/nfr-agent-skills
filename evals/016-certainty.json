@@ -1,0 +1,59 @@
+{
+  "id": 16,
+  "slug": "certainty",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this about what the evidence warrants, error against a reference, or proving a claim under assumptions?",
+  "should_trigger": [
+    {
+      "prompt": "Can we call this confirmed?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this about what the evidence warrants, error against a reference, or proving a claim under assumptions?"
+    },
+    {
+      "prompt": "The report sounds too sure.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this about what the evidence warrants, error against a reference, or proving a claim under assumptions?"
+    },
+    {
+      "prompt": "Mark this conclusion unverified when its source evidence is missing rather than displaying it as confirmed.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The two supplied sources disagree; show that uncertainty instead of silently choosing a confident answer.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The totals look wrong.",
+      "intended_sibling": "accuracy",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are the values wrong against a reference, is the implemented rule wrong, or is the evidence uncertain?"
+    },
+    {
+      "prompt": "Tests don't cover every possibility.",
+      "intended_sibling": "provability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is a claim to be proved under assumptions, checked through selected evidence, or first expressed precisely?"
+    },
+    {
+      "prompt": "Compare the reported package weights with the scale readings and show how far each result is off.",
+      "intended_sibling": "accuracy",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show why the invariant follows from every allowed transition in the model, including the assumptions the proof needs.",
+      "intended_sibling": "provability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

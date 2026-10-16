@@ -1,0 +1,59 @@
+{
+  "id": 34,
+  "slug": "decomposability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we making responsibilities independently separable, organizing dependency layers, or joining components?",
+  "should_trigger": [
+    {
+      "prompt": "Split this module up.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we making responsibilities independently separable, organizing dependency layers, or joining components?"
+    },
+    {
+      "prompt": "These parts are too tangled.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we making responsibilities independently separable, organizing dependency layers, or joining components?"
+    },
+    {
+      "prompt": "Separate billing from rendering so each can run its own task without borrowing the other's mutable state.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Extract the validator with its own inputs and state owner, and show it can operate without the request handler.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The package layout is a mess.",
+      "intended_sibling": "structuredness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we enforcing dependency organization, separating responsibilities, or aligning peer conventions?"
+    },
+    {
+      "prompt": "Help us combine these components.",
+      "intended_sibling": "composability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem the joined stages' behavior, the work of wiring them up, or whether their gains add together?"
+    },
+    {
+      "prompt": "Make the domain layer independent of the web layer and check the actual dependency edges against that organization.",
+      "intended_sibling": "structuredness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "When the middle stage rejects a row, make the whole chain agree on what stops, what continues, and who releases the input.",
+      "intended_sibling": "composability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

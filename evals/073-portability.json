@@ -1,0 +1,59 @@
+{
+  "id": 73,
+  "slug": "portability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?",
+  "should_trigger": [
+    {
+      "prompt": "Move this service to the new host.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "It only runs on the old machine.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "Move the software to the target runtime, track the platform-specific edits, and check that the same behavior still works.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Identify the operating-system assumptions that stop this application running in the target environment and isolate those adaptations.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The new install won't start.",
+      "intended_sibling": "installability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the task setting up or upgrading on one target, moving between platforms, or operating an installed service?"
+    },
+    {
+      "prompt": "Dates are confusing our customers.",
+      "intended_sibling": "localizability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this language or locale adaptation, a platform move, or visual recognition of characters?"
+    },
+    {
+      "prompt": "On a clean target, install this supplied package and verify it starts with its declared prerequisites.",
+      "intended_sibling": "installability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Support decimal-comma input for the chosen locale while keeping canonical exported numeric values unambiguous.",
+      "intended_sibling": "localizability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

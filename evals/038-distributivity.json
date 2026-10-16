@@ -1,0 +1,59 @@
+{
+  "id": 38,
+  "slug": "distributivity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we deciding where work belongs, measuring growing load, or admitting extra resources into a deployment?",
+  "should_trigger": [
+    {
+      "prompt": "Spread this work across nodes.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we deciding where work belongs, measuring growing load, or admitting extra resources into a deployment?"
+    },
+    {
+      "prompt": "Which worker owns this job?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we deciding where work belongs, measuring growing load, or admitting extra resources into a deployment?"
+    },
+    {
+      "prompt": "Assign each key range to a named node and define what happens to ownership during reassignment.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Two workers claim the same shard; make placement and ownership explicit across the running nodes.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Handle more traffic.",
+      "intended_sibling": "scalability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we studying workload growth, admitting resources, or a fixed-load completion limit?"
+    },
+    {
+      "prompt": "We need more capacity.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the task admitting new deployment resources or testing behavior as workload grows?"
+    },
+    {
+      "prompt": "Increase concurrent users and record how throughput, errors and resource needs change across the workload growth.",
+      "intended_sibling": "scalability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Admit the new storage unit into the deployment and verify that its capacity is available for allocation.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

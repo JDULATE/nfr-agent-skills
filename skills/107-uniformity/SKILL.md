@@ -1,7 +1,7 @@
 ---
 name: uniformity
 description: >-
-  Aligns conventions across comparable peers when tickets say "list routes name the same limit differently", "use the same paging fields on peer routes", or "why does one list take pageSize". Not for selecting a common convention (see standardizability-standardization-standard) or value agreement (see consistency).
+  Aligns conventions across comparable peers when tickets say "list routes name the same limit differently", "use the same paging fields on these routes", or "why does only this list take pageSize". Not for selecting a common convention (see standardizability-standardization-standard) or value agreement (see consistency).
 ---
 
 # Uniformity

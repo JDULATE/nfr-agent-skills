@@ -1,0 +1,59 @@
+{
+  "id": 76,
+  "slug": "provability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is a claim to be proved under assumptions, checked through selected evidence, or first expressed precisely?",
+  "should_trigger": [
+    {
+      "prompt": "Can we prove this can't happen?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is a claim to be proved under assumptions, checked through selected evidence, or first expressed precisely?"
+    },
+    {
+      "prompt": "Tests don't cover every possibility.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is a claim to be proved under assumptions, checked through selected evidence, or first expressed precisely?"
+    },
+    {
+      "prompt": "State the assumptions and construct a checkable argument that the balance cannot become negative for all modeled transitions.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show why the invariant follows from every allowed transition in the model, including the assumptions the proof needs.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "How will we know this passed?",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?"
+    },
+    {
+      "prompt": "People read this spec differently.",
+      "intended_sibling": "formality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need precise notation, a proof built from it, or a clearer explanation in ordinary language?"
+    },
+    {
+      "prompt": "Choose feasible evidence and a decision rule for accepting this requirement instead of leaving 'works well' uncheckable.",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Specify what each symbol and missing value means in this policy notation before using it to state the rules.",
+      "intended_sibling": "formality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

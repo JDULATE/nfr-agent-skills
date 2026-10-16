@@ -1,0 +1,59 @@
+{
+  "id": 31,
+  "slug": "correctness",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?",
+  "should_trigger": [
+    {
+      "prompt": "This function returns the wrong result.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?"
+    },
+    {
+      "prompt": "Fix the checkout logic.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?"
+    },
+    {
+      "prompt": "The function takes the wrong branch for the boundary case in our agreed decision table; implement that table.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The contract says an expired request is rejected, but this endpoint accepts it; fix the behavior against that contract.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The totals look wrong.",
+      "intended_sibling": "accuracy",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are the values wrong against a reference, is the implemented rule wrong, or is the evidence uncertain?"
+    },
+    {
+      "prompt": "Is this report complete?",
+      "intended_sibling": "completeness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is a required member missing from a defined set, is a value wrong, or is an explanation missing a topic?"
+    },
+    {
+      "prompt": "Compare the reported package weights with the scale readings and show how far each result is off.",
+      "intended_sibling": "accuracy",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Every required attachment in this manifest must appear in the package; check membership rather than just total size.",
+      "intended_sibling": "completeness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

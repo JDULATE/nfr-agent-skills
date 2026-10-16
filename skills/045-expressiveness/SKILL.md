@@ -1,7 +1,7 @@
 ---
 name: expressiveness
 description: >-
-  Adds missing distinctions to a notation when tickets say "this rule cannot say owner only", "we cannot express an explicit denial", or "different policies serialize identically". Not for shortening adequate notation (see conciseness) or setting precision alone (see formality).
+  Adds missing distinctions to a notation when tickets say "this rule cannot say owner only", "we cannot write a deny rule", or "different policies save as the same thing". Not for shortening adequate notation (see conciseness) or setting precision alone (see formality).
 ---
 
 # Expressiveness

@@ -1,0 +1,59 @@
+{
+  "id": 51,
+  "slug": "formality",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need precise notation, a proof built from it, or a clearer explanation in ordinary language?",
+  "should_trigger": [
+    {
+      "prompt": "Make these rules precise.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need precise notation, a proof built from it, or a clearer explanation in ordinary language?"
+    },
+    {
+      "prompt": "People read this spec differently.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need precise notation, a proof built from it, or a clearer explanation in ordinary language?"
+    },
+    {
+      "prompt": "Define the allowed states and transitions so two implementers cannot assign different meanings to the same state label.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Specify what each symbol and missing value means in this policy notation before using it to state the rules.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Can we prove this can't happen?",
+      "intended_sibling": "provability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is a claim to be proved under assumptions, checked through selected evidence, or first expressed precisely?"
+    },
+    {
+      "prompt": "Make this explanation clearer.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is meaning misunderstood, reading flow difficult, or a needed topic absent?"
+    },
+    {
+      "prompt": "State the assumptions and construct a checkable argument that the balance cannot become negative for all modeled transitions.",
+      "intended_sibling": "provability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Rewrite this requirement explanation so its audience identifies the intended actor and condition correctly.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

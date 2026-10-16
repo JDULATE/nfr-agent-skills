@@ -1,0 +1,59 @@
+{
+  "id": 82,
+  "slug": "repeatability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this a repeated run in the same setup, independent reconstruction, or bounds on service variation?",
+  "should_trigger": [
+    {
+      "prompt": "I can't get the same result again.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this a repeated run in the same setup, independent reconstruction, or bounds on service variation?"
+    },
+    {
+      "prompt": "Does this pass on a rerun?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this a repeated run in the same setup, independent reconstruction, or bounds on service variation?"
+    },
+    {
+      "prompt": "Rerun the same fixture with the same procedure and setup and compare the resulting outputs.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the operator, inputs and environment fixed and check whether repeating this experiment gives the same recorded result.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "It only works on your laptop.",
+      "intended_sibling": "replicability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must another executor reconstruct the experiment, must the same setup rerun it, or must the product move platforms?"
+    },
+    {
+      "prompt": "Sometimes this call is much slower.",
+      "intended_sibling": "predictability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the complaint run-to-run spread, an absolute completion limit, or feedback oscillation?"
+    },
+    {
+      "prompt": "Give another engineer the materials to reconstruct the experiment on a clean runner and compare the result independently.",
+      "intended_sibling": "replicability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Explain and bound the variation between repeated service runs under matched conditions, including rare pauses.",
+      "intended_sibling": "predictability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

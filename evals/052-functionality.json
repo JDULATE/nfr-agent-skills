@@ -1,0 +1,59 @@
+{
+  "id": 52,
+  "slug": "functionality",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the needed capability absent, incorrectly implemented, or present but unsuitable for this task?",
+  "should_trigger": [
+    {
+      "prompt": "The export feature is missing.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the needed capability absent, incorrectly implemented, or present but unsuitable for this task?"
+    },
+    {
+      "prompt": "We need to support cancellation.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the needed capability absent, incorrectly implemented, or present but unsuitable for this task?"
+    },
+    {
+      "prompt": "Add the missing operation that lets a caller cancel a queued export and receive a defined result.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "List and implement the required report operations, including their actors, inputs and outputs; the download operation does not exist yet.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "This function returns the wrong result.",
+      "intended_sibling": "correctness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?"
+    },
+    {
+      "prompt": "The export isn't useful for our handoff.",
+      "intended_sibling": "suitability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the capability missing, present but unsuitable for the task, or failing to achieve the desired outcome?"
+    },
+    {
+      "prompt": "The function takes the wrong branch for the boundary case in our agreed decision table; implement that table.",
+      "intended_sibling": "correctness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Choose the report capability that fits this team's stated handoff context, rather than counting available features.",
+      "intended_sibling": "suitability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

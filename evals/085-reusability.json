@@ -1,0 +1,59 @@
+{
+  "id": 85,
+  "slug": "reusability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?",
+  "should_trigger": [
+    {
+      "prompt": "Stop copying this helper.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?"
+    },
+    {
+      "prompt": "Use the validator in the CLI too.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?"
+    },
+    {
+      "prompt": "Use the same validator artifact in the CLI as well as the web path without depending on a web request object.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Use this existing checker in the batch job without dragging in its web request dependencies or maintaining a copy.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Stop adding a special case for every input.",
+      "intended_sibling": "generality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Should one abstraction cover related cases, should an artifact be reused elsewhere, or should one product serve different roles?"
+    },
+    {
+      "prompt": "Help us combine these components.",
+      "intended_sibling": "composability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem the joined stages' behavior, the work of wiring them up, or whether their gains add together?"
+    },
+    {
+      "prompt": "Use one interval model for quantities and durations with the same interval rules instead of separate named-case branches.",
+      "intended_sibling": "generality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "When the middle stage rejects a row, make the whole chain agree on what stops, what continues, and who releases the input.",
+      "intended_sibling": "composability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

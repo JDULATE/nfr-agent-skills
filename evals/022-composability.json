@@ -1,0 +1,59 @@
+{
+  "id": 22,
+  "slug": "composability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the problem the joined stages' behavior, the work of wiring them up, or whether their gains add together?",
+  "should_trigger": [
+    {
+      "prompt": "Can these stages work together?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem the joined stages' behavior, the work of wiring them up, or whether their gains add together?"
+    },
+    {
+      "prompt": "Help us combine these components.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem the joined stages' behavior, the work of wiring them up, or whether their gains add together?"
+    },
+    {
+      "prompt": "Each stage passes alone, but the joined pipeline closes a stream too early; define who owns and closes it.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "When the middle stage rejects a row, make the whole chain agree on what stops, what continues, and who releases the input.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Help us wire these services together.",
+      "intended_sibling": "integratability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle assembly work, exchanged meaning, or setup of an already packaged deployment?"
+    },
+    {
+      "prompt": "Both changes help alone but not together.",
+      "intended_sibling": "additivity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we checking combined contributions, assembly contracts, or an improvement to one capability?"
+    },
+    {
+      "prompt": "Both components already agree on the messages; wire up their adapters and show how much glue code the assembly takes.",
+      "intended_sibling": "integratability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The combined saving is less than the sum of the isolated savings; check that difference rather than just whether the stages connect.",
+      "intended_sibling": "additivity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 name: immunity
 description: >-
-  Assesses exclusion of a named failure mechanism under explicit premises when users ask "can text still reach the command runner", "remove this failure path completely", or "does the old loader bypass the fix". Not for bounded response (see robustness), exposure mapping (see susceptibility), or threat review (see security-control-and-security).
+  Checks whether a mechanism excludes a named failure path under assumptions when users ask "can text still reach the command runner", "remove this failure path completely", or "does the old loader bypass the fix". Not for bounded response (see robustness), exposure mapping (see susceptibility), or threat review (see security-control-and-security).
 ---
 # Immunity
 

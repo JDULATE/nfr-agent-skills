@@ -1,0 +1,59 @@
+{
+  "id": 70,
+  "slug": "observability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need evidence to infer internal state, a status display, or a replay of one specific defect?",
+  "should_trigger": [
+    {
+      "prompt": "The logs aren't helping.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need evidence to infer internal state, a status display, or a replay of one specific defect?"
+    },
+    {
+      "prompt": "Is the worker stuck?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need evidence to infer internal state, a status display, or a replay of one specific defect?"
+    },
+    {
+      "prompt": "Add runtime evidence that distinguishes a queued job from an executing job that has stopped making progress.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Join retries to the original attempt so an operator can infer why the running system produced no result.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Customers can't see what's happening.",
+      "intended_sibling": "visibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does the audience need visible status, do operators need to infer hidden state, or should a message arrive at a task event?"
+    },
+    {
+      "prompt": "Where did this wrong value come from?",
+      "intended_sibling": "debuggability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?"
+    },
+    {
+      "prompt": "Show the intended customer the correct job's current progress and when that status was last updated.",
+      "intended_sibling": "visibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "This stack trace points at the renderer; find the execution step that introduced the bad value for this exact input.",
+      "intended_sibling": "debuggability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

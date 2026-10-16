@@ -1,0 +1,59 @@
+{
+  "id": 111,
+  "slug": "versatility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Must one product serve distinct roles, must an abstraction cover related cases, or must an artifact be reused in a new context?",
+  "should_trigger": [
+    {
+      "prompt": "Can this tool do another job?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must one product serve distinct roles, must an abstraction cover related cases, or must an artifact be reused in a new context?"
+    },
+    {
+      "prompt": "We need to use it beyond imports.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must one product serve distinct roles, must an abstraction cover related cases, or must an artifact be reused in a new context?"
+    },
+    {
+      "prompt": "Use the same tool to load inventory changes in import mode and inspect stock without changing it in audit mode.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Check that this tool serves both intake and audit tasks rather than just accepting more variants of intake records.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Stop adding a special case for every input.",
+      "intended_sibling": "generality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Should one abstraction cover related cases, should an artifact be reused elsewhere, or should one product serve different roles?"
+    },
+    {
+      "prompt": "Use the validator in the CLI too.",
+      "intended_sibling": "reusability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?"
+    },
+    {
+      "prompt": "Use one interval model for quantities and durations with the same interval rules instead of separate named-case branches.",
+      "intended_sibling": "generality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Use this existing checker in the batch job without dragging in its web request dependencies or maintaining a copy.",
+      "intended_sibling": "reusability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

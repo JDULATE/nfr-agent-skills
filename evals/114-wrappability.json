@@ -1,0 +1,59 @@
+{
+  "id": 114,
+  "slug": "wrappability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Will the implementation remain behind a new boundary, be substituted, or need assembly with other components?",
+  "should_trigger": [
+    {
+      "prompt": "Put a new API around this old function.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the implementation remain behind a new boundary, be substituted, or need assembly with other components?"
+    },
+    {
+      "prompt": "Can we expose this engine differently?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the implementation remain behind a new boundary, be substituted, or need assembly with other components?"
+    },
+    {
+      "prompt": "Keep the existing engine in place and expose a structured API that preserves its effects and native error behavior.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Add a new entrypoint around the retained implementation without silently changing what a successful native call does.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Swap this backend.",
+      "intended_sibling": "replaceability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?"
+    },
+    {
+      "prompt": "The pieces work alone but not together.",
+      "intended_sibling": "integratability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle assembly work, exchanged meaning, or setup of an already packaged deployment?"
+    },
+    {
+      "prompt": "Replace and retire the old provider while preserving the surrounding callers' contract and required state.",
+      "intended_sibling": "replaceability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Document who owns the glue code and prerequisites needed to turn these separately developed modules into a working solution.",
+      "intended_sibling": "integratability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

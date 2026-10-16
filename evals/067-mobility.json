@@ -1,0 +1,59 @@
+{
+  "id": 67,
+  "slug": "mobility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Must the task continue during movement, resume after a pause elsewhere, or run on a different software platform?",
+  "should_trigger": [
+    {
+      "prompt": "Keep this working as I move.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the task continue during movement, resume after a pause elsewhere, or run on a different software platform?"
+    },
+    {
+      "prompt": "Changing networks breaks my work.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the task continue during movement, resume after a pause elsewhere, or run on a different software platform?"
+    },
+    {
+      "prompt": "Keep the same active upload progressing as the client switches network paths, without restarting the logical task.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the live task progressing while the user changes connections instead of creating a new task at each switch.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Let me pick up where I left off.",
+      "intended_sibling": "nomadicity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this resuming after relocation, uninterrupted work while moving, or restoring a disrupted service?"
+    },
+    {
+      "prompt": "It only runs on the old machine.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "Save the draft and task position so the user can resume after disconnecting here and reconnecting at another site.",
+      "intended_sibling": "nomadicity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Identify the operating-system assumptions that stop this application running in the target environment and isolate those adaptations.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

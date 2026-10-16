@@ -1,0 +1,59 @@
+{
+  "id": 36,
+  "slug": "demonstrability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Does the audience need an inspectable demonstration, acceptance evidence, or a repeated run in the same setup?",
+  "should_trigger": [
+    {
+      "prompt": "Show us that this actually works.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does the audience need an inspectable demonstration, acceptance evidence, or a repeated run in the same setup?"
+    },
+    {
+      "prompt": "We need a demo for the reviewers.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does the audience need an inspectable demonstration, acceptance evidence, or a repeated run in the same setup?"
+    },
+    {
+      "prompt": "Prepare a replayable failed-payment demo with named inputs and visible outcomes that the reviewer can inspect.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Let the audience rerun this approval scenario and inspect the transition it shows, rather than just reading the claim.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "How will we know this passed?",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?"
+    },
+    {
+      "prompt": "Does this pass on a rerun?",
+      "intended_sibling": "repeatability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this a repeated run in the same setup, independent reconstruction, or bounds on service variation?"
+    },
+    {
+      "prompt": "Choose feasible evidence and a decision rule for accepting this requirement instead of leaving 'works well' uncheckable.",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the operator, inputs and environment fixed and check whether repeating this experiment gives the same recorded result.",
+      "intended_sibling": "repeatability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

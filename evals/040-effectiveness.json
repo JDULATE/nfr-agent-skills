@@ -1,0 +1,59 @@
+{
+  "id": 40,
+  "slug": "effectiveness",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we evaluating achieved outcomes, a capability's presence, or its fit for a particular task?",
+  "should_trigger": [
+    {
+      "prompt": "Does this feature actually help?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we evaluating achieved outcomes, a capability's presence, or its fit for a particular task?"
+    },
+    {
+      "prompt": "The dashboard looks successful but users disagree.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we evaluating achieved outcomes, a capability's presence, or its fit for a particular task?"
+    },
+    {
+      "prompt": "Count invoices actually reconciled against the team's goal, rather than clicks on the reconciliation button.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The workflow finishes, but the requested issues remain unresolved; evaluate the achieved outcome rather than feature presence.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The export feature is missing.",
+      "intended_sibling": "functionality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the needed capability absent, incorrectly implemented, or present but unsuitable for this task?"
+    },
+    {
+      "prompt": "The export isn't useful for our handoff.",
+      "intended_sibling": "suitability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the capability missing, present but unsuitable for the task, or failing to achieve the desired outcome?"
+    },
+    {
+      "prompt": "Add the missing operation that lets a caller cancel a queued export and receive a defined result.",
+      "intended_sibling": "functionality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Choose the report capability that fits this team's stated handoff context, rather than counting available features.",
+      "intended_sibling": "suitability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

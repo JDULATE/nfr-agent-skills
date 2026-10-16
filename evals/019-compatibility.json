@@ -1,0 +1,59 @@
+{
+  "id": 19,
+  "slug": "compatibility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Must the tools coexist without interference, exchange data with matching meaning, or replace one another?",
+  "should_trigger": [
+    {
+      "prompt": "These tools don't work together.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the tools coexist without interference, exchange data with matching meaning, or replace one another?"
+    },
+    {
+      "prompt": "Can we run both versions?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the tools coexist without interference, exchange data with matching meaning, or replace one another?"
+    },
+    {
+      "prompt": "Installing the new client overwrites the old client's preferences; keep both usable side by side.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Both agents must share this machine without taking each other's port or deleting each other's files.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The receiver doesn't understand our export.",
+      "intended_sibling": "interoperability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the failure exchanged meaning, the work of connecting systems, or interference while they coexist?"
+    },
+    {
+      "prompt": "We need to stop using the old provider.",
+      "intended_sibling": "replaceability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?"
+    },
+    {
+      "prompt": "The sender uses seconds and the receiver reads milliseconds; agree on the meaning at the exchange boundary.",
+      "intended_sibling": "interoperability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Substitute this component without asking its callers to change their inputs or interpretation of the results.",
+      "intended_sibling": "replaceability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

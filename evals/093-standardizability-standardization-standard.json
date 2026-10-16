@@ -1,0 +1,59 @@
+{
+  "id": 93,
+  "slug": "standardizability-standardization-standard",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need to select a convention, enforce an already selected rule, or make peer interfaces consistent?",
+  "should_trigger": [
+    {
+      "prompt": "We need one shared format.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to select a convention, enforce an already selected rule, or make peer interfaces consistent?"
+    },
+    {
+      "prompt": "Teams keep inventing their own names.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to select a convention, enforce an already selected rule, or make peer interfaces consistent?"
+    },
+    {
+      "prompt": "Choose and publish the event-field convention that teams will adopt; no common rule has been selected yet.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Agree on a shared naming convention and plan its adoption rather than checking files against an existing rule.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Check whether this follows the rules.",
+      "intended_sibling": "conformance",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Have the rules already been chosen, or do we need to choose them or check functional behavior?"
+    },
+    {
+      "prompt": "Make these APIs consistent.",
+      "intended_sibling": "uniformity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are peer conventions mismatched, does a convention need choosing, or do values disagree at the same revision?"
+    },
+    {
+      "prompt": "Validate this payload against the schema we have already selected and report the violated rule.",
+      "intended_sibling": "conformance",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Align the peer forms' treatment of the same validation action so callers do not relearn it for each form.",
+      "intended_sibling": "uniformity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 21,
+  "slug": "complexity-interacting-complexity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we reducing interaction burden, removing an unnecessary mechanism, or bounding the work for one edit?",
+  "should_trigger": [
+    {
+      "prompt": "This code has too many moving parts.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reducing interaction burden, removing an unnecessary mechanism, or bounding the work for one edit?"
+    },
+    {
+      "prompt": "Why is this change so hard to reason about?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reducing interaction burden, removing an unnecessary mechanism, or bounding the work for one edit?"
+    },
+    {
+      "prompt": "Map how these flags alter each other's paths so we can reduce the combinations a reviewer has to reason through.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "These callbacks change shared state in different orders; identify the interacting paths before simplifying them.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "This feels overengineered.",
+      "intended_sibling": "simplicity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal removing unnecessary mechanisms, reducing interaction burden, or making the text easier to follow?"
+    },
+    {
+      "prompt": "This edit looks risky.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance about one implementation edit, ongoing upkeep, or moving a request through delivery?"
+    },
+    {
+      "prompt": "Remove the plugin registry from this fixed export path; there is no requirement for alternate formatters.",
+      "intended_sibling": "simplicity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Change this implementation rule within the agreed effort and ripple-effect boundary.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

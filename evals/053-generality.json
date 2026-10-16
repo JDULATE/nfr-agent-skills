@@ -1,0 +1,59 @@
+{
+  "id": 53,
+  "slug": "generality",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Should one abstraction cover related cases, should an artifact be reused elsewhere, or should one product serve different roles?",
+  "should_trigger": [
+    {
+      "prompt": "Stop adding a special case for every input.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Should one abstraction cover related cases, should an artifact be reused elsewhere, or should one product serve different roles?"
+    },
+    {
+      "prompt": "Can this model cover more cases?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Should one abstraction cover related cases, should an artifact be reused elsewhere, or should one product serve different roles?"
+    },
+    {
+      "prompt": "Use one interval model for quantities and durations with the same interval rules instead of separate named-case branches.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Replace these near-identical range checkers with one abstraction that covers the agreed family of ranges.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Stop copying this helper.",
+      "intended_sibling": "reusability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?"
+    },
+    {
+      "prompt": "We need to use it beyond imports.",
+      "intended_sibling": "versatility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must one product serve distinct roles, must an abstraction cover related cases, or must an artifact be reused in a new context?"
+    },
+    {
+      "prompt": "Use the same validator artifact in the CLI as well as the web path without depending on a web request object.",
+      "intended_sibling": "reusability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Check that this tool serves both intake and audit tasks rather than just accepting more variants of intake records.",
+      "intended_sibling": "versatility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

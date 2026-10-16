@@ -1,0 +1,59 @@
+{
+  "id": 55,
+  "slug": "installability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the task setting up or upgrading on one target, moving between platforms, or operating an installed service?",
+  "should_trigger": [
+    {
+      "prompt": "The new install won't start.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the task setting up or upgrading on one target, moving between platforms, or operating an installed service?"
+    },
+    {
+      "prompt": "Can we make upgrades less painful?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the task setting up or upgrading on one target, moving between platforms, or operating an installed service?"
+    },
+    {
+      "prompt": "On a clean target, install this supplied package and verify it starts with its declared prerequisites.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The installer fails halfway through an upgrade; leave a known usable installation rather than a mixture of old and new files.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Move this service to the new host.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "We get stuck halfway through a rerun.",
+      "intended_sibling": "operability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal a complete operator task, a single command's effect, or fleet-wide policy coordination?"
+    },
+    {
+      "prompt": "Move the software to the target runtime, track the platform-specific edits, and check that the same behavior still works.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Define the entry conditions, actions and exit checks for rerunning this runtime job, including what to do with partial state.",
+      "intended_sibling": "operability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

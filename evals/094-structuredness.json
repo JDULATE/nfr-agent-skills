@@ -1,0 +1,59 @@
+{
+  "id": 94,
+  "slug": "structuredness",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we enforcing dependency organization, separating responsibilities, or aligning peer conventions?",
+  "should_trigger": [
+    {
+      "prompt": "The package layout is a mess.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we enforcing dependency organization, separating responsibilities, or aligning peer conventions?"
+    },
+    {
+      "prompt": "These imports go everywhere.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we enforcing dependency organization, separating responsibilities, or aligning peer conventions?"
+    },
+    {
+      "prompt": "Make the domain layer independent of the web layer and check the actual dependency edges against that organization.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Expose and remove the import cycle that violates the agreed package dependency rules rather than just renaming folders.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Split this module up.",
+      "intended_sibling": "decomposability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we making responsibilities independently separable, organizing dependency layers, or joining components?"
+    },
+    {
+      "prompt": "Make these APIs consistent.",
+      "intended_sibling": "uniformity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are peer conventions mismatched, does a convention need choosing, or do values disagree at the same revision?"
+    },
+    {
+      "prompt": "Separate billing from rendering so each can run its own task without borrowing the other's mutable state.",
+      "intended_sibling": "decomposability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Align the peer forms' treatment of the same validation action so callers do not relearn it for each form.",
+      "intended_sibling": "uniformity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

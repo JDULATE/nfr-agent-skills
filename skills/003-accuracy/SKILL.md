@@ -1,7 +1,7 @@
 ---
 name: accuracy
 description: >-
-  Reduces error against a reference when tickets say "our sensor readings are off", "the reported weight misses the reference", or "rounding hides the measurement error". Not for following a specified algorithm (see correctness) or confidence labels (see certainty).
+  Reduces error against a reference when tickets say "our sensor readings are off", "the weight is wrong against the scale", or "rounding hides the error". Not for following a specified algorithm (see correctness) or confidence labels (see certainty).
 ---
 
 # Accuracy

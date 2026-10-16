@@ -1,0 +1,59 @@
+{
+  "id": 109,
+  "slug": "variability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this product-family combination control, a supported instance setting, or switching an operating configuration?",
+  "should_trigger": [
+    {
+      "prompt": "We need different editions.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this product-family combination control, a supported instance setting, or switching an operating configuration?"
+    },
+    {
+      "prompt": "Some feature combinations don't work.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this product-family combination control, a supported instance setting, or switching an operating configuration?"
+    },
+    {
+      "prompt": "Reject product builds that include export without audit, and state which edition combinations are supported at build time.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Model the allowed feature combinations for this product family and where each choice is bound, rather than exposing runtime settings.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this configurable.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we defining valid supported options, tuning one value, or switching an active arrangement?"
+    },
+    {
+      "prompt": "Changing config loses work.",
+      "intended_sibling": "reconfigurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance about the configuration transition, the available settings, or tuning a parameter?"
+    },
+    {
+      "prompt": "Expose the built-in retry options with validated combinations and explicit default precedence, without source edits.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Resume an interrupted configuration change without letting the old and new arrangement both claim the same pending work.",
+      "intended_sibling": "reconfigurability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

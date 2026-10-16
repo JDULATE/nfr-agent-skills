@@ -1,0 +1,59 @@
+{
+  "id": 104,
+  "slug": "transferability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this handing assets and responsibility to a recipient, moving execution platforms, or ongoing system exchange?",
+  "should_trigger": [
+    {
+      "prompt": "Help us hand this project over.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this handing assets and responsibility to a recipient, moving execution platforms, or ongoing system exchange?"
+    },
+    {
+      "prompt": "The recipient can't use the package.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this handing assets and responsibility to a recipient, moving execution platforms, or ongoing system exchange?"
+    },
+    {
+      "prompt": "Package the project, linked assets and responsibility information so the receiving team can take over and use them meaningfully.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The exported project opens at the recipient but loses linked documents; preserve the asset relationships needed for the handoff.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Move this service to the new host.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "These systems disagree about the response.",
+      "intended_sibling": "interoperability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the failure exchanged meaning, the work of connecting systems, or interference while they coexist?"
+    },
+    {
+      "prompt": "Move the software to the target runtime, track the platform-specific edits, and check that the same behavior still works.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Both APIs return success, but one means queued and the other means completed; align the interaction meaning.",
+      "intended_sibling": "interoperability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

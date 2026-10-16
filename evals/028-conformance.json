@@ -1,0 +1,59 @@
+{
+  "id": 28,
+  "slug": "conformance",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Have the rules already been chosen, or do we need to choose them or check functional behavior?",
+  "should_trigger": [
+    {
+      "prompt": "Check whether this follows the rules.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Have the rules already been chosen, or do we need to choose them or check functional behavior?"
+    },
+    {
+      "prompt": "Is this payload valid?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Have the rules already been chosen, or do we need to choose them or check functional behavior?"
+    },
+    {
+      "prompt": "Validate this payload against the schema we have already selected and report the violated rule.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The team has adopted these naming rules; reject files that break them rather than choosing a new convention.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "We need one shared format.",
+      "intended_sibling": "standardizability-standardization-standard",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to select a convention, enforce an already selected rule, or make peer interfaces consistent?"
+    },
+    {
+      "prompt": "Fix the checkout logic.",
+      "intended_sibling": "correctness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?"
+    },
+    {
+      "prompt": "Choose and publish the event-field convention that teams will adopt; no common rule has been selected yet.",
+      "intended_sibling": "standardizability-standardization-standard",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The contract says an expired request is rejected, but this endpoint accepts it; fix the behavior against that contract.",
+      "intended_sibling": "correctness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

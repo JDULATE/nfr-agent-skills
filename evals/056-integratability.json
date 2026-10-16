@@ -1,0 +1,59 @@
+{
+  "id": 56,
+  "slug": "integratability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the obstacle assembly work, exchanged meaning, or setup of an already packaged deployment?",
+  "should_trigger": [
+    {
+      "prompt": "Help us wire these services together.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle assembly work, exchanged meaning, or setup of an already packaged deployment?"
+    },
+    {
+      "prompt": "The pieces work alone but not together.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle assembly work, exchanged meaning, or setup of an already packaged deployment?"
+    },
+    {
+      "prompt": "Both components already agree on the messages; wire up their adapters and show how much glue code the assembly takes.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Document who owns the glue code and prerequisites needed to turn these separately developed modules into a working solution.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The receiver doesn't understand our export.",
+      "intended_sibling": "interoperability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the failure exchanged meaning, the work of connecting systems, or interference while they coexist?"
+    },
+    {
+      "prompt": "Can we make upgrades less painful?",
+      "intended_sibling": "installability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the task setting up or upgrading on one target, moving between platforms, or operating an installed service?"
+    },
+    {
+      "prompt": "The sender uses seconds and the receiver reads milliseconds; agree on the meaning at the exchange boundary.",
+      "intended_sibling": "interoperability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The installer fails halfway through an upgrade; leave a known usable installation rather than a mixture of old and new files.",
+      "intended_sibling": "installability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 33,
+  "slug": "debuggability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?",
+  "should_trigger": [
+    {
+      "prompt": "Help me debug this failure.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?"
+    },
+    {
+      "prompt": "Where did this wrong value come from?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?"
+    },
+    {
+      "prompt": "Replay this saved failing request and trace where its correct input first becomes the wrong parsed value.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "This stack trace points at the renderer; find the execution step that introduced the bad value for this exact input.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Help us understand what broke.",
+      "intended_sibling": "analyzability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need a dependency or cause map, a replay of one bug, or evidence from the running system?"
+    },
+    {
+      "prompt": "We can't reproduce the timeout in tests.",
+      "intended_sibling": "testability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are tests missing control and observation seams, an acceptance method, or a diagnosis of a particular failure?"
+    },
+    {
+      "prompt": "Map the callers and stored fields affected by removing this customer field before we choose the change.",
+      "intended_sibling": "analyzability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Expose a test seam to force the timeout branch and observe its result without invoking the live service.",
+      "intended_sibling": "testability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

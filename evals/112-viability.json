@@ -1,0 +1,59 @@
+{
+  "id": 112,
+  "slug": "viability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we assessing continued value, whether a candidate can initially be built, or a spending ceiling?",
+  "should_trigger": [
+    {
+      "prompt": "Is this still worth running?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we assessing continued value, whether a candidate can initially be built, or a spending ceiling?"
+    },
+    {
+      "prompt": "Should we keep this product?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we assessing continued value, whether a candidate can initially be built, or a spending ceiling?"
+    },
+    {
+      "prompt": "Decide whether this existing reporting service is worth keeping until our next review, including its upkeep and the value it provides.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Set a continue-or-retire decision for this existing service using its benefits and future obligations, rather than initial build feasibility.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Can we actually build this?",
+      "intended_sibling": "feasibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the question initial technical achievability, spending limits, or whether continued operation remains worthwhile?"
+    },
+    {
+      "prompt": "This service is getting expensive.",
+      "intended_sibling": "affordability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision about a spending limit, whether a design can be built, or whether it remains worth running?"
+    },
+    {
+      "prompt": "Prove the candidate renderer can run locally with no network access before committing to this offline design.",
+      "intended_sibling": "feasibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep this workload within the team's approved budget, including support and migration costs.",
+      "intended_sibling": "affordability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

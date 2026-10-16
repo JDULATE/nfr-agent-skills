@@ -1,0 +1,59 @@
+{
+  "id": 69,
+  "slug": "nomadicity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this resuming after relocation, uninterrupted work while moving, or restoring a disrupted service?",
+  "should_trigger": [
+    {
+      "prompt": "Let me pick up where I left off.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this resuming after relocation, uninterrupted work while moving, or restoring a disrupted service?"
+    },
+    {
+      "prompt": "I lose my place when I reconnect.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this resuming after relocation, uninterrupted work while moving, or restoring a disrupted service?"
+    },
+    {
+      "prompt": "Save the draft and task position so the user can resume after disconnecting here and reconnecting at another site.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "After a relocation pause, reopen the saved work in the new environment with its prior progress intact.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Keep this working as I move.",
+      "intended_sibling": "mobility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the task continue during movement, resume after a pause elsewhere, or run on a different software platform?"
+    },
+    {
+      "prompt": "We lose work after a crash.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance about restoration after disruption, operation during a fault, or retention of acknowledged writes?"
+    },
+    {
+      "prompt": "Keep the same active upload progressing as the client switches network paths, without restarting the logical task.",
+      "intended_sibling": "mobility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The restored process starts but cannot serve its saved orders; define and verify the usable restored condition.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

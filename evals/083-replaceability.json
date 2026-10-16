@@ -1,0 +1,59 @@
+{
+  "id": 83,
+  "slug": "replaceability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?",
+  "should_trigger": [
+    {
+      "prompt": "Swap this backend.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?"
+    },
+    {
+      "prompt": "We need to stop using the old provider.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?"
+    },
+    {
+      "prompt": "Replace and retire the old provider while preserving the surrounding callers' contract and required state.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Substitute this component without asking its callers to change their inputs or interpretation of the results.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "These tools don't work together.",
+      "intended_sibling": "compatibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the tools coexist without interference, exchange data with matching meaning, or replace one another?"
+    },
+    {
+      "prompt": "Can we expose this engine differently?",
+      "intended_sibling": "wrappability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the implementation remain behind a new boundary, be substituted, or need assembly with other components?"
+    },
+    {
+      "prompt": "Installing the new client overwrites the old client's preferences; keep both usable side by side.",
+      "intended_sibling": "compatibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Add a new entrypoint around the retained implementation without silently changing what a successful native call does.",
+      "intended_sibling": "wrappability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

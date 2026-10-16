@@ -1,0 +1,59 @@
+{
+  "id": 30,
+  "slug": "controllability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is acceptance about one command taking effect, completing an operator task, or coordinating a fleet policy?",
+  "should_trigger": [
+    {
+      "prompt": "Give on-call a way to stop this.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance about one command taking effect, completing an operator task, or coordinating a fleet policy?"
+    },
+    {
+      "prompt": "The pause button doesn't help.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance about one command taking effect, completing an operator task, or coordinating a fleet policy?"
+    },
+    {
+      "prompt": "After the pause command is acknowledged, stop admitting new jobs while letting the already admitted jobs finish.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Make resume change this worker from paused to accepting work, and expose whether that command actually took effect.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "On-call can't finish the job.",
+      "intended_sibling": "operability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal a complete operator task, a single command's effect, or fleet-wide policy coordination?"
+    },
+    {
+      "prompt": "We need better fleet controls.",
+      "intended_sibling": "manageability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we coordinating many targets, making one command take effect, or completing one operator task?"
+    },
+    {
+      "prompt": "Give on-call an executable path from a partial export through the recovery choices to a verified completed or handed-off task.",
+      "intended_sibling": "operability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show which nodes have adopted the assigned configuration and bring the remaining targets into the intended fleet state.",
+      "intended_sibling": "manageability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

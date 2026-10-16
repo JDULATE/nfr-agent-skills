@@ -1,7 +1,7 @@
 ---
 name: viability
 description: >-
-  Checks continued stakeholder value when tickets say "can we keep this report service worthwhile", "what if upkeep doubles next cycle", or "set a renewal or retirement gate". Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).
+  Checks continued stakeholder value when tickets say "is this report service still worth running", "what if upkeep doubles next cycle", or "when should we retire this service". Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).
 ---
 
 # Viability

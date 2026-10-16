@@ -1,0 +1,59 @@
+{
+  "id": 49,
+  "slug": "feasibility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the question initial technical achievability, spending limits, or whether continued operation remains worthwhile?",
+  "should_trigger": [
+    {
+      "prompt": "Can we actually build this?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the question initial technical achievability, spending limits, or whether continued operation remains worthwhile?"
+    },
+    {
+      "prompt": "Will this design work here?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the question initial technical achievability, spending limits, or whether continued operation remains worthwhile?"
+    },
+    {
+      "prompt": "Prove the candidate renderer can run locally with no network access before committing to this offline design.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Our required dependency is unreachable in the target environment; test whether any candidate can meet all the stated constraints.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Can we afford this export?",
+      "intended_sibling": "affordability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision about a spending limit, whether a design can be built, or whether it remains worth running?"
+    },
+    {
+      "prompt": "Should we keep this product?",
+      "intended_sibling": "viability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we assessing continued value, whether a candidate can initially be built, or a spending ceiling?"
+    },
+    {
+      "prompt": "We have a spending limit for setup and running the importer; compare designs against that limit.",
+      "intended_sibling": "affordability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Set a continue-or-retire decision for this existing service using its benefits and future obligations, rather than initial build feasibility.",
+      "intended_sibling": "viability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

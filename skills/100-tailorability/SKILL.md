@@ -1,7 +1,7 @@
 ---
 name: tailorability
 description: >-
-  Fits supported behavior to a work context when tickets say "fit the workflow to the night shift", "let departments use different presets", or "our team needs another supported process". Not for authored behavior (see customizability), defining settings (see configurability), alternatives (see flexibility), or external changes (see adaptability).
+  Fits supported behavior to a work context when tickets say "fit the workflow to the night shift", "let departments use different presets", or "our team needs another built-in workflow". Not for authored behavior (see customizability), defining settings (see configurability), alternatives (see flexibility), or external changes (see adaptability).
 ---
 # Tailorability
 

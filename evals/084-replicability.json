@@ -1,0 +1,59 @@
+{
+  "id": 84,
+  "slug": "replicability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Must another executor reconstruct the experiment, must the same setup rerun it, or must the product move platforms?",
+  "should_trigger": [
+    {
+      "prompt": "It only works on your laptop.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must another executor reconstruct the experiment, must the same setup rerun it, or must the product move platforms?"
+    },
+    {
+      "prompt": "Another engineer gets a different answer.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must another executor reconstruct the experiment, must the same setup rerun it, or must the product move platforms?"
+    },
+    {
+      "prompt": "Give another engineer the materials to reconstruct the experiment on a clean runner and compare the result independently.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Remove the experiment's dependence on the original operator's private setup so another team can rebuild and evaluate it.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "I can't get the same result again.",
+      "intended_sibling": "repeatability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this a repeated run in the same setup, independent reconstruction, or bounds on service variation?"
+    },
+    {
+      "prompt": "It only runs on the old machine.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we moving software across execution environments, installing on one target, or adapting language and locale?"
+    },
+    {
+      "prompt": "Rerun the same fixture with the same procedure and setup and compare the resulting outputs.",
+      "intended_sibling": "repeatability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Identify the operating-system assumptions that stop this application running in the target environment and isolate those adaptations.",
+      "intended_sibling": "portability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

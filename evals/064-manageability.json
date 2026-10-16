@@ -1,0 +1,59 @@
+{
+  "id": 64,
+  "slug": "manageability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are we coordinating many targets, making one command take effect, or completing one operator task?",
+  "should_trigger": [
+    {
+      "prompt": "Admin settings keep getting out of sync.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we coordinating many targets, making one command take effect, or completing one operator task?"
+    },
+    {
+      "prompt": "We need better fleet controls.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we coordinating many targets, making one command take effect, or completing one operator task?"
+    },
+    {
+      "prompt": "Apply the desired policy to the declared fleet, track which targets missed it, and reconcile approved local exceptions.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show which nodes have adopted the assigned configuration and bring the remaining targets into the intended fleet state.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Give on-call a way to stop this.",
+      "intended_sibling": "controllability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance about one command taking effect, completing an operator task, or coordinating a fleet policy?"
+    },
+    {
+      "prompt": "We get stuck halfway through a rerun.",
+      "intended_sibling": "operability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal a complete operator task, a single command's effect, or fleet-wide policy coordination?"
+    },
+    {
+      "prompt": "After the pause command is acknowledged, stop admitting new jobs while letting the already admitted jobs finish.",
+      "intended_sibling": "controllability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Define the entry conditions, actions and exit checks for rerunning this runtime job, including what to do with partial state.",
+      "intended_sibling": "operability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

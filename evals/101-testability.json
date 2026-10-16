@@ -1,0 +1,59 @@
+{
+  "id": 101,
+  "slug": "testability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are tests missing control and observation seams, an acceptance method, or a diagnosis of a particular failure?",
+  "should_trigger": [
+    {
+      "prompt": "This is hard to test.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are tests missing control and observation seams, an acceptance method, or a diagnosis of a particular failure?"
+    },
+    {
+      "prompt": "We can't reproduce the timeout in tests.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are tests missing control and observation seams, an acceptance method, or a diagnosis of a particular failure?"
+    },
+    {
+      "prompt": "Add a controllable clock so tests can drive expiry without waiting on the real clock.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Expose a test seam to force the timeout branch and observe its result without invoking the live service.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "How will we know this passed?",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?"
+    },
+    {
+      "prompt": "Where did this wrong value come from?",
+      "intended_sibling": "debuggability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?"
+    },
+    {
+      "prompt": "Choose feasible evidence and a decision rule for accepting this requirement instead of leaving 'works well' uncheckable.",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "This stack trace points at the renderer; find the execution step that introduced the bad value for this exact input.",
+      "intended_sibling": "debuggability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

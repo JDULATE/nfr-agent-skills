@@ -1,0 +1,59 @@
+{
+  "id": 107,
+  "slug": "uniformity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are peer conventions mismatched, does a convention need choosing, or do values disagree at the same revision?",
+  "should_trigger": [
+    {
+      "prompt": "Why do these screens do it differently?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are peer conventions mismatched, does a convention need choosing, or do values disagree at the same revision?"
+    },
+    {
+      "prompt": "Make these APIs consistent.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are peer conventions mismatched, does a convention need choosing, or do values disagree at the same revision?"
+    },
+    {
+      "prompt": "The peer list endpoints use different names for the same paging option; apply their agreed shared convention.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Align the peer forms' treatment of the same validation action so callers do not relearn it for each form.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "We need one shared format.",
+      "intended_sibling": "standardizability-standardization-standard",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to select a convention, enforce an already selected rule, or make peer interfaces consistent?"
+    },
+    {
+      "prompt": "Which status should we show?",
+      "intended_sibling": "consistency",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are representations disagreeing at the same revision, is a value wrong against reality, or was data altered incorrectly?"
+    },
+    {
+      "prompt": "Choose and publish the event-field convention that teams will adopt; no common rule has been selected yet.",
+      "intended_sibling": "standardizability-standardization-standard",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare the cache and database at the agreed revision so an older value is not mistaken for an equivalent current one.",
+      "intended_sibling": "consistency",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

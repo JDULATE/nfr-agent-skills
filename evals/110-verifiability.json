@@ -1,0 +1,59 @@
+{
+  "id": 110,
+  "slug": "verifiability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?",
+  "should_trigger": [
+    {
+      "prompt": "How will we know this passed?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?"
+    },
+    {
+      "prompt": "We can't check this requirement.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?"
+    },
+    {
+      "prompt": "Choose feasible evidence and a decision rule for accepting this requirement instead of leaving 'works well' uncheckable.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Replace this unavailable acceptance check with a practical inspection or test that can support the same stated claim.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "This is hard to test.",
+      "intended_sibling": "testability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are tests missing control and observation seams, an acceptance method, or a diagnosis of a particular failure?"
+    },
+    {
+      "prompt": "Tests don't cover every possibility.",
+      "intended_sibling": "provability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is a claim to be proved under assumptions, checked through selected evidence, or first expressed precisely?"
+    },
+    {
+      "prompt": "Add a controllable clock so tests can drive expiry without waiting on the real clock.",
+      "intended_sibling": "testability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show why the invariant follows from every allowed transition in the model, including the assumptions the proof needs.",
+      "intended_sibling": "provability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

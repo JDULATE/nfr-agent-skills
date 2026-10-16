@@ -1,0 +1,59 @@
+{
+  "id": 29,
+  "slug": "consistency",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are representations disagreeing at the same revision, is a value wrong against reality, or was data altered incorrectly?",
+  "should_trigger": [
+    {
+      "prompt": "These screens disagree.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are representations disagreeing at the same revision, is a value wrong against reality, or was data altered incorrectly?"
+    },
+    {
+      "prompt": "Which status should we show?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are representations disagreeing at the same revision, is a value wrong against reality, or was data altered incorrectly?"
+    },
+    {
+      "prompt": "The list and detail endpoint show different states for the same record revision; check that they agree.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare the cache and database at the agreed revision so an older value is not mistaken for an equivalent current one.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The totals look wrong.",
+      "intended_sibling": "accuracy",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are the values wrong against a reference, is the implemented rule wrong, or is the evidence uncertain?"
+    },
+    {
+      "prompt": "Stop the import corrupting data.",
+      "intended_sibling": "integrity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the concern alteration of data, disagreement between representations, or accuracy against an external reference?"
+    },
+    {
+      "prompt": "Compare the reported package weights with the scale readings and show how far each result is off.",
+      "intended_sibling": "accuracy",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Prevent a stale writer from overwriting a newer accepted edit under the agreed update rule.",
+      "intended_sibling": "integrity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

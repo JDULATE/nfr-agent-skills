@@ -1,0 +1,59 @@
+{
+  "id": 66,
+  "slug": "measurability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do we need a measurement procedure, an inference about runtime state, or an acceptance evidence plan?",
+  "should_trigger": [
+    {
+      "prompt": "What exactly are we counting?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need a measurement procedure, an inference about runtime state, or an acceptance evidence plan?"
+    },
+    {
+      "prompt": "These charts don't agree.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need a measurement procedure, an inference about runtime state, or an acceptance evidence plan?"
+    },
+    {
+      "prompt": "Define where queue delay starts and ends and what units the observation records before comparing the dashboards.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Specify how this property is measured and check whether the instrument can distinguish the values the decision needs.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The logs aren't helping.",
+      "intended_sibling": "observability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need evidence to infer internal state, a status display, or a replay of one specific defect?"
+    },
+    {
+      "prompt": "We can't check this requirement.",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need an acceptance evidence method, test-control seams, or a proof for all modeled cases?"
+    },
+    {
+      "prompt": "Add runtime evidence that distinguishes a queued job from an executing job that has stopped making progress.",
+      "intended_sibling": "observability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Replace this unavailable acceptance check with a practical inspection or test that can support the same stated claim.",
+      "intended_sibling": "verifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

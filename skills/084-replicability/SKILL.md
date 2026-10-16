@@ -1,7 +1,7 @@
 ---
 name: replicability
 description: >-
-  Enables independent reconstruction when tickets say "another engineer gets a different result", "rebuild this experiment on a clean runner", or "the setup depends on your laptop". Not for reruns in the original setup (see repeatability) or moving the product to another platform (see portability).
+  Enables independent reconstruction when tickets say "another engineer gets a different result", "rerun this experiment on a clean runner", or "the setup depends on your laptop". Not for reruns in the original setup (see repeatability) or moving the product to another platform (see portability).
 ---
 
 # Replicability
