@@ -1,7 +1,7 @@
 {
   "cli_version": "codex-cli 0.162.1",
   "arguments": [
-    "C:\\Users\\ulate\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.EXE",
+    "codex",
     "--no-daemon",
     "exec",
     "--ignore-user-config",
@@ -15,10 +15,10 @@
     "never",
     "--json",
     "--output-last-message",
-    "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-8-after-ejydkvig\\router-response.json",
+    "run/router-response.json",
     "-"
   ],
-  "run_directory": "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-8-after-ejydkvig",
+  "run_directory": "run/nfr-routing-8-after-ejydkvig",
   "stage": "after",
   "fresh_session": true,
   "answer_key_supplied": false,
@@ -34,5 +34,6 @@
   "session_id": "01a14650-6b60-7c33-998f-e95ee66e640e",
   "tool_calls": 0,
   "results_sha256": "e225ee30ad259fae0a246bb031f4eaa9e270fa10dade0de98e40b05601bca888",
-  "session_transcript_sha256": "f8fafad12768163d47d5f834bc417f01451205e0b48bbb000519388e70665c32"
+  "session_transcript_sha256": "f8fafad12768163d47d5f834bc417f01451205e0b48bbb000519388e70665c32",
+  "local_paths_redacted": true
 }

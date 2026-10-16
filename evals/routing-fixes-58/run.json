@@ -1,8 +1,8 @@
 {
-  "run_directory": "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-58-final-yplq2u6l",
+  "run_directory": "run/nfr-routing-58-final-yplq2u6l",
   "cli_version": "codex-cli 0.162.1",
   "arguments": [
-    "C:\\Users\\ulate\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.EXE",
+    "codex",
     "--no-daemon",
     "exec",
     "--ignore-user-config",
@@ -16,7 +16,7 @@
     "never",
     "--json",
     "--output-last-message",
-    "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-58-final-yplq2u6l\\router-response.json",
+    "run/router-response.json",
     "-"
   ],
   "router_instruction_prefix": "The complete contents of the two requested files are supplied inline below. Read these supplied contents directly. Do not use tools, run commands, read local files, or search for other context.\n\nRoute each developer request using only routing-catalog.md and routing-prompts.json in the working directory.\nRead both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.\nFor every prompt, choose one exact catalogue slug or \"ask\". Choose \"ask\" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.\nUse the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.\nReturn only a complete JSON array of objects with exactly the fields \"id\" and \"choice\". Include every input id exactly once. Use the literal value \"ask\" for asking the user. No Markdown fences, commentary, explanations, or additional fields.\n",
@@ -36,5 +36,6 @@
   "tool_calls": 0,
   "session_id": "01a1463a-1a9f-7092-b350-cd097fffc3f9",
   "results_sha256": "fac949ce321a02fbdac93c2b7f3dbfca044d7b88ebc297553f13b964e4e15630",
-  "session_transcript_sha256": "fcdfb2ca6cc0c99bd91b73b52f31160c459f4099ff1fb3469e03c1e176c376f2"
+  "session_transcript_sha256": "fcdfb2ca6cc0c99bd91b73b52f31160c459f4099ff1fb3469e03c1e176c376f2",
+  "local_paths_redacted": true
 }

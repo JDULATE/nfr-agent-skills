@@ -2579,5 +2579,45 @@
       "auditability"
     ],
     "held_out": true
+  },
+  {
+    "id": "S001",
+    "group": "explicit",
+    "expected": "nfr-selector"
+  },
+  {
+    "id": "S002",
+    "group": "explicit",
+    "expected": "nfr-selector"
+  },
+  {
+    "id": "S003",
+    "group": "explicit",
+    "expected": "nfr-selector"
+  },
+  {
+    "id": "S004",
+    "group": "explicit",
+    "expected": "nfr-selector"
+  },
+  {
+    "id": "S005",
+    "group": "explicit",
+    "expected": "adjustability"
+  },
+  {
+    "id": "S006",
+    "group": "explicit",
+    "expected": "privacy"
+  },
+  {
+    "id": "S007",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "S008",
+    "group": "vague",
+    "expected": "ask"
   }
 ]

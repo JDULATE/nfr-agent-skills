@@ -73,6 +73,25 @@ class DescriptionTests(unittest.TestCase):
         self.assertEqual(checker.overlap(set(), set()), 0)
         self.assertNotEqual(checker.keywords("workers"), checker.keywords("worker"))
 
+    def test_selector_competes_without_changing_nfr_coverage_contract(self):
+        selector = {"id": 0, "name": "NFR Selector", "slug": "nfr-selector",
+                    "aliases": [], "category": "Orchestration", "status": "draft"}
+        (self.root / "selector.json").write_text(json.dumps(selector), encoding="utf-8")
+        path = checker.skill_path(self.root, selector)
+        path.parent.mkdir(parents=True)
+        path.write_text('---\nname: nfr-selector\ndescription: Selects alpha beta concerns when asked for several qualities.\n---\n', encoding="utf-8")
+        positives = self.cases("selection")
+        for case in positives:
+            case.update(distinguishing_fact_present=True, expected_behavior="route")
+            case.pop("clarifying_question", None)
+        data = {"id": 0, "slug": "nfr-selector", "should_trigger": positives,
+                "near_miss": self.cases("alpha", "extendability")}
+        (self.root / "evals/000-nfr-selector.json").write_text(json.dumps(data), encoding="utf-8")
+        result = checker.check(self.root)
+        self.assertIn("nfr-selector", result["candidate_pool"])
+        self.assertEqual(result["selected_ids"], [0, 46, 47])
+        self.assertEqual(checker.check(self.root, "0")["summary"]["eval_skills"], 1)
+
     def test_only_keeps_all_authored_competitors_and_is_read_only(self):
         before = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
         result = checker.check(self.root, "46")

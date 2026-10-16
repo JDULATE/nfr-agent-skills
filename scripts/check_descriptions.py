@@ -9,7 +9,7 @@ from pathlib import Path
 import re
 import sys
 
-from _common import ROOT, frontmatter, load_catalog, select_ids, skill_path
+from _common import ROOT, frontmatter, load_skill_entries, select_ids, skill_path
 
 
 STOP_WORDS = frozenset("""a an and are as at be been but by can could do does for from has have how i if
@@ -78,7 +78,7 @@ def load_eval(root, row, by_slug):
 
 def check(root=ROOT, only=None):
     root = Path(root)
-    catalogue = load_catalog(root)
+    catalogue = load_skill_entries(root)
     by_slug = {row["slug"]: row for row in catalogue}
     authored = [row for row in catalogue if row["status"] != "todo"]
     authored_ids = {row["id"] for row in authored}
@@ -163,7 +163,11 @@ def check(root=ROOT, only=None):
                     "shared_expected_keywords": None if expected_score is None else sorted(prompt_words & descriptions[expected]),
                     "flags": flags,
                 })
-    if only is None and records and omitted * 2 < len(records):
+    # Broad selection is itself a routing fact. Preserve the half-underspecified
+    # coverage rule for the 114 NFRs without mislabeling selector positives vague.
+    nfr_records = [case for case in records if case["skill_id"] != 0]
+    nfr_omitted = sum(not case["distinguishing_fact_present"] for case in nfr_records)
+    if only is None and nfr_records and nfr_omitted * 2 < len(nfr_records):
         raise ValueError("At least half of all authored prompts must omit the distinguishing fact")
     pair_results = [{"pair": list(pair), "counts": dict(sorted(entry["counts"].items())),
                      "case_ids": sorted(entry["case_ids"])} for pair, entry in pairs.items()]

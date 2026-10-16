@@ -180,7 +180,7 @@ The exact Windows ACL/sandbox interaction has not been independently diagnosed.
 The adapted run's accessible temporary fixtures were cleaned up.
 The failed workspace fixture container could not be deleted with current access.
 It was moved, without changing permissions, outside the repository to:
-`C:\Users\ulate\Desktop\Proyectos Personales\NFR SKILLS\.batch-13-test-temp-residue\tmpppyknw23`.
+`run/tmpppyknw23`.
 That generated residue needs cleanup by a process with suitable access.
 The first failed external-temp attempt may also have left its inaccessible
 `tmpflmbyra_` directory under the Windows temp root; its cleanup is unverified.

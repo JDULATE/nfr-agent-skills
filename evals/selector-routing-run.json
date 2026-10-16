@@ -1,0 +1,35 @@
+{
+  "fresh_session": true,
+  "session_id": "01a14680-fb45-7f72-aebd-e52fb44ee7b3",
+  "cli_version": "codex-cli 0.162.1",
+  "arguments": [
+    "codex",
+    "--no-daemon",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--config",
+    "approval_policy=\"never\"",
+    "--color",
+    "never",
+    "--json",
+    "--output-last-message",
+    "run/results.json",
+    "-"
+  ],
+  "local_paths_redacted": true,
+  "input_files": {
+    "routing-catalog.md": "dabc82c287e141a5ab4a180f7c80a082dbfef5cd5397139ce979c98f906b2279",
+    "routing-prompts.json": "43b69c72cce56c502443c94d3a7ed9a3899e02e1f30287bdaee06bec1eb8e701"
+  },
+  "stdin_sha256": "428a8e03c4195cbe9e4bc0a3228f742d2a88de70072931540fb24324b151ee4b",
+  "router_instruction_prefix": "The complete contents of the two requested files are supplied inline below. Read these supplied contents directly. Do not use tools, run commands, read local files, or search for other context.\n\nRoute each developer request using only routing-catalog.md and routing-prompts.json in the working directory.\nRead both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.\nFor every prompt, choose one exact catalogue slug or \"ask\". Choose \"ask\" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.\nUse the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.\nReturn only a complete JSON array of objects with exactly the fields \"id\" and \"choice\". Include every input id exactly once. Use the literal value \"ask\" for asking the user. No Markdown fences, commentary, explanations, or additional fields.\n",
+  "answer_key_supplied": false,
+  "tool_calls": 0,
+  "elapsed_seconds": 5.94,
+  "exit_code": 0,
+  "held_out_cases_run": 0
+}

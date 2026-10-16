@@ -54,6 +54,20 @@ def select_ids(value, entries):
     return selected
 
 
+def load_skill_entries(root):
+    """Keep the 114-NFR catalogue intact; load the optional selector separately."""
+    entries = load_catalog(root)
+    manifest = root / "selector.json"
+    if manifest.exists():
+        selector = json.loads(manifest.read_text(encoding="utf-8"))
+        required = {"id": 0, "name": "NFR Selector", "slug": "nfr-selector",
+                    "aliases": [], "category": "Orchestration", "status": "draft"}
+        if selector != required or type(selector.get("id")) is not int:
+            raise ValueError("selector.json must describe the draft 000-nfr-selector")
+        entries = [selector] + entries
+    return entries
+
+
 def skill_path(root, row):
     return root / "skills" / f"{row['id']:03d}-{row['slug']}" / "SKILL.md"
 

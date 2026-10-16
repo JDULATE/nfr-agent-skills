@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from _common import ROOT, SECTIONS, frontmatter, load_catalog, select_ids, skill_path
+from _common import ROOT, SECTIONS, frontmatter, load_skill_entries, select_ids, skill_path
 
 # These are detection patterns, not claims that any matched standard exists.
 URL = re.compile(r"(?:https?://|www\.)[^\s<>\]\)\"']+", re.I)
@@ -182,7 +182,7 @@ def jaccard(left, right):
 
 
 def validate(root, only=None):
-    entries = load_catalog(root)
+    entries = load_skill_entries(root)
     known_slugs = {row["slug"] for row in entries}
     selected = select_ids(only, entries)
     allowlist = root / "references" / "standards-allowlist.md"

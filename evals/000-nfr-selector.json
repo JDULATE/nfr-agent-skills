@@ -1,0 +1,57 @@
+{
+  "id": 0,
+  "slug": "nfr-selector",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Selection requests route here even when project details remain unknown; ambiguous single concerns require a sibling question, not selector activation.",
+  "routing_question": "Is this a selection or multi-quality request, or one identified quality?",
+  "should_trigger": [
+    {
+      "prompt": "Which NFRs matter for a new document-export service?",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Make this production-ready; choose the quality work we actually need.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Balance security, response time, and ease of maintenance for this API.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Pick and prioritize the smallest set of quality skills for our project.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Tune an already exposed batch-size parameter while keeping the worker arrangement unchanged.",
+      "intended_sibling": "adjustability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Restrict the personal fields sent to our analytics recipient to the approved purpose and lifecycle.",
+      "intended_sibling": "privacy",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Make this faster.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which single-quality boundary is intended before choosing its individual skill?"
+    },
+    {
+      "prompt": "Make this configurable.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which single-quality boundary is intended before choosing its individual skill?"
+    }
+  ]
+}

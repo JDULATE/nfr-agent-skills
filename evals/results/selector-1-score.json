@@ -1,0 +1,43 @@
+{
+  "groups": {
+    "explicit": {
+      "correct": 6,
+      "total": 6,
+      "answered": 6,
+      "missing": 0,
+      "accuracy": 1.0
+    },
+    "vague": {
+      "correct": 2,
+      "total": 2,
+      "answered": 2,
+      "missing": 0,
+      "accuracy": 1.0
+    },
+    "user_voice": {
+      "correct": 0,
+      "total": 0,
+      "answered": 0,
+      "missing": 0,
+      "accuracy": null
+    }
+  },
+  "cohorts": {
+    "held_out": {
+      "correct": 0,
+      "total": 0,
+      "answered": 0,
+      "missing": 0,
+      "accuracy": null
+    },
+    "rest": {
+      "correct": 8,
+      "total": 8,
+      "answered": 8,
+      "missing": 0,
+      "accuracy": 1.0
+    }
+  },
+  "held_out_cases": [],
+  "misses": []
+}

@@ -1,6 +1,6 @@
 # NFR skill index
 
-Generated from `nfr-list.json`. Absent todo skills are pending authoring.
+Generated from `nfr-list.json` and optional `selector.json`. Absent todo skills are pending authoring.
 
 ## Business & Fitness
 
@@ -78,6 +78,10 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [071 Operability](skills/071-operability/SKILL.md) — draft
 - [102 Traceability](skills/102-traceability/SKILL.md) — draft
 - [113 Visibility](skills/113-visibility/SKILL.md) — draft
+
+## Orchestration
+
+- [000 NFR Selector](skills/000-nfr-selector/SKILL.md) — draft
 
 ## Performance & Efficiency
 

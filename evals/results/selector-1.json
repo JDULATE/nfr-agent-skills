@@ -1,0 +1,10 @@
+[
+  {"id":"S001","choice":"nfr-selector"},
+  {"id":"S002","choice":"nfr-selector"},
+  {"id":"S003","choice":"nfr-selector"},
+  {"id":"S004","choice":"nfr-selector"},
+  {"id":"S005","choice":"adjustability"},
+  {"id":"S006","choice":"privacy"},
+  {"id":"S007","choice":"ask"},
+  {"id":"S008","choice":"ask"}
+]

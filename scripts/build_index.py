@@ -4,22 +4,23 @@ import argparse
 from collections import defaultdict
 from pathlib import Path
 
-from _common import ROOT, load_catalog, skill_path
+from _common import ROOT, load_skill_entries, skill_path
 
 
 def build(root):
     groups = defaultdict(list)
-    for row in load_catalog(root):
+    entries = load_skill_entries(root)
+    for row in entries:
         groups[row["category"]].append(row)
-    lines = ["# NFR skill index", "", "Generated from `nfr-list.json`. Absent todo skills are pending authoring.", ""]
-    for category, entries in sorted(groups.items()):
+    lines = ["# NFR skill index", "", "Generated from `nfr-list.json` and optional `selector.json`. Absent todo skills are pending authoring.", ""]
+    for category, category_entries in sorted(groups.items()):
         lines.extend([f"## {category}", ""])
-        for row in sorted(entries, key=lambda item: item["id"]):
+        for row in sorted(category_entries, key=lambda item: item["id"]):
             path = skill_path(root, row).relative_to(root).as_posix()
             lines.append(f"- [{row['id']:03d} {row['name']}]({path}) — {row['status']}")
         lines.append("")
     (root / "INDEX.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
-    print("Built INDEX.md with 114 entries.")
+    print(f"Built INDEX.md with {len(entries)} entries.")
 
 
 def main():

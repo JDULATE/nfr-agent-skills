@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from _common import SECTIONS, frontmatter, load_catalog, skill_path
+from _common import SECTIONS, frontmatter, load_catalog, load_skill_entries, skill_path
 from build_index import build
 from generate_skills import generate
 from validate_skills import citations, five_grams, jaccard, validate
@@ -310,6 +310,30 @@ class FoundationTests(unittest.TestCase):
         failed = subprocess.run(command + ["--only", "15"], capture_output=True, text=True)
         self.assertEqual(failed.returncode, 1)
         self.assertIn("Missing skill file", failed.stdout)
+
+    def test_optional_selector_is_validated_indexed_and_keeps_catalogue_intact(self):
+        selector = {"id": 0, "name": "NFR Selector", "slug": "nfr-selector",
+                    "aliases": [], "category": "Orchestration", "status": "draft"}
+        manifest = self.root / "selector.json"
+        manifest.write_text(json.dumps(selector), encoding="utf-8")
+        path = skill_path(self.root, selector)
+        path.parent.mkdir()
+        path.write_text(self.fixture(1).replace("name: accessibility-access-control", "name: nfr-selector"),
+                        encoding="utf-8")
+        self.assertEqual(len(load_catalog(self.root)), 114)
+        self.assertEqual(len(load_skill_entries(self.root)), 115)
+        self.assertEqual(validate(self.root, "0")[:3], ([], 1, 0))
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            build(self.root)
+        self.assertIn("Built INDEX.md with 115 entries.", output.getvalue())
+        self.assertIn("000 NFR Selector", (self.root / "INDEX.md").read_text())
+        path.unlink()
+        self.assertIn("Missing skill file", "\n".join(validate(self.root, "0")[0]))
+        selector["status"] = "reviewed"
+        manifest.write_text(json.dumps(selector), encoding="utf-8")
+        with self.assertRaises(ValueError):
+            load_skill_entries(self.root)
 
 
 if __name__ == "__main__":

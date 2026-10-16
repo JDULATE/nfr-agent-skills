@@ -2018,5 +2018,37 @@
     "id": "H012",
     "prompt": "We need to show the auditors this report is right.",
     "held_out": true
+  },
+  {
+    "id": "S001",
+    "prompt": "Which NFRs matter for a new document-export service?"
+  },
+  {
+    "id": "S002",
+    "prompt": "Make this production-ready; choose the quality work we actually need."
+  },
+  {
+    "id": "S003",
+    "prompt": "Balance security, response time, and ease of maintenance for this API."
+  },
+  {
+    "id": "S004",
+    "prompt": "Pick and prioritize the smallest set of quality skills for our project."
+  },
+  {
+    "id": "S005",
+    "prompt": "Tune an already exposed batch-size parameter while keeping the worker arrangement unchanged."
+  },
+  {
+    "id": "S006",
+    "prompt": "Restrict the personal fields sent to our analytics recipient to the approved purpose and lifecycle."
+  },
+  {
+    "id": "S007",
+    "prompt": "Make this faster."
+  },
+  {
+    "id": "S008",
+    "prompt": "Make this configurable."
   }
 ]
