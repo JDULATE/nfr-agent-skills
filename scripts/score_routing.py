@@ -7,8 +7,11 @@ Then run: python scripts/score_routing.py results.json
 
 Choices must be exact canonical slugs or "ask". Missing answers count as misses
 against the complete key; duplicate and unknown ids are input errors. Accuracy
-is reported separately for explicit, vague, and user_voice prompts. A successful
-exit means valid grading inputs, not that the routing answers passed a threshold.
+is reported separately for held-out cases and the rest, as well as overall
+explicit, vague, and user_voice groups. Optional held_out key fields must be
+booleans; absent means false. Held-out cases also report acceptable_choice,
+acceptable_ask, or wrong. A successful exit means valid grading inputs, not
+that the routing answers passed a threshold.
 """
 
 import argparse
@@ -38,8 +41,12 @@ def score(results, key):
     for index, row in enumerate(key, 1):
         label = f"key[{index}]"
         case_id = record_id(row, label)
-        if set(row) != {"id", "group", "expected"}:
-            raise ValueError(f"{label}: expected id, group, and expected fields only")
+        if set(row) not in ({"id", "group", "expected"},
+                            {"id", "group", "expected", "held_out"}):
+            raise ValueError(f"{label}: expected id, group, expected, and optional held_out fields only")
+        held_out = row.get("held_out", False)
+        if not isinstance(held_out, bool):
+            raise ValueError(f"{label}: held_out must be a boolean")
         if case_id in expected:
             raise ValueError(f"{label}: duplicate id {case_id}")
         group = row["group"]
@@ -57,7 +64,7 @@ def score(results, key):
             raise ValueError(f"{label}: vague prompts must expect ask only")
         if group == "explicit" and "ask" in choices:
             raise ValueError(f"{label}: explicit prompts must expect a skill")
-        expected[case_id] = (group, choices)
+        expected[case_id] = (group, choices, held_out)
 
     if not isinstance(results, list):
         raise ValueError("Results must be a JSON array of id/choice objects")
@@ -78,39 +85,60 @@ def score(results, key):
 
     groups = {group: {"correct": 0, "total": 0, "answered": 0, "missing": 0}
               for group in GROUPS}
+    cohorts = {name: {"correct": 0, "total": 0, "answered": 0, "missing": 0}
+               for name in ("held_out", "rest")}
+    held_out_cases = []
     misses = []
-    for case_id, (group, choices) in expected.items():
-        stats = groups[group]
-        stats["total"] += 1
+    for case_id, (group, choices, held_out) in expected.items():
         choice = answers.get(case_id)
-        stats["answered"] += choice is not None
-        stats["missing"] += choice is None
-        if choice in choices:
-            stats["correct"] += 1
-        else:
+        correct = choice in choices
+        outcome = ("acceptable_ask" if choice == "ask" else "acceptable_choice") if correct else "wrong"
+        for stats in (groups[group], cohorts["held_out" if held_out else "rest"]):
+            stats["total"] += 1
+            stats["answered"] += choice is not None
+            stats["missing"] += choice is None
+            stats["correct"] += correct
+        if held_out:
+            held_out_cases.append({"id": case_id, "group": group, "choice": choice,
+                                   "expected": choices, "outcome": outcome,
+                                   "choice_in_acceptable_set": correct})
+        if not correct:
             misses.append({"id": case_id, "group": group, "choice": choice,
-                           "expected": choices, "reason": "missing" if choice is None else "incorrect"})
-    for stats in groups.values():
+                           "expected": choices, "held_out": held_out, "outcome": outcome,
+                           "reason": "missing" if choice is None else "incorrect"})
+    for stats in (*groups.values(), *cohorts.values()):
         stats["accuracy"] = stats["correct"] / stats["total"] if stats["total"] else None
-    return {"groups": groups, "misses": misses}
+    return {"groups": groups, "cohorts": cohorts,
+            "held_out_cases": held_out_cases, "misses": misses}
 
 
 def print_report(report):
+    for cohort, stats in report["cohorts"].items():
+        accuracy = "n/a" if stats["accuracy"] is None else f"{stats['accuracy']:.2%}"
+        print(f"{cohort}: {stats['correct']}/{stats['total']} ({accuracy}); "
+              f"answered {stats['answered']}; missing {stats['missing']}")
+    print("Overall groups (held-out and rest):")
     for group, stats in report["groups"].items():
         accuracy = "n/a" if stats["accuracy"] is None else f"{stats['accuracy']:.2%}"
         print(f"{group}: {stats['correct']}/{stats['total']} ({accuracy}); "
               f"answered {stats['answered']}; missing {stats['missing']}")
+    for case in report["held_out_cases"]:
+        choice = "<missing>" if case["choice"] is None else repr(case["choice"])
+        print(f"HELD_OUT {case['id']}: {case['outcome']}; choice={choice}; "
+              f"choice_in_acceptable_set={case['choice_in_acceptable_set']}; "
+              f"expected={json.dumps(case['expected'])}")
     for miss in report["misses"]:
         choice = "<missing>" if miss["choice"] is None else repr(miss["choice"])
         print(f"MISS {miss['id']} [{miss['group']}]: choice={choice}; "
-              f"expected={json.dumps(miss['expected'])}")
+              f"expected={json.dumps(miss['expected'])}; held_out={miss['held_out']}; "
+              f"outcome={miss['outcome']}; reason={miss['reason']}")
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("results", type=Path, help="JSON array of id/choice objects")
     parser.add_argument("--key", type=Path, default=DEFAULT_KEY, help="Answer key (default: evals/routing-key.json)")
-    parser.add_argument("--json", action="store_true", help="Print group metrics and every miss as JSON")
+    parser.add_argument("--json", action="store_true", help="Print cohort/group metrics, held-out outcomes, and every miss as JSON")
     args = parser.parse_args(argv)
     try:
         results = json.loads(args.results.read_text(encoding="utf-8-sig"))

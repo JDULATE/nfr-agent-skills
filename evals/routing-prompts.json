@@ -1958,5 +1958,65 @@
   {
     "id": "r-ffb5cd29876f1de5",
     "prompt": "Make these APIs consistent."
+  },
+  {
+    "id": "H001",
+    "prompt": "Our API gets slow when a few big customers hit it at once.",
+    "held_out": true
+  },
+  {
+    "id": "H002",
+    "prompt": "Pages load fine on my laptop but are terrible on old phones.",
+    "held_out": true
+  },
+  {
+    "id": "H003",
+    "prompt": "I can't tell who changed this setting last week.",
+    "held_out": true
+  },
+  {
+    "id": "H004",
+    "prompt": "Make the dashboard usable with a screen reader.",
+    "held_out": true
+  },
+  {
+    "id": "H005",
+    "prompt": "New teammates take days to get the project running locally.",
+    "held_out": true
+  },
+  {
+    "id": "H006",
+    "prompt": "The same bug keeps coming back every release.",
+    "held_out": true
+  },
+  {
+    "id": "H007",
+    "prompt": "Can this run on both Linux and Windows?",
+    "held_out": true
+  },
+  {
+    "id": "H008",
+    "prompt": "Our service falls over when the database is down.",
+    "held_out": true
+  },
+  {
+    "id": "H009",
+    "prompt": "Translate the app into Spanish and Japanese.",
+    "held_out": true
+  },
+  {
+    "id": "H010",
+    "prompt": "Make it so we can swap the payment provider later.",
+    "held_out": true
+  },
+  {
+    "id": "H011",
+    "prompt": "Two customers got different totals for the same cart.",
+    "held_out": true
+  },
+  {
+    "id": "H012",
+    "prompt": "We need to show the auditors this report is right.",
+    "held_out": true
   }
 ]

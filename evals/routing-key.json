@@ -2459,5 +2459,125 @@
     "id": "r-ffb5cd29876f1de5",
     "group": "vague",
     "expected": "ask"
+  },
+  {
+    "id": "H001",
+    "group": "user_voice",
+    "expected": [
+      "quality-of-service",
+      "scalability",
+      "performance-efficiency-time-or-space-bounds"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H002",
+    "group": "user_voice",
+    "expected": [
+      "efficiency-device-efficiency",
+      "performance-efficiency-time-or-space-bounds"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H003",
+    "group": "user_voice",
+    "expected": [
+      "auditability",
+      "traceability",
+      "accountability"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H004",
+    "group": "user_voice",
+    "expected": [
+      "accessibility-access-control"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H005",
+    "group": "user_voice",
+    "expected": [
+      "installability",
+      "learnability",
+      "trainability",
+      "supportability",
+      "ask"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H006",
+    "group": "user_voice",
+    "expected": [
+      "testability",
+      "stability",
+      "maintainability",
+      "ask"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H007",
+    "group": "user_voice",
+    "expected": [
+      "portability",
+      "compatibility"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H008",
+    "group": "user_voice",
+    "expected": [
+      "fault-failure-tolerance",
+      "robustness",
+      "availability",
+      "reliability",
+      "ask"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H009",
+    "group": "user_voice",
+    "expected": [
+      "localizability"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H010",
+    "group": "user_voice",
+    "expected": [
+      "replaceability",
+      "flexibility",
+      "extensibility",
+      "ask"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H011",
+    "group": "user_voice",
+    "expected": [
+      "consistency",
+      "correctness",
+      "accuracy"
+    ],
+    "held_out": true
+  },
+  {
+    "id": "H012",
+    "group": "user_voice",
+    "expected": [
+      "verifiability",
+      "demonstrability",
+      "auditability"
+    ],
+    "held_out": true
   }
 ]

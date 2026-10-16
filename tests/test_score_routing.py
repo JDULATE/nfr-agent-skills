@@ -74,6 +74,57 @@ class RoutingScoreTests(unittest.TestCase):
         self.assertIsNone(report["groups"]["vague"]["accuracy"])
         self.assertEqual((key, results), before)
 
+    def test_held_out_partition_outcomes_and_missing_answers(self):
+        key = copy.deepcopy(self.key) + [
+            {"id": "h1", "group": "user_voice", "expected": ["alpha", "beta"], "held_out": True},
+            {"id": "h2", "group": "user_voice", "expected": ["beta", "ask"], "held_out": True},
+            {"id": "h3", "group": "user_voice", "expected": "alpha", "held_out": True},
+            {"id": "h4", "group": "user_voice", "expected": "alpha", "held_out": True},
+            {"id": "h5", "group": "user_voice", "expected": ["alpha", "ask"], "held_out": True},
+        ]
+        key[0]["held_out"] = False
+        results = [{"id": "x1", "choice": "alpha"}, {"id": "x2", "choice": "ask"},
+                   {"id": "x3", "choice": "beta"}, {"id": "h1", "choice": "beta"},
+                   {"id": "h2", "choice": "ask"}, {"id": "h3", "choice": "ask"},
+                   {"id": "h5", "choice": "gamma"}]
+        before = copy.deepcopy((key, results))
+        report = scorer.score(results, key)
+        self.assertEqual(report["cohorts"]["held_out"],
+                         {"correct": 2, "total": 5, "answered": 4, "missing": 1, "accuracy": 0.4})
+        self.assertEqual(report["cohorts"]["rest"]["accuracy"], 1)
+        self.assertEqual(report["cohorts"]["rest"]["total"], 3)
+        self.assertEqual(report["groups"]["user_voice"]["total"], 6)
+        self.assertEqual([c["outcome"] for c in report["held_out_cases"]],
+                         ["acceptable_choice", "acceptable_ask", "wrong", "wrong", "wrong"])
+        self.assertEqual([c["choice_in_acceptable_set"] for c in report["held_out_cases"]],
+                         [True, True, False, False, False])
+        self.assertEqual({m["id"] for m in report["misses"]}, {"h3", "h4", "h5"})
+        self.assertTrue(all(m["held_out"] and m["outcome"] == "wrong" for m in report["misses"]))
+        self.assertEqual(next(m for m in report["misses"] if m["id"] == "h4")["reason"], "missing")
+        self.assertEqual((key, results), before)
+        text = io.StringIO()
+        with contextlib.redirect_stdout(text):
+            scorer.print_report(report)
+        self.assertIn("held_out: 2/5", text.getvalue())
+        self.assertIn("rest: 3/3", text.getvalue())
+        self.assertIn("HELD_OUT h2: acceptable_ask", text.getvalue())
+        self.assertEqual(text.getvalue().count("MISS "), 3)
+
+    def test_legacy_keys_have_no_held_out_cases(self):
+        report = scorer.score([], self.key)
+        self.assertEqual(report["held_out_cases"], [])
+        self.assertEqual(report["cohorts"]["held_out"]["total"], 0)
+        self.assertIsNone(report["cohorts"]["held_out"]["accuracy"])
+        self.assertEqual(report["cohorts"]["rest"]["total"], len(self.key))
+        self.assertTrue(all(not m["held_out"] for m in report["misses"]))
+
+    def test_held_out_marker_requires_boolean(self):
+        for marker in (None, "true", "false", 0, 1, [], {}):
+            key = copy.deepcopy(self.key)
+            key[0]["held_out"] = marker
+            with self.subTest(marker=marker), self.assertRaisesRegex(ValueError, "held_out must be a boolean"):
+                scorer.score([], key)
+
     def test_cli_json_text_errors_and_read_only_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
