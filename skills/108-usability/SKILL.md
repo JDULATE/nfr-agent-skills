@@ -1,7 +1,7 @@
 ---
 name: usability
 description: >-
-  Improves end-to-end task performance when tickets say "users cannot finish checkout", "people make mistakes in this workflow", or "make the whole task easier to complete". Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).
+  Checks whole-task interaction when asked "observe checkout errors", "test unaided task completion", or "measure effort through recovery". Ask the user if task success vs learning or sentiment is unclear. Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).
 ---
 # Usability
 

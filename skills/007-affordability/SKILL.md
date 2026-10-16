@@ -1,7 +1,7 @@
 ---
 name: affordability
 description: >-
-  Checks budget fit when tickets say "this export exceeds our spending cap", "include setup and running costs", or "batch requests so this workload fits the budget". Not for delivery under all constraints (see feasibility) or continued value (see viability).
+  Checks financial limits when asked "cap running costs", "include setup costs", or "price this workload". Ask the user if budget fit vs delivery feasibility is unclear. Not for delivery under all constraints (see feasibility) or continued value (see viability).
 ---
 
 # Affordability

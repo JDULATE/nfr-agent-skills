@@ -1,7 +1,7 @@
 ---
 name: feasibility
 description: >-
-  Tests whether a design can meet its delivery constraints when tickets say "can we ship this offline", "try the local renderer before we commit", or "the plan needs a service we cannot reach". Not for budget fit alone (see affordability) or ongoing worth (see viability).
+  Tests initial delivery constraints when asked "try the offline renderer", "check dependency access", or "test this design here". Ask the user if build feasibility vs budget or continued worth is unclear. Not for budget fit alone (see affordability) or ongoing worth (see viability).
 ---
 
 # Feasibility

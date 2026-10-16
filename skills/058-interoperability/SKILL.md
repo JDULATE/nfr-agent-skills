@@ -1,7 +1,7 @@
 ---
 name: interoperability
 description: >-
-  Aligns exchange meaning when tickets say "they disagree on units", "the receiver misreads our payload", or "their success response means something else". Not for assembly effort (see integratability).
+  Aligns exchanged meaning when asked "agree on timestamp units", "fix payload interpretation", or "distinguish queued from completed". Ask the user if meaning vs connection setup is unclear. Not for assembly effort (see integratability).
 ---
 
 # Interoperability

@@ -1,7 +1,7 @@
 ---
 name: robustness
 description: >-
-  Bounds behavior under adverse inputs or conditions when tickets say "bad input leaves jobs running", "huge requests take down healthy work", or "rejected imports leave half-written rows". Not for component faults (see fault-failure-tolerance), threat review (see security-control-and-security), or normal-profile failures (see reliability).
+  Bounds bad-input effects when asked "reject oversized requests safely", "release failed reservations", or "avoid partial rejected rows". Ask the user if input stress vs modeled faults is unclear. Not for component faults (see fault-failure-tolerance), threat review (see security-control-and-security), or normal-profile failures (see reliability).
 ---
 # Robustness
 

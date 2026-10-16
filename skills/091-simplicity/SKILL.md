@@ -1,7 +1,7 @@
 ---
 name: simplicity
 description: >-
-  Removes unnecessary mechanisms when tickets say "this fixed export has a plugin framework", "why is there a registry for one formatter", or "use a direct call for this fixed path". Not for mapping interaction burden (see complexity-interacting-complexity) or reading flow alone (see readability).
+  Removes unjustified mechanisms when asked "remove this unused dispatcher", "drop the fixed-path registry", or "justify this plugin framework". Ask the user if unnecessary machinery vs interaction burden is unclear. Not for mapping interaction burden (see complexity-interacting-complexity) or reading flow alone (see readability).
 ---
 
 # Simplicity

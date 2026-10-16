@@ -1,7 +1,7 @@
 ---
 name: effectiveness
 description: >-
-  Checks achieved outcomes when tickets say "reviewing discrepancies does not fix stock", "the screen says done but the mismatch remains", or "measure reconciled inventory rather than clicks". Not for capability presence (see functionality) or task fit alone (see suitability).
+  Checks attained outcomes when asked "count resolved issues", "verify stock was reconciled", or "stop counting clicks as success". Ask the user if outcomes vs task fit is unclear. Not for capability presence (see functionality) or task fit alone (see suitability).
 ---
 
 # Effectiveness

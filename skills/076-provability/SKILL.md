@@ -1,7 +1,7 @@
 ---
 name: provability
 description: >-
-  Builds checkable arguments from explicit assumptions when tickets say "prove this balance cannot go negative", "which assumptions does this proof need", or "tests do not cover every state". Not for testing selected cases (see verifiability) or defining notation alone (see formality).
+  Proves modeled claims when asked "prove the balance invariant", "check every allowed transition", or "list proof assumptions". Ask the user if proof vs selected test evidence is unclear. Not for testing selected cases (see verifiability) or defining notation alone (see formality).
 ---
 
 # Provability

@@ -1,7 +1,7 @@
 ---
 name: portability
 description: >-
-  Moves software between execution environments when tickets say "the app only works on the old host", "move this service to the new runtime", or "keep the same result on the target host". Not for setup on one target (see installability), locale adaptation (see localizability), or user movement (see mobility).
+  Moves execution platforms when asked "isolate OS assumptions", "adapt to the target runtime", or "preserve behavior on the new platform". Ask the user if platform differences vs installation alone is unclear. Not for setup on one target (see installability), locale adaptation (see localizability), or user movement (see mobility).
 ---
 
 # Portability

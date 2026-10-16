@@ -1,7 +1,7 @@
 ---
 name: legibility
 description: >-
-  Checks character and symbol recognition in the viewing context when tickets say "these characters look the same", "users misread the identifier", or "the font is unreadable on this display". Not for code/text reading flow (see readability), visual appeal (see attractiveness), or broader access barriers (see accessibility-access-control).
+  Checks character recognition when asked "distinguish I from l", "fix lookalike symbols", or "test this font on the display". Ask the user if characters vs reading flow is unclear. Not for code/text reading flow (see readability), visual appeal (see attractiveness), or broader access barriers (see accessibility-access-control).
 ---
 # Legibility
 

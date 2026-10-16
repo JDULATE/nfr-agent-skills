@@ -1,7 +1,7 @@
 ---
 name: repeatability
 description: >-
-  Checks repeated runs in the same setup when tickets say "the same fixture gives different answers", "rerun this without changing the setup", or "does this pass twice in a row". Not for independent reconstruction elsewhere (see replicability) or bounds on service variation (see predictability).
+  Checks reruns with held conditions when asked "repeat the same fixture", "keep setup unchanged", or "compare repeated outputs". Ask the user if same setup vs independent reconstruction is unclear. Not for independent reconstruction elsewhere (see replicability) or bounds on service variation (see predictability).
 ---
 
 # Repeatability

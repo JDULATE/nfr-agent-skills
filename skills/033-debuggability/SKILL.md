@@ -1,7 +1,7 @@
 ---
 name: debuggability
 description: >-
-  Localizes a particular execution defect when tickets say "reproduce this parser crash", "show me where this value goes wrong", or "the stack trace does not explain this input". Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).
+  Localizes one execution defect when asked "replay this parser crash", "trace this bad value", or "inspect this failing input". Ask the user if one replay vs system analysis is unclear. Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).
 ---
 
 # Debuggability

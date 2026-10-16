@@ -1,0 +1,23 @@
+{
+  "executor": "fresh Codex agent",
+  "agent_task": "/root/blinded_router_fixes_round2",
+  "fork_turns": "none",
+  "model": "Inherited primary model; no override requested. Not asserted to match prior CLI default.",
+  "input_files": {
+    "routing-catalog.md": "a1ee36bfba6b2c0dbce9102d1fe2db5c6bfda3f069386673630865c70823299e",
+    "routing-prompts.json": "9a53b1e844b8b2679c4dfb0df66da1838352028f24a3529c09f7775b58db2a6a"
+  },
+  "key_sha256": "2450fec1ab67e4dfe3888f331ea45d07ac2382c23300e329d3948477f27e91ff",
+  "results_sha256": "e1a199f6594967ae89f0bd83e58ea9b658c217724b20e8f84175f334aedee5bf",
+  "answer_key_supplied": false,
+  "original_labels_or_previous_choices_supplied": false,
+  "agent_completion": "Wrote 268 answers; read only the two complete inputs and no other inputs.",
+  "input_access_evidence": "Agent completion statement; no CLI event transcript is available for the fresh-agent fallback.",
+  "answers": 268,
+  "scoring_command": "python scripts/score_routing.py routing-fixes-results.json --key evals/routing-fixes/routing-key.json",
+  "original_misses_repaired": 36,
+  "original_misses_remaining": 58,
+  "control_regressions": 5,
+  "comparability_limit": "The original baseline used CLI default. Managed permissions blocked CLI startup, so these post-change checks use fresh agents. No claim that score changes are caused only by description edits.",
+  "rounds": 2
+}

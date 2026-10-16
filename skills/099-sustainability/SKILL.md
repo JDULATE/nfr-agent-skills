@@ -1,7 +1,7 @@
 ---
 name: sustainability
 description: >-
-  Assesses energy and device-life trade-offs when users ask "can we use less energy for these reports", "can we keep these devices useful", or "do we really need replacement hardware". Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).
+  Checks environmental stewardship when asked "measure report energy", "extend useful device life", or "avoid replacing usable hardware". Ask the user which environmental objective is intended. Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).
 ---
 # Sustainability
 

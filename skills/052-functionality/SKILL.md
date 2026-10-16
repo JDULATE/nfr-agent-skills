@@ -1,7 +1,7 @@
 ---
 name: functionality
 description: >-
-  Defines required capabilities when tickets say "we need an export operation", "there is no way to cancel a queued export", or "list what the export service must do". Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).
+  Defines absent capabilities when asked "add export downloads", "add queued-job cancellation", or "list required operations". Ask the user if a missing operation vs broken existing behavior is unclear. Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).
 ---
 
 # Functionality

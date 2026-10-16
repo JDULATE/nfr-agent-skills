@@ -1,7 +1,7 @@
 ---
 name: additivity
 description: >-
-  Tests whether separate contributions combine as claimed when users ask "do these gains add up", "are we counting the benefit twice", or "both changes together help less". Not for assembly contracts (see composability) or admitting resources (see expandability).
+  Checks summed gains when asked "compare combined savings", "avoid double-counting", or "measure each contribution". Ask the user if sums vs joined behavior is unclear. Not for assembly contracts (see composability) or admitting resources (see expandability).
 ---
 # Additivity
 

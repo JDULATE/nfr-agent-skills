@@ -1,7 +1,7 @@
 ---
 name: likeability
 description: >-
-  Evaluates feelings after use when users say "people hate using this tool", "which workflow do users prefer", or "the app feels frustrating after use". Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).
+  Checks feelings after use when asked "compare workflow preferences", "collect user frustration", or "review session satisfaction". Ask the user if sentiment vs appearance or task success is unclear. Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).
 ---
 # Likeability
 

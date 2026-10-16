@@ -1,7 +1,7 @@
 ---
 name: readability
 description: >-
-  Improves code and text reading flow when tickets say "rename these confusing variables", "this function is buried in nesting", or "reorder this paragraph so it flows". Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).
+  Improves reading flow when asked "reduce this nesting", "rename confusing locals", or "reorder these sentences". Ask the user if structure vs missing concepts or character recognition is unclear. Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).
 status: draft
 ---
 # Readability

@@ -1,7 +1,7 @@
 ---
 name: measurability
 description: >-
-  Defines a property's measurement procedure when tickets say "what exactly are we counting", "these dashboards use different units", or "how do we measure queue delay". Not for inferring hidden runtime state (see observability) or selecting acceptance evidence (see verifiability).
+  Defines measurements when asked "define queue-delay units", "choose counting boundaries", or "check instrument resolution". Ask the user if measurement vs state inference or acceptance evidence is unclear. Not for inferring hidden runtime state (see observability) or selecting acceptance evidence (see verifiability).
 ---
 
 # Measurability

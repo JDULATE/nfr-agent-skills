@@ -1,7 +1,7 @@
 ---
 name: reconfigurability
 description: >-
-  Controls transitions between operating configurations when tickets say "switch modes without losing queued jobs", "resume the interrupted config change", or "who owns work during the switch". Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).
+  Controls configuration transitions when asked "preserve queued work on mode switch", "resume a config change", or "check ownership during cutover". Ask the user if a transition vs tuning is unclear. Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).
 ---
 # Reconfigurability
 

@@ -1,7 +1,7 @@
 ---
 name: configurability
 description: >-
-  Defines supported settings, defaults, and valid combinations when tickets say "which settings do we support", "these config options clash", or "document defaults and overrides". Not for tuning a value (see adjustability), switching state (see reconfigurability), or user-authored behavior (see customizability).
+  Defines valid settings when asked "list supported options", "resolve config conflicts", or "show default precedence". Ask the user if options vs tuning vs transitions is unclear. Not for tuning a value (see adjustability), switching state (see reconfigurability), or user-authored behavior (see customizability).
 ---
 # Configurability
 

@@ -1,7 +1,7 @@
 ---
 name: wrappability
 description: >-
-  Adds a boundary around an unchanged implementation when tickets say "put a structured API around this old function", "keep the legacy engine behind a new interface", or "expose a new entrypoint without changing the engine". Not for substituting the engine (see replaceability) or just wiring components (see integratability).
+  Wraps retained implementations when asked "keep the engine behind an API", "translate native errors", or "expose the old function unchanged". Ask the user if retention vs substitution is unclear. Not for substituting the engine (see replaceability) or just wiring components (see integratability).
 ---
 
 # Wrappability

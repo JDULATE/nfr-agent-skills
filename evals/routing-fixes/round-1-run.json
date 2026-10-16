@@ -1,0 +1,14 @@
+{
+  "executor": "fresh Codex agent",
+  "agent_task": "/root/blinded_router_fixes",
+  "fork_turns": "none",
+  "input_files": [
+    "routing-catalog.md",
+    "routing-prompts.json"
+  ],
+  "answer_key_supplied": false,
+  "agent_completion": "Wrote and validated 268 answers; read the two complete inputs and no other inputs.",
+  "results_sha256": "a2584a3985d575c7eb79ff5c0f784a70826ef48c8136f8e4ba7987de4bdf0636",
+  "catalog_sha256": "0e3804df67e20e3707b7b5a34e9f41d5a38fdcc9b84f873e55144bfaa9609e80",
+  "comparability_limit": "Baseline used CLI default; this run uses a fresh agent inheriting the primary model. CLI launch was blocked by managed user-directory permissions."
+}

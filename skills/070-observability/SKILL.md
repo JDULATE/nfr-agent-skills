@@ -1,7 +1,7 @@
 ---
 name: observability
 description: >-
-  Makes runtime state inferable when tickets say "is this job queued or stuck", "we cannot join the retry to its first attempt", or "the logs do not explain the missing result". Not for displaying status alone (see visibility), defining units (see measurability), or one defect replay (see debuggability).
+  Distinguishes runtime states when asked "join retries to attempts", "separate queued from stuck", or "explain missing results from signals". Ask the user if inference vs status display is unclear. Not for displaying status alone (see visibility), defining units (see measurability), or one defect replay (see debuggability).
 ---
 
 # Observability

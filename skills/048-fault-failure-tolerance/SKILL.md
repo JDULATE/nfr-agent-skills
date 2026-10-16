@@ -1,7 +1,7 @@
 ---
 name: fault-failure-tolerance
 description: >-
-  Keeps a defined service working during modeled faults when users say "keep serving when a worker dies", "fail over while requests are running", or "keep writes working during a partition". Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).
+  Checks service during faults when asked "serve with a dead worker", "write through a partition", or "test failover under load". Ask the user if continued service vs restoration is unclear. Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).
 ---
 # Fault/Failure Tolerance
 

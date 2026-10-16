@@ -1,7 +1,7 @@
 ---
 name: integratability
 description: >-
-  Bounds assembly work when tickets say "wire these services together", "the components work alone but not together", or "connecting this needs too much glue". Not for exchange meaning (see interoperability).
+  Bounds assembly work when asked "reduce adapter glue", "wire agreed message contracts", or "assign integration ownership". Ask the user if wiring effort vs exchanged meaning is unclear. Not for exchange meaning (see interoperability).
 ---
 
 # Integratability

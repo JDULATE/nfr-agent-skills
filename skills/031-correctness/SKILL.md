@@ -1,7 +1,7 @@
 ---
 name: correctness
 description: >-
-  Matches specified behavior when tickets say "this branch returns the wrong result", "the boundary case breaks the agreed rule", or "the function violates its contract". Not for error against measured truth (see accuracy), missing required members (see completeness), or selected-rule audits (see conformance).
+  Checks specified behavior when asked "fix this boundary case", "match the decision table", or "reject expired requests". Ask the user if contract failure vs reference error is unclear. Not for error against measured truth (see accuracy), missing required members (see completeness), or selected-rule audits (see conformance).
 ---
 
 # Correctness

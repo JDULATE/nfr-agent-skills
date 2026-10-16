@@ -1,7 +1,7 @@
 ---
 name: completeness
 description: >-
-  Checks bounded coverage when tickets say "the export skips required records", "this export leaves out an item", or "duplicates hide a missing item". Not for breadth of explanations (see comprehensiveness) or wrong computed values (see correctness).
+  Checks required members when asked "find omitted order IDs", "check every attachment", or "duplicates hide missing rows". Ask the user if missing items vs missing topics is unclear. Not for breadth of explanations (see comprehensiveness) or wrong computed values (see correctness).
 ---
 
 # Completeness

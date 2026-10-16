@@ -1,7 +1,7 @@
 ---
 name: auditability
 description: >-
-  Defines evidence for independent review when tickets say "the reviewer cannot reconstruct this approval", "our audit trail leaves gaps", or "this export cannot answer the auditor". Not for actor identity (see accountability), artifact links (see traceability), or checking selected rules (see conformance).
+  Prepares review evidence when asked "reconstruct this approval", "explain audit gaps", or "export review records". Ask the user if review evidence vs actor identity is unclear. Not for actor identity (see accountability), artifact links (see traceability), or checking selected rules (see conformance).
 ---
 # Auditability
 

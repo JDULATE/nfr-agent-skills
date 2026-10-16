@@ -1,7 +1,7 @@
 ---
 name: accountability
 description: >-
-  Binds initiating and executing actors under a validated identity model when users ask "who approved this change", "which user queued this job", or "shared accounts hide who acted". Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).
+  Attributes actions when asked "keep the initiator", "tag delegated jobs", or "link actions to logins". Ask the user if identity vs review evidence is unclear. Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).
 ---
 # Accountability
 

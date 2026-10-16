@@ -1,7 +1,7 @@
 ---
 name: suitability
 description: >-
-  Checks capabilities against a particular task when tickets say "the export cannot feed our offline importer", "this format does not fit the receiving tool", or "the feature exists but cannot complete this handoff". Not for capability presence alone (see functionality) or achieved outcomes (see effectiveness).
+  Checks capability fit when asked "feed this offline importer", "match this handoff format", or "compare features for our task". Ask the user if task fit vs achieved outcome is unclear. Not for capability presence alone (see functionality) or achieved outcomes (see effectiveness).
 ---
 
 # Suitability

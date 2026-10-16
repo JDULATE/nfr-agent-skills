@@ -1,7 +1,7 @@
 ---
 name: variability
 description: >-
-  Models allowed product variants when tickets say "which editions can we build", "export must require audit in every edition", or "the build allows a feature combination we do not support". Not for settings of one instance (see configurability) or applying a transition (see reconfigurability).
+  Defines product-family combinations when asked "reject invalid edition builds", "make export require audit", or "list allowed feature sets". Ask the user if family variants vs instance settings is unclear. Not for settings of one instance (see configurability) or applying a transition (see reconfigurability).
 ---
 
 # Variability

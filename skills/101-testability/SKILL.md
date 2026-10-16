@@ -1,7 +1,7 @@
 ---
 name: testability
 description: >-
-  Adds test control and observation seams when tickets say "we cannot force the timeout path", "tests cannot see which branch ran", or "this test depends on the real clock". Not for selecting acceptance evidence (see verifiability) or diagnosing a particular failing execution (see debuggability).
+  Adds test controls when asked "force the timeout branch", "inject a clock", or "observe which test path ran". Ask the user if missing test seams vs one failing replay is unclear. Not for selecting acceptance evidence (see verifiability) or diagnosing a particular failing execution (see debuggability).
 ---
 
 # Testability

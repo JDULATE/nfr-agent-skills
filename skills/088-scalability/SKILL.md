@@ -1,7 +1,7 @@
 ---
 name: scalability
 description: >-
-  Tests behavior as demand grows when tickets say "handle more users without adding errors", "why does throughput stop rising", or "does another worker help under load". Not for resource admission (see expandability), fixed-load bounds (see performance-efficiency-time-or-space-bounds), or unit resource cost (see efficiency-device-efficiency).
+  Tests demand growth when asked "plot throughput growth", "find the load plateau", or "compare workers under load". Ask the user if growth vs resource admission is unclear. Not for resource admission (see expandability), fixed-load bounds (see performance-efficiency-time-or-space-bounds), or unit resource cost (see efficiency-device-efficiency).
 ---
 # Scalability
 

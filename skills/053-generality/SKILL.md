@@ -1,7 +1,7 @@
 ---
 name: generality
 description: >-
-  Broadens one abstraction across related cases when tickets say "stop adding exceptions to this range checker", "use one range model for quantities and durations", or "every new range field needs another branch". Not for different task roles (see versatility) or moving an artifact to another context (see reusability).
+  Covers related cases with one abstraction when asked "unify these range checkers", "cover quantities and durations", or "stop field-specific branches". Ask the user which case family and common rule are intended if unstated. Not for different task roles (see versatility) or moving an artifact to another context (see reusability).
 ---
 
 # Generality

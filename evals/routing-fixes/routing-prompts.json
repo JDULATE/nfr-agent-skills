@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "r-00142465219fbaa9",
+    "prompt": "Increase concurrent users and record how throughput, errors and resource needs change across the workload growth."
+  },
+  {
+    "id": "r-00412786481d82e5",
+    "prompt": "Add a new entrypoint around the retained implementation without silently changing what a successful native call does."
+  },
+  {
+    "id": "r-013631a3aef9e06f",
+    "prompt": "Repeated bad inputs must release reservations and leave no forbidden partial mutation or orphaned background work."
+  },
+  {
+    "id": "r-013c18dc521eb11c",
+    "prompt": "Define the entry conditions, actions and exit checks for rerunning this runtime job, including what to do with partial state."
+  },
+  {
+    "id": "r-021d92c5acc01525",
+    "prompt": "Use one interval model for quantities and durations with the same interval rules instead of separate named-case branches."
+  },
+  {
+    "id": "r-032c098268c74570",
+    "prompt": "Carry the authenticated initiator and delegated worker separately through the approval job."
+  },
+  {
+    "id": "r-04e13c43038096d8",
+    "prompt": "The sender uses seconds and the receiver reads milliseconds; agree on the meaning at the exchange boundary."
+  },
+  {
+    "id": "r-08569fca852c0bf9",
+    "prompt": "Give an independent reviewer the permitted evidence view needed to reconstruct this approval without private author explanations."
+  },
+  {
+    "id": "r-08cab0ddf2872410",
+    "prompt": "On a clean target, install this supplied package and verify it starts with its declared prerequisites."
+  },
+  {
+    "id": "r-091c33606e5419cc",
+    "prompt": "People struggle with the app."
+  },
+  {
+    "id": "r-09b28c71fc1887dc",
+    "prompt": "Handle more traffic."
+  },
+  {
+    "id": "r-0a22198d58f09dff",
+    "prompt": "Choose the report capability that fits this team's stated handoff context, rather than counting available features."
+  },
+  {
+    "id": "r-0b92fc33c482976f",
+    "prompt": "At the disabled action, expose the current object's state and the condition that enables the next operation."
+  },
+  {
+    "id": "r-0bda13a87d4ad995",
+    "prompt": "Is this report complete?"
+  },
+  {
+    "id": "r-0d6c45b5898145ff",
+    "prompt": "Both changes help alone but not together."
+  },
+  {
+    "id": "r-0e6b88a273a7e7d3",
+    "prompt": "Map the callers and stored fields affected by removing this customer field before we choose the change."
+  },
+  {
+    "id": "r-10cea61997b8fdb2",
+    "prompt": "Make the experience better."
+  },
+  {
+    "id": "r-10e9c7fb2fde201a",
+    "prompt": "The behavior keeps changing."
+  },
+  {
+    "id": "r-10fa474e5e2b4e6c",
+    "prompt": "Completion feels unpredictable."
+  },
+  {
+    "id": "r-11a7978c48245818",
+    "prompt": "Check whether this follows the rules."
+  },
+  {
+    "id": "r-136e0a1f295bde94",
+    "prompt": "Help me debug this failure."
+  },
+  {
+    "id": "r-14666de76d196d71",
+    "prompt": "The function takes the wrong branch for the boundary case in our agreed decision table; implement that table."
+  },
+  {
+    "id": "r-146d2169a8a10275",
+    "prompt": "Explain and bound the variation between repeated service runs under matched conditions, including rare pauses."
+  },
+  {
+    "id": "r-16cf8186495bbb9b",
+    "prompt": "New users struggle with this."
+  },
+  {
+    "id": "r-1710bd38806aa8a1",
+    "prompt": "Tests don't cover every possibility."
+  },
+  {
+    "id": "r-171946a9fc20bdee",
+    "prompt": "Both agents must share this machine without taking each other's port or deleting each other's files."
+  },
+  {
+    "id": "r-18298ecf9b96923f",
+    "prompt": "We need more capacity."
+  },
+  {
+    "id": "r-18e946084d8f2345",
+    "prompt": "Dates are confusing our customers."
+  },
+  {
+    "id": "r-1a163ca7f836ff18",
+    "prompt": "We have a spending limit for setup and running the importer; compare designs against that limit."
+  },
+  {
+    "id": "r-1aacb2250866dd84",
+    "prompt": "Document who owns the glue code and prerequisites needed to turn these separately developed modules into a working solution."
+  },
+  {
+    "id": "r-1bbbde99ec656d0d",
+    "prompt": "Fix the checkout logic."
+  },
+  {
+    "id": "r-1d3450cfae00e2ec",
+    "prompt": "Make this easier to look after."
+  },
+  {
+    "id": "r-1d6124c9354c782b",
+    "prompt": "People do not get this."
+  },
+  {
+    "id": "r-1d8c5d5257e59ead",
+    "prompt": "We need a better audit trail."
+  },
+  {
+    "id": "r-1de44dac1fd40d54",
+    "prompt": "Identify the operating-system assumptions that stop this application running in the target environment and isolate those adaptations."
+  },
+  {
+    "id": "r-1e6b8acc8d9139d7",
+    "prompt": "Can this model cover more cases?"
+  },
+  {
+    "id": "r-1f048d09fda1755a",
+    "prompt": "Both APIs return success, but one means queued and the other means completed; align the interaction meaning."
+  },
+  {
+    "id": "r-212433c508cb6344",
+    "prompt": "Use the validator in the CLI too."
+  },
+  {
+    "id": "r-21f23a92c0ef4ac8",
+    "prompt": "Is the documentation enough?"
+  },
+  {
+    "id": "r-241bf7e42eedd129",
+    "prompt": "The package layout is a mess."
+  },
+  {
+    "id": "r-25efb477bee0fd0a",
+    "prompt": "We need different editions."
+  },
+  {
+    "id": "r-27ab27a7e5e93872",
+    "prompt": "Handle more users."
+  },
+  {
+    "id": "r-2820e20b462b3c0d",
+    "prompt": "Stop copying this helper."
+  },
+  {
+    "id": "r-2875138ec6d35605",
+    "prompt": "Make our backups useful."
+  },
+  {
+    "id": "r-290e28507504f2f8",
+    "prompt": "The recipient can't use the package."
+  },
+  {
+    "id": "r-2a15293fe4223b00",
+    "prompt": "Stop adding a special case for every input."
+  },
+  {
+    "id": "r-2a223324cbf197c0",
+    "prompt": "Another engineer gets a different answer."
+  },
+  {
+    "id": "r-2a752499b3a4288a",
+    "prompt": "Define the allowed states and transitions so two implementers cannot assign different meanings to the same state label."
+  },
+  {
+    "id": "r-2c9f9cdf7c34f936",
+    "prompt": "Attach another storage unit and check the transition that makes its capacity usable, without claiming a workload-growth curve."
+  },
+  {
+    "id": "r-2ed5a3f566cab0d2",
+    "prompt": "Customers can't see what's happening."
+  },
+  {
+    "id": "r-2eec4750902942a8",
+    "prompt": "Should we keep this product?"
+  },
+  {
+    "id": "r-2fd5c74ab06efa38",
+    "prompt": "Review the palette and composition using appearance judgments under the same viewing conditions."
+  },
+  {
+    "id": "r-301e07759cc0eb64",
+    "prompt": "Move the software to the target runtime, track the platform-specific edits, and check that the same behavior still works."
+  },
+  {
+    "id": "r-31dd2d97a1df9b05",
+    "prompt": "Test whether the intended audience can explain the meaning of this particular error paragraph using grounded scenarios."
+  },
+  {
+    "id": "r-32800fed628d4ba4",
+    "prompt": "Use this existing checker in the batch job without dragging in its web request dependencies or maintaining a copy."
+  },
+  {
+    "id": "r-32d3cd68e3eda168",
+    "prompt": "Admit a new worker into the existing installation and verify placement, routing and usable added capacity."
+  },
+  {
+    "id": "r-34075badeb722eb3",
+    "prompt": "Can we expose this engine differently?"
+  },
+  {
+    "id": "r-3426cfe6d588294e",
+    "prompt": "Apply the new setup."
+  },
+  {
+    "id": "r-354eada869c66e98",
+    "prompt": "Can we call this confirmed?"
+  },
+  {
+    "id": "r-37eb69ec9d791f9d",
+    "prompt": "Make checkout easier."
+  },
+  {
+    "id": "r-37f3d4ea4d68fff1",
+    "prompt": "Keep a critical counterexample visible when deciding operational reliance across several independent failure concerns."
+  },
+  {
+    "id": "r-386f0951db48c822",
+    "prompt": "Compare bytes transferred per useful decoded result before choosing the packed representation; keep output quality fixed."
+  },
+  {
+    "id": "r-38de958ba57dca4d",
+    "prompt": "Notify the affected user when the export finishes, through the agreed channel while the next action is still useful."
+  },
+  {
+    "id": "r-38e216f95092d864",
+    "prompt": "Make these labels clearer."
+  },
+  {
+    "id": "r-395aa30520cc1f56",
+    "prompt": "Can we run both versions?"
+  },
+  {
+    "id": "r-3a156d1ffc74a161",
+    "prompt": "Let customers make it their own."
+  },
+  {
+    "id": "r-3a93b57e292b6093",
+    "prompt": "Give the installation more headroom."
+  },
+  {
+    "id": "r-3caae219ae15a22e",
+    "prompt": "Does this pass on a rerun?"
+  },
+  {
+    "id": "r-3cae9f8a14b7e792",
+    "prompt": "We need better documentation."
+  },
+  {
+    "id": "r-3cc486f153304550",
+    "prompt": "The pieces work alone but not together."
+  },
+  {
+    "id": "r-3e20a3b68eff4295",
+    "prompt": "People do not enjoy this."
+  },
+  {
+    "id": "r-3f2eaac92c935785",
+    "prompt": "Make troubleshooting easier."
+  },
+  {
+    "id": "r-40689c1f0bc1e130",
+    "prompt": "Rename confusing variables and flatten nested control flow so readers can follow the same code meaning."
+  },
+  {
+    "id": "r-40c0859ae907228b",
+    "prompt": "Will this design work here?"
+  },
+  {
+    "id": "r-40ea526d0e358dbe",
+    "prompt": "Make it easier to change."
+  },
+  {
+    "id": "r-423d17eb232af336",
+    "prompt": "Reorder these sentences to make their existing meaning easier to follow without adding missing concepts."
+  },
+  {
+    "id": "r-43071ab7a17cb5f6",
+    "prompt": "This rule language can't say what we need."
+  },
+  {
+    "id": "r-43ac8d1036d22bde",
+    "prompt": "Protect the report output."
+  },
+  {
+    "id": "r-454ecee0a31f2d9b",
+    "prompt": "It only runs on the old machine."
+  },
+  {
+    "id": "r-46f4fb4e3de43c5d",
+    "prompt": "Clarify this for readers."
+  },
+  {
+    "id": "r-4702213686ff69af",
+    "prompt": "Find what changed this decision."
+  },
+  {
+    "id": "r-4712a66798dbd10d",
+    "prompt": "The page feels uninviting."
+  },
+  {
+    "id": "r-473db3456a90cbc0",
+    "prompt": "Keep people informed."
+  },
+  {
+    "id": "r-4bc32bb365518dff",
+    "prompt": "Stop overload breaking the worker."
+  },
+  {
+    "id": "r-4c69fad2d46bb2e7",
+    "prompt": "Add a suggestion panel with its own acceptance checks while the manual reply function remains usable in its original role."
+  },
+  {
+    "id": "r-4ef7816fff7eaed3",
+    "prompt": "A cache populated for one team discloses protected contents to another; enforce the field/recipient boundary on reuse."
+  },
+  {
+    "id": "r-4f1aa613fb568ad4",
+    "prompt": "Choose feasible evidence and a decision rule for accepting this requirement instead of leaving 'works well' uncheckable."
+  },
+  {
+    "id": "r-4f4b7285460d8e7b",
+    "prompt": "People read this spec differently."
+  },
+  {
+    "id": "r-4fe42cb616a5a186",
+    "prompt": "Replace and retire the old provider while preserving the surrounding callers' contract and required state."
+  },
+  {
+    "id": "r-50cd37978f2a9caf",
+    "prompt": "Which worker owns this job?"
+  },
+  {
+    "id": "r-5174f6e026d7200e",
+    "prompt": "We need to stop using the old provider."
+  },
+  {
+    "id": "r-522eb4b5697e10b3",
+    "prompt": "We cannot seem to ship this."
+  },
+  {
+    "id": "r-526b3ad54e859b5a",
+    "prompt": "Our service needs better uptime."
+  },
+  {
+    "id": "r-52a947df69f074e1",
+    "prompt": "Keep this workload within the team's approved budget, including support and migration costs."
+  },
+  {
+    "id": "r-52c0dc8b3ab03d92",
+    "prompt": "Help us wire these services together."
+  },
+  {
+    "id": "r-53bb9c6161763cce",
+    "prompt": "Make this dataset less identifying."
+  },
+  {
+    "id": "r-544e2a4c3a959b68",
+    "prompt": "Fit this tool to our team."
+  },
+  {
+    "id": "r-56677163d27567d6",
+    "prompt": "Help us hand this project over."
+  },
+  {
+    "id": "r-56dd9a18cc7efb5d",
+    "prompt": "Broaden this guide beyond its current topics using audience questions, rather than checking members of a fixed required list."
+  },
+  {
+    "id": "r-5792a42a89629f88",
+    "prompt": "When the middle stage rejects a row, make the whole chain agree on what stops, what continues, and who releases the input."
+  },
+  {
+    "id": "r-5858847318a21069",
+    "prompt": "Define the built-in options, defaults, precedence and invalid combinations without requiring source edits."
+  },
+  {
+    "id": "r-58be2272a38abc93",
+    "prompt": "Who was behind this change?"
+  },
+  {
+    "id": "r-5904e73cf611aac0",
+    "prompt": "Clean up our customer data."
+  },
+  {
+    "id": "r-591489b007912170",
+    "prompt": "Let admins tweak this."
+  },
+  {
+    "id": "r-5929e4dc4b473e3c",
+    "prompt": "Make this configurable."
+  },
+  {
+    "id": "r-59341513211f26ec",
+    "prompt": "Compare which experienced workflow people prefer, without treating visual appeal alone as the verdict."
+  },
+  {
+    "id": "r-5bffefb34bdc97bc",
+    "prompt": "Set a continue-or-retire decision for this existing service using its benefits and future obligations, rather than initial build feasibility."
+  },
+  {
+    "id": "r-5c2b9641f0aa635c",
+    "prompt": "The report sounds too sure."
+  },
+  {
+    "id": "r-5d6985e8f00a2ac7",
+    "prompt": "We need to support cancellation."
+  },
+  {
+    "id": "r-5e72b222cf2bbbf4",
+    "prompt": "Expose a test seam to force the timeout branch and observe its result without invoking the live service."
+  },
+  {
+    "id": "r-60130dbf2da5c8c5",
+    "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance."
+  },
+  {
+    "id": "r-608f51b62b135457",
+    "prompt": "The logs aren't helping."
+  },
+  {
+    "id": "r-6193dbf3b2de97d6",
+    "prompt": "Show the intended customer the correct job's current progress and when that status was last updated."
+  },
+  {
+    "id": "r-625806728696d50b",
+    "prompt": "Do not lose service when things break."
+  },
+  {
+    "id": "r-6509479e01b66713",
+    "prompt": "Tune an already exposed batch-size parameter while keeping the worker arrangement unchanged."
+  },
+  {
+    "id": "r-65211bcbb6955743",
+    "prompt": "The totals look wrong."
+  },
+  {
+    "id": "r-65962c0fc744f0cf",
+    "prompt": "Help us with a customer issue."
+  },
+  {
+    "id": "r-665c3cee81b33a2a",
+    "prompt": "The dashboard looks successful but users disagree."
+  },
+  {
+    "id": "r-668347a0cdc41cb3",
+    "prompt": "We can't reproduce the timeout in tests."
+  },
+  {
+    "id": "r-67191eb0ee8982c0",
+    "prompt": "The new install won't start."
+  },
+  {
+    "id": "r-6753b4b72a1bf7aa",
+    "prompt": "Do these optimizations work well together?"
+  },
+  {
+    "id": "r-677ac388c80fc716",
+    "prompt": "Is the old version proven enough?"
+  },
+  {
+    "id": "r-68251e946af55326",
+    "prompt": "Split this module up."
+  },
+  {
+    "id": "r-68c83d508f9634a9",
+    "prompt": "People misread these IDs."
+  },
+  {
+    "id": "r-695603b91f39f0fe",
+    "prompt": "These systems disagree about the response."
+  },
+  {
+    "id": "r-6976b62b346e4e07",
+    "prompt": "Do we have enough assurance?"
+  },
+  {
+    "id": "r-6d15b8b67c56d1cd",
+    "prompt": "Installing the new client overwrites the old client's preferences; keep both usable side by side."
+  },
+  {
+    "id": "r-6fa5f18f3c835424",
+    "prompt": "Can we combine these improvements?"
+  },
+  {
+    "id": "r-737a242f3235564c",
+    "prompt": "Keep the export's peak retained space below its confirmed ceiling while producing the complete required artifact at the stated load."
+  },
+  {
+    "id": "r-7575f37abe25bdd0",
+    "prompt": "Help us combine these components."
+  },
+  {
+    "id": "r-763c5fbe2dfca612",
+    "prompt": "Improve continuing diagnosis, repair and modification across representative recurring upkeep tasks."
+  },
+  {
+    "id": "r-76bb5405eadfabb3",
+    "prompt": "Teams keep inventing their own names."
+  },
+  {
+    "id": "r-779c30432ea37800",
+    "prompt": "We need a demo for the reviewers."
+  },
+  {
+    "id": "r-789b5ac3aa251075",
+    "prompt": "Let us control its behavior."
+  },
+  {
+    "id": "r-7998f646cf36b5db",
+    "prompt": "The export is missing something."
+  },
+  {
+    "id": "r-79e7379966bc813d",
+    "prompt": "This function returns the wrong result."
+  },
+  {
+    "id": "r-7a4eb6ae6c5efa60",
+    "prompt": "We need one shared format."
+  },
+  {
+    "id": "r-7ba78f90fa644b37",
+    "prompt": "Add a controllable clock so tests can drive expiry without waiting on the real clock."
+  },
+  {
+    "id": "r-7bbaf31c02347e16",
+    "prompt": "Validate this payload against the schema we have already selected and report the violated rule."
+  },
+  {
+    "id": "r-7bd98ba2ba8e01c5",
+    "prompt": "Show why this requirement passed."
+  },
+  {
+    "id": "r-7eec1af519af1537",
+    "prompt": "The installer fails halfway through an upgrade; leave a known usable installation rather than a mixture of old and new files."
+  },
+  {
+    "id": "r-7fe916099edff214",
+    "prompt": "Stop these surprise pauses."
+  },
+  {
+    "id": "r-8024de27c7216148",
+    "prompt": "Align the confirmed-save response with the promised persistence condition and distinguish valid later supersession from lost state."
+  },
+  {
+    "id": "r-808d30d85b9c52d6",
+    "prompt": "The export isn't useful for our handoff."
+  },
+  {
+    "id": "r-829ee8d31c479410",
+    "prompt": "Expose the supported configuration menu and validate the effective choice, rather than tune a control or apply a stateful transition."
+  },
+  {
+    "id": "r-8482677b2640a033",
+    "prompt": "Is the worker stuck?"
+  },
+  {
+    "id": "r-85312516f6e4ba88",
+    "prompt": "Keep superseded verification historical when a requirement changes, and find affected obligations when linked code is removed."
+  },
+  {
+    "id": "r-855060bae8272884",
+    "prompt": "Give another engineer the materials to reconstruct the experiment on a clean runner and compare the result independently."
+  },
+  {
+    "id": "r-8603efdd7d009787",
+    "prompt": "This feature doesn't fit our workflow."
+  },
+  {
+    "id": "r-860bde7ea61265ef",
+    "prompt": "Change how the worker behaves."
+  },
+  {
+    "id": "r-870524c16593dcfc",
+    "prompt": "Review the manual's topic coverage for its intended readers, not membership of records in an export."
+  },
+  {
+    "id": "r-8a6365d5923475e8",
+    "prompt": "State the assumptions and construct a checkable argument that the balance cannot become negative for all modeled transitions."
+  },
+  {
+    "id": "r-8abb5433e79605cc",
+    "prompt": "Exercise continuous normal-profile work and retain each qualifying failure event even when a retry or restart restores completion."
+  },
+  {
+    "id": "r-8acb151f93497cc1",
+    "prompt": "Keep the operator, inputs and environment fixed and check whether repeating this experiment gives the same recorded result."
+  },
+  {
+    "id": "r-8addcc277daf14ca",
+    "prompt": "Estimate the implementation owners, contracts and ripple effects touched by this particular rule edit."
+  },
+  {
+    "id": "r-8b076602fa74b927",
+    "prompt": "Move this service to the new host."
+  },
+  {
+    "id": "r-8bb78924fbb37f35",
+    "prompt": "Can we make upgrades less painful?"
+  },
+  {
+    "id": "r-8bfd522e94801264",
+    "prompt": "Make these rules precise."
+  },
+  {
+    "id": "r-8fbc0c5f00915d4c",
+    "prompt": "It only works on your laptop."
+  },
+  {
+    "id": "r-90a885445e668703",
+    "prompt": "Changing config loses work."
+  },
+  {
+    "id": "r-90e5f24ed5ee30be",
+    "prompt": "This service is getting expensive."
+  },
+  {
+    "id": "r-915e470bd1f5bff2",
+    "prompt": "The worker is too expensive to run."
+  },
+  {
+    "id": "r-917c8b57d32e3594",
+    "prompt": "Make this extensible."
+  },
+  {
+    "id": "r-91964c7b1654e2f3",
+    "prompt": "Let departments work differently."
+  },
+  {
+    "id": "r-91dadf4f75caa790",
+    "prompt": "This code has too many moving parts."
+  },
+  {
+    "id": "r-932ea74f1519cc78",
+    "prompt": "After the pause command is acknowledged, stop admitting new jobs while letting the already admitted jobs finish."
+  },
+  {
+    "id": "r-93bd3fbc46c5bd37",
+    "prompt": "Limit collection and recipients to the supplied personal-data purpose and propagate withdrawal to every producer and capture path."
+  },
+  {
+    "id": "r-94e3d0d51dd15ca6",
+    "prompt": "Make this code easier to read."
+  },
+  {
+    "id": "r-95433a841e4d7f59",
+    "prompt": "Show which nodes have adopted the assigned configuration and bring the remaining targets into the intended fleet state."
+  },
+  {
+    "id": "r-9664816a60d3c8b1",
+    "prompt": "Add runtime evidence that distinguishes a queued job from an executing job that has stopped making progress."
+  },
+  {
+    "id": "r-969a626040451483",
+    "prompt": "Compare static visual styles for aesthetic appeal to the intended audience without treating task success as the verdict."
+  },
+  {
+    "id": "r-97d13e456376587b",
+    "prompt": "Can we prove this can't happen?"
+  },
+  {
+    "id": "r-97ffad2125c5b921",
+    "prompt": "These tools don't work together."
+  },
+  {
+    "id": "r-990bf1d636783aa5",
+    "prompt": "Make this screen nicer."
+  },
+  {
+    "id": "r-9a742aac491e4000",
+    "prompt": "Readers interpret this requirement as allowing a different actor; clarify its actors and conditions against the source rule."
+  },
+  {
+    "id": "r-9bc5df77b7002ca8",
+    "prompt": "Make the screen explain itself."
+  },
+  {
+    "id": "r-9d5130866c3f7b13",
+    "prompt": "Can we afford this export?"
+  },
+  {
+    "id": "r-9d7e90652a465cfa",
+    "prompt": "We cannot afford to lose changes."
+  },
+  {
+    "id": "r-9f6e34fc68670736",
+    "prompt": "Build a case runbook with reproduction, verified resolution or escalation rather than changing the general maintenance process."
+  },
+  {
+    "id": "r-a006780d6cabc834",
+    "prompt": "Replace this unavailable acceptance check with a practical inspection or test that can support the same stated claim."
+  },
+  {
+    "id": "r-a4a5743876323a31",
+    "prompt": "Users need a new rule they write themselves, not just a choice among supplied settings or a team-specific preset."
+  },
+  {
+    "id": "r-a56b2e0715e81b81",
+    "prompt": "Users confuse displayed identifier characters; test transcription under the stated font, display and viewing conditions."
+  },
+  {
+    "id": "r-a6d8ba442a3034e2",
+    "prompt": "Show how this migration leaves a workable path for subsequent changes and eventual compatibility-bridge retirement."
+  },
+  {
+    "id": "r-a730e3d8adf0553f",
+    "prompt": "Rewrite this requirement explanation so its audience identifies the intended actor and condition correctly."
+  },
+  {
+    "id": "r-a8b80f08c359eb8b",
+    "prompt": "Map how these flags alter each other's paths so we can reduce the combinations a reviewer has to reason through."
+  },
+  {
+    "id": "r-a99048f421fc4cd9",
+    "prompt": "Protect this feature."
+  },
+  {
+    "id": "r-ab3c6352559e382b",
+    "prompt": "Change the value of the existing polling control and verify the effective value and operating effect within the same setup."
+  },
+  {
+    "id": "r-abdc6d99a3aee72c",
+    "prompt": "Make the domain layer independent of the web layer and check the actual dependency edges against that organization."
+  },
+  {
+    "id": "r-af45b59af270f474",
+    "prompt": "Set an absolute completion-percentile deadline for this operation under a fixed offered workload, with errors and pending outcomes accounted for."
+  },
+  {
+    "id": "r-af99c38b79e557af",
+    "prompt": "Help us understand what broke."
+  },
+  {
+    "id": "r-b26b3e06a3869d22",
+    "prompt": "We need to use it beyond imports."
+  },
+  {
+    "id": "r-b4f2c7711d799a00",
+    "prompt": "Make this service greener."
+  },
+  {
+    "id": "r-b66cd17cff46dec8",
+    "prompt": "Improve visual recognition of glyphs while keeping the text's meaning and structure unchanged."
+  },
+  {
+    "id": "r-b6d8e9643baa8d0f",
+    "prompt": "Rerun the same fixture with the same procedure and setup and compare the resulting outputs."
+  },
+  {
+    "id": "r-b747e24a69197b64",
+    "prompt": "Fix task interaction obstacles and verify the real goal, rather than judging only preference or newly acquired ability."
+  },
+  {
+    "id": "r-b7dc1785ad471f9d",
+    "prompt": "Resume an interrupted configuration change without letting the old and new arrangement both claim the same pending work."
+  },
+  {
+    "id": "r-baf46ca02b55de64",
+    "prompt": "Use the same validator artifact in the CLI as well as the web path without depending on a web request object."
+  },
+  {
+    "id": "r-be2cc9d10a1d7593",
+    "prompt": "Test a reader's cross-component predictions about why this system flow behaves as it does, not just interpretation of one paragraph."
+  },
+  {
+    "id": "r-bf22552eb7865121",
+    "prompt": "We can't check this requirement."
+  },
+  {
+    "id": "r-bf4120f30daf35df",
+    "prompt": "Support decimal-comma input for the chosen locale while keeping canonical exported numeric values unambiguous."
+  },
+  {
+    "id": "r-bf5bb2708b854660",
+    "prompt": "Hold a fail-stop worker fault while the alternate path continues the required business result with its state rules intact."
+  },
+  {
+    "id": "r-c1cb33a2b1af6534",
+    "prompt": "Exercise the declared network partition during ownership handoff and verify continued required service, not just a later restart."
+  },
+  {
+    "id": "r-c249dbb555af5508",
+    "prompt": "Show why the invariant follows from every allowed transition in the model, including the assumptions the proof needs."
+  },
+  {
+    "id": "r-c25140895970cc45",
+    "prompt": "Prove the candidate renderer can run locally with no network access before committing to this offline design."
+  },
+  {
+    "id": "r-c342a78b6a6a6a51",
+    "prompt": "Both components already agree on the messages; wire up their adapters and show how much glue code the assembly takes."
+  },
+  {
+    "id": "r-c4f7c2d7df86cbbb",
+    "prompt": "Replace these near-identical range checkers with one abstraction that covers the agreed family of ranges."
+  },
+  {
+    "id": "r-c5df00e6450f3eb9",
+    "prompt": "The text is hard to read."
+  },
+  {
+    "id": "r-c6003b5136a7f04a",
+    "prompt": "The workflow finishes, but the requested issues remain unresolved; evaluate the achieved outcome rather than feature presence."
+  },
+  {
+    "id": "r-c7490e02d72a00ae",
+    "prompt": "Resume an interrupted configuration transition without losing or replaying in-progress work."
+  },
+  {
+    "id": "r-c767a2d18ade0424",
+    "prompt": "Tell us who did this."
+  },
+  {
+    "id": "r-c8391c58ca395f8b",
+    "prompt": "Choose and publish the event-field convention that teams will adopt; no common rule has been selected yet."
+  },
+  {
+    "id": "r-ca67b415b8384e1f",
+    "prompt": "Use fewer resources."
+  },
+  {
+    "id": "r-cab803755979f1b7",
+    "prompt": "Align the peer forms' treatment of the same validation action so callers do not relearn it for each form."
+  },
+  {
+    "id": "r-cbbab0547d8fcff7",
+    "prompt": "Can this tool do another job?"
+  },
+  {
+    "id": "r-cc9ff733087bcd4d",
+    "prompt": "Reduce observed range by making periodic cleanup incremental, rather than merely improving a central or absolute timing number."
+  },
+  {
+    "id": "r-cd4c1eaa416209f3",
+    "prompt": "Every required attachment in this manifest must appear in the package; check membership rather than just total size."
+  },
+  {
+    "id": "r-cd58360db7ab0823",
+    "prompt": "Observe newcomers gaining task ability through product use, then test a later unaided attempt without introducing a course."
+  },
+  {
+    "id": "r-cdb119bd268c8ba9",
+    "prompt": "The receiver doesn't understand our export."
+  },
+  {
+    "id": "r-cf2a3a3829e43038",
+    "prompt": "Make reports more personal."
+  },
+  {
+    "id": "r-cf7db5d551f8a87d",
+    "prompt": "Compare the reported package weights with the scale readings and show how far each result is off."
+  },
+  {
+    "id": "r-cfa11658661e7b94",
+    "prompt": "On-call can't finish the job."
+  },
+  {
+    "id": "r-cff94eb9c9b72d70",
+    "prompt": "Specify what each symbol and missing value means in this policy notation before using it to state the rules."
+  },
+  {
+    "id": "r-d13d56649866b943",
+    "prompt": "What exactly are we counting?"
+  },
+  {
+    "id": "r-d251713f660cc8fd",
+    "prompt": "Reduce CPU-seconds per correct completed report while preserving the same required output and resource boundary."
+  },
+  {
+    "id": "r-d32d9053e5eb455a",
+    "prompt": "The paragraph takes too much effort."
+  },
+  {
+    "id": "r-d3dc202ad6acb822",
+    "prompt": "We need better fleet controls."
+  },
+  {
+    "id": "r-d4d39be78dc262a8",
+    "prompt": "Make this more reliable."
+  },
+  {
+    "id": "r-d80e4afa0c3a60d8",
+    "prompt": "This feels overengineered."
+  },
+  {
+    "id": "r-d860c62c401280ae",
+    "prompt": "Allow customers to author their own report template beyond the built-in choices, with a bounded input and rendering contract."
+  },
+  {
+    "id": "r-d8fbd88e3c5c9e47",
+    "prompt": "Can we actually build this?"
+  },
+  {
+    "id": "r-db2e1418bcacb95e",
+    "prompt": "Review alternate attack paths and failed controls for the declared misuse model while preserving legitimate use."
+  },
+  {
+    "id": "r-dc35686fd9e8cf9f",
+    "prompt": "Let customers plug in their own report formats without touching core code."
+  },
+  {
+    "id": "r-dd8b0409043f8049",
+    "prompt": "Where did this wrong value come from?"
+  },
+  {
+    "id": "r-deea1bec20ba25ba",
+    "prompt": "Check that this tool serves both intake and audit tasks rather than just accepting more variants of intake records."
+  },
+  {
+    "id": "r-df25f727bda85530",
+    "prompt": "Admit the new storage unit into the deployment and verify that its capacity is available for allocation."
+  },
+  {
+    "id": "r-e1ef58b88335057c",
+    "prompt": "How will we know this passed?"
+  },
+  {
+    "id": "r-e202f25015e74188",
+    "prompt": "Give on-call a way to stop this."
+  },
+  {
+    "id": "r-e35b63c6e94e25e8",
+    "prompt": "We get stuck halfway through a rerun."
+  },
+  {
+    "id": "r-e37944566e76aaf2",
+    "prompt": "Make this faster."
+  },
+  {
+    "id": "r-e491734c35b483bd",
+    "prompt": "Our fixes take too much effort."
+  },
+  {
+    "id": "r-e5a4d18a59da6042",
+    "prompt": "Put a new API around this old function."
+  },
+  {
+    "id": "r-e7298d8feff7dca8",
+    "prompt": "Does this feature actually help?"
+  },
+  {
+    "id": "r-e7f93ec80c7a461b",
+    "prompt": "Is this still worth running?"
+  },
+  {
+    "id": "r-e906f9ac93ac06df",
+    "prompt": "Make the system easier to understand."
+  },
+  {
+    "id": "r-e9a0364dddb5ec2c",
+    "prompt": "Add the missing operation that lets a caller cancel a queued export and receive a defined result."
+  },
+  {
+    "id": "r-eb9484de4c2d1530",
+    "prompt": "We want room to keep improving."
+  },
+  {
+    "id": "r-ebe06c04252d4ce8",
+    "prompt": "The export feature is missing."
+  },
+  {
+    "id": "r-ee88375638c9589f",
+    "prompt": "This stack trace points at the renderer; find the execution step that introduced the bad value for this exact input."
+  },
+  {
+    "id": "r-efcbda989498d81c",
+    "prompt": "Build the missing extension hook through bounded core/interface edits before accepting new plugin behavior."
+  },
+  {
+    "id": "r-f02044e5b76544fb",
+    "prompt": "Swap this backend."
+  },
+  {
+    "id": "r-f0ea1a4c1fd6cc90",
+    "prompt": "Make this explanation clearer."
+  },
+  {
+    "id": "r-f487cce8e685e7d4",
+    "prompt": "Add something useful to the editor."
+  },
+  {
+    "id": "r-f499a63d814b3af6",
+    "prompt": "Expose the built-in retry options with validated combinations and explicit default precedence, without source edits."
+  },
+  {
+    "id": "r-f5104ee00e36ed63",
+    "prompt": "Get the service back."
+  },
+  {
+    "id": "r-f6f5291508e402a3",
+    "prompt": "Sometimes this call is much slower."
+  },
+  {
+    "id": "r-f74233bb37c0f533",
+    "prompt": "Align input, measurement and action traces to bound post-settling directional drift and coupled-controller oscillation."
+  },
+  {
+    "id": "r-f813e6ab2bab850d",
+    "prompt": "Rehearse restoration from disruption through dependency bootstrap, coherent state replay and the verified usable business journey."
+  },
+  {
+    "id": "r-f840b615d41cf571",
+    "prompt": "Can we upgrade this algorithm?"
+  },
+  {
+    "id": "r-f89ba37cb32cdc5d",
+    "prompt": "The contract says an expired request is rejected, but this endpoint accepts it; fix the behavior against that contract."
+  },
+  {
+    "id": "r-f995c50ca50697b9",
+    "prompt": "The patch is merged but the approved change is not in use; follow this request's delivery and adoption evidence."
+  },
+  {
+    "id": "r-f9a6306357de5710",
+    "prompt": "This is hard to test."
+  },
+  {
+    "id": "r-f9b80679850c9047",
+    "prompt": "Keep us working through a disaster."
+  },
+  {
+    "id": "r-fa4d7c768527ffb7",
+    "prompt": "Our tail latency needs work."
+  },
+  {
+    "id": "r-fa9cc30b8d455504",
+    "prompt": "After users complete the interaction, collect their subjective positive and negative judgments separately from observed task success."
+  },
+  {
+    "id": "r-fac08c84bc0a5c00",
+    "prompt": "I can't get the same result again."
+  },
+  {
+    "id": "r-fe27712e62d948ec",
+    "prompt": "Spread this work across nodes."
+  },
+  {
+    "id": "r-fea7a948bd276155",
+    "prompt": "Survive an outage."
+  },
+  {
+    "id": "r-ffb5cd29876f1de5",
+    "prompt": "Make these APIs consistent."
+  }
+]

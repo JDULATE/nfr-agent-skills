@@ -1,7 +1,7 @@
 ---
 name: decomposability
 description: >-
-  Finds separable responsibilities when tickets say "split this without sharing its internals", "these parts cannot run apart", or "extract the renderer from billing". Not for dependency layout alone (see structuredness) or joining components (see composability).
+  Separates responsibilities when asked "extract billing from rendering", "give this part its own state", or "run the validator alone". Ask the user if splitting duties vs organizing imports is unclear. Not for dependency layout alone (see structuredness) or joining components (see composability).
 ---
 
 # Decomposability

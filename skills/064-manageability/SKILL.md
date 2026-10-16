@@ -1,7 +1,7 @@
 ---
 name: manageability
 description: >-
-  Coordinates fleet policy when tickets say "roll out worker settings across nodes", "which nodes missed this setting", or "keep an exception local to one node". Not for one runtime task (see operability), one state-changing command (see controllability), or configuration transitions (see reconfigurability).
+  Coordinates fleet policy when asked "reconcile node settings", "find missed fleet updates", or "track local exceptions". Ask the user if fleet policy vs one runtime task is unclear. Not for one runtime task (see operability), one state-changing command (see controllability), or configuration transitions (see reconfigurability).
 ---
 
 # Manageability

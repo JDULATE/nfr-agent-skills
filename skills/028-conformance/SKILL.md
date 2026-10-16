@@ -1,7 +1,7 @@
 ---
 name: conformance
 description: >-
-  Checks selected rules when tickets say "validate this against our schema", "reject names that break the agreed convention", or "show which rule this violates". Not for choosing a convention (see standardizability-standardization-standard).
+  Checks chosen rules when asked "validate our schema", "reject invalid field names", or "show violated rules". Ask the user whether rules are already selected if unstated. Not for choosing a convention (see standardizability-standardization-standard).
 ---
 
 # Conformance

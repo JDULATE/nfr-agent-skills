@@ -1,7 +1,7 @@
 ---
 name: verifiability
 description: >-
-  Connects requirements to feasible acceptance evidence when tickets say "how will we know this requirement passed", "this acceptance check cannot be run", or "what evidence would settle this claim". Not for adding test seams (see testability), defining units (see measurability), or constructing proofs (see provability).
+  Designs acceptance evidence when asked "replace an unworkable check", "tie evidence to this claim", or "define the pass decision". Ask the user if acceptance method vs test seams or proof is unclear. Not for adding test seams (see testability), defining units (see measurability), or constructing proofs (see provability).
 ---
 
 # Verifiability

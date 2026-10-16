@@ -1,7 +1,7 @@
 ---
 name: adjustability
 description: >-
-  Tunes existing controls in a fixed arrangement when tickets say "let admins tweak thresholds", "change the polling interval", or "tune the current batch size". Not for defining options (see configurability) or switching arrangements (see reconfigurability).
+  Tunes existing controls when asked "lower this threshold", "change the polling interval", or "adjust batch size". Ask the user if tuning vs new options is unclear. Not for defining options (see configurability) or switching arrangements (see reconfigurability).
 ---
 # Adjustability
 

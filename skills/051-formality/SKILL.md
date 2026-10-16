@@ -1,7 +1,7 @@
 ---
 name: formality
 description: >-
-  Makes specification notation precise when tickets say "what does this state label mean", "define when this transition is allowed", or "stop interpreting this rule differently". Not for proving the stated property (see provability) or choosing acceptance evidence (see verifiability).
+  Defines precise notation when asked "define allowed transitions", "give states one meaning", or "specify missing values". Ask the user if notation precision vs explanation clarity is unclear. Not for proving the stated property (see provability) or choosing acceptance evidence (see verifiability).
 ---
 
 # Formality

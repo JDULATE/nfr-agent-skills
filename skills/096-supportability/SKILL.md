@@ -1,7 +1,7 @@
 ---
 name: supportability
 description: >-
-  Resolves a specific support encounter when tickets say "support cannot explain this failed export", "give support a safe diagnostic bundle", or "we need a runbook for this customer issue". Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).
+  Supports a specific user case when asked "prepare support diagnostics", "give support an investigation path", or "resolve this export case". Ask the user if support work vs code upkeep is unclear. Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).
 ---
 # Supportability
 

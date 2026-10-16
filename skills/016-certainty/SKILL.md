@@ -1,7 +1,7 @@
 ---
 name: certainty
 description: >-
-  Bounds confidence claims when tickets say "stop calling guesses confirmed", "show when the evidence is missing", or "mark this result as unverified". Not for value error (see accuracy) or formal guarantees (see provability).
+  Bounds confidence when asked "label missing evidence", "show conflicting sources", or "mark unverified results". Ask the user if confidence vs value error is unclear. Not for value error (see accuracy) or formal guarantees (see provability).
 ---
 
 # Certainty

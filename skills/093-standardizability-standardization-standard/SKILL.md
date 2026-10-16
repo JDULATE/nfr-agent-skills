@@ -1,7 +1,7 @@
 ---
 name: standardizability-standardization-standard
 description: >-
-  Selects and adopts common conventions when tickets say "agree on one event format", "teams invent different field names", or "publish a shared naming convention". Not for checking already selected rules (see conformance).
+  Selects common conventions when asked "adopt an event format", "publish naming rules", or "agree on field names". Ask the user whether a convention exists before routing a consistency request. Not for checking already selected rules (see conformance).
 ---
 
 # Standardizability/Standardization/Standard

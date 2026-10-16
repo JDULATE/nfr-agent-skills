@@ -1,7 +1,7 @@
 ---
 name: recoverability
 description: >-
-  Restores usable state after disruption when tickets say "prove we can restore this backup", "the process is up but orders still fail", or "resume work without replaying orders twice". Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).
+  Restores usable state when asked "restore saved orders", "check restored checkout", or "avoid duplicate replays". Ask the user if restoring service vs preserving writes is unclear. Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).
 ---
 # Recoverability
 

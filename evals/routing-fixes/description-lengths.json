@@ -1,0 +1,416 @@
+[
+  {
+    "id": 2,
+    "slug": "accountability",
+    "before": 300,
+    "after": 278
+  },
+  {
+    "id": 5,
+    "slug": "additivity",
+    "before": 261,
+    "after": 258
+  },
+  {
+    "id": 6,
+    "slug": "adjustability",
+    "before": 257,
+    "after": 261
+  },
+  {
+    "id": 7,
+    "slug": "affordability",
+    "before": 256,
+    "after": 260
+  },
+  {
+    "id": 10,
+    "slug": "anonymity",
+    "before": 324,
+    "after": 313
+  },
+  {
+    "id": 12,
+    "slug": "attractiveness",
+    "before": 267,
+    "after": 295
+  },
+  {
+    "id": 13,
+    "slug": "auditability",
+    "before": 306,
+    "after": 302
+  },
+  {
+    "id": 15,
+    "slug": "availability",
+    "before": 252,
+    "after": 286
+  },
+  {
+    "id": 16,
+    "slug": "certainty",
+    "before": 224,
+    "after": 241
+  },
+  {
+    "id": 18,
+    "slug": "communicativeness",
+    "before": 289,
+    "after": 304
+  },
+  {
+    "id": 20,
+    "slug": "completeness",
+    "before": 248,
+    "after": 281
+  },
+  {
+    "id": 23,
+    "slug": "comprehensibility",
+    "before": 306,
+    "after": 313
+  },
+  {
+    "id": 27,
+    "slug": "configurability",
+    "before": 311,
+    "after": 312
+  },
+  {
+    "id": 28,
+    "slug": "conformance",
+    "before": 239,
+    "after": 250
+  },
+  {
+    "id": 31,
+    "slug": "correctness",
+    "before": 309,
+    "after": 325
+  },
+  {
+    "id": 33,
+    "slug": "debuggability",
+    "before": 288,
+    "after": 296
+  },
+  {
+    "id": 34,
+    "slug": "decomposability",
+    "before": 261,
+    "after": 296
+  },
+  {
+    "id": 36,
+    "slug": "demonstrability",
+    "before": 281,
+    "after": 303
+  },
+  {
+    "id": 38,
+    "slug": "distributivity",
+    "before": 191,
+    "after": 243
+  },
+  {
+    "id": 40,
+    "slug": "effectiveness",
+    "before": 275,
+    "after": 263
+  },
+  {
+    "id": 42,
+    "slug": "enhanceability",
+    "before": 314,
+    "after": 331
+  },
+  {
+    "id": 45,
+    "slug": "expressiveness",
+    "before": 269,
+    "after": 290
+  },
+  {
+    "id": 47,
+    "slug": "extensibility",
+    "before": 306,
+    "after": 316
+  },
+  {
+    "id": 48,
+    "slug": "fault-failure-tolerance",
+    "before": 303,
+    "after": 303
+  },
+  {
+    "id": 49,
+    "slug": "feasibility",
+    "before": 270,
+    "after": 282
+  },
+  {
+    "id": 51,
+    "slug": "formality",
+    "before": 283,
+    "after": 298
+  },
+  {
+    "id": 52,
+    "slug": "functionality",
+    "before": 286,
+    "after": 321
+  },
+  {
+    "id": 53,
+    "slug": "generality",
+    "before": 318,
+    "after": 331
+  },
+  {
+    "id": 55,
+    "slug": "installability",
+    "before": 260,
+    "after": 292
+  },
+  {
+    "id": 56,
+    "slug": "integratability",
+    "before": 206,
+    "after": 234
+  },
+  {
+    "id": 58,
+    "slug": "interoperability",
+    "before": 200,
+    "after": 236
+  },
+  {
+    "id": 60,
+    "slug": "legibility",
+    "before": 339,
+    "after": 328
+  },
+  {
+    "id": 61,
+    "slug": "likeability",
+    "before": 266,
+    "after": 314
+  },
+  {
+    "id": 63,
+    "slug": "maintainability",
+    "before": 288,
+    "after": 319
+  },
+  {
+    "id": 64,
+    "slug": "manageability",
+    "before": 307,
+    "after": 329
+  },
+  {
+    "id": 65,
+    "slug": "maturity",
+    "before": 315,
+    "after": 321
+  },
+  {
+    "id": 66,
+    "slug": "measurability",
+    "before": 280,
+    "after": 318
+  },
+  {
+    "id": 70,
+    "slug": "observability",
+    "before": 303,
+    "after": 324
+  },
+  {
+    "id": 71,
+    "slug": "operability",
+    "before": 301,
+    "after": 338
+  },
+  {
+    "id": 72,
+    "slug": "performance-efficiency-time-or-space-bounds",
+    "before": 323,
+    "after": 341
+  },
+  {
+    "id": 73,
+    "slug": "portability",
+    "before": 309,
+    "after": 331
+  },
+  {
+    "id": 74,
+    "slug": "predictability",
+    "before": 326,
+    "after": 343
+  },
+  {
+    "id": 76,
+    "slug": "provability",
+    "before": 284,
+    "after": 281
+  },
+  {
+    "id": 78,
+    "slug": "readability",
+    "before": 270,
+    "after": 298
+  },
+  {
+    "id": 79,
+    "slug": "reconfigurability",
+    "before": 321,
+    "after": 328
+  },
+  {
+    "id": 80,
+    "slug": "recoverability",
+    "before": 346,
+    "after": 343
+  },
+  {
+    "id": 82,
+    "slug": "repeatability",
+    "before": 294,
+    "after": 314
+  },
+  {
+    "id": 83,
+    "slug": "replaceability",
+    "before": 210,
+    "after": 234
+  },
+  {
+    "id": 84,
+    "slug": "replicability",
+    "before": 295,
+    "after": 330
+  },
+  {
+    "id": 85,
+    "slug": "reusability",
+    "before": 280,
+    "after": 310
+  },
+  {
+    "id": 86,
+    "slug": "robustness",
+    "before": 340,
+    "after": 348
+  },
+  {
+    "id": 88,
+    "slug": "scalability",
+    "before": 342,
+    "after": 346
+  },
+  {
+    "id": 90,
+    "slug": "self-descriptiveness",
+    "before": 321,
+    "after": 350
+  },
+  {
+    "id": 91,
+    "slug": "simplicity",
+    "before": 296,
+    "after": 330
+  },
+  {
+    "id": 93,
+    "slug": "standardizability-standardization-standard",
+    "before": 221,
+    "after": 251
+  },
+  {
+    "id": 95,
+    "slug": "suitability",
+    "before": 310,
+    "after": 280
+  },
+  {
+    "id": 96,
+    "slug": "supportability",
+    "before": 321,
+    "after": 329
+  },
+  {
+    "id": 97,
+    "slug": "survivability",
+    "before": 349,
+    "after": 348
+  },
+  {
+    "id": 99,
+    "slug": "sustainability",
+    "before": 328,
+    "after": 337
+  },
+  {
+    "id": 100,
+    "slug": "tailorability",
+    "before": 347,
+    "after": 346
+  },
+  {
+    "id": 101,
+    "slug": "testability",
+    "before": 295,
+    "after": 302
+  },
+  {
+    "id": 104,
+    "slug": "transferability",
+    "before": 319,
+    "after": 349
+  },
+  {
+    "id": 106,
+    "slug": "understandability",
+    "before": 297,
+    "after": 333
+  },
+  {
+    "id": 108,
+    "slug": "usability",
+    "before": 285,
+    "after": 317
+  },
+  {
+    "id": 109,
+    "slug": "variability",
+    "before": 293,
+    "after": 310
+  },
+  {
+    "id": 110,
+    "slug": "verifiability",
+    "before": 320,
+    "after": 322
+  },
+  {
+    "id": 111,
+    "slug": "versatility",
+    "before": 305,
+    "after": 318
+  },
+  {
+    "id": 112,
+    "slug": "viability",
+    "before": 309,
+    "after": 345
+  },
+  {
+    "id": 114,
+    "slug": "wrappability",
+    "before": 325,
+    "after": 297
+  }
+]

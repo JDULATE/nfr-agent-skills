@@ -1,0 +1,16 @@
+{
+  "cli_version": "codex-cli 0.162.1",
+  "exit_code": 1,
+  "elapsed_seconds": 2.17,
+  "stdin_sha256": "8d6dad9818e3f68575ab2ec84f4e409f9cf167f05a082c081d142e7fa40bb1d7",
+  "input_files": {
+    "routing-catalog.md": "0e3804df67e20e3707b7b5a34e9f41d5a38fdcc9b84f873e55144bfaa9609e80",
+    "routing-prompts.json": "9a53b1e844b8b2679c4dfb0df66da1838352028f24a3529c09f7775b58db2a6a"
+  },
+  "failure": "CLI failed to initialize its in-process app-server client because managed permissions denied access to user-level Codex runtime files.",
+  "stderr": "WARNING: failed to clean up stale arg0 temp dirs: Acceso denegado. (os error 5)\nWARNING: proceeding, even though we could not create PATH aliases: Acceso denegado. (os error 5) at path \"C:\\\\Users\\\\ulate\\\\.codex\\\\tmp\\\\arg0\\\\codex-arg0GEcaC6\"\nError: failed to initialize in-process app-server client: Acceso denegado. (os error 5)\n",
+  "routing_answers_returned": false,
+  "scored": false,
+  "earlier_setup_failure": "Creating a child directory inside the default temporary directory was also denied.",
+  "fallback": "Fresh Codex agent, fork_turns=none, restricted by instruction to the two blinded inputs."
+}

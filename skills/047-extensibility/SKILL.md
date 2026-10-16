@@ -1,7 +1,7 @@
 ---
 name: extensibility
 description: >-
-  Admits additions through an existing hook without core edits when users say "register a plugin with this hook", "add another provider to this interface", or "test plugin activation and cleanup". Not for building or widening the hook (see extendability) or composing component contracts (see composability).
+  Checks hooks when asked "plugins without core edits", "customer report plugins", or "register another provider". Ask the user whether core edits are allowed if unstated; inspect the hook before accepting. Not for building or widening the hook (see extendability) or composing component contracts (see composability).
 ---
 # Extensibility
 

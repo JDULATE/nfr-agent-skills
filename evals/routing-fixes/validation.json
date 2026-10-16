@@ -1,0 +1,46 @@
+{
+  "repository_validator": {
+    "command": "python scripts/validate_skills.py",
+    "checked": 114,
+    "errors": 0
+  },
+  "full_suite": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 34,
+    "passed": 33,
+    "errors": 1,
+    "error": "Managed Windows permissions denied writing and cleaning the TemporaryDirectory fixture; a workspace relocation alone produced the same permission error."
+  },
+  "full_suite_compatible_fixture": {
+    "tests": 34,
+    "passed": 34,
+    "errors": 0,
+    "method": "Full unittest discovery; patched tempfile.mkdtemp in the current test process only to create unique fixture directories under the writable repository using Path.mkdir and inherited permissions. Test sources and assertions unchanged."
+  },
+  "supplemental_skill_creator_validator": {
+    "checked": 69,
+    "passed": 67,
+    "errors": [
+      {
+        "id": 15,
+        "slug": "availability",
+        "message": "Unexpected key(s) in SKILL.md frontmatter: status. Allowed properties are: allowed-tools, description, license, metadata, name",
+        "pre_existing": true
+      },
+      {
+        "id": 78,
+        "slug": "readability",
+        "message": "Unexpected key(s) in SKILL.md frontmatter: status. Allowed properties are: allowed-tools, description, license, metadata, name",
+        "pre_existing": true
+      }
+    ]
+  },
+  "preservation": {
+    "bodies": 114,
+    "all_boundary_clauses": 114,
+    "non_description_frontmatter": 114,
+    "unchanged_descriptions": 45,
+    "changed_descriptions": 69,
+    "shared_quoted_triggers": 0
+  }
+}

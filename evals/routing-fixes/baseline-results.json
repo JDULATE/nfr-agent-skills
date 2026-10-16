@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "r-00142465219fbaa9",
+    "choice": "scalability"
+  },
+  {
+    "id": "r-00412786481d82e5",
+    "choice": "wrappability"
+  },
+  {
+    "id": "r-013631a3aef9e06f",
+    "choice": "robustness"
+  },
+  {
+    "id": "r-013c18dc521eb11c",
+    "choice": "operability"
+  },
+  {
+    "id": "r-021d92c5acc01525",
+    "choice": "generality"
+  },
+  {
+    "id": "r-032c098268c74570",
+    "choice": "accountability"
+  },
+  {
+    "id": "r-04e13c43038096d8",
+    "choice": "interoperability"
+  },
+  {
+    "id": "r-08569fca852c0bf9",
+    "choice": "auditability"
+  },
+  {
+    "id": "r-08cab0ddf2872410",
+    "choice": "installability"
+  },
+  {
+    "id": "r-091c33606e5419cc",
+    "choice": "ask"
+  },
+  {
+    "id": "r-09b28c71fc1887dc",
+    "choice": "scalability"
+  },
+  {
+    "id": "r-0a22198d58f09dff",
+    "choice": "suitability"
+  },
+  {
+    "id": "r-0b92fc33c482976f",
+    "choice": "self-descriptiveness"
+  },
+  {
+    "id": "r-0bda13a87d4ad995",
+    "choice": "ask"
+  },
+  {
+    "id": "r-0d6c45b5898145ff",
+    "choice": "additivity"
+  },
+  {
+    "id": "r-0e6b88a273a7e7d3",
+    "choice": "analyzability"
+  },
+  {
+    "id": "r-10cea61997b8fdb2",
+    "choice": "ask"
+  },
+  {
+    "id": "r-10e9c7fb2fde201a",
+    "choice": "ask"
+  },
+  {
+    "id": "r-10fa474e5e2b4e6c",
+    "choice": "predictability"
+  },
+  {
+    "id": "r-11a7978c48245818",
+    "choice": "conformance"
+  },
+  {
+    "id": "r-136e0a1f295bde94",
+    "choice": "debuggability"
+  },
+  {
+    "id": "r-14666de76d196d71",
+    "choice": "correctness"
+  },
+  {
+    "id": "r-146d2169a8a10275",
+    "choice": "predictability"
+  },
+  {
+    "id": "r-16cf8186495bbb9b",
+    "choice": "ask"
+  },
+  {
+    "id": "r-1710bd38806aa8a1",
+    "choice": "ask"
+  },
+  {
+    "id": "r-171946a9fc20bdee",
+    "choice": "compatibility"
+  },
+  {
+    "id": "r-18298ecf9b96923f",
+    "choice": "ask"
+  },
+  {
+    "id": "r-18e946084d8f2345",
+    "choice": "ask"
+  },
+  {
+    "id": "r-1a163ca7f836ff18",
+    "choice": "affordability"
+  },
+  {
+    "id": "r-1aacb2250866dd84",
+    "choice": "integratability"
+  },
+  {
+    "id": "r-1bbbde99ec656d0d",
+    "choice": "ask"
+  },
+  {
+    "id": "r-1d3450cfae00e2ec",
+    "choice": "maintainability"
+  },
+  {
+    "id": "r-1d6124c9354c782b",
+    "choice": "ask"
+  },
+  {
+    "id": "r-1d8c5d5257e59ead",
+    "choice": "auditability"
+  },
+  {
+    "id": "r-1de44dac1fd40d54",
+    "choice": "portability"
+  },
+  {
+    "id": "r-1e6b8acc8d9139d7",
+    "choice": "ask"
+  },
+  {
+    "id": "r-1f048d09fda1755a",
+    "choice": "interoperability"
+  },
+  {
+    "id": "r-212433c508cb6344",
+    "choice": "reusability"
+  },
+  {
+    "id": "r-21f23a92c0ef4ac8",
+    "choice": "ask"
+  },
+  {
+    "id": "r-241bf7e42eedd129",
+    "choice": "ask"
+  },
+  {
+    "id": "r-25efb477bee0fd0a",
+    "choice": "variability"
+  },
+  {
+    "id": "r-27ab27a7e5e93872",
+    "choice": "scalability"
+  },
+  {
+    "id": "r-2820e20b462b3c0d",
+    "choice": "reusability"
+  },
+  {
+    "id": "r-2875138ec6d35605",
+    "choice": "ask"
+  },
+  {
+    "id": "r-290e28507504f2f8",
+    "choice": "transferability"
+  },
+  {
+    "id": "r-2a15293fe4223b00",
+    "choice": "generality"
+  },
+  {
+    "id": "r-2a223324cbf197c0",
+    "choice": "replicability"
+  },
+  {
+    "id": "r-2a752499b3a4288a",
+    "choice": "formality"
+  },
+  {
+    "id": "r-2c9f9cdf7c34f936",
+    "choice": "expandability"
+  },
+  {
+    "id": "r-2ed5a3f566cab0d2",
+    "choice": "ask"
+  },
+  {
+    "id": "r-2eec4750902942a8",
+    "choice": "viability"
+  },
+  {
+    "id": "r-2fd5c74ab06efa38",
+    "choice": "attractiveness"
+  },
+  {
+    "id": "r-301e07759cc0eb64",
+    "choice": "portability"
+  },
+  {
+    "id": "r-31dd2d97a1df9b05",
+    "choice": "comprehensibility"
+  },
+  {
+    "id": "r-32800fed628d4ba4",
+    "choice": "reusability"
+  },
+  {
+    "id": "r-32d3cd68e3eda168",
+    "choice": "expandability"
+  },
+  {
+    "id": "r-34075badeb722eb3",
+    "choice": "ask"
+  },
+  {
+    "id": "r-3426cfe6d588294e",
+    "choice": "ask"
+  },
+  {
+    "id": "r-354eada869c66e98",
+    "choice": "certainty"
+  },
+  {
+    "id": "r-37eb69ec9d791f9d",
+    "choice": "usability"
+  },
+  {
+    "id": "r-37f3d4ea4d68fff1",
+    "choice": "dependability"
+  },
+  {
+    "id": "r-386f0951db48c822",
+    "choice": "efficiency-device-efficiency"
+  },
+  {
+    "id": "r-38de958ba57dca4d",
+    "choice": "communicativeness"
+  },
+  {
+    "id": "r-38e216f95092d864",
+    "choice": "ask"
+  },
+  {
+    "id": "r-395aa30520cc1f56",
+    "choice": "ask"
+  },
+  {
+    "id": "r-3a156d1ffc74a161",
+    "choice": "ask"
+  },
+  {
+    "id": "r-3a93b57e292b6093",
+    "choice": "ask"
+  },
+  {
+    "id": "r-3caae219ae15a22e",
+    "choice": "repeatability"
+  },
+  {
+    "id": "r-3cae9f8a14b7e792",
+    "choice": "ask"
+  },
+  {
+    "id": "r-3cc486f153304550",
+    "choice": "ask"
+  },
+  {
+    "id": "r-3e20a3b68eff4295",
+    "choice": "likeability"
+  },
+  {
+    "id": "r-3f2eaac92c935785",
+    "choice": "ask"
+  },
+  {
+    "id": "r-40689c1f0bc1e130",
+    "choice": "readability"
+  },
+  {
+    "id": "r-40c0859ae907228b",
+    "choice": "feasibility"
+  },
+  {
+    "id": "r-40ea526d0e358dbe",
+    "choice": "ask"
+  },
+  {
+    "id": "r-423d17eb232af336",
+    "choice": "readability"
+  },
+  {
+    "id": "r-43071ab7a17cb5f6",
+    "choice": "expressiveness"
+  },
+  {
+    "id": "r-43ac8d1036d22bde",
+    "choice": "ask"
+  },
+  {
+    "id": "r-454ecee0a31f2d9b",
+    "choice": "portability"
+  },
+  {
+    "id": "r-46f4fb4e3de43c5d",
+    "choice": "ask"
+  },
+  {
+    "id": "r-4702213686ff69af",
+    "choice": "ask"
+  },
+  {
+    "id": "r-4712a66798dbd10d",
+    "choice": "attractiveness"
+  },
+  {
+    "id": "r-473db3456a90cbc0",
+    "choice": "communicativeness"
+  },
+  {
+    "id": "r-4bc32bb365518dff",
+    "choice": "robustness"
+  },
+  {
+    "id": "r-4c69fad2d46bb2e7",
+    "choice": "augmentability"
+  },
+  {
+    "id": "r-4ef7816fff7eaed3",
+    "choice": "confidentiality"
+  },
+  {
+    "id": "r-4f1aa613fb568ad4",
+    "choice": "verifiability"
+  },
+  {
+    "id": "r-4f4b7285460d8e7b",
+    "choice": "ask"
+  },
+  {
+    "id": "r-4fe42cb616a5a186",
+    "choice": "replaceability"
+  },
+  {
+    "id": "r-50cd37978f2a9caf",
+    "choice": "distributivity"
+  },
+  {
+    "id": "r-5174f6e026d7200e",
+    "choice": "replaceability"
+  },
+  {
+    "id": "r-522eb4b5697e10b3",
+    "choice": "ask"
+  },
+  {
+    "id": "r-526b3ad54e859b5a",
+    "choice": "availability"
+  },
+  {
+    "id": "r-52a947df69f074e1",
+    "choice": "affordability"
+  },
+  {
+    "id": "r-52c0dc8b3ab03d92",
+    "choice": "integratability"
+  },
+  {
+    "id": "r-53bb9c6161763cce",
+    "choice": "anonymity"
+  },
+  {
+    "id": "r-544e2a4c3a959b68",
+    "choice": "tailorability"
+  },
+  {
+    "id": "r-56677163d27567d6",
+    "choice": "transferability"
+  },
+  {
+    "id": "r-56dd9a18cc7efb5d",
+    "choice": "comprehensiveness"
+  },
+  {
+    "id": "r-5792a42a89629f88",
+    "choice": "composability"
+  },
+  {
+    "id": "r-5858847318a21069",
+    "choice": "configurability"
+  },
+  {
+    "id": "r-58be2272a38abc93",
+    "choice": "accountability"
+  },
+  {
+    "id": "r-5904e73cf611aac0",
+    "choice": "ask"
+  },
+  {
+    "id": "r-591489b007912170",
+    "choice": "adjustability"
+  },
+  {
+    "id": "r-5929e4dc4b473e3c",
+    "choice": "configurability"
+  },
+  {
+    "id": "r-59341513211f26ec",
+    "choice": "likeability"
+  },
+  {
+    "id": "r-5bffefb34bdc97bc",
+    "choice": "viability"
+  },
+  {
+    "id": "r-5c2b9641f0aa635c",
+    "choice": "certainty"
+  },
+  {
+    "id": "r-5d6985e8f00a2ac7",
+    "choice": "functionality"
+  },
+  {
+    "id": "r-5e72b222cf2bbbf4",
+    "choice": "testability"
+  },
+  {
+    "id": "r-60130dbf2da5c8c5",
+    "choice": "recoverability"
+  },
+  {
+    "id": "r-608f51b62b135457",
+    "choice": "ask"
+  },
+  {
+    "id": "r-6193dbf3b2de97d6",
+    "choice": "visibility"
+  },
+  {
+    "id": "r-625806728696d50b",
+    "choice": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-6509479e01b66713",
+    "choice": "adjustability"
+  },
+  {
+    "id": "r-65211bcbb6955743",
+    "choice": "ask"
+  },
+  {
+    "id": "r-65962c0fc744f0cf",
+    "choice": "supportability"
+  },
+  {
+    "id": "r-665c3cee81b33a2a",
+    "choice": "ask"
+  },
+  {
+    "id": "r-668347a0cdc41cb3",
+    "choice": "testability"
+  },
+  {
+    "id": "r-67191eb0ee8982c0",
+    "choice": "installability"
+  },
+  {
+    "id": "r-6753b4b72a1bf7aa",
+    "choice": "additivity"
+  },
+  {
+    "id": "r-677ac388c80fc716",
+    "choice": "maturity"
+  },
+  {
+    "id": "r-68251e946af55326",
+    "choice": "decomposability"
+  },
+  {
+    "id": "r-68c83d508f9634a9",
+    "choice": "legibility"
+  },
+  {
+    "id": "r-695603b91f39f0fe",
+    "choice": "ask"
+  },
+  {
+    "id": "r-6976b62b346e4e07",
+    "choice": "ask"
+  },
+  {
+    "id": "r-6d15b8b67c56d1cd",
+    "choice": "compatibility"
+  },
+  {
+    "id": "r-6fa5f18f3c835424",
+    "choice": "additivity"
+  },
+  {
+    "id": "r-737a242f3235564c",
+    "choice": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-7575f37abe25bdd0",
+    "choice": "ask"
+  },
+  {
+    "id": "r-763c5fbe2dfca612",
+    "choice": "maintainability"
+  },
+  {
+    "id": "r-76bb5405eadfabb3",
+    "choice": "standardizability-standardization-standard"
+  },
+  {
+    "id": "r-779c30432ea37800",
+    "choice": "demonstrability"
+  },
+  {
+    "id": "r-789b5ac3aa251075",
+    "choice": "ask"
+  },
+  {
+    "id": "r-7998f646cf36b5db",
+    "choice": "completeness"
+  },
+  {
+    "id": "r-79e7379966bc813d",
+    "choice": "correctness"
+  },
+  {
+    "id": "r-7a4eb6ae6c5efa60",
+    "choice": "standardizability-standardization-standard"
+  },
+  {
+    "id": "r-7ba78f90fa644b37",
+    "choice": "testability"
+  },
+  {
+    "id": "r-7bbaf31c02347e16",
+    "choice": "conformance"
+  },
+  {
+    "id": "r-7bd98ba2ba8e01c5",
+    "choice": "verifiability"
+  },
+  {
+    "id": "r-7eec1af519af1537",
+    "choice": "installability"
+  },
+  {
+    "id": "r-7fe916099edff214",
+    "choice": "predictability"
+  },
+  {
+    "id": "r-8024de27c7216148",
+    "choice": "durability"
+  },
+  {
+    "id": "r-808d30d85b9c52d6",
+    "choice": "suitability"
+  },
+  {
+    "id": "r-829ee8d31c479410",
+    "choice": "configurability"
+  },
+  {
+    "id": "r-8482677b2640a033",
+    "choice": "observability"
+  },
+  {
+    "id": "r-85312516f6e4ba88",
+    "choice": "traceability"
+  },
+  {
+    "id": "r-855060bae8272884",
+    "choice": "replicability"
+  },
+  {
+    "id": "r-8603efdd7d009787",
+    "choice": "suitability"
+  },
+  {
+    "id": "r-860bde7ea61265ef",
+    "choice": "ask"
+  },
+  {
+    "id": "r-870524c16593dcfc",
+    "choice": "comprehensiveness"
+  },
+  {
+    "id": "r-8a6365d5923475e8",
+    "choice": "provability"
+  },
+  {
+    "id": "r-8abb5433e79605cc",
+    "choice": "reliability"
+  },
+  {
+    "id": "r-8acb151f93497cc1",
+    "choice": "repeatability"
+  },
+  {
+    "id": "r-8addcc277daf14ca",
+    "choice": "modifiability"
+  },
+  {
+    "id": "r-8b076602fa74b927",
+    "choice": "portability"
+  },
+  {
+    "id": "r-8bb78924fbb37f35",
+    "choice": "ask"
+  },
+  {
+    "id": "r-8bfd522e94801264",
+    "choice": "formality"
+  },
+  {
+    "id": "r-8fbc0c5f00915d4c",
+    "choice": "ask"
+  },
+  {
+    "id": "r-90a885445e668703",
+    "choice": "reconfigurability"
+  },
+  {
+    "id": "r-90e5f24ed5ee30be",
+    "choice": "ask"
+  },
+  {
+    "id": "r-915e470bd1f5bff2",
+    "choice": "ask"
+  },
+  {
+    "id": "r-917c8b57d32e3594",
+    "choice": "ask"
+  },
+  {
+    "id": "r-91964c7b1654e2f3",
+    "choice": "tailorability"
+  },
+  {
+    "id": "r-91dadf4f75caa790",
+    "choice": "ask"
+  },
+  {
+    "id": "r-932ea74f1519cc78",
+    "choice": "controllability"
+  },
+  {
+    "id": "r-93bd3fbc46c5bd37",
+    "choice": "privacy"
+  },
+  {
+    "id": "r-94e3d0d51dd15ca6",
+    "choice": "readability"
+  },
+  {
+    "id": "r-95433a841e4d7f59",
+    "choice": "manageability"
+  },
+  {
+    "id": "r-9664816a60d3c8b1",
+    "choice": "observability"
+  },
+  {
+    "id": "r-969a626040451483",
+    "choice": "attractiveness"
+  },
+  {
+    "id": "r-97d13e456376587b",
+    "choice": "provability"
+  },
+  {
+    "id": "r-97ffad2125c5b921",
+    "choice": "ask"
+  },
+  {
+    "id": "r-990bf1d636783aa5",
+    "choice": "ask"
+  },
+  {
+    "id": "r-9a742aac491e4000",
+    "choice": "comprehensibility"
+  },
+  {
+    "id": "r-9bc5df77b7002ca8",
+    "choice": "self-descriptiveness"
+  },
+  {
+    "id": "r-9d5130866c3f7b13",
+    "choice": "affordability"
+  },
+  {
+    "id": "r-9d7e90652a465cfa",
+    "choice": "ask"
+  },
+  {
+    "id": "r-9f6e34fc68670736",
+    "choice": "supportability"
+  },
+  {
+    "id": "r-a006780d6cabc834",
+    "choice": "verifiability"
+  },
+  {
+    "id": "r-a4a5743876323a31",
+    "choice": "customizability"
+  },
+  {
+    "id": "r-a56b2e0715e81b81",
+    "choice": "legibility"
+  },
+  {
+    "id": "r-a6d8ba442a3034e2",
+    "choice": "evolvability"
+  },
+  {
+    "id": "r-a730e3d8adf0553f",
+    "choice": "comprehensibility"
+  },
+  {
+    "id": "r-a8b80f08c359eb8b",
+    "choice": "complexity-interacting-complexity"
+  },
+  {
+    "id": "r-a99048f421fc4cd9",
+    "choice": "ask"
+  },
+  {
+    "id": "r-ab3c6352559e382b",
+    "choice": "adjustability"
+  },
+  {
+    "id": "r-abdc6d99a3aee72c",
+    "choice": "structuredness"
+  },
+  {
+    "id": "r-af45b59af270f474",
+    "choice": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-af99c38b79e557af",
+    "choice": "ask"
+  },
+  {
+    "id": "r-b26b3e06a3869d22",
+    "choice": "versatility"
+  },
+  {
+    "id": "r-b4f2c7711d799a00",
+    "choice": "sustainability"
+  },
+  {
+    "id": "r-b66cd17cff46dec8",
+    "choice": "legibility"
+  },
+  {
+    "id": "r-b6d8e9643baa8d0f",
+    "choice": "repeatability"
+  },
+  {
+    "id": "r-b747e24a69197b64",
+    "choice": "usability"
+  },
+  {
+    "id": "r-b7dc1785ad471f9d",
+    "choice": "reconfigurability"
+  },
+  {
+    "id": "r-baf46ca02b55de64",
+    "choice": "reusability"
+  },
+  {
+    "id": "r-be2cc9d10a1d7593",
+    "choice": "understandability"
+  },
+  {
+    "id": "r-bf22552eb7865121",
+    "choice": "verifiability"
+  },
+  {
+    "id": "r-bf4120f30daf35df",
+    "choice": "localizability"
+  },
+  {
+    "id": "r-bf5bb2708b854660",
+    "choice": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-c1cb33a2b1af6534",
+    "choice": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-c249dbb555af5508",
+    "choice": "provability"
+  },
+  {
+    "id": "r-c25140895970cc45",
+    "choice": "feasibility"
+  },
+  {
+    "id": "r-c342a78b6a6a6a51",
+    "choice": "integratability"
+  },
+  {
+    "id": "r-c4f7c2d7df86cbbb",
+    "choice": "generality"
+  },
+  {
+    "id": "r-c5df00e6450f3eb9",
+    "choice": "ask"
+  },
+  {
+    "id": "r-c6003b5136a7f04a",
+    "choice": "effectiveness"
+  },
+  {
+    "id": "r-c7490e02d72a00ae",
+    "choice": "reconfigurability"
+  },
+  {
+    "id": "r-c767a2d18ade0424",
+    "choice": "accountability"
+  },
+  {
+    "id": "r-c8391c58ca395f8b",
+    "choice": "standardizability-standardization-standard"
+  },
+  {
+    "id": "r-ca67b415b8384e1f",
+    "choice": "ask"
+  },
+  {
+    "id": "r-cab803755979f1b7",
+    "choice": "uniformity"
+  },
+  {
+    "id": "r-cbbab0547d8fcff7",
+    "choice": "versatility"
+  },
+  {
+    "id": "r-cc9ff733087bcd4d",
+    "choice": "predictability"
+  },
+  {
+    "id": "r-cd4c1eaa416209f3",
+    "choice": "completeness"
+  },
+  {
+    "id": "r-cd58360db7ab0823",
+    "choice": "learnability"
+  },
+  {
+    "id": "r-cdb119bd268c8ba9",
+    "choice": "interoperability"
+  },
+  {
+    "id": "r-cf2a3a3829e43038",
+    "choice": "ask"
+  },
+  {
+    "id": "r-cf7db5d551f8a87d",
+    "choice": "accuracy"
+  },
+  {
+    "id": "r-cfa11658661e7b94",
+    "choice": "operability"
+  },
+  {
+    "id": "r-cff94eb9c9b72d70",
+    "choice": "formality"
+  },
+  {
+    "id": "r-d13d56649866b943",
+    "choice": "measurability"
+  },
+  {
+    "id": "r-d251713f660cc8fd",
+    "choice": "efficiency-device-efficiency"
+  },
+  {
+    "id": "r-d32d9053e5eb455a",
+    "choice": "ask"
+  },
+  {
+    "id": "r-d3dc202ad6acb822",
+    "choice": "manageability"
+  },
+  {
+    "id": "r-d4d39be78dc262a8",
+    "choice": "ask"
+  },
+  {
+    "id": "r-d80e4afa0c3a60d8",
+    "choice": "simplicity"
+  },
+  {
+    "id": "r-d860c62c401280ae",
+    "choice": "customizability"
+  },
+  {
+    "id": "r-d8fbd88e3c5c9e47",
+    "choice": "feasibility"
+  },
+  {
+    "id": "r-db2e1418bcacb95e",
+    "choice": "security-control-and-security"
+  },
+  {
+    "id": "r-dc35686fd9e8cf9f",
+    "choice": "ask"
+  },
+  {
+    "id": "r-dd8b0409043f8049",
+    "choice": "debuggability"
+  },
+  {
+    "id": "r-deea1bec20ba25ba",
+    "choice": "versatility"
+  },
+  {
+    "id": "r-df25f727bda85530",
+    "choice": "expandability"
+  },
+  {
+    "id": "r-e1ef58b88335057c",
+    "choice": "verifiability"
+  },
+  {
+    "id": "r-e202f25015e74188",
+    "choice": "ask"
+  },
+  {
+    "id": "r-e35b63c6e94e25e8",
+    "choice": "operability"
+  },
+  {
+    "id": "r-e37944566e76aaf2",
+    "choice": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-e491734c35b483bd",
+    "choice": "maintainability"
+  },
+  {
+    "id": "r-e5a4d18a59da6042",
+    "choice": "wrappability"
+  },
+  {
+    "id": "r-e7298d8feff7dca8",
+    "choice": "effectiveness"
+  },
+  {
+    "id": "r-e7f93ec80c7a461b",
+    "choice": "viability"
+  },
+  {
+    "id": "r-e906f9ac93ac06df",
+    "choice": "understandability"
+  },
+  {
+    "id": "r-e9a0364dddb5ec2c",
+    "choice": "functionality"
+  },
+  {
+    "id": "r-eb9484de4c2d1530",
+    "choice": "ask"
+  },
+  {
+    "id": "r-ebe06c04252d4ce8",
+    "choice": "functionality"
+  },
+  {
+    "id": "r-ee88375638c9589f",
+    "choice": "debuggability"
+  },
+  {
+    "id": "r-efcbda989498d81c",
+    "choice": "extendability"
+  },
+  {
+    "id": "r-f02044e5b76544fb",
+    "choice": "replaceability"
+  },
+  {
+    "id": "r-f0ea1a4c1fd6cc90",
+    "choice": "comprehensibility"
+  },
+  {
+    "id": "r-f487cce8e685e7d4",
+    "choice": "ask"
+  },
+  {
+    "id": "r-f499a63d814b3af6",
+    "choice": "configurability"
+  },
+  {
+    "id": "r-f5104ee00e36ed63",
+    "choice": "recoverability"
+  },
+  {
+    "id": "r-f6f5291508e402a3",
+    "choice": "predictability"
+  },
+  {
+    "id": "r-f74233bb37c0f533",
+    "choice": "stability"
+  },
+  {
+    "id": "r-f813e6ab2bab850d",
+    "choice": "recoverability"
+  },
+  {
+    "id": "r-f840b615d41cf571",
+    "choice": "enhanceability"
+  },
+  {
+    "id": "r-f89ba37cb32cdc5d",
+    "choice": "correctness"
+  },
+  {
+    "id": "r-f995c50ca50697b9",
+    "choice": "changeability"
+  },
+  {
+    "id": "r-f9a6306357de5710",
+    "choice": "ask"
+  },
+  {
+    "id": "r-f9b80679850c9047",
+    "choice": "survivability"
+  },
+  {
+    "id": "r-fa4d7c768527ffb7",
+    "choice": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-fa9cc30b8d455504",
+    "choice": "likeability"
+  },
+  {
+    "id": "r-fac08c84bc0a5c00",
+    "choice": "ask"
+  },
+  {
+    "id": "r-fe27712e62d948ec",
+    "choice": "distributivity"
+  },
+  {
+    "id": "r-fea7a948bd276155",
+    "choice": "ask"
+  },
+  {
+    "id": "r-ffb5cd29876f1de5",
+    "choice": "ask"
+  }
+]

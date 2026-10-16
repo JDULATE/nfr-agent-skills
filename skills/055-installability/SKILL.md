@@ -1,7 +1,7 @@
 ---
 name: installability
 description: >-
-  Improves installation lifecycle when tickets say "a clean install will not start", "upgrades leave half-installed files", or "uninstall removes our own data". Not for moving between execution platforms (see portability) or deployment uptime (see availability).
+  Checks installation state when asked "fix partial upgrades", "start a clean install", or "keep user data on uninstall". Ask the user if setup on one target vs platform adaptation is unclear. Not for moving between execution platforms (see portability) or deployment uptime (see availability).
 ---
 
 # Installability

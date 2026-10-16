@@ -1,7 +1,7 @@
 ---
 name: replaceability
 description: >-
-  Preserves surrounding contracts during substitution when tickets say "swap this provider", "remove the old backend", or "keep callers unchanged after replacement". Not for coexistence alone (see compatibility).
+  Checks substitution when asked "retire the old backend", "preserve callers on replacement", or "migrate provider state". Ask the user if replacement vs coexistence or wrapping is unclear. Not for coexistence alone (see compatibility).
 ---
 
 # Replaceability

@@ -1,7 +1,7 @@
 ---
 name: reusability
 description: >-
-  Reuses an artifact in a specified new context when tickets say "use the same validator in the CLI", "stop copying the import checker", or "this helper needs the web request". Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).
+  Reuses a shared artifact when asked "decouple the checker from HTTP", "run one validator in web and CLI", or "remove the copied helper". Ask the user if reuse vs broader cases or joined stages is unclear. Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).
 ---
 
 # Reusability

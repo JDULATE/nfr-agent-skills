@@ -1,7 +1,7 @@
 ---
 name: enhanceability
 description: >-
-  Designs changes that improve an existing capability when tickets say "make this parser easier to improve", "swap in a better algorithm", or "upgrade this feature without adding a new one". Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged changes (see evolvability).
+  Refines existing capabilities when asked "improve the current parser", "replace this algorithm with a better one", or "upgrade this feature in place". Ask the user if refinement vs a new helper is unclear. Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged changes (see evolvability).
 ---
 # Enhanceability
 

@@ -1,7 +1,7 @@
 ---
 name: distributivity
 description: >-
-  Defines node allocation when tickets say "which worker owns this key", "spread partitions across nodes", or "two nodes claim the same shard". Not for workload growth curves (see scalability).
+  Defines node placement when asked "assign key ranges", "prevent duplicate shard owners", or "redistribute partitions". Ask the user if placement rules vs observing current ownership is unclear. Not for workload growth curves (see scalability).
 ---
 
 # Distributivity

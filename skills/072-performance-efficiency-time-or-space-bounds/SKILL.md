@@ -1,7 +1,7 @@
 ---
 name: performance-efficiency-time-or-space-bounds
 description: >-
-  Sets fixed-load time, throughput, or space bounds when tickets say "our p95 is too high", "the export takes too long", or "this operation uses too much memory". Not for run-to-run variation (see predictability), resources per result (see efficiency-device-efficiency), or competing service classes (see quality-of-service).
+  Sets fixed-load bounds when asked "set an export deadline", "cap operation memory", or "specify completion percentiles". Ask the user if absolute latency vs variation is unclear. Not for run-to-run variation (see predictability), resources per result (see efficiency-device-efficiency), or competing service classes (see quality-of-service).
 ---
 # Performance/Efficiency/Time or Space Bounds
 

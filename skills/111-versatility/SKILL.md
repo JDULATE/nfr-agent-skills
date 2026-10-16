@@ -1,7 +1,7 @@
 ---
 name: versatility
 description: >-
-  Supports distinct roles in one product when tickets say "use this tool for imports and stock checks", "audit inventory without changing it", or "the import tool also needs a checking mode". Not for one abstraction covering related cases (see generality) or reusing an artifact elsewhere (see reusability).
+  Supports distinct product roles when asked "import and audit stock", "add read-only inventory checking", or "keep audit mode nonmutating". Ask the user if new roles vs related cases or reuse is unclear. Not for one abstraction covering related cases (see generality) or reusing an artifact elsewhere (see reusability).
 ---
 
 # Versatility

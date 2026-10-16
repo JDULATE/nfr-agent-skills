@@ -1,7 +1,7 @@
 ---
 name: communicativeness
 description: >-
-  Defines timely user feedback when tickets say "notify me when the export is done", "the error arrives too late", or "keep users posted while a job runs". Not for explaining current state and actions (see self-descriptiveness) or clarifying a standalone explanation (see comprehensibility).
+  Times user feedback when asked "notify on export completion", "report errors sooner", or "send job updates". Ask the user if notifications vs visible status is unclear. Not for explaining current state and actions (see self-descriptiveness) or clarifying a standalone explanation (see comprehensibility).
 ---
 # Communicativeness
 

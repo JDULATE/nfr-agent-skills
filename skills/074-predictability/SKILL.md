@@ -1,7 +1,7 @@
 ---
 name: predictability
 description: >-
-  Bounds variation across comparable runs when tickets say "the same job is fast then slow", "completion times jump around", or "rare pauses keep surprising callers". Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).
+  Bounds run variation when asked "limit completion-time spread", "measure rare pauses", or "compare fast and slow runs". Ask the user if variation vs an absolute deadline is unclear. Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).
 ---
 # Predictability
 

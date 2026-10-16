@@ -1,7 +1,7 @@
 ---
 name: operability
 description: >-
-  Makes an operator task executable when tickets say "on-call cannot resume this export", "the rerun command leaves us stuck", or "what do we do after a partial export". Not for fleet policy (see manageability), a single control action (see controllability), or a user support case (see supportability).
+  Builds operator task paths when asked "handle a partial rerun", "verify the runtime task finished", or "define on-call exit checks". Ask the user if a whole task vs one control or support case is unclear. Not for fleet policy (see manageability), a single control action (see controllability), or a user support case (see supportability).
 ---
 
 # Operability

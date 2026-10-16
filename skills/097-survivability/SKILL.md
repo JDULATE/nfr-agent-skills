@@ -1,7 +1,7 @@
 ---
 name: survivability
 description: >-
-  Preserves essential work through severe disruption when tickets say "keep dispatch running if the site is lost", "what still works without central login", or "reconcile offline assignments when we return". Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).
+  Preserves essential mission work when asked "dispatch after site loss", "operate without central login", or "reconcile offline assignments". Ask the user if essential continuity vs restoration is unclear. Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).
 ---
 # Survivability
 

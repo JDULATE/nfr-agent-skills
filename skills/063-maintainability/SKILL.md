@@ -1,7 +1,7 @@
 ---
 name: maintainability
 description: >-
-  Reduces recurring upkeep effort when tickets say "repairs keep taking too long", "future maintainers cannot diagnose this", or "we redo the same maintenance work". Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).
+  Reduces recurring upkeep when asked "stop repeated repair work", "help future maintainers", or "review ongoing fix effort". Ask the user if ongoing upkeep vs one edit or support case is unclear. Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).
 ---
 # Maintainability
 

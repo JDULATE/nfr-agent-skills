@@ -1,7 +1,7 @@
 ---
 name: maturity
 description: >-
-  Assesses readiness from operating and defect history when users ask "is this release proven enough", "the same bug came back under a new ticket", or "has anyone used this since the fix". Not for future failure trials (see reliability), combined assurance (see dependability), or upkeep effort (see maintainability).
+  Assesses operating history when asked "check use since the fix", "link returning defects", or "review exercised workflows". Ask the user if past experience vs future failure trials is unclear. Not for future failure trials (see reliability), combined assurance (see dependability), or upkeep effort (see maintainability).
 ---
 # Maturity
 

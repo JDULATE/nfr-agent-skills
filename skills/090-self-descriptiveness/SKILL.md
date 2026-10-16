@@ -1,7 +1,7 @@
 ---
 name: self-descriptiveness
 description: >-
-  Makes current state and action effects clear in context when users ask "why is this button disabled", "what will clicking this change", or "which report am I editing right now". Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).
+  Explains context at the action when asked "show why this control is disabled", "explain this action now", or "label the current report". Ask the user if in-context cues vs a separate explanation is unclear. Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).
 ---
 # Self-Descriptiveness
 

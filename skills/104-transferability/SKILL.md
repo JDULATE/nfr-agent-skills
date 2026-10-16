@@ -1,7 +1,7 @@
 ---
 name: transferability
 description: >-
-  Supports project handoffs when tickets say "hand this project to another team", "export these records without losing links", or "the recipient cannot open the package". Not for moving execution platforms (see portability), ongoing system exchange (see interoperability), or rebuilding an experiment (see replicability).
+  Transfers project assets when asked "handoff linked project files", "map recipient owners", or "preserve links on transfer". Ask the user if recipient handoff vs installation or exchange is unclear. Not for moving execution platforms (see portability), ongoing system exchange (see interoperability), or rebuilding an experiment (see replicability).
 ---
 
 # Transferability

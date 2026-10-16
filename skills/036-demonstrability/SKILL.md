@@ -1,7 +1,7 @@
 ---
 name: demonstrability
 description: >-
-  Builds inspectable capability demonstrations when tickets say "show reviewers the failed-payment flow", "make the demo runnable again", or "let the audience see the result". Not for proving every possible case (see provability) or designing acceptance evidence (see verifiability).
+  Builds inspectable demos when asked "show the payment failure", "replay the approval demo", or "let reviewers inspect the result". Ask the user if demonstration vs acceptance evidence is unclear. Not for proving every possible case (see provability) or designing acceptance evidence (see verifiability).
 ---
 
 # Demonstrability

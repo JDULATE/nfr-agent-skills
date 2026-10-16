@@ -1,7 +1,7 @@
 ---
 name: attractiveness
 description: >-
-  Evaluates visual appeal when users say "this screen looks uninviting", "which visual style looks better", or "make this layout more appealing". Not for feelings after use (see likeability), recognizing characters (see legibility), or completing tasks (see usability).
+  Tests appearance when asked "compare these visual styles", "this layout looks dull", or "review the screen design". Ask the user if looks vs feelings after use is unclear. Not for feelings after use (see likeability), recognizing characters (see legibility), or completing tasks (see usability).
 ---
 # Attractiveness
 

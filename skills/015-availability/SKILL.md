@@ -1,7 +1,7 @@
 ---
 name: availability
 description: >-
-  Improves and measures usable service time when tickets say "users get logged out on deploy", "checkout goes down during releases", or "count our downtime". Not for failure-free operation (see reliability) or restoring usable state (see recoverability).
+  Measures usable service time when asked "count checkout downtime", "keep sessions through deploys", or "measure service readiness". Ask the user if outage time vs failure counts is unclear. Not for failure-free operation (see reliability) or restoring usable state (see recoverability).
 status: draft
 ---
 # Availability
