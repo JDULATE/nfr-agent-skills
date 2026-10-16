@@ -1,0 +1,5 @@
+Route each developer request using only routing-catalog.md and routing-prompts.json in the working directory.
+Read both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.
+For every prompt, choose one exact catalogue slug or "ask". Choose "ask" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.
+Use the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.
+Return only a complete JSON array of objects with exactly the fields "id" and "choice". Include every input id exactly once. Use the literal value "ask" for asking the user. No Markdown fences, commentary, explanations, or additional fields.
