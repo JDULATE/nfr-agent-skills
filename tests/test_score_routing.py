@@ -48,11 +48,31 @@ class RoutingScoreTests(unittest.TestCase):
                        [{"id": "x1", "choice": "alpha"}] * 2,
                        [{"id": "x1", "choice": ["alpha"]}],
                        [{"id": "x1", "choice": " "}],
-                       [{"id": "x1", "choice": "alpha", "expected": "alpha"}],
+                       [{"id": "x1"}], [{"choice": "alpha"}],
                        [{"id": 1, "choice": "alpha"}]]
         for results in bad_results:
             with self.subTest(results=results), self.assertRaises(ValueError):
                 scorer.score(results, self.key)
+
+    def test_extra_result_fields_do_not_score_runner_up(self):
+        results = [{"id": "x1", "choice": "wrong", "runner_up": "alpha", "confidence": 0.9},
+                   {"id": "x2", "choice": "ask", "notes": {"source": "fixture"}},
+                   {"id": "x3", "choice": "beta", "expected": "wrong"}]
+        original = copy.deepcopy(results)
+        report = scorer.score(results, self.key)
+        baseline = scorer.score([{k: row[k] for k in ("id", "choice")} for row in results], self.key)
+        self.assertEqual(report["groups"], baseline["groups"])
+        self.assertEqual(report["cohorts"], baseline["cohorts"])
+        self.assertEqual(len(report["misses"]), 1)
+        self.assertEqual(report["misses"][0]["runner_up"], "alpha")
+        self.assertEqual(report["misses"][0]["choice"], "wrong")
+        self.assertEqual(report["groups"]["explicit"]["correct"], 0)
+        text = io.StringIO()
+        with contextlib.redirect_stdout(text):
+            scorer.print_report(report)
+        miss_line = next(line for line in text.getvalue().splitlines() if line.startswith("MISS "))
+        self.assertIn('runner_up="alpha"', miss_line)
+        self.assertEqual(results, original)
 
     def test_key_rejects_conflicting_groups_and_invalid_choices(self):
         for changes in ({"group": "other"}, {"expected": []},
@@ -130,18 +150,21 @@ class RoutingScoreTests(unittest.TestCase):
             root = Path(directory)
             key_path, results_path = root / "key.json", root / "results.json"
             key_path.write_text(json.dumps(self.key), encoding="utf-8")
-            results_path.write_text('[{"id":"x2","choice":"wrong"}]', encoding="utf-8-sig")
+            results_path.write_text('[{"id":"x2","choice":"wrong","runner_up":"ask","notes":"fixture"}]', encoding="utf-8-sig")
             before = {p.name: p.read_bytes() for p in root.iterdir()}
             args = [str(results_path), "--key", str(key_path)]
             out = io.StringIO()
             with contextlib.redirect_stdout(out):
                 self.assertEqual(scorer.main(args + ["--json"]), 0)
-            self.assertEqual(len(json.loads(out.getvalue())["misses"]), 3)
+            parsed = json.loads(out.getvalue())
+            self.assertEqual(len(parsed["misses"]), 3)
+            self.assertEqual(next(m for m in parsed["misses"] if m["id"] == "x2")["runner_up"], "ask")
             out = io.StringIO()
             with contextlib.redirect_stdout(out):
                 self.assertEqual(scorer.main(args), 0)
             self.assertEqual(out.getvalue().count("MISS "), 3)
             self.assertIn("user_voice:", out.getvalue())
+            self.assertIn('runner_up="ask"', out.getvalue())
             self.assertEqual({p.name: p.read_bytes() for p in root.iterdir()}, before)
             results_path.write_text('{', encoding="utf-8")
             with contextlib.redirect_stderr(io.StringIO()):

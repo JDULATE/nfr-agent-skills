@@ -3,6 +3,8 @@
 Give a blinded router only evals/routing-catalog.md and routing-prompts.json.
 Keep routing-key.json and the original labeled evals out of its context.
 Collect a JSON array of {"id": "opaque prompt id", "choice": "slug or ask"}.
+Additional result fields are ignored for scoring. A supplied runner_up is
+retained only as a diagnostic beside a miss; it never earns credit.
 Then run: python scripts/score_routing.py results.json
 
 Choices must be exact canonical slugs or "ask". Missing answers count as misses
@@ -69,11 +71,12 @@ def score(results, key):
     if not isinstance(results, list):
         raise ValueError("Results must be a JSON array of id/choice objects")
     answers = {}
+    runner_ups = {}
     for index, row in enumerate(results, 1):
         label = f"results[{index}]"
         case_id = record_id(row, label)
-        if set(row) != {"id", "choice"}:
-            raise ValueError(f"{label}: expected id and choice fields only")
+        if not {"id", "choice"}.issubset(row):
+            raise ValueError(f"{label}: required id and choice fields are missing")
         if case_id not in expected:
             raise ValueError(f"{label}: unknown id {case_id}")
         if case_id in answers:
@@ -82,6 +85,8 @@ def score(results, key):
         if not isinstance(choice, str) or not choice.strip() or choice != choice.strip():
             raise ValueError(f"{label}: choice must be a nonempty string without outer whitespace")
         answers[case_id] = choice
+        if "runner_up" in row:
+            runner_ups[case_id] = row["runner_up"]
 
     groups = {group: {"correct": 0, "total": 0, "answered": 0, "missing": 0}
               for group in GROUPS}
@@ -106,6 +111,8 @@ def score(results, key):
             misses.append({"id": case_id, "group": group, "choice": choice,
                            "expected": choices, "held_out": held_out, "outcome": outcome,
                            "reason": "missing" if choice is None else "incorrect"})
+            if case_id in runner_ups:
+                misses[-1]["runner_up"] = runner_ups[case_id]
     for stats in (*groups.values(), *cohorts.values()):
         stats["accuracy"] = stats["correct"] / stats["total"] if stats["total"] else None
     return {"groups": groups, "cohorts": cohorts,
@@ -129,9 +136,10 @@ def print_report(report):
               f"expected={json.dumps(case['expected'])}")
     for miss in report["misses"]:
         choice = "<missing>" if miss["choice"] is None else repr(miss["choice"])
+        runner_up = f"; runner_up={json.dumps(miss['runner_up'])}" if "runner_up" in miss else ""
         print(f"MISS {miss['id']} [{miss['group']}]: choice={choice}; "
               f"expected={json.dumps(miss['expected'])}; held_out={miss['held_out']}; "
-              f"outcome={miss['outcome']}; reason={miss['reason']}")
+              f"outcome={miss['outcome']}; reason={miss['reason']}{runner_up}")
 
 
 def main(argv=None):

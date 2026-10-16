@@ -1,0 +1,50 @@
+[
+  {
+    "id": "H001",
+    "choice": "scalability"
+  },
+  {
+    "id": "H002",
+    "choice": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "H003",
+    "choice": "accountability"
+  },
+  {
+    "id": "H004",
+    "choice": "accessibility-access-control"
+  },
+  {
+    "id": "H005",
+    "choice": "installability"
+  },
+  {
+    "id": "H006",
+    "choice": "maturity"
+  },
+  {
+    "id": "H007",
+    "choice": "portability"
+  },
+  {
+    "id": "H008",
+    "choice": "fault-failure-tolerance"
+  },
+  {
+    "id": "H009",
+    "choice": "localizability"
+  },
+  {
+    "id": "H010",
+    "choice": "replaceability"
+  },
+  {
+    "id": "H011",
+    "choice": "consistency"
+  },
+  {
+    "id": "H012",
+    "choice": "auditability"
+  }
+]
