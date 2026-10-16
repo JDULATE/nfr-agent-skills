@@ -38,6 +38,9 @@ designing that acceptance route.
    feasible evidence for those predicates, and leave an unstated deadline open;
    confirm with the user/stakeholder.
    Never turn the absence of a deadline into permission for arbitrary completion.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [acceptance route design](./references/design-guide.md)
    when replacing an unexecutable check or a proxy acceptance criterion.
@@ -46,6 +49,8 @@ designing that acceptance route.
    If control or observation is missing, then specify the seam work for `testability`.
    If a proof is needed, then define its role and hand argument construction to
    `provability` rather than describing a planned argument as discharged.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse the acceptance procedure against a passing fixture, a failing
    fixture, and missing evidence. Confirm that its inputs are actually obtainable.

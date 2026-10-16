@@ -49,6 +49,9 @@ preservation after acknowledgement (`durability`), agreement across representati
    bounded design while unresolved participation choices remain explicit.
    If no acceptance target exists, then offer the illustrative partial-view gate
    and confirm with the user/stakeholder before adopting its scenario scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [visibility-boundary practices](./references/design-patterns.md)
    when locating commit scope, publication, or irreversible side effects.
@@ -56,6 +59,8 @@ preservation after acknowledgement (`durability`), agreement across representati
    actual publication/commit boundary rather than merely wrapping calls in one function.
    If compensation occurs after an effect became visible, then disclose that
    history; compensation cannot erase the earlier partial view from this contract.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Interrupt before, between, and after participating changes while
    reading through the agreed observer path and inspecting final committed state.

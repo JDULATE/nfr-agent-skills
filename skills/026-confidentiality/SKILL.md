@@ -48,6 +48,9 @@ distinguish permitted handling purpose/lifecycle (`privacy`), identity unlinkabi
    Continue to a payload/cache/path design without silently choosing unknown field policy.
    If no criterion exists, then offer the illustrative disclosure gate and confirm
    with the user/stakeholder before accepting its recipient/channel scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [disclosure-boundary practices](./references/design-patterns.md)
    when narrowing views, isolating cache entries, or filtering alternate output.
@@ -55,6 +58,8 @@ distinguish permitted handling purpose/lifecycle (`privacy`), identity unlinkabi
    emission; masking the display cannot retract fields already sent to that recipient.
    If cache reuse crosses permitted scopes, then align reuse with the disclosure
    policy or avoid that reuse; a correct origin check does not protect an unsafe cached view.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Send synthetic protected markers through allowed and forbidden paths,
    inspect actual recipients, and exercise changed permissions and delayed copies.

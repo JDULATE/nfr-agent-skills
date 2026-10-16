@@ -36,6 +36,9 @@ read-only state inference (`observability`).
    pause new intake while active work finishes, resume through the same control
    channel, and require worker-state feedback; confirm with the user/stakeholder.
    Ask the user for any required completion deadline instead of inventing one.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [control design](./references/design-guide.md) when
    selecting a target-state command and a feedback path.
@@ -43,6 +46,8 @@ read-only state inference (`observability`).
    If pausing work also disables its command reader, then separate control intake.
    If concurrent commands can supersede each other, then define an ordering fence
    and reject stale transitions rather than guessing the final intent.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Command pause, observe intake cessation, let active work follow the
    agreed policy, then command resume. Check target isolation and stale-command handling.

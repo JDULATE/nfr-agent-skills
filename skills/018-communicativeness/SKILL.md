@@ -48,6 +48,9 @@ and interpretation of a separate explanation (`comprehensibility`).
    and return behavior; and timing, failure, or ordering constraints. Continue to design.
    If no timing target exists, then propose the illustrative trial and confirm
    with the user/stakeholder before asserting delivery attainment.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [event-to-message patterns](./references/design-patterns.md)
    when handling deferred, replayed, or out-of-order feedback.
@@ -55,6 +58,8 @@ and interpretation of a separate explanation (`comprehensibility`).
    of relying on a transient message they cannot see.
    If a message claims success, then tie it to the actual business completion event,
    not merely a queued request; preserve distinct pending and failed outcomes.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Drive accepted, delayed, completed, and failed traces through the
    agreed channel; inspect payloads and delivery with task correlation retained.

@@ -36,6 +36,9 @@ configuration transition (`reconfigurability`).
    explicit target identities, desired-versus-observed revisions, local exceptions,
    and unresolved offline targets; confirm with the user/stakeholder.
    Ask the user for any required convergence deadline.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [fleet administration](./references/design-guide.md)
    when choosing reconciliation, exception handling, or replacement-target rules.
@@ -43,6 +46,8 @@ configuration transition (`reconfigurability`).
    If a node is offline, then retain pending intent rather than mark it compliant.
    If an exception ends or membership changes, then recompute the applicable policy
    under its declared precedence instead of copying another node's effective state.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Reconcile an ordinary target, an exception target, and an unreachable
    target against the declared policy. Check a reconnect and exception end.

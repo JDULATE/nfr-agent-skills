@@ -1,5 +1,5 @@
 {
-  "baseline_results": "routing-results.json",
+  "baseline_results": "evals/results/routing-results.json",
   "baseline_score": "reviews/routing-score.json",
   "failed_ids": [
     "r-09b28c71fc1887dc",

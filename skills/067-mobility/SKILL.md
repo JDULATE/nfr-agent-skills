@@ -36,6 +36,9 @@ after relocation (`nomadicity`) and moving execution platforms (`portability`).
    keep the requested task active, preserve its acknowledged prefix and pending input,
    and avoid a user restart in the declared handoff; confirm with the user/stakeholder.
    Leave numeric gap or latency limits open rather than guessing them.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [active handoff decisions](./references/design-guide.md)
    when choosing task/path separation and overlap handling.
@@ -43,6 +46,8 @@ after relocation (`nomadicity`) and moving execution platforms (`portability`).
    If both paths may act during handoff, then define current ownership and fence the
    retired path. If the target cannot support the declared continuity, then expose
    that limitation rather than silently substituting a suspend-and-reopen workflow.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Change the path during active work and inspect task identity,
    acknowledged/pending progress, in-flight ownership, and completion.

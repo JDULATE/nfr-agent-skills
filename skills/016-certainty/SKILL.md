@@ -40,6 +40,9 @@ a formal argument under explicit assumptions (`provability`).
    Do not invent confidence percentages.
    Ask at most three questions about the claim, supporting sources and validity,
    and how qualified or unknown results should be presented or used.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [confidence decisions](./references/design-guide.md)
    when replacing unconditional labels with evidence-dependent states.
@@ -47,6 +50,8 @@ a formal argument under explicit assumptions (`provability`).
    result rather than promoting a plausible answer.
    If sources disagree, then carry the conflict to the consumer instead of
    selecting the most reassuring label.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise supported, missing, mismatched, and conflicting evidence
    through the actual output path, including cache and display mapping.

@@ -30,7 +30,7 @@
   "earlier_unscored_attempt": "01a14598-4e40-70a1-a90d-7c02b5567b06: file reads blocked by CLI policy; no routing answers",
   "answers": 490,
   "answer_normalization": "none; output-last-message bytes copied unchanged",
-  "scoring_command": "python scripts/score_routing.py routing-results.json",
+  "scoring_command": "python scripts/score_routing.py evals/results/routing-results.json",
   "score_sha256": "b09cdb70c81be6ec45711d2929ed2919ef1b7dab68ca2349dbbd0653c43ebaca",
   "key_sha256": "58c6535aba33556e2d5e2720c80fb3669754df4f733a200c56242e182e9fe0f2",
   "misses": 94

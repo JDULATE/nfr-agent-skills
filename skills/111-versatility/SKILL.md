@@ -39,6 +39,9 @@ and using an artifact in another context (`reusability`).
    outcome/effect checks; confirm with the user/stakeholder.
    Ask at most three questions about role outcomes, allowed effects,
    and shared context before adding a task path.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [role-support decisions](./references/design-guide.md)
    when separating role handlers and mutation permissions.
@@ -46,6 +49,8 @@ and using an artifact in another context (`reusability`).
    rather than reusing an import path that writes the expected values.
    If switching roles leaves previous task state active, then reset or explicitly
    transfer the permitted context before executing the next task.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Execute each role through the same declared product, checking its
    result and actual state effects independently.

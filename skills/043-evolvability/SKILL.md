@@ -49,6 +49,9 @@ of a particular edit (`modifiability`) and an isolated addition (`extendability`
    decisions constrain the path. Move into scenario design without fabricating a roadmap.
    If no numeric scenario target is available, then propose the labeled rehearsal
    count above and confirm with the user/stakeholder; do not make it a universal minimum.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Use [evolution patterns](./references/design-patterns.md) when
    separating change boundaries, staging data transition, and retiring temporary paths.
@@ -56,6 +59,8 @@ of a particular edit (`modifiability`) and an isolated addition (`extendability`
    removal cost with an alternative now and expose that decision to the owner.
    If a future scenario is merely speculative, then retain an explicit decision
    point rather than building unrequested infrastructure for every possible future.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Apply the selected changes in order to the same evolving fixture,
    carrying data, configuration, and consumer versions forward between stages.

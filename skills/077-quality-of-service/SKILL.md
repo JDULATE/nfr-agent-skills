@@ -50,6 +50,9 @@ and action permission (`accessibility-access-control`).
    Continue to a bounded scheduler/admission design with unresolved capacity visible.
    If no targets exist, then offer the illustrative paired trial and confirm
    with the user/stakeholder before accepting its class limits or progress window.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [class-treatment practices](./references/design-patterns.md)
    when selecting admission, isolation, priority or minimum-progress handling.
@@ -61,6 +64,8 @@ and action permission (`accessibility-access-control`).
    or reserve nonborrowable capacity; an opportunity count alone promises no completion time.
    If classes share downstream pools, then inspect that contention too; separate
    ingress queues alone cannot establish differentiated end-to-end treatment.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise the declared mix during contention, inspect trusted assignment
    and retain each class's completion, delay, rejects and unfinished work.

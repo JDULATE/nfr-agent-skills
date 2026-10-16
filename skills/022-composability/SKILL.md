@@ -39,6 +39,9 @@ preservation of summed contributions (`additivity`).
    original failure; confirm with the user/stakeholder.
    Ask at most three grouped questions about the result, shared ownership,
    and failure behavior before a practical composition change.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [join decisions](./references/design-guide.md)
    when resolving lifetime, ordering, and failure-contract mismatches.
@@ -46,6 +49,8 @@ preservation of summed contributions (`additivity`).
    the declared owner rather than inheriting an incompatible standalone default.
    If an adapter changes failure meaning, then expose that change or preserve
    the agreed error at the assembled boundary.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Execute the entire chain with real stage contracts, capturing output,
    effects, resource events, and failures.

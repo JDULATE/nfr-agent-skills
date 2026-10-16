@@ -47,6 +47,9 @@ and active adversarial intervention (`defensibility`).
    Continue to a source-backed path map with unobserved deployment facts marked unknown.
    If no criterion exists, then propose the illustrative classification gate and
    confirm with the user/stakeholder before accepting its fixture/environment scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [exposure-path practices](./references/design-patterns.md)
    when distinguishing prerequisites, apparent blockers and actual affected boundaries.
@@ -54,6 +57,8 @@ and active adversarial intervention (`defensibility`).
    and identify the minimal source/config evidence needed to resolve it.
    If the task includes reducing exposure, then change the confirmed precondition
    or entrypoint and recheck alternate paths rather than assuming the label alone fixes it.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Trace declared paths and challenge relevant capabilities/configurations
    with synthetic fixtures inside the authorized validation boundary.

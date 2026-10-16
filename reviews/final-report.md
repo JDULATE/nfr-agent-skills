@@ -69,7 +69,7 @@ Built INDEX.md with 115 entries.
 ```
 
 - Two tests were added for selector validation/indexing and selector participation in description checks while retaining the 114-NFR coverage contract.
-- Supplemental Skill Creator validation: 113/115 passed. Availability and readability retain a pre-existing status frontmatter field rejected by that checker. Their runtime host compatibility remains unverified; the repository validator accepts that field.
+- After pre-release cleanup, supplemental Skill Creator validation passes 115/115. All SKILL.md frontmatters contain only name and description; status remains in the catalogue. Runtime host compatibility is still unverified.
 - Selector frontmatter is name/description only, its description is 273 characters, and its body is 129 lines.
 - The selector has five Rules of thumb, specific to selection coverage, sibling resolution, conflicts, handoff budgets, or bypassing selection for an identified quality.
 
@@ -108,7 +108,7 @@ The retained adjustability repair records tuning based on a reported scratch-pro
 - Independent audits identify transferable rules and depth gaps in earlier batches. This phase did not repair every audited weakness or perform a new independent full-content audit. Validation cannot establish specificity or factual correctness.
 - Some skills have three Rules of thumb while the latest guide recommends four to six; others have seven or eight. No padding or unrelated content repair was performed.
 - Availability/design-patterns.md has 102 lines and privacy/design-patterns.md has 92, above the current 80-line design-guide recommendation. Both remain below the per-reference 150-line limit.
-- Optional custom frontmatter compatibility is unresolved for availability and readability. Other-agent discovery and environment-specific Codex installation were not exercised.
+- The availability/readability status frontmatter fields were removed for pre-release compatibility. Other-agent discovery and environment-specific Codex installation remain unverified.
 - Selector routing passed this small authored set; its full planning/build handoffs, question ceiling, assumption disclosure, and conflict decisions were not independently executed on a real task.
 
 ## Workflow execution evidence gap
@@ -284,3 +284,48 @@ The retained directory contains 39 files, including this report:
 - [routing-fixes.md](routing-fixes.md)
 - [routing-misses.md](routing-misses.md)
 - [routing-score.json](routing-score.json)
+
+## Release-readiness addendum
+
+v0.1.0 pre-release preparation retains all 115 skills as drafts. No tag, push, or history rewrite was performed.
+
+The audited transferable Rules of thumb bullets in batches 2-9 were not retrofitted. The earlier verification estimate was about 175, as supplied for this prep; that estimate was not independently recounted here. Adding common Workflow guard sentences does not repair those Rules of thumb.
+
+The baseline comparison covered one task. Fast paths were exercised in a few manual scratch runs by the maintainer; the no-skills baseline behaved about the same on that task. Repository validation does not establish that Workflows produce better implementations.
+
+The 21 skills with only three Rules of thumb remain:
+
+- 009-analyzability
+- 031-correctness
+- 033-debuggability
+- 036-demonstrability
+- 040-effectiveness
+- 045-expressiveness
+- 049-feasibility
+- 067-mobility
+- 070-observability
+- 071-operability
+- 082-repeatability
+- 085-reusability
+- 091-simplicity
+- 094-structuredness
+- 095-suitability
+- 101-testability
+- 104-transferability
+- 107-uniformity
+- 109-variability
+- 110-verifiability
+- 113-visibility
+
+The workflow-update script was run in dry-run mode before application. Specify guards were added to all 115 skills; equivalent Design/Implement guidance was retained in selector, adjustability, and configurability, with the new sentence added to the other 112. A subsequent dry run reports zero changes. Descriptions and sections outside Workflow are unchanged, apart from the two explicitly removed frontmatter status lines.
+
+The full validator reports 115 checked and zero errors; all 43 tests pass; the index builder reports 115 entries; the supplemental Skill Creator checker passes 115/115. No similarity threshold or validator was weakened. Complete command outputs are in [release-prep-validation.txt](release-prep-validation.txt).
+
+The two raw routing result files moved unchanged into evals/results/, and their references were updated. The empty temporary folder was removed. Text normalization uses LF; the existing review export exclusions remain.
+
+The prior review inventory is the Phase 6 snapshot. release-prep-validation.txt is additional development evidence and is excluded from archive exports with the rest of reviews/.
+
+The final tracked-file personal-info scan found 81 matching lines, all substrings
+inside unrelated English verbs; no personal data or absolute local paths were
+found by the requested searches. Every hit is listed by file and line in
+[release-prep-validation.txt](release-prep-validation.txt).

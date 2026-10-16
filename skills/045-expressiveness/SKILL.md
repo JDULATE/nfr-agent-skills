@@ -39,6 +39,9 @@ Separate missing semantic capability from shortening adequate notation
    intended evaluation outcome; confirm with the user/stakeholder.
    Ask at most three questions covering domain distinctions, interpretation,
    and backward handling before changing the notation.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [representation decisions](./references/design-guide.md)
    when selecting tagged constructs, explicit negative forms, or serialization.
@@ -46,6 +49,8 @@ Separate missing semantic capability from shortening adequate notation
    in the representation rather than inferring intent from external context.
    If a new construct has no agreed evaluation meaning, then leave it proposed
    instead of implementing an arbitrary interpreter rule.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Encode contrasting intentions, serialize/parse them, and inspect their
    resulting evaluations with distinguishing inputs.

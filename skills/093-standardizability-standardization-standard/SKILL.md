@@ -39,6 +39,9 @@ Separate adopting a convention from checking an already chosen rule
    legacy mappings and exceptions; confirm with the user/stakeholder.
    Ask at most three questions on shared meaning, decision authority, and adoption
    scope; keep an unapproved proposal distinct from a binding convention.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [adoption decisions](./references/design-guide.md)
    when choosing a canonical vocabulary, mapping boundary, or exception register.
@@ -46,6 +49,8 @@ Separate adopting a convention from checking an already chosen rule
    before choosing a common name.
    If changing legacy output would break a consumer, then place a declared
    translation at its boundary or keep a scoped exception pending migration.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Trace representative producer outputs into the adopted vocabulary,
    compare required meanings, and inspect named legacy mappings and exceptions.

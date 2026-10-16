@@ -41,6 +41,9 @@ functional specification (`correctness`).
    as unknown rather than passed; confirm with the user/stakeholder.
    Ask at most three questions about the rule source, artifact scope, and
    applicability or exception authority before making a practical checker change.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [rule-check decisions](./references/design-guide.md)
    when adding schema gates, naming checks, or rule-result attribution.
@@ -48,6 +51,8 @@ functional specification (`correctness`).
    without broadening or weakening it.
    If a rule needs judgment or its applicability is unresolved, then preserve an
    explicit manual or unknown result instead of inventing an automated pass.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise violating and satisfying artifacts for each implemented
    predicate and inspect their rule identifiers and evidence locations.

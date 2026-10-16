@@ -38,6 +38,9 @@ and from removing one implementation in favor of another (`replaceability`).
    For a practical fix, present that record and ask at most three questions:
    which combinations, which protected operations, and which shared resources
    or accepted differences? Proceed to reversible design using explicit assumptions.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [coexistence decisions](./references/design-guide.md)
    when selecting namespace, dependency, or lifecycle isolation.
@@ -45,6 +48,8 @@ and from removing one implementation in favor of another (`replaceability`).
    that resource before changing either component's protected behavior.
    If shared dependencies cannot satisfy both consumers, then isolate their
    resolution boundary or report the unsupported combination.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare each component alone with the supported combinations using
    the same inputs and environment. Include neighbor update and removal.

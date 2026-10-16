@@ -47,6 +47,9 @@ passive state inference (`observability`) and normal restoration (`recoverabilit
    Continue to a scoped control/runbook design using the existing granted authority.
    If no target exists, then offer the illustrative containment trial and confirm
    with the user/stakeholder before adopting its timing or capability scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [response-control practices](./references/design-patterns.md)
    when connecting signals, operator controls and effect verification.
@@ -54,6 +57,8 @@ passive state inference (`observability`) and normal restoration (`recoverabilit
    those capabilities separately rather than calling the whole action path contained.
    If a response destroys necessary evidence or blocks unrelated essential work,
    then expose the conflict and design the permitted scoped alternative.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse detection, activation, scoped effect and attempted continuation
    with synthetic activity; retain valid-work controls and unresolved capabilities.

@@ -48,6 +48,9 @@ continuing maintenance effort (`maintainability`).
    diagnosis with missing decisions visibly pending.
    If a deadline is absent, then offer the illustrative handoff bound and
    confirm with the user/stakeholder; do not present it as a universal approval SLA.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [handoff patterns](./references/design-patterns.md) when
    separating state evidence, receiving responsibility, and adoption checks.
@@ -55,6 +58,8 @@ continuing maintenance effort (`maintainability`).
    ready evidence; a sent notification cannot establish an accepted handoff.
    If deployment occurred without audience use, then inspect enablement and
    adoption conditions separately instead of closing the request as delivered-to-use.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Follow a synthetic or inspected request through the declared states,
    exercising a blocked handoff, delivered artifact, and adoption endpoint.

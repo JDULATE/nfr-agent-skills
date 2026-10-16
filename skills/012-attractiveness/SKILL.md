@@ -47,6 +47,9 @@ interaction (`likeability`), symbol recognition (`legibility`), and successful t
    acceptance rule should replace the proposal. Proceed to a reversible style draft.
    If the stakeholder supplies no numeric goal, then use the illustrative scale
    and confirm with the user/stakeholder before selecting an acceptance rule.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [visual comparison practices](./references/design-patterns.md)
    when choosing variants or reducing presentation confounds.
@@ -54,6 +57,8 @@ interaction (`likeability`), symbol recognition (`legibility`), and successful t
    before asking viewers to prefer it; do not exchange recognition for decoration.
    If multiple visual dimensions change, then retain a variant ledger rather
    than attributing the response to an individual color or spacing decision.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Inspect rendered variants under the recorded conditions, then collect
    visual judgments separately from task outcomes and post-task sentiment.

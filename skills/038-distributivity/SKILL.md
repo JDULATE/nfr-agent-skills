@@ -38,6 +38,9 @@ resource admission (`expandability`).
    ownership published only after a checked handoff; confirm with the user/stakeholder.
    Ask at most three grouped questions about allocation, authority, and handoff
    constraints before designing reversible changes.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [placement decisions](./references/design-guide.md)
    when selecting routing maps, stale-owner fencing, or movement stages.
@@ -45,6 +48,8 @@ resource admission (`expandability`).
    at the effect boundary rather than merely refreshing the router.
    If handoff cannot establish the agreed state boundary, then leave the shard
    unassigned or paused according to the confirmed policy instead of guessing.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise current and stale assignment tokens through the effect path,
    and record ownership before, during, and after a move.

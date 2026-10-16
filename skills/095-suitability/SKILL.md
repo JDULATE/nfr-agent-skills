@@ -40,6 +40,9 @@ stakeholder outcome attainment (`effectiveness`).
    without manual re-entry; confirm with the user/stakeholder.
    Ask at most three questions about task/context, receiver constraints,
    and allowed adaptation before changing the export path.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [task-fit decisions](./references/design-guide.md)
    when choosing format, local delivery, or constrained adaptation.
@@ -47,6 +50,8 @@ stakeholder outcome attainment (`effectiveness`).
    than relying on a capability that needs remote retrieval.
    If its format cannot represent a source value under the supplied contract,
    then expose that limitation rather than silently dropping or changing the value.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise the complete named handoff from source through the existing
    receiving tool, comparing accepted records with the task's required meaning.

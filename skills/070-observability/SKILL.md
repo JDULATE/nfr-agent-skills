@@ -36,6 +36,9 @@ about the running system.
    distinguish queued, claimed, dependency-waiting, and committed states for the
    requested path, with logical-job and attempt linkage; confirm with the user/stakeholder.
    Keep retention, field exposure, and collection cost within existing policy.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [runtime inference design](./references/design-guide.md)
    when choosing semantic lifecycle events, attempt links, or handoff evidence.
@@ -43,6 +46,8 @@ about the running system.
    boundary separately. If an asynchronous handoff loses identity, then propagate
    the minimum correlation context. If identical signals fit several hidden states,
    then add a discriminator instead of increasing duplicate message volume.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise known queued, claimed, waiting, failed-attempt, retry, and
    committed fixture states. Infer state from collected signals without reading

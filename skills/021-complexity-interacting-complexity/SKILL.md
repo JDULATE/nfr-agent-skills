@@ -39,6 +39,9 @@ and finding a particular execution defect (`debuggability`).
    eliminate unexplained reentry obligations; confirm with the user/stakeholder.
    Ask at most three questions on scenario scope, required interactions, and
    acceptable changes before proposing a bounded intervention.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [interaction decisions](./references/design-guide.md)
    when addressing feedback, coupled flags, or shared coordination.
@@ -46,6 +49,8 @@ and finding a particular execution defect (`debuggability`).
    termination rule before changing the callback graph.
    If a dependency merely moves behind a facade, then keep its interaction in
    the ledger; do not claim it disappeared.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Reconstruct the before/after graph and reachable scenario cases under
    the same declared boundary. Check required behavior separately.

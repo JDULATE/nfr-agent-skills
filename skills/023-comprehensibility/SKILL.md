@@ -47,6 +47,9 @@ model (`understandability`), and in-context state cues (`self-descriptiveness`).
    Proceed to a scoped explanation alternative while disputed meaning stays open.
    If no acceptance bound exists, then offer the illustrative question-bound above
    and confirm with the user/stakeholder before treating it as an agreed reader criterion.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [interpretation patterns](./references/design-patterns.md)
    when resolving ambiguous actors, domain concepts, or implied permissions.
@@ -54,6 +57,8 @@ model (`understandability`), and in-context state cues (`self-descriptiveness`).
    rather than merely replacing a word with a shorter synonym.
    If examples imply a broader rule than the source permits, then add a contrasting
    excluded case and rewrite the scope instead of expanding the underlying requirement.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare each intended proposition with the revised explanation and ask
    intended readers to interpret new positive/negative scenarios without coaching.

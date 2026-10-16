@@ -48,6 +48,9 @@ the content; separate reading meaning (`readability`), aesthetic response
    Proceed to rendering alternatives rather than guessing a universal style threshold.
    If no criterion is supplied, then offer the illustrative fixture bound and
    confirm with the user/stakeholder before adopting it as a recognition requirement.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [recognition patterns](./references/design-patterns.md) when
    choosing glyph distinctions, rendering conditions, or a transcription comparison.
@@ -55,6 +58,8 @@ the content; separate reading meaning (`readability`), aesthetic response
    rather than inferring recognition from a font name or a source-style value alone.
    If enlarging or restyling content clips or substitutes characters, then repair
    that presentation loss before judging the remaining visible symbols legible.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Render the preserved content under the agreed conditions and obtain
    unaided audience transcriptions against the source-character oracle.

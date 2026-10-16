@@ -47,6 +47,9 @@ envelope (`performance-efficiency-time-or-space-bounds`) and resource per result
    constraints; and trial points, budget or saturation decisions. Continue to a bounded curve design.
    If no growth scope exists, then offer the illustrative load points and confirm
    with the user/stakeholder before using them as the claimed demand range.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [growth-curve practices](./references/design-patterns.md)
    when locating shared work, skew, coordination or a resource-dependent bottleneck.
@@ -58,6 +61,8 @@ envelope (`performance-efficiency-time-or-space-bounds`) and resource per result
    limit rather than assuming more partitions admit the required growth.
    If resources change between points, then retain that policy and its costs;
    compare fixed-resource and added-resource behavior rather than presenting one unlabeled curve.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Offer each declared demand/data point with a capable generator and
    inspect service correctness, throughput, backlog and resources through the run.

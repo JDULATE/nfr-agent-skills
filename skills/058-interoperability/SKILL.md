@@ -39,6 +39,9 @@ noninterfering coexistence (`compatibility`).
    acceptance is distinct from completed application; confirm with the user/stakeholder.
    For a change request, ask at most three questions on participant contracts,
    permitted conversions, and response/effect obligations before designing.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [exchange decisions](./references/design-guide.md)
    when adding unit adapters, response states, or representation gates.
@@ -46,6 +49,8 @@ noninterfering coexistence (`compatibility`).
    refuse when conversion information is unavailable.
    If a response only means queued, then preserve that status through the caller
    rather than presenting the requested effect as complete.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Send complete contract fixtures through real serializers, receiver
    actions, and caller response handling; check the resulting domain values.

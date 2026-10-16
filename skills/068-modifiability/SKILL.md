@@ -48,6 +48,9 @@ distinguish continuing maintenance (`maintainability`), request progress
    Proceed to an impact map with forecasts separate from measured work.
    If no bound is supplied, then offer the labeled component example and confirm
    with the user/stakeholder; obtain a separate time bound when effort is the goal.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [impact patterns](./references/design-patterns.md) when
    tracing semantic fan-out, choosing an edit seam, or accounting for work.
@@ -55,6 +58,8 @@ distinguish continuing maintenance (`maintainability`), request progress
    ledger before calling it local, even if callers need no textual changes.
    If actual impact exceeds the envelope, then expose extra owners and required
    work for a scope decision instead of hiding generated or test changes.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare the actual diff and behaviors with the predicted impact map;
    exercise changed-rule and retained cases through real consumers.

@@ -47,6 +47,9 @@ question (`auditability`) and practical test control/observation (`testability`)
    Continue to a typed trace map without inventing missing relationship facts.
    If no criterion exists, then offer the illustrative orphan-link gate and
    confirm with the user/stakeholder before adopting its artifact/scope limits.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [relationship practices](./references/design-patterns.md)
    when choosing stable IDs, revisioned edges or evidence-status links.
@@ -54,6 +57,8 @@ question (`auditability`) and practical test control/observation (`testability`)
    current verification needs; a working URL to an old test cannot update its coverage.
    If a link only says related, then identify the actual relationship or mark
    it unresolved before using it to assert implementation or verification impact.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Walk forward and backward from the agreed starting artifacts and
    inspect revision, edge meaning, actual target and result status.

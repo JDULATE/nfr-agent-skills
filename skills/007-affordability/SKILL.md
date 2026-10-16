@@ -41,6 +41,9 @@ and continued stakeholder value (`viability`).
    budget owner confirms the boundary and cap; confirm with the user/stakeholder.
    Ask at most three grouped questions on the cost boundary, workload/rates,
    and required behavior before proposing an engineering change.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [cost-fit decisions](./references/design-guide.md)
    when evaluating batching, retention scope, or cost admission.
@@ -48,6 +51,8 @@ and continued stakeholder value (`viability`).
    while preserving the required result and accepted failure behavior.
    If a cap can be met only by omitting required work, then present the scope
    trade-off instead of reporting the unchanged workload as affordable.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Recompute candidate costs from observed cost drivers and the declared
    rate model. Compare required workload outputs before and after the change.

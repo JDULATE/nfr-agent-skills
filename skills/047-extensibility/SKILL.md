@@ -49,6 +49,9 @@ through core edits (`extendability`) and general assembly (`composability`).
    compatibility limits apply. Proceed to an adapter design against inspected contracts.
    If the source-edit bound was not given, then propose the illustrative bound
    above and confirm with the user/stakeholder before using it as acceptance evidence.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [extension-contract patterns](./references/design-patterns.md)
    when selecting registration, contract adapters, dispatch, and lifecycle boundaries.
@@ -56,6 +59,8 @@ through core edits (`extendability`) and general assembly (`composability`).
    hidden coupling rather than claiming the addition used an unchanged core.
    If an extension requires broader authority or a new contract meaning, then
    obtain that decision and separate it from a conforming implementation change.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Add an independently implemented fixture through the documented route,
    exercise its accepted and rejected contract cases, and compare host source.

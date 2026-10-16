@@ -49,6 +49,9 @@ not this repository's additivity convention.
    are acceptable. Continue with a comparison design while answers are pending.
    If no numeric target is provided for a formal spec, then use the labeled proposal
    above and confirm with the user/stakeholder before accepting its tolerance.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [combination patterns](./references/design-patterns.md) when
    separating contribution accounting from shared state and overlap.
@@ -56,6 +59,8 @@ not this repository's additivity convention.
    allocate it under the chosen rule rather than counting the same effect twice.
    If the measured quantity has no defensible aggregation, then replace the additive
    claim with a separately named combined-outcome requirement and obtain its boundary.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Measure baseline, isolated increments, and their combination with the
    same fixtures and observation procedure; calculate the residual against the rule.

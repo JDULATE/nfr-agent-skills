@@ -242,4 +242,4 @@ The baseline choice and expected choice were ask for each row.
 - This is a targeted revision check over previously observed failures and selected siblings, not an independent holdout evaluation or a full-catalogue rerun. Candidate coverage is 114; prompt coverage is the 268 selected cases only.
 - The final report does not claim that all 94 misses are fixed. The 58 original misses and five control failures remain visible for human review.
 
-Evidence: evals/routing-fixes/selection.json, baseline-score.json, round-1-score.json, score.json, run.json, validation.json and the preserved raw result files. Final results: routing-fixes-results.json.
+Evidence: evals/routing-fixes/selection.json, baseline-score.json, round-1-score.json, score.json, run.json, validation.json and the preserved raw result files. Final results: evals/results/routing-fixes-results.json.

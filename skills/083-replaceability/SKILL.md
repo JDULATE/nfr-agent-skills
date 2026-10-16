@@ -38,6 +38,9 @@ around an implementation that remains in use (`wrappability`).
    removal; confirm with the user/stakeholder.
    Ask at most three grouped questions covering obligations, state/migration,
    and cutover permissions before beginning reversible adapter work.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [substitution decisions](./references/design-guide.md)
    when choosing contract adapters, state conversion, or a cutover gate.
@@ -45,6 +48,8 @@ around an implementation that remains in use (`wrappability`).
    preserved caller contract or obtain approval for the changed obligation.
    If new writes cannot be read by the old provider, then mark rollback blocked
    after those writes unless a verified reverse migration is available.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare old and new implementations with contract fixtures and
    inspect migrated state; run callers with the old dependency absent.

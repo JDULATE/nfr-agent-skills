@@ -34,6 +34,9 @@ arguments covering all modeled cases (`provability`) from what one showing estab
    use synthetic state, show the requested result and its contrasting refusal,
    and expose the resulting state; confirm with the user/stakeholder.
    Keep this proposed demonstration record separate from product acceptance.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [demonstration design](./references/design-guide.md)
    when replacing an author-only performance with inspectable evidence.
@@ -42,6 +45,8 @@ arguments covering all modeled cases (`provability`) from what one showing estab
    boundary visibly and keep the real feature path in the scenario.
    If narration supplies the supposed result, then add an observable artifact
    rather than strengthening the narrator's assertion.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Replay from the recorded setup without the author filling in missing
    steps. Check expected outputs and forbidden effects against the scene record.

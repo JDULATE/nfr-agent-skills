@@ -46,6 +46,9 @@ from memory. Route one identified quality directly to its individual skill.
    If targets are missing, then propose qualitative acceptance boundaries or
    clearly labeled illustrative numeric defaults; confirm with the user/stakeholder.
    Keep unknown targets unresolved rather than calling readiness established.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [selection decisions](./references/design-guide.md) when
    deciding coverage, dependencies, or competing quality claims.

@@ -51,6 +51,9 @@ subjective response (`likeability`), and visual appeal (`attractiveness`).
    reversible interaction design grounded in observed blockers.
    If no numeric target exists, then use the illustrative error trial and confirm
    with the user/stakeholder before accepting its scenario scope or criterion.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [task-outcome practices](./references/design-patterns.md)
    when reducing selection errors, preserving work, or exposing correction paths.
@@ -58,6 +61,8 @@ subjective response (`likeability`), and visual appeal (`attractiveness`).
    check and improve its interaction instead of redefining success around its removal.
    If an error is correctable, then preserve permitted input and point to the
    failed field/action; inspect resulting state before claiming recovery works.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Execute goal-based scenarios with intended users where available;
    retain actual result, errors, work lost, corrections, help, and effort.

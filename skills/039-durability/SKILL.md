@@ -48,6 +48,9 @@ and reconstructing usable service after loss or interruption (`recoverability`).
    Continue to a persistence-path design while the actual promise remains proposed.
    If no loss criterion exists, then offer the illustrative missing-version gate
    and confirm with the user/stakeholder before adopting the event scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [acknowledged-state practices](./references/design-patterns.md)
    when aligning the response, persistence boundary, and post-event retrieval.
@@ -55,6 +58,8 @@ and reconstructing usable service after loss or interruption (`recoverability`).
    or the write path with the confirmed contract instead of relying on response wording.
    If replicas or backups share the modeled loss dependency, then expose that
    limitation rather than declaring the acknowledged change protected by copy count.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Record acknowledged identities/contents outside the component under
    test, trigger the scoped event, and retrieve state through the agreed authority.

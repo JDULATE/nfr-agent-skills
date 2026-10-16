@@ -66,6 +66,9 @@ masking a name establishes neither an approved purpose nor an unlinkability resu
    recipients, retention, backups, and exceptions; and what choice behavior or
    defaults need changing. Proceed to reversible design with available answers.
    If policy is unresolved, then present alternatives and keep affected decisions open.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [design patterns](./references/design-patterns.md) when
    choosing field controls, choice propagation, expiry, deletion, or capture redaction.
@@ -76,6 +79,8 @@ masking a name establishes neither an approved purpose nor an unlinkability resu
    If backups or replay can reintroduce data, then design restore-time suppression;
    if telemetry or capture retains it, then redact at the source and verify recipients.
    Implement confirmed handling; keep unresolved policy choices as design alternatives.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Follow synthetic records through capture, derived outputs, purge jobs,
    withdrawal, and a controlled restore; inspect allowed and forbidden payloads.

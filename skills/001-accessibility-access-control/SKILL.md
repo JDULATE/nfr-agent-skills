@@ -54,6 +54,9 @@ not synonyms: distinguish general task outcomes (`usability`), visual recognitio
    Continue to reversible branch-specific design; keep unresolved policy decisions visible.
    If no target is given, then offer the illustrative gates and confirm with the
    user/stakeholder before adopting either branch's scenario scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [branch practices](./references/design-patterns.md) when
    fixing interaction semantics/focus or locating authorization enforcement.
@@ -63,6 +66,8 @@ not synonyms: distinguish general task outcomes (`usability`), visual recognitio
    confirmed policy at the actual action boundary rather than only hiding its control.
    If policy state can change after a prior decision, then re-evaluate its validity
    at the effect boundary under the confirmed revocation contract.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise Accessibility tasks through the agreed input/assistive
    conditions, including error and return paths. Exercise Access Control allow/deny,

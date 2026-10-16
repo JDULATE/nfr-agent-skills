@@ -37,6 +37,9 @@ unclear concepts (`comprehensibility`) from locale adaptation.
    external resources and explicit formatters with invariant machine data and
    visible missing-resource results; confirm with the user/stakeholder.
    Keep translation approval and locale correctness distinct from mechanism checks.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [locale-boundary decisions](./references/design-guide.md)
    when separating resources, templates, display formats, and parsing.
@@ -44,6 +47,8 @@ unclear concepts (`comprehensibility`) from locale adaptation.
    If a locale formatter changes exported machine values, then separate that
    output boundary. If date meaning is unclear, then resolve whether it is a
    calendar date or an instant before choosing any display conversion.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Render the same canonical fixture using the supplied locale profiles.
    Compare resource selection, placeholders, date meaning, and machine output.

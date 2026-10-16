@@ -47,6 +47,9 @@ appeal (`attractiveness`), achieved task outcomes (`usability`), and acquired ab
    Continue to a reversible interaction proposal tied to the reported experience.
    If no measure exists, then propose the illustrative anchored response and
    confirm with the user/stakeholder before selecting a pass rule.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [experience-response practices](./references/design-patterns.md)
    when changing disliked interactions or comparing preference evidence.
@@ -54,6 +57,8 @@ appeal (`attractiveness`), achieved task outcomes (`usability`), and acquired ab
    rather than restyling unrelated screens and attributing any new rating to it.
    If a candidate removes a control or task result, then keep that functional
    difference explicit instead of comparing sentiment as if the tasks were equivalent.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Collect the response after the specified experience without suggesting
    the preferred answer; retain negative, neutral, and absent responses.

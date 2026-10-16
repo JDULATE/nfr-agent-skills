@@ -48,6 +48,9 @@ approved personal-data handling (`privacy`), recipient disclosure permission
    Continue to a scoped release design while unknown observer capabilities remain explicit.
    If no target exists, then propose the illustrative linkage-fixture gate and
    confirm with the user/stakeholder before adopting its attack/model scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [observer-and-linkage practices](./references/design-patterns.md)
    when choosing field removal, scoped identifiers, grouping, or release restrictions.
@@ -55,6 +58,8 @@ approved personal-data handling (`privacy`), recipient disclosure permission
    path or withdraw the claim; a new token spelling does not remove a usable mapping.
    If context or repeated output reconstructs identity, then revise the release
    granularity or scope against utility instead of checking each field in isolation.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Attempt the stated joins and inferences using only the observer's
    declared view, including prior releases and alternate capture/error paths.

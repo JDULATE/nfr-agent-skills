@@ -39,6 +39,9 @@ attainment (`effectiveness`), and incorrect existing behavior (`correctness`).
    for the supplied cases; confirm with the user/stakeholder.
    Ask at most three questions on capability scope, actors, and state behavior
    before adding an operation.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [capability decisions](./references/design-guide.md)
    when adding an entrypoint and its actual state effect.
@@ -46,6 +49,8 @@ attainment (`effectiveness`), and incorrect existing behavior (`correctness`).
    precondition and implement the queued-state transition rather than advertising all-state cancellation.
    If a handler is only a placeholder, then keep the capability unimplemented
    until its required result exists.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Invoke each required operation through the actual service boundary
    and inspect its declared result and effect.

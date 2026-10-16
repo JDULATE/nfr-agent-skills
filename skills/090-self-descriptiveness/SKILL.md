@@ -48,6 +48,9 @@ feedback timing (`communicativeness`), and backend inference (`observability`).
    Proceed to view/state mappings while unknown action meanings stay unresolved.
    If no acceptance bound exists, then offer the illustrative inference trial and
    confirm with the user/stakeholder before declaring the cues sufficient.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [state-cue patterns](./references/design-patterns.md) when
    exposing object context, disabled reasons, or pending/confirmed status.
@@ -55,6 +58,8 @@ feedback timing (`communicativeness`), and backend inference (`observability`).
    of use instead of linking only to a general manual that lacks the current state.
    If work is pending, then preserve that distinction until the accepted completion
    evidence exists; do not relabel an initiated action as a completed result.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise the state/action matrix through normal views and responses,
    including stale context, pending work, disabled controls, and failed actions.

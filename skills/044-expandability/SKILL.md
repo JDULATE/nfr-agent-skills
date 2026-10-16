@@ -49,6 +49,9 @@ curve under workload (`scalability`) and a new function (`extendability`).
    Then design an addition rehearsal using documented capabilities where answers are missing.
    If no numeric addition scope was supplied, then offer the labeled unit count
    above and confirm with the user/stakeholder before treating it as accepted capacity.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [capacity admission patterns](./references/design-patterns.md)
    when planning registration, work placement, headroom, and partial-addition handling.
@@ -56,6 +59,8 @@ curve under workload (`scalability`) and a new function (`extendability`).
    interruption evidence instead of assuming registration completes expansion.
    If a shared controller or fixed partition limit blocks useful addition, then
    expose that ceiling and evaluate an approved change rather than merely allocating more units.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse addition from the starting shape and use the worked example
    when choosing a before/after capacity-boundary probe, not just a placement test.

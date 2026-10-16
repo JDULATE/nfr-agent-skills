@@ -52,6 +52,9 @@ separate tuning an exposed control (`adjustability`), applying another arrangeme
    resolver design while unconfirmed option meanings remain proposals.
    If no target is provided, then offer the illustrative unknown-key bound and
    confirm with the user/stakeholder before treating it as the accepted policy.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [choice patterns](./references/design-patterns.md) when
    defining combinations, absence semantics, or effective-choice evidence.

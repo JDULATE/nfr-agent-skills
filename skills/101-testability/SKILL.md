@@ -36,6 +36,9 @@ acceptance evidence (`verifiability`), diagnosing one failed execution
    inject a clock at dependency construction, script external responses, and
    inspect a semantic result plus its side effect; confirm with the user/stakeholder.
    Keep the real decision logic inside the tested boundary.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [test seam decisions](./references/design-guide.md)
    when choosing a clock seam, response adapter, or outcome observation.
@@ -44,6 +47,8 @@ acceptance evidence (`verifiability`), diagnosing one failed execution
    the substitution outward. If observations cannot distinguish two paths, then
    expose a stable semantic outcome instead of private line-by-line execution.
    Do not expose a public bypass simply to make a test easier to drive.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Drive the targeted branches through the same entrypoint using the
    seam; compare expected results and externally relevant effects.

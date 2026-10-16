@@ -47,6 +47,9 @@ control drift/oscillation (`stability`) and product-family options (`variability
    Continue to a scoped variation analysis with unconfirmed groups/bounds visible.
    If no target exists, then offer the illustrative observed-range trial and
    confirm with the user/stakeholder before treating its sample set as sufficient.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [variation practices](./references/design-patterns.md)
    when reducing variable work or separating warm, queued and competing conditions.
@@ -56,6 +59,8 @@ control drift/oscillation (`stability`) and product-family options (`variability
    to test incremental work and its backlog; do not replace spread with a faster mean.
    If a candidate makes every result equally slow, then assess the separate
    absolute deadline; lower variation alone cannot establish overall acceptable service.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Repeat the agreed condition groups, retain raw extremes and coverage,
    and compare variation plus absolute/result constraints under the same method.

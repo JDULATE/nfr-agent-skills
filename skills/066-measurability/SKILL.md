@@ -39,6 +39,9 @@ requirement's acceptance (`verifiability`).
    For queue delay, propose paired admission/start events and milliseconds;
    for another property with unknown boundaries or units, Ask the user.
    Do not invent a queue-delay acceptance target from that metric definition.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [measurement design](./references/design-guide.md)
    when repairing observation boundaries, dimensional meaning, or resolution.
@@ -47,6 +50,8 @@ requirement's acceptance (`verifiability`).
    observation or label the proposed proxy rather than silently renaming it.
    If a known input change is smaller than the instrument can resolve, then
    revise the instrument or narrow the decision it can support.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Recompute the measure from a fixture with known event pairs, a unit
    conversion, and an unresolved observation. Preserve raw samples, exclusions,

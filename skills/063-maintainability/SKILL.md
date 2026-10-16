@@ -48,6 +48,9 @@ left behind; separate one edit's impact (`modifiability`), a support encounter
    Proceed to a scoped maintenance-path design with trial values still proposed.
    If no bound is given, then offer the labeled task/effort trial and confirm with
    the user/stakeholder; do not extrapolate its results to all future maintenance.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [upkeep patterns](./references/design-patterns.md) when
    preserving diagnosis context, regeneration paths, or recurring repair obligations.
@@ -55,6 +58,8 @@ left behind; separate one edit's impact (`modifiability`), a support encounter
    in the upkeep comparison instead of reporting only the simpler code path.
    If maintainers need private remembered steps to repair from a clean checkout,
    then make those prerequisites explicit or repair the repository-supported path.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse the selected tasks from their declared starts; retain outcomes,
    active work, waits, prior-fix checks, and regeneration results.

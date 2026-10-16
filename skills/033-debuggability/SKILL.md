@@ -36,6 +36,9 @@ localization path.
    reproduce the named failure and identify the earliest value/branch divergence
    supported by an inspectable capture; confirm with the user/stakeholder.
    Treat a missing reproducer as an explicit limitation, not permission to invent one.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [localization design](./references/design-guide.md)
    when choosing replay, capture points, or source mapping.
@@ -43,6 +46,8 @@ localization path.
    selection boundary. If input reduction changes the symptom, then restore the
    required trigger rather than reporting an unrelated smaller failure.
    Keep temporary diagnostic changes scoped to the failing path.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Replay the capture and compare actual versus expected values at the
    suspected boundary. Test a minimal corrective change and neighboring inputs.

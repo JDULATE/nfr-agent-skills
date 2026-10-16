@@ -36,6 +36,9 @@ movement (`mobility`) from migration of the software's execution environment.
    isolate the named environment differences in a platform adapter/configuration
    boundary while keeping the requested behavior fixed; confirm with the user/stakeholder.
    Ask for an effort or elapsed-time limit rather than inventing one.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [environment adaptation](./references/design-guide.md)
    when choosing an explicit capability mapping or platform adapter.
@@ -43,6 +46,8 @@ movement (`mobility`) from migration of the software's execution environment.
    target artifact root. If a target lacks a needed capability, then expose an
    alternative with its behavior difference or leave support unverified.
    If adaptation changes domain behavior, then separate that change from the migration claim.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Run preserved behavior fixtures in both declared environment profiles.
    Compare content, side effects, and required artifact locations, not compilation alone.

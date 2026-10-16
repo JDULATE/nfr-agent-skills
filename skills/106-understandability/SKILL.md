@@ -48,6 +48,9 @@ and causal paths in the project; separate interpreting one explanation
    Proceed to a bounded model sketch without claiming an exhaustive system explanation.
    If no criterion is supplied, then offer the illustrative prediction trial and
    confirm with the user/stakeholder before using it as an audience acceptance gate.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [model patterns](./references/design-patterns.md) when
    explaining ownership, asynchronous handoffs, or cause-to-state paths.
@@ -55,6 +58,8 @@ and causal paths in the project; separate interpreting one explanation
    state and who completes it rather than drawing an arrow that implies instant success.
    If a component boundary hides a state decision, then expose the owner and its
    input/output meaning rather than adding more unexplained boxes to the diagram.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Reconcile the model with representative source paths and ask intended
    readers to predict a normal case and a changed/failed handoff without hints.

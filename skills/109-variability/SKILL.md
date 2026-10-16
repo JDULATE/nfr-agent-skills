@@ -39,12 +39,17 @@ Separate family-level alternatives from settings of an instance
    confirm with the user/stakeholder.
    Ask at most three questions about the family, feature relationships,
    and binding/derivation boundary before changing build logic.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [variant decisions](./references/design-guide.md)
    when encoding implications, exclusions, and artifact derivation.
    If a selection violates a constraint, then refuse it before partial output.
    If an enabled feature has no derivation rule, then report an incomplete
    variant model rather than silently omitting the feature.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Enumerate the bounded selection space or a declared coverage subset,
    checking validity decisions and actual derived artifacts separately.

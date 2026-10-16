@@ -37,6 +37,9 @@ user support case (`supportability`).
    inspect ownership and committed progress, resume only the remaining requested
    work, and verify the final artifact; confirm with the user/stakeholder.
    Leave recovery-time or completion deadlines open unless supplied.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [operator task design](./references/design-guide.md)
    when connecting commands into a resumable task with a verifiable outcome.
@@ -44,6 +47,8 @@ user support case (`supportability`).
    If another writer owns the task, then stop at the defined handoff instead of
    launching competing work. If a partial checkpoint exists, then branch using its
    committed boundary rather than the operator's memory of the last command.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Walk the procedure from an ordinary, partially completed, and blocked
    entry state using synthetic or otherwise authorized targets.

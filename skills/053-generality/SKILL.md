@@ -39,6 +39,9 @@ and performing distinct task roles (`versatility`).
    without adding a branch per member; confirm with the user/stakeholder.
    Ask at most three questions about the family, invariants, and allowed
    variation before changing the abstraction.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [family-model decisions](./references/design-guide.md)
    when replacing named-case dispatch with a common representation.
@@ -46,6 +49,8 @@ and performing distinct task roles (`versatility`).
    model data rather than hard-code a new member name.
    If a case violates the common operation's assumptions, then exclude it or
    revise the family explicitly instead of forcing it through a misleading default.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise contrasting family members through the same operation and
    inspect both the abstraction and callers for hidden named-case branches.

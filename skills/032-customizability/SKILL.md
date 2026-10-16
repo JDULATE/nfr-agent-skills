@@ -48,6 +48,9 @@ contextual fitting (`tailorability`), and existing-hook admission (`extensibilit
    Proceed to an authoring-boundary design without assuming a plugin contract exists.
    If no scope is supplied, then propose the illustrative artifact above and confirm
    with the user/stakeholder before adopting its form or coverage.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [authoring patterns](./references/design-patterns.md) when
    separating authored artifacts from built-ins and defining revision/validation behavior.
@@ -55,6 +58,8 @@ contextual fitting (`tailorability`), and existing-hook admission (`extensibilit
    contract decision rather than reaching into private host state for this customer.
    If authors need a newly built hook, then expose that core work separately;
    do not claim a hardcoded customer branch proves stakeholder authoring works.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Supply an independently edited artifact through the normal selection
    path; compare its result with the authored expectation and rejected-artifact cases.

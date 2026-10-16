@@ -36,6 +36,9 @@ how to establish a requirement (`verifiability`).
    defaults: a typed state vocabulary, explicit transition table, and rejection
    meaning for unlisted transitions; confirm with the user/stakeholder.
    Do not imply that adopting this notation establishes implementation correctness.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [notation decisions](./references/design-guide.md)
    when selecting prose constraints, a transition table, or a stricter grammar.
@@ -43,6 +46,8 @@ how to establish a requirement (`verifiability`).
    If the same symbol has incompatible meanings, then separate the names or scopes.
    If a checker forces a new semantic decision, then surface that decision instead
    of treating its default as the stakeholder's requirement.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Interpret concrete valid, invalid, boundary, and omitted cases using
    only the notation record. Compare the readings with source contracts.

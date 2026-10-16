@@ -48,6 +48,9 @@ result and measurement envelope; distinguish resource per useful result
    and outcome rules; and target, environment or constraints. Continue to a measured-path design.
    If no criterion exists, then offer the illustrative elapsed-time trial and
    confirm with the user/stakeholder before accepting its percentile, budget or workload.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [operation-envelope practices](./references/design-patterns.md)
    when inspecting queues, dependency work, data access or space growth.
@@ -57,6 +60,8 @@ result and measurement envelope; distinguish resource per useful result
    check the confirmed constraints instead of declaring a latency-only improvement sufficient.
    If independent lookups dominate completion, then test bounded batching; if
    materialization breaches space, then stream private pages before final publication.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Generate the declared offered workload, inspect correct completion,
    raw elapsed outcomes, unfinished/rejected work and scoped space peaks.

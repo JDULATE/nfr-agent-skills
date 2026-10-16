@@ -47,6 +47,9 @@ and accommodating changed operating conditions (`adaptability`).
    Proceed to a reversible plan alternative without approving commitments yourself.
    If no target is supplied, then offer the illustrative planning bound above
    and confirm with the user/stakeholder; do not imply that it commits delivery time.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [response patterns](./references/design-patterns.md) when
    slicing an urgent outcome or preserving interrupted work.
@@ -54,6 +57,8 @@ and accommodating changed operating conditions (`adaptability`).
    the owner's explicit constraint decision rather than calling the omission agility.
    If the new order blocks another commitment, then expose its displaced result,
    restart condition, and owner before presenting the revised plan as feasible.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Replay a priority event through plan revision and a scoped delivery
    rehearsal; compare commitments and gate evidence before and after the event.

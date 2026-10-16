@@ -50,6 +50,9 @@ function (`augmentability`) and a sequence of future changes (`evolvability`).
    change. Start a refinement design without pretending an unapproved metric is accepted.
    If a formal target is absent, then offer the illustrative error reduction above
    and confirm with the user/stakeholder; choose another metric when errors do not apply.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Consult [refinement patterns](./references/design-patterns.md)
    when isolating a strategy, comparing candidate results, or staging adoption.
@@ -57,6 +60,8 @@ function (`augmentability`) and a sequence of future changes (`evolvability`).
    expose those edits before claiming that surface admits the refinement.
    If a candidate helps the aggregate but harms a protected group, then expose
    that trade-off and retain the baseline path until the owner resolves it.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Replay a matched corpus through baseline and candidate implementations;
    compare quality and protected cases, then reconcile the adoption diff with

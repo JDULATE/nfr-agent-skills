@@ -36,6 +36,9 @@ the analysis those artifacts support.
    map the named change through known consumers and give each causal candidate a
    supporting or contradicting check; confirm with the user/stakeholder.
    Leave unsupported edges and unexamined consumers explicitly open.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [analysis design](./references/design-guide.md) when
    selecting boundary maps, consumer inventories, or hypothesis checks.
@@ -44,6 +47,8 @@ the analysis those artifacts support.
    check whose outcomes discriminate them before selecting a repair.
    Add focused contract checks or missing dependency documentation as warranted;
    do not rewrite an implementation merely because it appears in the graph.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Follow each reported impact through an actual reference or configured
    interaction. Compare causal candidates with the discriminating fixture.

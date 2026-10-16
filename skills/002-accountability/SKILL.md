@@ -46,6 +46,9 @@ artifact relationships (`traceability`), and identity hiding (`anonymity`).
    and evidence access, lifetime or acceptance cases. Continue to a scoped event design.
    If no criterion exists, then offer the illustrative false-attribution gate and
    confirm with the user/stakeholder before adopting its identity/scenario limits.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [attribution practices](./references/design-patterns.md)
    when binding identity at entry, propagating delegation, or recording outcomes.
@@ -53,6 +56,8 @@ artifact relationships (`traceability`), and identity hiding (`anonymity`).
    separately; do not replace responsibility with the last service account name.
    If a caller supplies an actor label, then distinguish it from trusted identity
    before recording it as attribution evidence.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise direct, delegated, shared, unknown-origin, and failed-action
    traces; compare identity assertions with actual action/effect records.

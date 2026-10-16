@@ -49,6 +49,9 @@ a combined reliance case (`dependability`), and maintenance effort (`maintainabi
    Continue to a versioned experience ledger without fabricating missing episodes.
    If no review window exists, then offer the illustrative history window and
    confirm with the user/stakeholder before treating it as sufficient coverage.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [operational-history practices](./references/design-patterns.md)
    when mapping exposure, recurring defects, and verified repairs.
@@ -56,6 +59,8 @@ a combined reliance case (`dependability`), and maintenance effort (`maintainabi
    code fix from demonstrated operating improvement and identify the missing evidence.
    If the same failure returns under a new ticket, then link the recurrence;
    resetting identifiers must not make the experience record look resolved.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Reconcile releases, actual episodes, defect identity, fix revisions,
    reproductions, and post-fix use; inspect gaps and contradictory incidents.

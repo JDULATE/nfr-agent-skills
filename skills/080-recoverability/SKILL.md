@@ -49,6 +49,9 @@ essential mission continuity during severe disruption (`survivability`).
    Continue to an isolated procedure design, retaining missing credentials or state decisions.
    If no time target exists, then offer the illustrative recovery trial and
    confirm with the user/stakeholder before adopting its deadline or endpoint.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [restoration practices](./references/design-patterns.md)
    when selecting coherent restore inputs, dependency order, or replay reconciliation.
@@ -56,6 +59,8 @@ essential mission continuity during severe disruption (`survivability`).
    resuming writes rather than claiming recovery from a successful import alone.
    If an essential restore dependency lies in the disrupted boundary, then design
    and test its recovery route; a runbook cannot assume its own unavailable prerequisites.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse from declared disruption through restored state, replay,
    validation, and the actual journey; retain every elapsed milestone.

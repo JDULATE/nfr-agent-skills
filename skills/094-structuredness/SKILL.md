@@ -38,6 +38,9 @@ and consistent presentation among peers (`uniformity`).
    confirm with the user/stakeholder.
    Ask at most three questions about intended roles, permitted relationships,
    and exceptional dependencies before reorganizing source.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [organization decisions](./references/design-guide.md)
    when relocating translation, changing dependency direction, or checking cycles.
@@ -45,6 +48,8 @@ and consistent presentation among peers (`uniformity`).
    at the boundary or introduce an appropriate domain-owned abstraction.
    If only directories move while forbidden edges remain, then continue to
    repair or report the dependency violation instead of accepting the layout.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Reconstruct imports and relevant runtime edges after the change,
    checking the declared direction rules and any prohibited cycles.

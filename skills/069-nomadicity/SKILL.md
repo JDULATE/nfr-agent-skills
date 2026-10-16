@@ -36,6 +36,9 @@ declared pause and reconnection; distinguish activity continuing during movement
    preserve the requested task snapshot, rebind confirmed resources after reconnect,
    and verify an actual resumed edit; confirm with the user/stakeholder.
    Ask for any resumption deadline rather than guessing a universal duration.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [post-relocation decisions](./references/design-guide.md)
    when choosing saved context, resource rebinding, or resume validation.
@@ -44,6 +47,8 @@ declared pause and reconnection; distinguish activity continuing during movement
    revalidate and surface the decision before applying saved writes.
    If the task cannot be resumed, then preserve its context and explain the gap
    instead of opening an empty task as if nothing had been lost.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Save the task, suspend, relocate, reconnect, and perform the required
    action from the saved context. Inspect local and remote work after resumption.

@@ -10,7 +10,7 @@ An earlier fresh session could not read the files because CLI policy blocked its
 
 ## Scores against the frozen key
 
-Scoring command: python scripts/score_routing.py routing-results.json
+Scoring command: python scripts/score_routing.py evals/results/routing-results.json
 
 | Group | Correct | Total | Accuracy | Missing |
 | --- | ---: | ---: | ---: | ---: |
@@ -18,7 +18,7 @@ Scoring command: python scripts/score_routing.py routing-results.json
 | vague | 147 | 240 | 61.25% | 0 |
 | user_voice | 7 | 8 | 87.50% | 0 |
 
-Total misses: 94. All 490 ids were answered exactly once using a valid catalogue slug or ask. The raw answer bytes were copied unchanged into routing-results.json.
+Total misses: 94. All 490 ids were answered exactly once using a valid catalogue slug or ask. The raw answer bytes were copied unchanged into evals/results/routing-results.json.
 
 These are misses against the existing key, not adjudicated description defects. The vague labels include cases questioned in the preceding audit. Descriptions, skill bodies, original evals, and their labels are unchanged. No miss has been reclassified.
 
@@ -207,7 +207,7 @@ The key expects ask for every row below. The router instead selected the listed 
 
 ## Evidence and limits
 
-- routing-results.json preserves the fresh router output. evals/routing-session.jsonl preserves its event transcript; evals/routing-run.json records input hashes, session id, CLI version, prompt prefix, no-tool-call check, and usage.
+- evals/results/routing-results.json preserves the fresh router output. evals/routing-session.jsonl preserves its event transcript; evals/routing-run.json records input hashes, session id, CLI version, prompt prefix, no-tool-call check, and usage.
 - reviews/routing-score.json contains the scorer output. The tables above join every miss to its exact prompt; original eval source indices are one-based.
 - This is one routing run against repository-authored prompts and the current descriptions. It is not a general estimate of routing performance.
 - No holdout split, repeat run, model comparison, or description rewrite was performed. One completed set of routing answers was evaluated; the earlier blocked attempt supplied no answers.

@@ -48,6 +48,9 @@ personal-data lifecycle (`privacy`), and active defensive response (`defensibili
    Continue to repository analysis and isolated test design using confirmed scope.
    If no target exists, then offer the illustrative modeled-path gate and confirm
    with the user/stakeholder before treating it as acceptance or broadening validation.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [threat-path practices](./references/design-patterns.md)
    when selecting control placement, trust decisions, or evidence for a misuse path.
@@ -55,6 +58,8 @@ personal-data lifecycle (`privacy`), and active defensive response (`defensibili
    or policy decision, then enforce the confirmed boundary before the protected effect.
    If a proposed control only logs misuse, then state its detection role and
    verify the prevention claim separately; an alert cannot undo an already completed effect.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise modeled misuse and valid-use controls within the authorized
    test boundary; inspect actual asset effects and control behavior, not only tool labels.

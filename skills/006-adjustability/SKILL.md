@@ -63,6 +63,9 @@ distinguish the settings menu (`configurability`), a changed arrangement
    Use labeled proposals for defaultable decisions instead of asking about each.
    Show the settled consolidated block before implementing the authorized minimum;
    do not turn the block into a blanket approval request for ordinary scoped work.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [tuning patterns](./references/design-patterns.md) when
    tracing value precedence, work boundaries, reversal, or exposing a hardcoded value.

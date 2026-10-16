@@ -47,12 +47,17 @@ operating arrangement (`reconfigurability`) under this repository's conventions.
    Proceed to adapter design while unknown meanings remain open.
    If no formal target is given, then use the labeled proposal above and confirm
    with the user/stakeholder before accepting its fixture bound.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [adaptation patterns](./references/design-patterns.md) when
    choosing a normalization boundary or an unsupported-condition response.
    If representations differ but meanings agree, then normalize at that boundary.
    If meanings differ, then obtain a mapping or accepted loss decision instead
    of carrying forward an old-looking but misleading value.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Replay old/new conditions through the actual integration and compare
    domain results, rejection behavior, and selection evidence.

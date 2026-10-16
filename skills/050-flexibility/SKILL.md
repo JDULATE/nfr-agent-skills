@@ -46,6 +46,9 @@ and actually moving between arrangements (`reconfigurability`).
    Proceed to an alternatives design without promising live switching.
    If no choice set is given, then propose the illustrative pair only where
    relevant and confirm with the user/stakeholder before accepting that scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [alternative patterns](./references/design-patterns.md) when
    choosing common obligations, route-specific prerequisites, and selection behavior.
@@ -53,6 +56,8 @@ and actually moving between arrangements (`reconfigurability`).
    before counting them as available options for the intended chooser.
    If live work must move between routes, then separate its transition/state
    requirements under `reconfigurability` from independent route coverage here.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Complete matched tasks separately through each agreed route; compare
    common outcomes and deliberately allowed differences.

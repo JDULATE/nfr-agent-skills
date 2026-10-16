@@ -42,6 +42,9 @@ protection against alteration (`integrity`).
    Do not silently promise instantaneous agreement across all readers.
    Ask at most three grouped questions about authority, comparison semantics,
    and stale/unknown behavior before a practical remediation.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [agreement decisions](./references/design-guide.md)
    when choosing revision-aware reads, snapshot assembly, or semantic comparison.
@@ -49,6 +52,8 @@ protection against alteration (`integrity`).
    state or report the declared unresolved result rather than relabeling the cache.
    If representations use different state names, then compare their agreed
    meanings instead of raw spelling.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Interleave updates and reads through both paths, recording entity,
    revision, returned values, and the selected agreement decision.

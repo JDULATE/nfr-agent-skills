@@ -41,6 +41,9 @@ Separate peer convention alignment from selecting that convention
    with aliases and exceptions visible; confirm with the user/stakeholder.
    Ask at most three questions about comparability, convention authority,
    and caller compatibility before changing interfaces.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [peer-alignment decisions](./references/design-guide.md)
    when normalizing equivalent surfaces or retaining exceptions.
@@ -48,6 +51,8 @@ Separate peer convention alignment from selecting that convention
    explicit rather than renaming them into false equivalence.
    If existing callers require an old name, then define its alias and conflict
    behavior while implementing the canonical path on every in-scope peer.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Apply the same equivalent request to each comparable peer and inspect
    actual handling, docs, aliases, and differences.

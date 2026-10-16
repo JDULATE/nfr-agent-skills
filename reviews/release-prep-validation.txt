@@ -1,0 +1,578 @@
+Release-prep validation outputs
+
+Full validator
+$ python scripts/validate_skills.py
+Checked 115 skill(s); 0 absent todo skill(s); 0 error(s).
+
+Exit code: 0
+
+Full test suite
+$ python -m unittest discover -s tests -v
+test_cli_json_text_warnings_and_errors (test_descriptions.DescriptionTests.test_cli_json_text_warnings_and_errors) ... ok
+test_eval_identity_counts_duplicates_and_siblings_are_validated (test_descriptions.DescriptionTests.test_eval_identity_counts_duplicates_and_siblings_are_validated) ... ok
+test_known_todo_sibling_is_unscored_not_fabricated (test_descriptions.DescriptionTests.test_known_todo_sibling_is_unscored_not_fabricated) ... ok
+test_missing_eval_description_and_insufficient_vague_coverage_fail (test_descriptions.DescriptionTests.test_missing_eval_description_and_insufficient_vague_coverage_fail) ... ok
+test_near_miss_outranks_named_sibling (test_descriptions.DescriptionTests.test_near_miss_outranks_named_sibling) ... ok
+test_only_keeps_all_authored_competitors_and_is_read_only (test_descriptions.DescriptionTests.test_only_keeps_all_authored_competitors_and_is_read_only) ... ok
+test_only_rejects_invalid_unknown_and_todo_ids (test_descriptions.DescriptionTests.test_only_rejects_invalid_unknown_and_todo_ids) ... ok
+test_positive_ties_are_preserved_and_zero_signal_is_not_a_winner (test_descriptions.DescriptionTests.test_positive_ties_are_preserved_and_zero_signal_is_not_a_winner) ... ok
+test_selector_competes_without_changing_nfr_coverage_contract (test_descriptions.DescriptionTests.test_selector_competes_without_changing_nfr_coverage_contract) ... ok
+test_tokenization_and_exact_jaccard (test_descriptions.DescriptionTests.test_tokenization_and_exact_jaccard) ... ok
+test_body_line_limit_and_unfinished_tokens (test_foundation.FoundationTests.test_body_line_limit_and_unfinished_tokens) ... ok
+test_catalog_has_exact_count_range_and_unique_slugs (test_foundation.FoundationTests.test_catalog_has_exact_count_range_and_unique_slugs) ... ok
+test_catalog_rejects_duplicate_ids_slugs_and_wrong_count (test_foundation.FoundationTests.test_catalog_rejects_duplicate_ids_slugs_and_wrong_count) ... ok
+test_citations_activate_with_allowlist_and_require_exact_matches (test_foundation.FoundationTests.test_citations_activate_with_allowlist_and_require_exact_matches) ... ok
+test_cross_skill_copy_detection_in_batch (test_foundation.FoundationTests.test_cross_skill_copy_detection_in_batch) ... ok
+test_description_boundaries (test_foundation.FoundationTests.test_description_boundaries) ... ok
+test_empty_scaffold_passes_but_selected_missing_file_fails (test_foundation.FoundationTests.test_empty_scaffold_passes_but_selected_missing_file_fails) ... ok
+test_generator_dry_run_and_idempotency (test_foundation.FoundationTests.test_generator_dry_run_and_idempotency) ... ok
+test_generator_preserves_both_catalog_and_file_status (test_foundation.FoundationTests.test_generator_preserves_both_catalog_and_file_status) ... ok
+test_index_grouping_status_links_and_determinism (test_foundation.FoundationTests.test_index_grouping_status_links_and_determinism) ... ok
+test_missing_frontmatter_name_description_and_trigger (test_foundation.FoundationTests.test_missing_frontmatter_name_description_and_trigger) ... ok
+test_missing_reordered_and_duplicate_sections (test_foundation.FoundationTests.test_missing_reordered_and_duplicate_sections) ... ok
+test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run (test_foundation.FoundationTests.test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run) ... ok
+test_optional_selector_is_validated_indexed_and_keeps_catalogue_intact (test_foundation.FoundationTests.test_optional_selector_is_validated_indexed_and_keeps_catalogue_intact) ... ok
+test_reference_existence_reference_style_and_one_level_depth (test_foundation.FoundationTests.test_reference_existence_reference_style_and_one_level_depth) ... ok
+test_references_check_nested_directories_and_citations (test_foundation.FoundationTests.test_references_check_nested_directories_and_citations) ... ok
+test_sibling_slugs_must_exist_in_catalogue (test_foundation.FoundationTests.test_sibling_slugs_must_exist_in_catalogue) ... ok
+test_unknown_description_or_reference_sibling_fails_cli (test_foundation.FoundationTests.test_unknown_description_or_reference_sibling_fails_cli) ... ok
+test_valid_fixture_and_frontmatter_variants (test_foundation.FoundationTests.test_valid_fixture_and_frontmatter_variants) ... ok
+test_validator_cli_exit_codes (test_foundation.FoundationTests.test_validator_cli_exit_codes) ... ok
+test_cli_json_text_errors_and_read_only_files (test_score_routing.RoutingScoreTests.test_cli_json_text_errors_and_read_only_files) ... ok
+test_empty_group_and_no_mutation (test_score_routing.RoutingScoreTests.test_empty_group_and_no_mutation) ... ok
+test_extra_result_fields_do_not_score_runner_up (test_score_routing.RoutingScoreTests.test_extra_result_fields_do_not_score_runner_up) ... ok
+test_groups_acceptable_sets_and_exact_choices (test_score_routing.RoutingScoreTests.test_groups_acceptable_sets_and_exact_choices) ... ok
+test_held_out_marker_requires_boolean (test_score_routing.RoutingScoreTests.test_held_out_marker_requires_boolean) ... ok
+test_held_out_partition_outcomes_and_missing_answers (test_score_routing.RoutingScoreTests.test_held_out_partition_outcomes_and_missing_answers) ... ok
+test_key_rejects_conflicting_groups_and_invalid_choices (test_score_routing.RoutingScoreTests.test_key_rejects_conflicting_groups_and_invalid_choices) ... ok
+test_legacy_keys_have_no_held_out_cases (test_score_routing.RoutingScoreTests.test_legacy_keys_have_no_held_out_cases) ... ok
+test_missing_answers_are_misses_with_full_denominators (test_score_routing.RoutingScoreTests.test_missing_answers_are_misses_with_full_denominators) ... ok
+test_results_reject_duplicate_unknown_and_malformed_records (test_score_routing.RoutingScoreTests.test_results_reject_duplicate_unknown_and_malformed_records) ... ok
+test_dry_run_and_invalid_plan_do_not_write (test_workflow_guards.WorkflowGuardTests.test_dry_run_and_invalid_plan_do_not_write) ... ok
+test_equivalent_wording_is_skipped_per_step (test_workflow_guards.WorkflowGuardTests.test_equivalent_wording_is_skipped_per_step) ... ok
+test_transform_preserves_surroundings_and_is_idempotent (test_workflow_guards.WorkflowGuardTests.test_transform_preserves_surroundings_and_is_idempotent) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 2.947s
+
+OK
+
+Exit code: 0
+
+Index
+$ python scripts/build_index.py
+Built INDEX.md with 115 entries.
+
+Exit code: 0
+
+Idempotence preview
+$ python scripts/add_workflow_guards.py --dry-run
+skills/000-nfr-selector/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/001-accessibility-access-control/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/002-accountability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/003-accuracy/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/004-adaptability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/005-additivity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/006-adjustability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/007-affordability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/008-agility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/009-analyzability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/010-anonymity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/011-atomicity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/012-attractiveness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/013-auditability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/014-augmentability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/015-availability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/016-certainty/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/017-changeability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/018-communicativeness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/019-compatibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/020-completeness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/021-complexity-interacting-complexity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/022-composability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/023-comprehensibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/024-comprehensiveness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/025-conciseness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/026-confidentiality/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/027-configurability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/028-conformance/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/029-consistency/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/030-controllability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/031-correctness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/032-customizability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/033-debuggability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/034-decomposability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/035-defensibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/036-demonstrability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/037-dependability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/038-distributivity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/039-durability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/040-effectiveness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/041-efficiency-device-efficiency/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/042-enhanceability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/043-evolvability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/044-expandability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/045-expressiveness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/046-extendability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/047-extensibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/048-fault-failure-tolerance/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/049-feasibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/050-flexibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/051-formality/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/052-functionality/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/053-generality/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/054-immunity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/055-installability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/056-integratability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/057-integrity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/058-interoperability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/059-learnability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/060-legibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/061-likeability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/062-localizability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/063-maintainability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/064-manageability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/065-maturity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/066-measurability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/067-mobility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/068-modifiability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/069-nomadicity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/070-observability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/071-operability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/072-performance-efficiency-time-or-space-bounds/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/073-portability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/074-predictability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/075-privacy/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/076-provability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/077-quality-of-service/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/078-readability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/079-reconfigurability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/080-recoverability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/081-reliability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/082-repeatability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/083-replaceability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/084-replicability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/085-reusability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/086-robustness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/087-safety/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/088-scalability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/089-security-control-and-security/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/090-self-descriptiveness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/091-simplicity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/092-stability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/093-standardizability-standardization-standard/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/094-structuredness/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/095-suitability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/096-supportability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/097-survivability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/098-susceptibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/099-sustainability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/100-tailorability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/101-testability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/102-traceability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/103-trainability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/104-transferability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/105-trustability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/106-understandability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/107-uniformity/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/108-usability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/109-variability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/110-verifiability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/111-versatility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/112-viability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/113-visibility/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+skills/114-wrappability/SKILL.md: Specify=skip-equivalent, Design/Implement=skip-equivalent
+DRY RUN: 0/115 skill files need changes.
+
+Exit code: 0
+
+Skill Creator checker
+000-nfr-selector: PASS - Skill is valid!
+001-accessibility-access-control: PASS - Skill is valid!
+002-accountability: PASS - Skill is valid!
+003-accuracy: PASS - Skill is valid!
+004-adaptability: PASS - Skill is valid!
+005-additivity: PASS - Skill is valid!
+006-adjustability: PASS - Skill is valid!
+007-affordability: PASS - Skill is valid!
+008-agility: PASS - Skill is valid!
+009-analyzability: PASS - Skill is valid!
+010-anonymity: PASS - Skill is valid!
+011-atomicity: PASS - Skill is valid!
+012-attractiveness: PASS - Skill is valid!
+013-auditability: PASS - Skill is valid!
+014-augmentability: PASS - Skill is valid!
+015-availability: PASS - Skill is valid!
+016-certainty: PASS - Skill is valid!
+017-changeability: PASS - Skill is valid!
+018-communicativeness: PASS - Skill is valid!
+019-compatibility: PASS - Skill is valid!
+020-completeness: PASS - Skill is valid!
+021-complexity-interacting-complexity: PASS - Skill is valid!
+022-composability: PASS - Skill is valid!
+023-comprehensibility: PASS - Skill is valid!
+024-comprehensiveness: PASS - Skill is valid!
+025-conciseness: PASS - Skill is valid!
+026-confidentiality: PASS - Skill is valid!
+027-configurability: PASS - Skill is valid!
+028-conformance: PASS - Skill is valid!
+029-consistency: PASS - Skill is valid!
+030-controllability: PASS - Skill is valid!
+031-correctness: PASS - Skill is valid!
+032-customizability: PASS - Skill is valid!
+033-debuggability: PASS - Skill is valid!
+034-decomposability: PASS - Skill is valid!
+035-defensibility: PASS - Skill is valid!
+036-demonstrability: PASS - Skill is valid!
+037-dependability: PASS - Skill is valid!
+038-distributivity: PASS - Skill is valid!
+039-durability: PASS - Skill is valid!
+040-effectiveness: PASS - Skill is valid!
+041-efficiency-device-efficiency: PASS - Skill is valid!
+042-enhanceability: PASS - Skill is valid!
+043-evolvability: PASS - Skill is valid!
+044-expandability: PASS - Skill is valid!
+045-expressiveness: PASS - Skill is valid!
+046-extendability: PASS - Skill is valid!
+047-extensibility: PASS - Skill is valid!
+048-fault-failure-tolerance: PASS - Skill is valid!
+049-feasibility: PASS - Skill is valid!
+050-flexibility: PASS - Skill is valid!
+051-formality: PASS - Skill is valid!
+052-functionality: PASS - Skill is valid!
+053-generality: PASS - Skill is valid!
+054-immunity: PASS - Skill is valid!
+055-installability: PASS - Skill is valid!
+056-integratability: PASS - Skill is valid!
+057-integrity: PASS - Skill is valid!
+058-interoperability: PASS - Skill is valid!
+059-learnability: PASS - Skill is valid!
+060-legibility: PASS - Skill is valid!
+061-likeability: PASS - Skill is valid!
+062-localizability: PASS - Skill is valid!
+063-maintainability: PASS - Skill is valid!
+064-manageability: PASS - Skill is valid!
+065-maturity: PASS - Skill is valid!
+066-measurability: PASS - Skill is valid!
+067-mobility: PASS - Skill is valid!
+068-modifiability: PASS - Skill is valid!
+069-nomadicity: PASS - Skill is valid!
+070-observability: PASS - Skill is valid!
+071-operability: PASS - Skill is valid!
+072-performance-efficiency-time-or-space-bounds: PASS - Skill is valid!
+073-portability: PASS - Skill is valid!
+074-predictability: PASS - Skill is valid!
+075-privacy: PASS - Skill is valid!
+076-provability: PASS - Skill is valid!
+077-quality-of-service: PASS - Skill is valid!
+078-readability: PASS - Skill is valid!
+079-reconfigurability: PASS - Skill is valid!
+080-recoverability: PASS - Skill is valid!
+081-reliability: PASS - Skill is valid!
+082-repeatability: PASS - Skill is valid!
+083-replaceability: PASS - Skill is valid!
+084-replicability: PASS - Skill is valid!
+085-reusability: PASS - Skill is valid!
+086-robustness: PASS - Skill is valid!
+087-safety: PASS - Skill is valid!
+088-scalability: PASS - Skill is valid!
+089-security-control-and-security: PASS - Skill is valid!
+090-self-descriptiveness: PASS - Skill is valid!
+091-simplicity: PASS - Skill is valid!
+092-stability: PASS - Skill is valid!
+093-standardizability-standardization-standard: PASS - Skill is valid!
+094-structuredness: PASS - Skill is valid!
+095-suitability: PASS - Skill is valid!
+096-supportability: PASS - Skill is valid!
+097-survivability: PASS - Skill is valid!
+098-susceptibility: PASS - Skill is valid!
+099-sustainability: PASS - Skill is valid!
+100-tailorability: PASS - Skill is valid!
+101-testability: PASS - Skill is valid!
+102-traceability: PASS - Skill is valid!
+103-trainability: PASS - Skill is valid!
+104-transferability: PASS - Skill is valid!
+105-trustability: PASS - Skill is valid!
+106-understandability: PASS - Skill is valid!
+107-uniformity: PASS - Skill is valid!
+108-usability: PASS - Skill is valid!
+109-variability: PASS - Skill is valid!
+110-verifiability: PASS - Skill is valid!
+111-versatility: PASS - Skill is valid!
+112-viability: PASS - Skill is valid!
+113-visibility: PASS - Skill is valid!
+114-wrappability: PASS - Skill is valid!
+Skill Creator checker: 115/115 passed.
+
+LF normalization
+The first renormalize attempt required staging the two moved-file deletions first.
+git add --update -- [the two original result paths]: exit 0
+git add --renormalize .: exit 0
+git diff --cached --check: exit 0
+
+Final personal-info scan
+All tracked UTF-8 text files were searched using every requested literal, case-insensitively.
+81 matching lines; every match was embedded in an unrelated English verb. No personal data or local path hit required an edit.
+Every hit (repository-relative file:line):
+evals/001-accessibility-access-control.json:53 - unrelated verb spelling
+evals/010-anonymity.json:53 - unrelated verb spelling
+evals/026-confidentiality.json:26 - unrelated verb spelling
+evals/routing-fixes-58/description-heuristic.txt:3705 - unrelated verb spelling
+evals/routing-fixes-58/routing-prompts.json:244 - unrelated verb spelling
+evals/routing-fixes/routing-prompts.json:344 - unrelated verb spelling
+evals/routing-prompts.json:680 - unrelated verb spelling
+reviews/batch-1-audit.md:123 - unrelated verb spelling
+reviews/batch-1-audit.md:125 - unrelated verb spelling
+reviews/batch-1-audit.md:268 - unrelated verb spelling
+reviews/batch-1-audit.md:270 - unrelated verb spelling
+reviews/batch-10-audit.md:244 - unrelated verb spelling
+reviews/batch-10-fixes.md:51 - unrelated verb spelling
+reviews/batch-10-fixes.md:85 - unrelated verb spelling
+reviews/batch-10-fixes.md:105 - unrelated verb spelling
+reviews/batch-11-review.md:17 - unrelated verb spelling
+reviews/batch-2-audit.md:125 - unrelated verb spelling
+reviews/batch-2-audit.md:435 - unrelated verb spelling
+reviews/batch-2-review.md:241 - unrelated verb spelling
+reviews/batch-3-review.md:255 - unrelated verb spelling
+reviews/batch-4-review.md:347 - unrelated verb spelling
+reviews/batch-5-review.md:56 - unrelated verb spelling
+reviews/batch-5-review.md:58 - unrelated verb spelling
+reviews/batch-5-review.md:308 - unrelated verb spelling
+reviews/batch-5-review.md:359 - unrelated verb spelling
+reviews/batch-6-review.md:329 - unrelated verb spelling
+reviews/batch-8-audit.md:87 - unrelated verb spelling
+skills/003-accuracy/references/worked-example.md:44 - unrelated verb spelling
+skills/005-additivity/SKILL.md:66 - unrelated verb spelling
+skills/005-additivity/references/design-patterns.md:44 - unrelated verb spelling
+skills/005-additivity/references/design-patterns.md:58 - unrelated verb spelling
+skills/005-additivity/references/worked-example.md:23 - unrelated verb spelling
+skills/012-attractiveness/SKILL.md:89 - unrelated verb spelling
+skills/012-attractiveness/SKILL.md:99 - unrelated verb spelling
+skills/012-attractiveness/SKILL.md:116 - unrelated verb spelling
+skills/012-attractiveness/references/design-patterns.md:10 - unrelated verb spelling
+skills/012-attractiveness/references/worked-example.md:15 - unrelated verb spelling
+skills/012-attractiveness/references/worked-example.md:29 - unrelated verb spelling
+skills/015-availability/references/measurement-contract.md:21 - unrelated verb spelling
+skills/015-availability/references/measurement-contract.md:35 - unrelated verb spelling
+skills/020-completeness/SKILL.md:57 - unrelated verb spelling
+skills/026-confidentiality/references/design-patterns.md:18 - unrelated verb spelling
+skills/034-decomposability/references/design-guide.md:17 - unrelated verb spelling
+skills/034-decomposability/references/worked-example.md:13 - unrelated verb spelling
+skills/034-decomposability/references/worked-example.md:28 - unrelated verb spelling
+skills/034-decomposability/references/worked-example.md:29 - unrelated verb spelling
+skills/034-decomposability/references/worked-example.md:63 - unrelated verb spelling
+skills/034-decomposability/references/worked-example.md:69 - unrelated verb spelling
+skills/036-demonstrability/SKILL.md:78 - unrelated verb spelling
+skills/036-demonstrability/SKILL.md:104 - unrelated verb spelling
+skills/036-demonstrability/SKILL.md:111 - unrelated verb spelling
+skills/036-demonstrability/references/design-guide.md:17 - unrelated verb spelling
+skills/036-demonstrability/references/design-guide.md:31 - unrelated verb spelling
+skills/036-demonstrability/references/worked-example.md:14 - unrelated verb spelling
+skills/036-demonstrability/references/worked-example.md:33 - unrelated verb spelling
+skills/036-demonstrability/references/worked-example.md:48 - unrelated verb spelling
+skills/036-demonstrability/references/worked-example.md:62 - unrelated verb spelling
+skills/036-demonstrability/references/worked-example.md:64 - unrelated verb spelling
+skills/038-distributivity/references/worked-example.md:36 - unrelated verb spelling
+skills/063-maintainability/SKILL.md:18 - unrelated verb spelling
+skills/064-manageability/SKILL.md:83 - unrelated verb spelling
+skills/064-manageability/SKILL.md:107 - unrelated verb spelling
+skills/064-manageability/references/design-guide.md:12 - unrelated verb spelling
+skills/085-reusability/SKILL.md:82 - unrelated verb spelling
+skills/086-robustness/SKILL.md:43 - unrelated verb spelling
+skills/088-scalability/SKILL.md:124 - unrelated verb spelling
+skills/094-structuredness/references/design-guide.md:17 - unrelated verb spelling
+skills/094-structuredness/references/design-guide.md:18 - unrelated verb spelling
+skills/094-structuredness/references/design-guide.md:22 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:10 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:11 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:28 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:29 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:38 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:43 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:51 - unrelated verb spelling
+skills/094-structuredness/references/worked-example.md:53 - unrelated verb spelling
+skills/099-sustainability/references/device-life-example.md:10 - unrelated verb spelling
+skills/099-sustainability/references/device-life-example.md:22 - unrelated verb spelling
+skills/099-sustainability/references/device-life-example.md:43 - unrelated verb spelling
+tests/test_foundation.py:264 - unrelated verb spelling
+
+Final rerun: scripts/validate_skills.py
+Checked 115 skill(s); 0 absent todo skill(s); 0 error(s).
+Exit: 0
+
+Final rerun: -m unittest discover -s tests -v
+test_cli_json_text_warnings_and_errors (test_descriptions.DescriptionTests.test_cli_json_text_warnings_and_errors) ... ok
+test_eval_identity_counts_duplicates_and_siblings_are_validated (test_descriptions.DescriptionTests.test_eval_identity_counts_duplicates_and_siblings_are_validated) ... ok
+test_known_todo_sibling_is_unscored_not_fabricated (test_descriptions.DescriptionTests.test_known_todo_sibling_is_unscored_not_fabricated) ... ok
+test_missing_eval_description_and_insufficient_vague_coverage_fail (test_descriptions.DescriptionTests.test_missing_eval_description_and_insufficient_vague_coverage_fail) ... ok
+test_near_miss_outranks_named_sibling (test_descriptions.DescriptionTests.test_near_miss_outranks_named_sibling) ... ok
+test_only_keeps_all_authored_competitors_and_is_read_only (test_descriptions.DescriptionTests.test_only_keeps_all_authored_competitors_and_is_read_only) ... ok
+test_only_rejects_invalid_unknown_and_todo_ids (test_descriptions.DescriptionTests.test_only_rejects_invalid_unknown_and_todo_ids) ... ok
+test_positive_ties_are_preserved_and_zero_signal_is_not_a_winner (test_descriptions.DescriptionTests.test_positive_ties_are_preserved_and_zero_signal_is_not_a_winner) ... ok
+test_selector_competes_without_changing_nfr_coverage_contract (test_descriptions.DescriptionTests.test_selector_competes_without_changing_nfr_coverage_contract) ... ok
+test_tokenization_and_exact_jaccard (test_descriptions.DescriptionTests.test_tokenization_and_exact_jaccard) ... ok
+test_body_line_limit_and_unfinished_tokens (test_foundation.FoundationTests.test_body_line_limit_and_unfinished_tokens) ... ok
+test_catalog_has_exact_count_range_and_unique_slugs (test_foundation.FoundationTests.test_catalog_has_exact_count_range_and_unique_slugs) ... ok
+test_catalog_rejects_duplicate_ids_slugs_and_wrong_count (test_foundation.FoundationTests.test_catalog_rejects_duplicate_ids_slugs_and_wrong_count) ... ok
+test_citations_activate_with_allowlist_and_require_exact_matches (test_foundation.FoundationTests.test_citations_activate_with_allowlist_and_require_exact_matches) ... ok
+test_cross_skill_copy_detection_in_batch (test_foundation.FoundationTests.test_cross_skill_copy_detection_in_batch) ... ok
+test_description_boundaries (test_foundation.FoundationTests.test_description_boundaries) ... ok
+test_empty_scaffold_passes_but_selected_missing_file_fails (test_foundation.FoundationTests.test_empty_scaffold_passes_but_selected_missing_file_fails) ... ok
+test_generator_dry_run_and_idempotency (test_foundation.FoundationTests.test_generator_dry_run_and_idempotency) ... ok
+test_generator_preserves_both_catalog_and_file_status (test_foundation.FoundationTests.test_generator_preserves_both_catalog_and_file_status) ... ok
+test_index_grouping_status_links_and_determinism (test_foundation.FoundationTests.test_index_grouping_status_links_and_determinism) ... ok
+test_missing_frontmatter_name_description_and_trigger (test_foundation.FoundationTests.test_missing_frontmatter_name_description_and_trigger) ... ok
+test_missing_reordered_and_duplicate_sections (test_foundation.FoundationTests.test_missing_reordered_and_duplicate_sections) ... ok
+test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run (test_foundation.FoundationTests.test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run) ... ok
+test_optional_selector_is_validated_indexed_and_keeps_catalogue_intact (test_foundation.FoundationTests.test_optional_selector_is_validated_indexed_and_keeps_catalogue_intact) ... ok
+test_reference_existence_reference_style_and_one_level_depth (test_foundation.FoundationTests.test_reference_existence_reference_style_and_one_level_depth) ... ok
+test_references_check_nested_directories_and_citations (test_foundation.FoundationTests.test_references_check_nested_directories_and_citations) ... ok
+test_sibling_slugs_must_exist_in_catalogue (test_foundation.FoundationTests.test_sibling_slugs_must_exist_in_catalogue) ... ok
+test_unknown_description_or_reference_sibling_fails_cli (test_foundation.FoundationTests.test_unknown_description_or_reference_sibling_fails_cli) ... ok
+test_valid_fixture_and_frontmatter_variants (test_foundation.FoundationTests.test_valid_fixture_and_frontmatter_variants) ... ok
+test_validator_cli_exit_codes (test_foundation.FoundationTests.test_validator_cli_exit_codes) ... ok
+test_cli_json_text_errors_and_read_only_files (test_score_routing.RoutingScoreTests.test_cli_json_text_errors_and_read_only_files) ... ok
+test_empty_group_and_no_mutation (test_score_routing.RoutingScoreTests.test_empty_group_and_no_mutation) ... ok
+test_extra_result_fields_do_not_score_runner_up (test_score_routing.RoutingScoreTests.test_extra_result_fields_do_not_score_runner_up) ... ok
+test_groups_acceptable_sets_and_exact_choices (test_score_routing.RoutingScoreTests.test_groups_acceptable_sets_and_exact_choices) ... ok
+test_held_out_marker_requires_boolean (test_score_routing.RoutingScoreTests.test_held_out_marker_requires_boolean) ... ok
+test_held_out_partition_outcomes_and_missing_answers (test_score_routing.RoutingScoreTests.test_held_out_partition_outcomes_and_missing_answers) ... ok
+test_key_rejects_conflicting_groups_and_invalid_choices (test_score_routing.RoutingScoreTests.test_key_rejects_conflicting_groups_and_invalid_choices) ... ok
+test_legacy_keys_have_no_held_out_cases (test_score_routing.RoutingScoreTests.test_legacy_keys_have_no_held_out_cases) ... ok
+test_missing_answers_are_misses_with_full_denominators (test_score_routing.RoutingScoreTests.test_missing_answers_are_misses_with_full_denominators) ... ok
+test_results_reject_duplicate_unknown_and_malformed_records (test_score_routing.RoutingScoreTests.test_results_reject_duplicate_unknown_and_malformed_records) ... ok
+test_dry_run_and_invalid_plan_do_not_write (test_workflow_guards.WorkflowGuardTests.test_dry_run_and_invalid_plan_do_not_write) ... ok
+test_equivalent_wording_is_skipped_per_step (test_workflow_guards.WorkflowGuardTests.test_equivalent_wording_is_skipped_per_step) ... ok
+test_transform_preserves_surroundings_and_is_idempotent (test_workflow_guards.WorkflowGuardTests.test_transform_preserves_surroundings_and_is_idempotent) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 2.882s
+
+OK
+Exit: 0
+
+Final rerun: scripts/build_index.py
+Built INDEX.md with 115 entries.
+Exit: 0
+
+Final Skill Creator checker rerun
+skills\000-nfr-selector: PASS - Skill is valid!
+skills\001-accessibility-access-control: PASS - Skill is valid!
+skills\002-accountability: PASS - Skill is valid!
+skills\003-accuracy: PASS - Skill is valid!
+skills\004-adaptability: PASS - Skill is valid!
+skills\005-additivity: PASS - Skill is valid!
+skills\006-adjustability: PASS - Skill is valid!
+skills\007-affordability: PASS - Skill is valid!
+skills\008-agility: PASS - Skill is valid!
+skills\009-analyzability: PASS - Skill is valid!
+skills\010-anonymity: PASS - Skill is valid!
+skills\011-atomicity: PASS - Skill is valid!
+skills\012-attractiveness: PASS - Skill is valid!
+skills\013-auditability: PASS - Skill is valid!
+skills\014-augmentability: PASS - Skill is valid!
+skills\015-availability: PASS - Skill is valid!
+skills\016-certainty: PASS - Skill is valid!
+skills\017-changeability: PASS - Skill is valid!
+skills\018-communicativeness: PASS - Skill is valid!
+skills\019-compatibility: PASS - Skill is valid!
+skills\020-completeness: PASS - Skill is valid!
+skills\021-complexity-interacting-complexity: PASS - Skill is valid!
+skills\022-composability: PASS - Skill is valid!
+skills\023-comprehensibility: PASS - Skill is valid!
+skills\024-comprehensiveness: PASS - Skill is valid!
+skills\025-conciseness: PASS - Skill is valid!
+skills\026-confidentiality: PASS - Skill is valid!
+skills\027-configurability: PASS - Skill is valid!
+skills\028-conformance: PASS - Skill is valid!
+skills\029-consistency: PASS - Skill is valid!
+skills\030-controllability: PASS - Skill is valid!
+skills\031-correctness: PASS - Skill is valid!
+skills\032-customizability: PASS - Skill is valid!
+skills\033-debuggability: PASS - Skill is valid!
+skills\034-decomposability: PASS - Skill is valid!
+skills\035-defensibility: PASS - Skill is valid!
+skills\036-demonstrability: PASS - Skill is valid!
+skills\037-dependability: PASS - Skill is valid!
+skills\038-distributivity: PASS - Skill is valid!
+skills\039-durability: PASS - Skill is valid!
+skills\040-effectiveness: PASS - Skill is valid!
+skills\041-efficiency-device-efficiency: PASS - Skill is valid!
+skills\042-enhanceability: PASS - Skill is valid!
+skills\043-evolvability: PASS - Skill is valid!
+skills\044-expandability: PASS - Skill is valid!
+skills\045-expressiveness: PASS - Skill is valid!
+skills\046-extendability: PASS - Skill is valid!
+skills\047-extensibility: PASS - Skill is valid!
+skills\048-fault-failure-tolerance: PASS - Skill is valid!
+skills\049-feasibility: PASS - Skill is valid!
+skills\050-flexibility: PASS - Skill is valid!
+skills\051-formality: PASS - Skill is valid!
+skills\052-functionality: PASS - Skill is valid!
+skills\053-generality: PASS - Skill is valid!
+skills\054-immunity: PASS - Skill is valid!
+skills\055-installability: PASS - Skill is valid!
+skills\056-integratability: PASS - Skill is valid!
+skills\057-integrity: PASS - Skill is valid!
+skills\058-interoperability: PASS - Skill is valid!
+skills\059-learnability: PASS - Skill is valid!
+skills\060-legibility: PASS - Skill is valid!
+skills\061-likeability: PASS - Skill is valid!
+skills\062-localizability: PASS - Skill is valid!
+skills\063-maintainability: PASS - Skill is valid!
+skills\064-manageability: PASS - Skill is valid!
+skills\065-maturity: PASS - Skill is valid!
+skills\066-measurability: PASS - Skill is valid!
+skills\067-mobility: PASS - Skill is valid!
+skills\068-modifiability: PASS - Skill is valid!
+skills\069-nomadicity: PASS - Skill is valid!
+skills\070-observability: PASS - Skill is valid!
+skills\071-operability: PASS - Skill is valid!
+skills\072-performance-efficiency-time-or-space-bounds: PASS - Skill is valid!
+skills\073-portability: PASS - Skill is valid!
+skills\074-predictability: PASS - Skill is valid!
+skills\075-privacy: PASS - Skill is valid!
+skills\076-provability: PASS - Skill is valid!
+skills\077-quality-of-service: PASS - Skill is valid!
+skills\078-readability: PASS - Skill is valid!
+skills\079-reconfigurability: PASS - Skill is valid!
+skills\080-recoverability: PASS - Skill is valid!
+skills\081-reliability: PASS - Skill is valid!
+skills\082-repeatability: PASS - Skill is valid!
+skills\083-replaceability: PASS - Skill is valid!
+skills\084-replicability: PASS - Skill is valid!
+skills\085-reusability: PASS - Skill is valid!
+skills\086-robustness: PASS - Skill is valid!
+skills\087-safety: PASS - Skill is valid!
+skills\088-scalability: PASS - Skill is valid!
+skills\089-security-control-and-security: PASS - Skill is valid!
+skills\090-self-descriptiveness: PASS - Skill is valid!
+skills\091-simplicity: PASS - Skill is valid!
+skills\092-stability: PASS - Skill is valid!
+skills\093-standardizability-standardization-standard: PASS - Skill is valid!
+skills\094-structuredness: PASS - Skill is valid!
+skills\095-suitability: PASS - Skill is valid!
+skills\096-supportability: PASS - Skill is valid!
+skills\097-survivability: PASS - Skill is valid!
+skills\098-susceptibility: PASS - Skill is valid!
+skills\099-sustainability: PASS - Skill is valid!
+skills\100-tailorability: PASS - Skill is valid!
+skills\101-testability: PASS - Skill is valid!
+skills\102-traceability: PASS - Skill is valid!
+skills\103-trainability: PASS - Skill is valid!
+skills\104-transferability: PASS - Skill is valid!
+skills\105-trustability: PASS - Skill is valid!
+skills\106-understandability: PASS - Skill is valid!
+skills\107-uniformity: PASS - Skill is valid!
+skills\108-usability: PASS - Skill is valid!
+skills\109-variability: PASS - Skill is valid!
+skills\110-verifiability: PASS - Skill is valid!
+skills\111-versatility: PASS - Skill is valid!
+skills\112-viability: PASS - Skill is valid!
+skills\113-visibility: PASS - Skill is valid!
+skills\114-wrappability: PASS - Skill is valid!
+
+Final scope audit: PASS
+115 descriptions unchanged; body limits and frontmatter keys pass; guard script idempotent.
+Catalogue, selector metadata, agent/contribution instructions, and validator unchanged.
+Both moved result files retain identical Git blobs. A working-copy byte check differed only because of LF normalization; the staged-blob check passed.

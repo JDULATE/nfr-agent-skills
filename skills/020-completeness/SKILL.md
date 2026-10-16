@@ -40,6 +40,9 @@ Separate missing required members from broad explanatory coverage
    reported separately from duplicates; confirm with the user/stakeholder.
    For a fix, ask at most three questions about the universe, member identity,
    and what evidence counts as representation or handling.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [coverage decisions](./references/design-guide.md)
    when changing pagination, identity tracking, or conditional case enumeration.
@@ -47,6 +50,8 @@ Separate missing required members from broad explanatory coverage
    identities directly rather than accepting the count.
    If the universe changes during traversal, then establish an agreed snapshot
    or reconciliation rule before claiming complete coverage.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Enumerate required and observed identities under the declared boundary;
    calculate missing members, duplicates, and unexpected members separately.

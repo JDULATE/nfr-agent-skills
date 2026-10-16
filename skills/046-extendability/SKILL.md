@@ -48,6 +48,9 @@ and greater deployment capacity (`expandability`).
    callers or meanings must remain; and which modules or interface changes are permitted.
    If a numeric change-scope limit is missing, then offer the labeled module-count
    example above and confirm with the user/stakeholder; do not optimize that count by concealment.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [core-addition patterns](./references/design-patterns.md)
    when choosing dispatch ownership; use the receipt example's owner/interface ledger
@@ -56,6 +59,8 @@ and greater deployment capacity (`expandability`).
    then reconsider dispatch ownership or expose that expanded impact for acceptance.
    If creating an extension point is itself requested, then record that core change
    here and separate future extension-without-core-edit claims from creating the point.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise the new result, retained operations, unsupported choices, and
    the changed interface's real callers; inspect the complete dependency diff.

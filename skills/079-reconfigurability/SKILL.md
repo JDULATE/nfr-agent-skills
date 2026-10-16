@@ -47,6 +47,9 @@ scalar tuning (`adjustability`), and independent alternatives (`flexibility`).
    Proceed to a checkpoint design without assuming lossless or interruption-free change.
    If a bound is missing, then offer the illustrative identity-loss bound and
    confirm with the user/stakeholder before accepting its scope or work semantics.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [transition patterns](./references/design-patterns.md) when
    choosing admission boundaries, ownership transfer, or partial-application recovery.
@@ -59,6 +62,8 @@ scalar tuning (`adjustability`), and independent alternatives (`flexibility`).
    from admitting new work to the target rather than silently reinterpreting its state.
    If reversal cannot read state already written under the target, then expose that
    incompatibility and design resume or repair instead of promising file-only rollback.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Carry accepted identities and outputs through start, intermediate
    checkpoints, interrupted application, and target completion.

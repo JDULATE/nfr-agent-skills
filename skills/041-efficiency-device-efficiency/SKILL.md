@@ -47,6 +47,9 @@ workload growth (`scalability`) and stewardship/lifecycle objectives (`sustainab
    conditions; and baseline, target or service constraints. Continue to a scoped change.
    If no target exists, then offer the illustrative resource-reduction trial and
    confirm with the user/stakeholder before accepting its metric or percentage.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [resource-accounting practices](./references/design-patterns.md)
    when eliminating repeated work, choosing reuse or comparing displaced resource costs.
@@ -56,6 +59,8 @@ workload growth (`scalability`) and stewardship/lifecycle objectives (`sustainab
    ratios and service constraints rather than accepting its lower aggregate resource total.
    If repeated decoding dominates CPU, then coalesce equivalent work within the
    useful result; if batch setup dominates small runs, then use the guide's cost crossover.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Run comparable baseline/candidate workloads, validate outputs and
    retain scoped resource consumption, useful work, failed/retried work and conditions.

@@ -50,6 +50,9 @@ harm claim (`robustness`).
    and permitted verification boundaries. Proceed to analysis and a reversible design.
    If no criterion exists, then offer the illustrative prohibited-action gate and
    confirm with the user/stakeholder before using its scenario scope for acceptance.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [harm-control practices](./references/design-patterns.md)
    when locating a decision gate, defining unknown-state behavior, or checking bypasses.
@@ -57,6 +60,8 @@ harm claim (`robustness`).
    action paths and enforce the confirmed constraint at the actual effect boundary.
    If delaying or blocking the action could cause another harm, then expose that
    competing path and seek the responsible decision instead of choosing blanket refusal.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise agreed synthetic hazard scenarios and boundary/timing paths
    in an authorized controlled environment; inspect actual effects, not only warnings.

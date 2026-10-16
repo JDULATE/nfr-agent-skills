@@ -40,6 +40,9 @@ fit of available capabilities to a particular task (`suitability`).
    inferring a wider success rate; confirm with the user/stakeholder.
    Ask at most three questions about the goal, evaluation context, and constraints
    before proposing a workflow change.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [outcome decisions](./references/design-guide.md)
    when connecting a completion signal to the required downstream result.
@@ -47,6 +50,8 @@ fit of available capabilities to a particular task (`suitability`).
    correction, then add or expose that correction path under the confirmed policy.
    If success can increase by weakening the goal, then preserve the original
    outcome definition and report the trade-off rather than relabeling success.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Follow eligible attempts to the actual outcome boundary, recording
    initial state, assistance, failure, and unresolved cases.

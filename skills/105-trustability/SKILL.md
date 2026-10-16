@@ -48,6 +48,9 @@ in a particular output (`certainty`).
    Continue to a claim/decision map without inventing supporting evidence.
    If no criterion exists, then offer the illustrative material-limit gate and
    confirm with the user/stakeholder before adopting its decision/model scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [decision-support practices](./references/design-patterns.md)
    when placing claims, evidence, limits or a delegation boundary.
@@ -55,6 +58,8 @@ in a particular output (`certainty`).
    claim and expose the gap instead of adding reassuring badges or stronger wording.
    If a known limit changes the permitted action, then show it at the relevant
    decision and preserve the actual authority boundary rather than burying it elsewhere.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Walk the stated decision using the intended stakeholder's evidence
    view; inspect support, counterexamples, unknowns and actual granted authority.

@@ -48,6 +48,9 @@ distinguish learning through product use (`learnability`), topic breadth
    Begin a lesson/fixture proposal with unresolved training decisions visible.
    If no assessment target exists, then propose the illustrative case trial and
    confirm with the user/stakeholder before setting the pass rule.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [instruction patterns](./references/design-patterns.md)
    when producing skill-aligned exercises, feedback, and assessment fixtures.
@@ -55,6 +58,8 @@ distinguish learning through product use (`learnability`), topic breadth
    instance while preserving the same target decisions and difficulty assumptions.
    If exercises change shared state, then provide a reset and inspect its result
    so a later learner cannot pass because an earlier learner finished the work.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse lessons and resets against current behavior; check outputs
    and reasoning on separate assessment cases with actual support recorded.

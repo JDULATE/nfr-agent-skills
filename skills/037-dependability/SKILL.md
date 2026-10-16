@@ -49,6 +49,9 @@ concerns; keep single-property acceptance with `reliability`, `availability`, or
    Continue to an evidence-gap map without asserting that the system is dependable.
    If no decision threshold exists, then propose the illustrative counterexample
    gate and confirm with the user/stakeholder before treating it as binding.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [assurance practices](./references/design-patterns.md)
    when linking evidence, finding invalid assumptions, or prioritizing concrete gaps.
@@ -56,6 +59,8 @@ concerns; keep single-property acceptance with `reliability`, `availability`, or
    test, operational, or documentation change; an argument rewrite alone cannot supply it.
    If one mitigation weakens another reliance condition, then expose the conflict
    and seek its owner decision rather than averaging the subclaims into approval.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Challenge each claim against its evidence, operating scope, shared
    assumptions, known incidents, and the actual implementation revision.

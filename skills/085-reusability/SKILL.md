@@ -39,6 +39,9 @@ and preservation of behavior when stages are joined (`composability`).
    without copying its logic; confirm with the user/stakeholder.
    Ask at most three questions about consumer needs, context policy, and allowed
    shared/adapter edits before extracting dependencies.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [context-reuse decisions](./references/design-guide.md)
    when removing ambient request access or separating adapters.
@@ -46,6 +49,8 @@ and preservation of behavior when stages are joined (`composability`).
    dependency through a confirmed contract.
    If the new consumer needs different policy, then keep that policy at its
    boundary rather than silently changing the old consumer's behavior.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Invoke the shared artifact from both actual context paths, checking
    outputs, dependencies, and changed files under the declared adaptation boundary.

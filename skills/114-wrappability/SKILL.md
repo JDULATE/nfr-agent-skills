@@ -40,6 +40,9 @@ Separate wrapping the retained implementation from substituting it
    confirm with the user/stakeholder.
    Ask at most three questions about retained behavior, new-boundary semantics,
    and forbidden changes before designing translation.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [wrapper decisions](./references/design-guide.md)
    when choosing public-operation mapping and result envelopes.
@@ -47,6 +50,8 @@ Separate wrapping the retained implementation from substituting it
    that limitation instead of fabricating success.
    If a call can mutate state and repetition is not established as safe, then
    avoid automatic replay and preserve an indeterminate result when appropriate.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare native and wrapped calls from equivalent initial states,
    checking results, failures, call counts, and actual state effects.

@@ -35,6 +35,9 @@ selected acceptance evidence (`verifiability`) from proving the proposition.
    mathematical-integer reservation model and a nonnegative-balance invariant;
    confirm with the user/stakeholder before treating that model as sufficient.
    List implementation arithmetic and concurrency as separate open obligations.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [proof construction](./references/design-guide.md)
    when selecting an invariant, exposing a missing premise, or repairing a guard.
@@ -43,6 +46,8 @@ selected acceptance evidence (`verifiability`) from proving the proposition.
    who must establish it instead of silently adding it.
    If production arithmetic or interleaving differs from the model, then expand
    the model or narrow the theorem's implementation coverage explicitly.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Check initial-state establishment, preservation for every modeled
    transition, and the argument's link to the actual proposition.

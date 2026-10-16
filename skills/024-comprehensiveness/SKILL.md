@@ -47,6 +47,9 @@ a causal model of the system (`understandability`).
    source evidence; and depth, exclusions, or scope limits. Continue with a topic map.
    If no breadth measure is supplied, then offer the illustrative journey trial
    and confirm with the user/stakeholder before treating its scope as sufficient.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [coverage-mapping practices](./references/design-patterns.md)
    when distinguishing genuine subjects from decorative headings.
@@ -54,6 +57,8 @@ a causal model of the system (`understandability`).
    or record the recovery gap; a setup-only paragraph does not cover operation.
    If the subject is explained elsewhere, then make its location discoverable
    from the relevant guide rather than duplicating an entire chapter.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Trace each retained subject to an actual explanation supporting its
    reader question; inspect adjacent failure and handoff questions for blind spots.

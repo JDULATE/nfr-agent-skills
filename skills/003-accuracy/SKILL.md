@@ -38,6 +38,9 @@ algorithm (`correctness`) and the confidence attached to an output (`certainty`)
    pass/fail left open until tolerance is confirmed; confirm with the user/stakeholder.
    For a practical fix, ask at most three questions about reference authority,
    error/tolerance, and operating conditions before proposing a correction.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [error-reduction decisions](./references/design-guide.md)
    when evaluating conversion, offset correction, or comparison precision.
@@ -45,6 +48,8 @@ algorithm (`correctness`) and the confidence attached to an output (`certainty`)
    parameters from the cases used to evaluate it.
    If the reference uncertainty can change the acceptance decision, then report
    an indeterminate comparison instead of attributing the difference to the system.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare raw observations and corrected outputs with their paired
    reference values under the declared conditions.

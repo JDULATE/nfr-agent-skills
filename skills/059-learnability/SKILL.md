@@ -48,6 +48,9 @@ performance without a learning claim (`usability`).
    hint or onboarding design while scope decisions remain recorded as proposals.
    If no learning criterion exists, then propose the illustrative acquisition
    sequence and confirm with the user/stakeholder before treating it as acceptance.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [acquisition patterns](./references/design-patterns.md)
    when changing progressive hints, safe practice, or transfer probes.
@@ -55,6 +58,8 @@ performance without a learning claim (`usability`).
    so completion cannot masquerade as independently acquired task ability.
    If the practice data repeats in assessment, then change the instance without
    changing the target skill; memorizing an answer is not the intended transfer.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Observe initial and later attempts under the recorded support conditions,
    including an unaided changed-instance attempt where independence is required.

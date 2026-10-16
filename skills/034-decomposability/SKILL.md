@@ -39,6 +39,9 @@ and preservation of behavior when parts are assembled (`composability`).
    into another part's private state; confirm with the user/stakeholder.
    Ask at most three questions about responsibilities, state/coordination,
    and preserved whole behavior before extracting code.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [split decisions](./references/design-guide.md)
    when selecting responsibility cuts and removing hidden dependencies.
@@ -46,6 +49,8 @@ and preservation of behavior when parts are assembled (`composability`).
    required information into an explicit boundary contract or reconsider the cut.
    If an invariant requires a common state owner, then retain that ownership
    rather than forcing a split across an unestablished coordination mechanism.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise each responsibility using only its declared inputs and
    dependencies, then compare the original whole-path behavior.

@@ -48,6 +48,9 @@ menu (`configurability`), and general alternative coverage (`flexibility`).
    Proceed to a recipe alternative while unsupported needs remain explicit gaps.
    If a target is absent, then propose the illustrative fit bound and confirm with
    the user/stakeholder before treating the selected needs or fixtures as complete.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [fit patterns](./references/design-patterns.md) when
    deriving a supported recipe from contextual needs and checking shared obligations.
@@ -55,6 +58,8 @@ menu (`configurability`), and general alternative coverage (`flexibility`).
    priority decision instead of hiding the trade-off in a plausible preset.
    If live work must move to the fitted arrangement, then separate that transition
    under `reconfigurability`; a correct recipe does not prove stateful application.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Apply the recipe from declared starting conditions and exercise the
    stakeholder's tasks, shared outcomes, and unaffected-context controls.

@@ -50,6 +50,9 @@ input behavior (`robustness`).
    Proceed to a fault-path design, keeping unknown independence assumptions visible.
    If no target exists, then offer the illustrative fault trial and confirm with
    the user/stakeholder before adopting its model or continuation criterion.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [continuation patterns](./references/design-patterns.md)
    when designing alternate paths, ownership handoff, or degraded service.
@@ -57,6 +60,8 @@ input behavior (`robustness`).
    boundary or the mechanism; counting replicas cannot supply the missing alternate path.
    If ownership can overlap during failover, then constrain who may commit results
    before enabling a path that could preserve responses while duplicating effects.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Inject the stated fault in a controlled environment while distinguishable
    work crosses the service; inspect results throughout detection and handoff.

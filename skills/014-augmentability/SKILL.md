@@ -48,6 +48,9 @@ result (`enhanceability`) and a general plug-in contract (`extensibility`).
    and allowed data, adoption effects, and timing. Proceed to attachment design.
    If a preservation target is absent, then confirm the illustrative bound above
    with the user/stakeholder before adoption; leave unresolved permissions unimplemented.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Use [attachment patterns](./references/design-patterns.md) when
    choosing separate presentation, a read-only projection, or explicit adoption.
@@ -56,6 +59,8 @@ result (`enhanceability`) and a general plug-in contract (`extensibility`).
    effects with the untouched original, and role replacements with a revised scope.
    If required support introduces a dependency, then record its accepted behavior;
    do not claim optional removal independence from that required arrangement.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare supplemented and failed-helper cases; test original-only and
    removed-helper cases where promised, judging the helper's result separately.

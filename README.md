@@ -1,16 +1,16 @@
-# nfr-agent-skills
+# nfr-agent-skills - v0.1.0 pre-release
 
 114 Non-Functional Requirement (NFR) skills and a selector for choosing among them.
 Each skill helps an agent clarify a concern, propose requirements, make a scoped
 change, and report verification. Browse [INDEX.md](INDEX.md) for the catalogue.
 
-**All 115 skills are drafts.** No release is tagged by this Phase 6 work.
+**v0.1.0 pre-release. All 115 skills are drafts.**
 The terminology boundaries are proposed repository conventions, not standardized
 definitions. These workflows do not establish compliance or production readiness.
 
 ## Use with Codex
 
-Verified against [official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills):
+Verified against [official OpenAI skill documentation](https://developers.openai.com/codex/skills):
 Codex discovers skill names, descriptions, and paths, then reads the full SKILL.md
 when a skill is selected. SKILL.md requires name and description frontmatter.
 Repository discovery scans `.agents/skills` from the working directory up to the
@@ -31,6 +31,10 @@ your-project/
       SKILL.md
       references/
 ```
+
+If you install only skill folders, copy the "Apply the skill" section of this
+repository's AGENTS.md into your own project's AGENTS.md. This repository's
+AGENTS.md is not read from your project merely because the skill folders are installed.
 
 The top-level `skills/` directory in this checkout is not itself a documented
 Codex discovery location. Installing a few relevant skills avoids relying on
@@ -70,13 +74,13 @@ held-out prompts. The held-out result was 11/12; one ambiguous recurring-bug
 prompt chose maturity, where asking the user was judged better. Routing accuracy
 does not demonstrate that the workflows produce better implementations.
 
-Fast paths were exercised in a few scratch runs only, as reported by the user.
+Fast paths were exercised in a few manual scratch runs by the maintainer.
 A no-skills baseline behaved about the same on one task. These observations do
 not establish a benefit over the baseline. Broad real-task workflow coverage,
 independent replication, and deployment-level results are missing.
-Availability and readability retain a repository-specific status frontmatter
-field rejected by the supplemental Skill Creator checker. Their runtime host
-compatibility has not been demonstrated by the repository validator passing.
+Every SKILL.md frontmatter contains only name and description; status remains
+in the catalogue. Runtime host compatibility is not established by repository
+validation alone.
 Development checkouts retain counts, routing provenance, uncertain claims, and
 known weaknesses in `reviews/final-report.md`. Reviews are development evidence
 and are excluded from future Git archive exports.

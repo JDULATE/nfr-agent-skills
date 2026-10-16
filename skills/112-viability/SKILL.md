@@ -40,6 +40,9 @@ fit (`affordability`), and environmental stewardship (`sustainability`).
    are supported, otherwise request a renewal decision; confirm with the user/stakeholder.
    Ask at most three grouped questions on value/horizon, ongoing obligations,
    and renewal or exit authority before proposing changes.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [continuation decisions](./references/design-guide.md)
    when narrowing unvalued output scope or recording renewal evidence.
@@ -47,6 +50,8 @@ fit (`affordability`), and environmental stewardship (`sustainability`).
    then propose removing that output while preserving valued recipient tasks.
    If ownership or future capacity is unresolved, then keep continuation
    conditional rather than assuming delivery success guarantees ongoing support.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Evaluate the declared value and obligation conditions for each recorded
    cycle or scenario, retaining adverse and missing evidence.

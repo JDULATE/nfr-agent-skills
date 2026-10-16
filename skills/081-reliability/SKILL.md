@@ -49,6 +49,9 @@ failure (`recoverability`).
    Proceed to a scoped defect investigation or trial design using proposed fields.
    If no target is given, then offer the illustrative continuous trial and confirm
    with the user/stakeholder before using it as the acceptance gate.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [failure-occurrence practices](./references/design-patterns.md)
    when changing lifecycle behavior, reproducing repeated defects, or retaining failure evidence.
@@ -56,6 +59,8 @@ failure (`recoverability`).
    boundary while fixing the cause; a faster restart is a restoration improvement alone.
    If failures emerge only after sustained use, then reproduce the state progression
    rather than repeatedly testing a newly initialized instance.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Run the declared operating profile across the agreed interval, inspect
    required results, and retain failures, restarts, resets, and observation gaps.

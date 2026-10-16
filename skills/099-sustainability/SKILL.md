@@ -51,6 +51,9 @@ continued stakeholder value (`viability`).
    If the chosen objective is device life instead, then specify usable-service
    and review-event evidence with the user rather than imposing the energy target;
    use the device-life example to propose a bounded continued-service trial.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [stewardship-evidence practices](./references/design-patterns.md)
    when reducing measured work, extending useful operation or comparing lifecycle boundaries.
@@ -60,6 +63,8 @@ continued stakeholder value (`viability`).
    then report the tradeoff as unknown rather than declaring a net environmental improvement.
    If retained working state forces premature retirement of an otherwise accepted
    device profile, then test bounded temporary state against service through its review event.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare the selected objective against equivalent useful output and
    conditions, retaining measured/proxy distinctions, scope and lifecycle exclusions.

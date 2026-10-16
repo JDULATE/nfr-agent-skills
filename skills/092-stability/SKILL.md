@@ -48,6 +48,9 @@ general outcome variation (`predictability`), and ordinary timing targets
    Continue to a bounded control/measurement design with unknown limits visible.
    If no target exists, then propose the illustrative held-input trial and confirm
    with the user/stakeholder before adopting its duration or no-reversal criterion.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [drift-and-oscillation practices](./references/design-patterns.md)
    when choosing transition bands, dwell, measurement alignment, or feedback checks.
@@ -55,6 +58,8 @@ general outcome variation (`predictability`), and ordinary timing targets
    rules against genuine-change response rather than hiding the reversals in an average.
    If control actions alter the measured input, then trace that feedback path
    before adding another independent controller that could amplify the oscillation.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Record held-condition and deliberate-change traces with the same
    sampling and initial-state rules; inspect post-settling drift, reversals, and response.

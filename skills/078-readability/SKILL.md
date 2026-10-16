@@ -2,7 +2,6 @@
 name: readability
 description: >-
   Improves reading representation when asked "reduce nesting", "rename confusing locals", or "reorder sentences". Before routing readability complaints, Ask the user: reading flow, missing concepts, or character recognition? Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).
-status: draft
 ---
 # Readability
 
@@ -62,6 +61,9 @@ unnecessary words for their own sake (`conciseness`).
    using available answers while others are pending.
    If the authoritative meaning conflicts across sources, then show the conflict
    and alternative wording or code rather than silently choosing new behavior.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Replace ambiguous local names with domain terms, expose
    intermediate meanings, and arrange conditions or sentences in reading order.
@@ -69,6 +71,8 @@ unnecessary words for their own sake (`conciseness`).
    If an extraction, guard clause, or reordered sentence changes evaluation order,
    side effects, exception behavior, or obligation strength, then separate that
    change for explicit review instead of presenting it as a readability edit.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare the rewrite against the preserved contract and run relevant
    behavior checks for code or an obligation-by-obligation comparison for prose.

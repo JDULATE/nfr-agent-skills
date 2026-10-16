@@ -49,6 +49,9 @@ all-journey usable-time accounting (`availability`).
    Continue to a mission-path design without claiming an unverified alternate survives.
    If no duration is supplied, then propose the illustrative mission trial and
    confirm with the user/stakeholder before treating its horizon as sufficient.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [essential-mission practices](./references/design-patterns.md)
    when separating optional work, building an alternate, or reconciling handback.
@@ -56,6 +59,8 @@ all-journey usable-time accounting (`availability`).
    then revise the disruption path; physical distance or a manual label cannot supply independence.
    If degraded authority or stale information changes mission consequences, then
    obtain the confirmed constraint before enabling that decision in the alternate mode.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Hold the declared disruption while exercising essential results with
    only the stated surviving resources, then inspect handback state and work.

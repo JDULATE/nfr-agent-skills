@@ -40,6 +40,9 @@ flow without changing design mechanisms (`readability`).
    preserving its contract; confirm with the user/stakeholder.
    Ask at most three grouped questions about the supported purpose, external
    consumers, and future obligations already accepted by the stakeholder.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [removal decisions](./references/design-guide.md)
    when replacing unjustified registries, lifecycle layers, or duplicate paths.
@@ -47,6 +50,8 @@ flow without changing design mechanisms (`readability`).
    rather than preserving an unused selection framework.
    If removal destroys a required extension or lifecycle effect, then keep that
    mechanism or propose a different reduction with the obligation intact.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Compare retained contract cases before/after and inspect the removed
    mechanisms' consumers and effects.

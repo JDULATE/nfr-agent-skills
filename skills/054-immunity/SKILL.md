@@ -47,6 +47,9 @@ distinguish controlled behavior under exposure (`robustness`), locating exposure
    and bypasses, claim criteria or permitted validation. Continue to a bounded path argument.
    If no criterion exists, then offer the illustrative counterexample gate and
    confirm with the user/stakeholder before accepting the exclusion scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [exclusion-argument practices](./references/design-patterns.md)
    when removing an enabling path or checking the assumptions behind it.
@@ -54,6 +57,8 @@ distinguish controlled behavior under exposure (`robustness`), locating exposure
    narrow/withdraw the claim; filtering a few inputs cannot establish mechanism exclusion.
    If exclusion depends on configuration, then encode and verify that condition
    and its invalidation rather than describing the property as unconditional.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Challenge the structural argument with alternate entrypoints,
    assumption violations and synthetic counterexamples in the approved boundary.

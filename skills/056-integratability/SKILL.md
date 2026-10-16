@@ -41,6 +41,9 @@ setup of a supplied deployment (`installability`).
    Count actual tasks, waiting dependencies, and unplanned edits separately.
    For a fix, ask at most three questions covering the desired path, allowed
    change surface, and the supplied prerequisites before moving to design.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [assembly decisions](./references/design-guide.md)
    when introducing bindings, prerequisite validation, or an adapter seam.
@@ -48,6 +51,8 @@ setup of a supplied deployment (`installability`).
    boundary rather than teaching each component every neighbor's settings.
    If a required interface is absent, then expose the missing component work
    and seek a revised boundary instead of counting it as invisible glue.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Assemble from a clean declared state, run the connected smoke path,
    and retain the edit/task ledger and missing-prerequisite outcomes.

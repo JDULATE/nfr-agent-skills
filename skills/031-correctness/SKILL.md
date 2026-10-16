@@ -39,6 +39,9 @@ required-set omissions (`completeness`), and selected-rule checking (`conformanc
    confirm with the user/stakeholder.
    For a practical defect, ask at most three questions covering the authoritative
    rule, relevant boundaries, and permitted side effects before implementing.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [behavior decisions](./references/design-guide.md)
    when fixing predicates, state guards, or result/effect ordering.
@@ -46,6 +49,8 @@ required-set omissions (`completeness`), and selected-rule checking (`conformanc
    and exercise values on both sides as well as equality.
    If the returned result matches but state effects differ, then repair or expose
    that separate contract failure rather than accepting output-only evidence.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Run the specified cases through the actual function or path, capturing
    outputs and before/after state. Retain rejected and failed cases.

@@ -40,6 +40,9 @@ continued value after delivery (`viability`).
    account for unresolved delivery work; confirm with the user/stakeholder.
    Ask at most three questions about deliverable scope, hard constraints,
    and available prerequisites/capacity before designing a probe.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [delivery-candidate decisions](./references/design-guide.md)
    when selecting a constrained prototype or alternate delivery path.
@@ -47,6 +50,8 @@ continued value after delivery (`viability`).
    permitted alternative against the same deliverable instead of weakening the constraint.
    If a spike succeeds but production integration work remains, then keep that
    work in the candidate plan rather than equating the spike with delivery.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Run the blocking probe under the actual declared constraints and
    reconcile remaining tasks, prerequisites, and available capacity.

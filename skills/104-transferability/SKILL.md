@@ -37,6 +37,9 @@ platform migration (`portability`), ongoing protocol exchange
    stage a recipient-usable package, validate links and meaning, and keep the source
    responsibility unchanged until acceptance; confirm with the user/stakeholder.
    Any final authority change remains governed by the existing confirmed policy.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [handoff decisions](./references/design-guide.md)
    when choosing package closure, mapping, recipient staging, or acceptance evidence.
@@ -44,6 +47,8 @@ platform migration (`portability`), ongoing protocol exchange
    them for the recipient. If identities differ, then use a confirmed mapping rather
    than silently dropping an assignee. If acceptance is absent, then retain the
    declared pending state instead of treating export completion as handoff completion.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Import into the declared recipient context and inspect content, links,
    mapped responsibility, and the usable result. Exercise a missing-asset case.

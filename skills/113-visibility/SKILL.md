@@ -37,6 +37,9 @@ timely notifications (`communicativeness`), and deciding permissions
    show the requested subject's observed state, observation time, and stale/unknown
    marker under existing permissions; confirm with the user/stakeholder.
    Ask the user for a freshness budget if elapsed time determines acceptability.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [status projection design](./references/design-guide.md)
    when choosing audience scoping, freshness labels, or state projection.
@@ -44,6 +47,8 @@ timely notifications (`communicativeness`), and deciding permissions
    audience and subject identity. If the source is stale, then retain its last
    observation with a stale marker rather than relabeling it current.
    If no source exists, then show unknown rather than an invented starting state.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Open the view for the intended audience with fresh, stale, missing,
    and wrong-subject fixture records. Inspect what is actually visible.

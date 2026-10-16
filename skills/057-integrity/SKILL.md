@@ -50,6 +50,9 @@ agreement (`consistency`).
    Continue to a constrained write/import design without inventing the authoritative value.
    If no criterion exists, then offer the illustrative prohibited-alteration gate
    and confirm with the user/stakeholder before adopting its fixture/threat scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [alteration-control practices](./references/design-patterns.md)
    when constraining writes, validating provenance, or rejecting obsolete updates.
@@ -57,6 +60,8 @@ agreement (`consistency`).
    an independent trust anchor; matching attacker-controlled values cannot establish trusted origin.
    If a stale writer can overwrite a newer approved state, then enforce the
    confirmed version/transition rule at the actual mutation boundary, not only in the editor.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Attempt prohibited field changes, altered/untrusted artifacts, stale
    updates, and legitimate corrections; inspect actual state and mismatch evidence.

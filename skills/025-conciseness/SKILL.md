@@ -47,6 +47,9 @@ set; distinguish following structure (`readability`), conceptual explanation
    Proceed to a deletion/merge proposal before treating a reduction as accepted.
    If no number is supplied, then propose the labeled prose target only where
    applicable and confirm with the user/stakeholder; reject cuts that lose meaning.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [reduction patterns](./references/design-patterns.md) when
    merging repeated claims, trimming framing, or preserving essential qualifiers.
@@ -54,6 +57,8 @@ set; distinguish following structure (`readability`), conceptual explanation
    distinction rather than merging by surface similarity.
    If a shorter name or extraction adds glossary lookup or cross-file chasing,
    then include that displaced reading cost instead of claiming a local length win.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Recount using the same procedure and map every retained proposition
    into the shortened artifact, including negative and boundary cases.

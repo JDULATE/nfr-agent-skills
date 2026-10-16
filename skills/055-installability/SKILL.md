@@ -36,6 +36,9 @@ deployment (`availability`) from the installation lifecycle itself.
    stage app-owned artifacts before activation, preserve user data, and track owned
    resources for removal; confirm with the user/stakeholder.
    Keep data-schema rollback and service interruption as separate explicit decisions.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [installation decisions](./references/design-guide.md)
    when selecting staging, activation, resource ownership, or cleanup behavior.
@@ -43,6 +46,8 @@ deployment (`availability`) from the installation lifecycle itself.
    the unresolved dependency. If an upgrade fails while staging, then retain the
    known installed version and expose the partial resources for controlled cleanup.
    If removal encounters an unowned resource, then retain it pending an ownership decision.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Rehearse clean install, supported upgrade, interrupted staging, and
    removal on synthetic or otherwise authorized targets. Inspect registrations and data.

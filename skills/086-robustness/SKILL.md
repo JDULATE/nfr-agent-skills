@@ -49,6 +49,9 @@ coordination (`security-control-and-security`).
    Continue to a bounded parser/admission/error-path design with unknown limits explicit.
    If no target exists, then offer the illustrative response trial and confirm
    with the user/stakeholder before using its interval or rejection policy.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [bounded-response patterns](./references/design-patterns.md)
    when locating early limits, partial-effect cleanup, or shared-budget isolation.
@@ -56,6 +59,8 @@ coordination (`security-control-and-security`).
    that expansion or bound the expansion itself; catching its final error is insufficient.
    If failed work reserves state/resources, then release or reconcile them under
    the actual lifecycle so repeated bad requests cannot silently consume the service.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise adverse inputs and stress at the declared boundary while
    inspecting rejected work, resource use, unaffected results, and post-exposure state.

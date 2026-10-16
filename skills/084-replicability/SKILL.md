@@ -36,6 +36,9 @@ needed for an independent attempt; distinguish reruns in the original setup
    publish the requested procedure's inputs and semantic settings, use a clean
    independent workspace, and compare the required result; confirm with the user/stakeholder.
    Fix the result equivalence rule before either outcome is inspected.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [reconstruction design](./references/design-guide.md)
    when eliminating hidden defaults, private resources, or copied results.
@@ -44,6 +47,8 @@ needed for an independent attempt; distinguish reruns in the original setup
    declared inputs or limit the independence claim.
    If setup needs assistance, then record the intervention and repair the package
    before claiming an unassisted reconstruction.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Have the independent executor reconstruct from the supplied package
    without the original working directory, then compare the retained actual output.

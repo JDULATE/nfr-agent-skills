@@ -36,6 +36,9 @@ repeated execution of this procedure in this setup.
    3 sequential runs from the same recorded initial state with exact comparison
    of the required result; confirm with the user/stakeholder.
    Separate meaningful result fields from variable metadata before collecting runs.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [rerun design](./references/design-guide.md) when
    deciding whether reset, isolation, or explicit nondeterministic inputs are needed.
@@ -44,6 +47,8 @@ repeated execution of this procedure in this setup.
    value rather than erasing it to obtain matching outputs.
    If result order is irrelevant by contract, then define a comparison that
    preserves multiplicity and required content instead of sorting away a defect.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Execute the predeclared rerun sequence and retain every result,
    failure, timeout, initial-state snapshot, and deviation from held conditions.

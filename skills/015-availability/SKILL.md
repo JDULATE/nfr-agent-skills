@@ -2,7 +2,6 @@
 name: availability
 description: >-
   Measures usable journey time when asked "count checkout downtime", "keep sessions on deploy", or "measure service readiness". Before routing uptime concerns, Ask the user: usable journeys, process health, or failures? Not for failure-free operation (see reliability) or restoring usable state (see recoverability).
-status: draft
 ---
 # Availability
 
@@ -61,6 +60,9 @@ the required service is usable now.
    Use available answers and proceed to reversible design while answers are pending.
    If a missing decision blocks a concrete change, then design the options and
    identify that decision without inventing a service promise.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Trace the journey's outage-producing path. Read
    [design patterns](./references/design-patterns.md) when choosing a continuity
@@ -73,6 +75,8 @@ the required service is usable now.
    and evaluate a fallback or redundancy without assuming replica independence.
    If a fallback loses required freshness, authorization, or write behavior, then
    classify that journey as unavailable and Ask the user before redefining success.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Exercise the journey across deployment, dependency loss, and recovery
    in a controlled environment; retain observations and the accounting calculation.

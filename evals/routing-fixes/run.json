@@ -14,7 +14,7 @@
   "agent_completion": "Wrote 268 answers; read only the two complete inputs and no other inputs.",
   "input_access_evidence": "Agent completion statement; no CLI event transcript is available for the fresh-agent fallback.",
   "answers": 268,
-  "scoring_command": "python scripts/score_routing.py routing-fixes-results.json --key evals/routing-fixes/routing-key.json",
+  "scoring_command": "python scripts/score_routing.py evals/results/routing-fixes-results.json --key evals/routing-fixes/routing-key.json",
   "original_misses_repaired": 36,
   "original_misses_remaining": 58,
   "control_regressions": 5,

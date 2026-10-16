@@ -46,6 +46,9 @@ artifact history (`traceability`), and satisfying selected rules (`conformance`)
    and gaps; and retention, access or answer criteria. Continue to a retrieval/evidence design.
    If no criterion exists, then propose the illustrative unsupported-conclusion
    gate and confirm with the user/stakeholder before accepting the fixture scope.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [examination practices](./references/design-patterns.md)
    when retaining evidence, exposing retrieval, or distinguishing absent records.
@@ -53,6 +56,8 @@ artifact history (`traceability`), and satisfying selected rules (`conformance`)
    approved schema/decision context rather than counting a successful export as examinability.
    If evidence expired or collection failed, then expose the gap and its scope;
    absence must not silently become evidence that no exception or action occurred.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Give the scoped question and permitted evidence view to the intended
    review role; reproduce the retrieval and inspect the supported answer.

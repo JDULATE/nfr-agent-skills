@@ -48,6 +48,9 @@ path; separate ongoing code upkeep (`maintainability`), runtime inference alone
    Proceed using synthetic inputs where collection permission or case data is unknown.
    If no scope is supplied, then offer the illustrative case-bundle trial and confirm
    with the user/stakeholder; obtain any time objective separately rather than inventing one.
+   State every assumption and proposed default to the user before building; ask at most
+   three questions, and stop for the user's reply only when a decision goes beyond the
+   smallest version.
 
 3. Design/Implement: Read [support patterns](./references/design-patterns.md) when
    designing bundle fields, diagnostic branches, or remedy/escalation evidence.
@@ -55,6 +58,8 @@ path; separate ongoing code upkeep (`maintainability`), runtime inference alone
    artifact output, and resulting action together rather than adding context-free logs.
    If the support actor lacks evidence or remedy authority, then report the exact
    escalation gap and proposed handoff contents without granting access or contacting others.
+   Build the smallest version that meets the request; list larger extensions as offers
+   and add them only with the user's yes.
 
 4. Verify: Reproduce the synthetic case as the affected actor, run collection under
    the support actor's declared access, and check the chosen action against its oracle.
