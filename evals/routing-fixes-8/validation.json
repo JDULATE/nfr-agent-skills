@@ -1,0 +1,50 @@
+[
+  {
+    "check": "validator",
+    "arguments": [
+      "python",
+      "scripts/validate_skills.py"
+    ],
+    "exit_code": 0,
+    "output": "evals\\routing-fixes-8\\validator.txt"
+  },
+  {
+    "check": "tests",
+    "arguments": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "output": "evals\\routing-fixes-8\\tests.txt"
+  },
+  {
+    "check": "description-heuristic",
+    "arguments": [
+      "python",
+      "scripts/check_descriptions.py",
+      "--only",
+      "33,52,80,83,85,90,112",
+      "--json"
+    ],
+    "exit_code": 0,
+    "output": "evals\\routing-fixes-8\\description-heuristic.txt"
+  },
+  {
+    "check": "routing-scorer",
+    "arguments": [
+      "python",
+      "scripts/score_routing.py",
+      "evals\\routing-fixes-8\\results.json",
+      "--key",
+      "evals\\routing-fixes-8\\routing-key.json",
+      "--json"
+    ],
+    "exit_code": 0,
+    "output": "evals\\routing-fixes-8\\routing-scorer.txt"
+  }
+]

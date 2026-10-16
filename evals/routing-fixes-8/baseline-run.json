@@ -1,0 +1,38 @@
+{
+  "cli_version": "codex-cli 0.162.1",
+  "arguments": [
+    "C:\\Users\\ulate\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.EXE",
+    "--no-daemon",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--config",
+    "approval_policy=\"never\"",
+    "--color",
+    "never",
+    "--json",
+    "--output-last-message",
+    "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-8-before-x4nj7h5_\\router-response.json",
+    "-"
+  ],
+  "run_directory": "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-8-before-x4nj7h5_",
+  "stage": "before",
+  "fresh_session": true,
+  "answer_key_supplied": false,
+  "model": "CLI default; no override; model name not reported",
+  "router_instruction_prefix": "The complete contents of the two requested files are supplied inline below. Read these supplied contents directly. Do not use tools, run commands, read local files, or search for other context.\n\nRoute each developer request using only routing-catalog.md and routing-prompts.json in the working directory.\nRead both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.\nFor every prompt, choose one exact catalogue slug or \"ask\". Choose \"ask\" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.\nUse the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.\nReturn only a complete JSON array of objects with exactly the fields \"id\" and \"choice\". Include every input id exactly once. Use the literal value \"ask\" for asking the user. No Markdown fences, commentary, explanations, or additional fields.\n",
+  "input_files": {
+    "routing-catalog.md": "d29c80336163885432b2045cb3a6cca3f7bfe54cfe2a7925e5839026c2d6b9de",
+    "routing-prompts.json": "dac7c7f4790c7fe5c3e946476f41e1ec582b3d2b2287dcdd658d2325fd47957b"
+  },
+  "stdin_sha256": "e3aead84b948fbc5e53355f779105f7d2f83e72c2a16279af7ca84765e585a7e",
+  "exit_code": 0,
+  "elapsed_seconds": 24.44,
+  "session_id": "01a1464f-d17b-7d41-a65a-1708e230b42d",
+  "tool_calls": 0,
+  "results_sha256": "2e88f23f20a6c4b33011833d3acf85707cad2c77c3bd773525c323d15ae333f3",
+  "session_transcript_sha256": "b4e2dcde64f6dcc5c5c5a21681d34d68f589148b4b591b1068aae7784b4a40d6"
+}

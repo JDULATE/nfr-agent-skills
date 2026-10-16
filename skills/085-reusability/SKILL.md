@@ -1,7 +1,7 @@
 ---
 name: reusability
 description: >-
-  Shares an artifact across contexts when asked "decouple a checker from HTTP", "share validation code", or "remove a copied helper". Ask the user which artifact and new consumer must share code before routing reuse. Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).
+  Shares one artifact when asked "reuse this exact checker", "remove web dependencies", or "share validation logic". Before routing use elsewhere, Ask the user: same code, broader input model, or joined stages? Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).
 ---
 
 # Reusability

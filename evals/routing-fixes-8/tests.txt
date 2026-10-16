@@ -1,0 +1,39 @@
+test_cli_json_text_warnings_and_errors (test_descriptions.DescriptionTests.test_cli_json_text_warnings_and_errors) ... ok
+test_eval_identity_counts_duplicates_and_siblings_are_validated (test_descriptions.DescriptionTests.test_eval_identity_counts_duplicates_and_siblings_are_validated) ... ok
+test_known_todo_sibling_is_unscored_not_fabricated (test_descriptions.DescriptionTests.test_known_todo_sibling_is_unscored_not_fabricated) ... ok
+test_missing_eval_description_and_insufficient_vague_coverage_fail (test_descriptions.DescriptionTests.test_missing_eval_description_and_insufficient_vague_coverage_fail) ... ok
+test_near_miss_outranks_named_sibling (test_descriptions.DescriptionTests.test_near_miss_outranks_named_sibling) ... ok
+test_only_keeps_all_authored_competitors_and_is_read_only (test_descriptions.DescriptionTests.test_only_keeps_all_authored_competitors_and_is_read_only) ... ok
+test_only_rejects_invalid_unknown_and_todo_ids (test_descriptions.DescriptionTests.test_only_rejects_invalid_unknown_and_todo_ids) ... ok
+test_positive_ties_are_preserved_and_zero_signal_is_not_a_winner (test_descriptions.DescriptionTests.test_positive_ties_are_preserved_and_zero_signal_is_not_a_winner) ... ok
+test_tokenization_and_exact_jaccard (test_descriptions.DescriptionTests.test_tokenization_and_exact_jaccard) ... ok
+test_body_line_limit_and_unfinished_tokens (test_foundation.FoundationTests.test_body_line_limit_and_unfinished_tokens) ... ok
+test_catalog_has_exact_count_range_and_unique_slugs (test_foundation.FoundationTests.test_catalog_has_exact_count_range_and_unique_slugs) ... ok
+test_catalog_rejects_duplicate_ids_slugs_and_wrong_count (test_foundation.FoundationTests.test_catalog_rejects_duplicate_ids_slugs_and_wrong_count) ... ok
+test_citations_activate_with_allowlist_and_require_exact_matches (test_foundation.FoundationTests.test_citations_activate_with_allowlist_and_require_exact_matches) ... ok
+test_cross_skill_copy_detection_in_batch (test_foundation.FoundationTests.test_cross_skill_copy_detection_in_batch) ... ok
+test_description_boundaries (test_foundation.FoundationTests.test_description_boundaries) ... ok
+test_empty_scaffold_passes_but_selected_missing_file_fails (test_foundation.FoundationTests.test_empty_scaffold_passes_but_selected_missing_file_fails) ... ok
+test_generator_dry_run_and_idempotency (test_foundation.FoundationTests.test_generator_dry_run_and_idempotency) ... ok
+test_generator_preserves_both_catalog_and_file_status (test_foundation.FoundationTests.test_generator_preserves_both_catalog_and_file_status) ... ok
+test_index_grouping_status_links_and_determinism (test_foundation.FoundationTests.test_index_grouping_status_links_and_determinism) ... ok
+test_missing_frontmatter_name_description_and_trigger (test_foundation.FoundationTests.test_missing_frontmatter_name_description_and_trigger) ... ok
+test_missing_reordered_and_duplicate_sections (test_foundation.FoundationTests.test_missing_reordered_and_duplicate_sections) ... ok
+test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run (test_foundation.FoundationTests.test_only_rejects_invalid_ids_and_unknown_skill_fails_full_run) ... ok
+test_reference_existence_reference_style_and_one_level_depth (test_foundation.FoundationTests.test_reference_existence_reference_style_and_one_level_depth) ... ok
+test_references_check_nested_directories_and_citations (test_foundation.FoundationTests.test_references_check_nested_directories_and_citations) ... ok
+test_sibling_slugs_must_exist_in_catalogue (test_foundation.FoundationTests.test_sibling_slugs_must_exist_in_catalogue) ... ok
+test_unknown_description_or_reference_sibling_fails_cli (test_foundation.FoundationTests.test_unknown_description_or_reference_sibling_fails_cli) ... ok
+test_valid_fixture_and_frontmatter_variants (test_foundation.FoundationTests.test_valid_fixture_and_frontmatter_variants) ... ok
+test_validator_cli_exit_codes (test_foundation.FoundationTests.test_validator_cli_exit_codes) ... ok
+test_cli_json_text_errors_and_read_only_files (test_score_routing.RoutingScoreTests.test_cli_json_text_errors_and_read_only_files) ... ok
+test_empty_group_and_no_mutation (test_score_routing.RoutingScoreTests.test_empty_group_and_no_mutation) ... ok
+test_groups_acceptable_sets_and_exact_choices (test_score_routing.RoutingScoreTests.test_groups_acceptable_sets_and_exact_choices) ... ok
+test_key_rejects_conflicting_groups_and_invalid_choices (test_score_routing.RoutingScoreTests.test_key_rejects_conflicting_groups_and_invalid_choices) ... ok
+test_missing_answers_are_misses_with_full_denominators (test_score_routing.RoutingScoreTests.test_missing_answers_are_misses_with_full_denominators) ... ok
+test_results_reject_duplicate_unknown_and_malformed_records (test_score_routing.RoutingScoreTests.test_results_reject_duplicate_unknown_and_malformed_records) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 2.855s
+
+OK

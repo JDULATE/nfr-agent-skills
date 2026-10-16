@@ -1,0 +1,2126 @@
+{
+  "method": "Jaccard of lowercase word sets after fixed stop words; no stemming, synonyms or negation handling",
+  "label_policy": "Underspecified labels are provisional leads for clarification, not unconditional routing truths",
+  "candidate_pool": [
+    "accessibility-access-control",
+    "accountability",
+    "accuracy",
+    "adaptability",
+    "additivity",
+    "adjustability",
+    "affordability",
+    "agility",
+    "analyzability",
+    "anonymity",
+    "atomicity",
+    "attractiveness",
+    "auditability",
+    "augmentability",
+    "availability",
+    "certainty",
+    "changeability",
+    "communicativeness",
+    "compatibility",
+    "completeness",
+    "complexity-interacting-complexity",
+    "composability",
+    "comprehensibility",
+    "comprehensiveness",
+    "conciseness",
+    "confidentiality",
+    "configurability",
+    "conformance",
+    "consistency",
+    "controllability",
+    "correctness",
+    "customizability",
+    "debuggability",
+    "decomposability",
+    "defensibility",
+    "demonstrability",
+    "dependability",
+    "distributivity",
+    "durability",
+    "effectiveness",
+    "efficiency-device-efficiency",
+    "enhanceability",
+    "evolvability",
+    "expandability",
+    "expressiveness",
+    "extendability",
+    "extensibility",
+    "fault-failure-tolerance",
+    "feasibility",
+    "flexibility",
+    "formality",
+    "functionality",
+    "generality",
+    "immunity",
+    "installability",
+    "integratability",
+    "integrity",
+    "interoperability",
+    "learnability",
+    "legibility",
+    "likeability",
+    "localizability",
+    "maintainability",
+    "manageability",
+    "maturity",
+    "measurability",
+    "mobility",
+    "modifiability",
+    "nomadicity",
+    "observability",
+    "operability",
+    "performance-efficiency-time-or-space-bounds",
+    "portability",
+    "predictability",
+    "privacy",
+    "provability",
+    "quality-of-service",
+    "readability",
+    "reconfigurability",
+    "recoverability",
+    "reliability",
+    "repeatability",
+    "replaceability",
+    "replicability",
+    "reusability",
+    "robustness",
+    "safety",
+    "scalability",
+    "security-control-and-security",
+    "self-descriptiveness",
+    "simplicity",
+    "stability",
+    "standardizability-standardization-standard",
+    "structuredness",
+    "suitability",
+    "supportability",
+    "survivability",
+    "susceptibility",
+    "sustainability",
+    "tailorability",
+    "testability",
+    "traceability",
+    "trainability",
+    "transferability",
+    "trustability",
+    "understandability",
+    "uniformity",
+    "usability",
+    "variability",
+    "verifiability",
+    "versatility",
+    "viability",
+    "visibility",
+    "wrappability"
+  ],
+  "selected_ids": [
+    33,
+    52,
+    80,
+    83,
+    85,
+    90,
+    112
+  ],
+  "summary": {
+    "authored_skills": 114,
+    "todo_excluded": 0,
+    "eval_skills": 7,
+    "prompts": 56,
+    "distinguishing_fact_omitted": 28,
+    "flags": {
+      "expected_not_top": 27,
+      "near_pair_no_signal": 6,
+      "near_target_outranks_sibling": 2,
+      "no_keyword_signal": 1,
+      "top_tie": 4
+    },
+    "ambiguous_pairs": 43
+  },
+  "ambiguous_pairs": [
+    {
+      "pair": [
+        "affordability",
+        "viability"
+      ],
+      "counts": {
+        "expected_not_top": 1,
+        "near_pair_no_signal": 1
+      },
+      "case_ids": [
+        "112-viability:near_miss[2]",
+        "112-viability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "accuracy",
+        "correctness"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "052-functionality:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "adaptability",
+        "analyzability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "033-debuggability:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "affordability",
+        "feasibility"
+      ],
+      "counts": {
+        "top_tie": 1
+      },
+      "case_ids": [
+        "112-viability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "affordability",
+        "learnability"
+      ],
+      "counts": {
+        "top_tie": 1
+      },
+      "case_ids": [
+        "112-viability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "affordability",
+        "recoverability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "112-viability:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "agility",
+        "replaceability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "083-replaceability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "analyzability",
+        "debuggability"
+      ],
+      "counts": {
+        "near_pair_no_signal": 1
+      },
+      "case_ids": [
+        "033-debuggability:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "analyzability",
+        "standardizability-standardization-standard"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "033-debuggability:near_miss[3]"
+      ]
+    },
+    {
+      "pair": [
+        "attractiveness",
+        "scalability"
+      ],
+      "counts": {
+        "top_tie": 1
+      },
+      "case_ids": [
+        "033-debuggability:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "attractiveness",
+        "testability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "033-debuggability:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "communicativeness",
+        "conciseness"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "090-self-descriptiveness:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "communicativeness",
+        "learnability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "090-self-descriptiveness:near_miss[3]"
+      ]
+    },
+    {
+      "pair": [
+        "communicativeness",
+        "self-descriptiveness"
+      ],
+      "counts": {
+        "near_pair_no_signal": 1
+      },
+      "case_ids": [
+        "090-self-descriptiveness:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "composability",
+        "reusability"
+      ],
+      "counts": {
+        "expected_not_top": 1,
+        "near_target_outranks_sibling": 1
+      },
+      "case_ids": [
+        "085-reusability:near_miss[4]"
+      ]
+    },
+    {
+      "pair": [
+        "comprehensibility",
+        "self-descriptiveness"
+      ],
+      "counts": {
+        "near_pair_no_signal": 1
+      },
+      "case_ids": [
+        "090-self-descriptiveness:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "conciseness",
+        "viability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "112-viability:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "controllability",
+        "fault-failure-tolerance"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:near_miss[3]"
+      ]
+    },
+    {
+      "pair": [
+        "correctness",
+        "functionality"
+      ],
+      "counts": {
+        "near_target_outranks_sibling": 1
+      },
+      "case_ids": [
+        "052-functionality:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "debuggability",
+        "dependability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "033-debuggability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "decomposability",
+        "reusability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "085-reusability:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "demonstrability",
+        "generality"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "085-reusability:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "durability",
+        "extendability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "durability",
+        "recoverability"
+      ],
+      "counts": {
+        "near_pair_no_signal": 1
+      },
+      "case_ids": [
+        "080-recoverability:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "durability",
+        "self-descriptiveness"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:near_miss[4]"
+      ]
+    },
+    {
+      "pair": [
+        "effectiveness",
+        "replaceability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "083-replaceability:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "effectiveness",
+        "reusability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "085-reusability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "efficiency-device-efficiency",
+        "functionality"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "052-functionality:should_trigger[4]"
+      ]
+    },
+    {
+      "pair": [
+        "efficiency-device-efficiency",
+        "nomadicity"
+      ],
+      "counts": {
+        "top_tie": 1
+      },
+      "case_ids": [
+        "080-recoverability:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "efficiency-device-efficiency",
+        "recoverability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "extendability",
+        "self-descriptiveness"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "090-self-descriptiveness:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "fault-failure-tolerance",
+        "nomadicity"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "fault-failure-tolerance",
+        "recoverability"
+      ],
+      "counts": {
+        "near_pair_no_signal": 1
+      },
+      "case_ids": [
+        "080-recoverability:near_miss[1]"
+      ]
+    },
+    {
+      "pair": [
+        "feasibility",
+        "learnability"
+      ],
+      "counts": {
+        "top_tie": 1
+      },
+      "case_ids": [
+        "112-viability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "feasibility",
+        "viability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "112-viability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "functionality",
+        "supportability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "052-functionality:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "learnability",
+        "viability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "112-viability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "manageability",
+        "recoverability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:should_trigger[4]"
+      ]
+    },
+    {
+      "pair": [
+        "nomadicity",
+        "recoverability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:should_trigger[2]"
+      ]
+    },
+    {
+      "pair": [
+        "quality-of-service",
+        "recoverability"
+      ],
+      "counts": {
+        "top_tie": 1
+      },
+      "case_ids": [
+        "080-recoverability:should_trigger[1]"
+      ]
+    },
+    {
+      "pair": [
+        "recoverability",
+        "reliability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "080-recoverability:should_trigger[3]"
+      ]
+    },
+    {
+      "pair": [
+        "scalability",
+        "testability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "033-debuggability:near_miss[2]"
+      ]
+    },
+    {
+      "pair": [
+        "suitability",
+        "supportability"
+      ],
+      "counts": {
+        "expected_not_top": 1
+      },
+      "case_ids": [
+        "052-functionality:near_miss[2]"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "033-debuggability:should_trigger[1]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "should_trigger",
+      "prompt": "Help me debug this failure.",
+      "expected_slug": "debuggability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.038462,
+      "top_candidates": [
+        "dependability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "033-debuggability:should_trigger[2]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "should_trigger",
+      "prompt": "Where did this wrong value come from?",
+      "expected_slug": "debuggability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need to isolate this particular failure, map wider dependencies, or create a way to drive and inspect tests?",
+      "target_score": 0.058824,
+      "expected_score": 0.058824,
+      "top_score": 0.058824,
+      "top_candidates": [
+        "debuggability"
+      ],
+      "shared_target_keywords": [
+        "value",
+        "wrong"
+      ],
+      "shared_expected_keywords": [
+        "value",
+        "wrong"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "033-debuggability:should_trigger[3]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "should_trigger",
+      "prompt": "Replay this saved failing request and trace where its correct input first becomes the wrong parsed value.",
+      "expected_slug": "debuggability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.128205,
+      "expected_score": 0.128205,
+      "top_score": 0.128205,
+      "top_candidates": [
+        "debuggability"
+      ],
+      "shared_target_keywords": [
+        "first",
+        "replay",
+        "trace",
+        "value",
+        "wrong"
+      ],
+      "shared_expected_keywords": [
+        "first",
+        "replay",
+        "trace",
+        "value",
+        "wrong"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "033-debuggability:should_trigger[4]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "should_trigger",
+      "prompt": "This stack trace points at the renderer; find the execution step that introduced the bad value for this exact input.",
+      "expected_slug": "debuggability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.128205,
+      "expected_score": 0.128205,
+      "top_score": 0.128205,
+      "top_candidates": [
+        "debuggability"
+      ],
+      "shared_target_keywords": [
+        "bad",
+        "execution",
+        "find",
+        "trace",
+        "value"
+      ],
+      "shared_expected_keywords": [
+        "bad",
+        "execution",
+        "find",
+        "trace",
+        "value"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "033-debuggability:near_miss[1]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "near_miss",
+      "prompt": "Help us understand what broke.",
+      "expected_slug": "analyzability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do we need a dependency or cause map, a replay of one bug, or evidence from the running system?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.035714,
+      "top_candidates": [
+        "adaptability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_pair_no_signal"
+      ]
+    },
+    {
+      "case_id": "033-debuggability:near_miss[2]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "near_miss",
+      "prompt": "We can't reproduce the timeout in tests.",
+      "expected_slug": "testability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are tests missing control and observation seams, an acceptance method, or a diagnosis of a particular failure?",
+      "target_score": 0.0,
+      "expected_score": 0.032258,
+      "top_score": 0.037037,
+      "top_candidates": [
+        "attractiveness",
+        "scalability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "timeout"
+      ],
+      "flags": [
+        "expected_not_top",
+        "top_tie"
+      ]
+    },
+    {
+      "case_id": "033-debuggability:near_miss[3]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "near_miss",
+      "prompt": "Map the callers and stored fields affected by removing this customer field before we choose the change.",
+      "expected_slug": "analyzability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.02381,
+      "expected_score": 0.0625,
+      "top_score": 0.088235,
+      "top_candidates": [
+        "standardizability-standardization-standard"
+      ],
+      "shared_target_keywords": [
+        "change"
+      ],
+      "shared_expected_keywords": [
+        "change",
+        "field"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "033-debuggability:near_miss[4]",
+      "skill_id": 33,
+      "skill_slug": "debuggability",
+      "kind": "near_miss",
+      "prompt": "Expose a test seam to force the timeout branch and observe its result without invoking the live service.",
+      "expected_slug": "testability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.04878,
+      "expected_score": 0.147059,
+      "top_score": 0.147059,
+      "top_candidates": [
+        "testability"
+      ],
+      "shared_target_keywords": [
+        "branch",
+        "test"
+      ],
+      "shared_expected_keywords": [
+        "branch",
+        "force",
+        "observe",
+        "test",
+        "timeout"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "052-functionality:should_trigger[1]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "should_trigger",
+      "prompt": "The export feature is missing.",
+      "expected_slug": "functionality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the needed capability absent, incorrectly implemented, or present but unsuitable for this task?",
+      "target_score": 0.071429,
+      "expected_score": 0.071429,
+      "top_score": 0.071429,
+      "top_candidates": [
+        "functionality"
+      ],
+      "shared_target_keywords": [
+        "feature",
+        "missing"
+      ],
+      "shared_expected_keywords": [
+        "feature",
+        "missing"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "052-functionality:should_trigger[2]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "should_trigger",
+      "prompt": "We need to support cancellation.",
+      "expected_slug": "functionality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the needed capability absent, incorrectly implemented, or present but unsuitable for this task?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.041667,
+      "top_candidates": [
+        "supportability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "052-functionality:should_trigger[3]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "should_trigger",
+      "prompt": "Add the missing operation that lets a caller cancel a queued export and receive a defined result.",
+      "expected_slug": "functionality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.117647,
+      "expected_score": 0.117647,
+      "top_score": 0.117647,
+      "top_candidates": [
+        "functionality"
+      ],
+      "shared_target_keywords": [
+        "add",
+        "cancel",
+        "missing",
+        "queued"
+      ],
+      "shared_expected_keywords": [
+        "add",
+        "cancel",
+        "missing",
+        "queued"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "052-functionality:should_trigger[4]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "should_trigger",
+      "prompt": "List and implement the required report operations, including their actors, inputs and outputs; the download operation does not exist yet.",
+      "expected_slug": "functionality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.025641,
+      "expected_score": 0.025641,
+      "top_score": 0.051282,
+      "top_candidates": [
+        "efficiency-device-efficiency"
+      ],
+      "shared_target_keywords": [
+        "operations"
+      ],
+      "shared_expected_keywords": [
+        "operations"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "052-functionality:near_miss[1]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "near_miss",
+      "prompt": "This function returns the wrong result.",
+      "expected_slug": "correctness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is behavior wrong against its contract, is a measured value inaccurate, or are required items missing?",
+      "target_score": 0.033333,
+      "expected_score": 0.0,
+      "top_score": 0.043478,
+      "top_candidates": [
+        "accuracy"
+      ],
+      "shared_target_keywords": [
+        "wrong"
+      ],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_target_outranks_sibling"
+      ]
+    },
+    {
+      "case_id": "052-functionality:near_miss[2]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "near_miss",
+      "prompt": "The export isn't useful for our handoff.",
+      "expected_slug": "suitability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the capability missing, present but unsuitable for the task, or failing to achieve the desired outcome?",
+      "target_score": 0.0,
+      "expected_score": 0.033333,
+      "top_score": 0.037037,
+      "top_candidates": [
+        "supportability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "handoff"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "052-functionality:near_miss[3]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "near_miss",
+      "prompt": "The function takes the wrong branch for the boundary case in our agreed decision table; implement that table.",
+      "expected_slug": "correctness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.027778,
+      "expected_score": 0.105263,
+      "top_score": 0.105263,
+      "top_candidates": [
+        "correctness"
+      ],
+      "shared_target_keywords": [
+        "wrong"
+      ],
+      "shared_expected_keywords": [
+        "boundary",
+        "case",
+        "decision",
+        "table"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "052-functionality:near_miss[4]",
+      "skill_id": 52,
+      "skill_slug": "functionality",
+      "kind": "near_miss",
+      "prompt": "Choose the report capability that fits this team's stated handoff context, rather than counting available features.",
+      "expected_slug": "suitability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.0,
+      "expected_score": 0.081081,
+      "top_score": 0.081081,
+      "top_candidates": [
+        "suitability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "available",
+        "capability",
+        "handoff"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "080-recoverability:should_trigger[1]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "should_trigger",
+      "prompt": "Get the service back.",
+      "expected_slug": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?",
+      "target_score": 0.0625,
+      "expected_score": 0.0625,
+      "top_score": 0.0625,
+      "top_candidates": [
+        "quality-of-service",
+        "recoverability"
+      ],
+      "shared_target_keywords": [
+        "back",
+        "service"
+      ],
+      "shared_expected_keywords": [
+        "back",
+        "service"
+      ],
+      "flags": [
+        "top_tie"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:should_trigger[2]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "should_trigger",
+      "prompt": "Make our backups useful.",
+      "expected_slug": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.034483,
+      "top_candidates": [
+        "efficiency-device-efficiency",
+        "nomadicity"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "top_tie"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:should_trigger[3]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "should_trigger",
+      "prompt": "Rehearse restoration from disruption through dependency bootstrap, coherent state replay and the verified usable business journey.",
+      "expected_slug": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.047619,
+      "expected_score": 0.047619,
+      "top_score": 0.078947,
+      "top_candidates": [
+        "reliability"
+      ],
+      "shared_target_keywords": [
+        "replay",
+        "state"
+      ],
+      "shared_expected_keywords": [
+        "replay",
+        "state"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:should_trigger[4]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "should_trigger",
+      "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance.",
+      "expected_slug": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.071429,
+      "expected_score": 0.071429,
+      "top_score": 0.073171,
+      "top_candidates": [
+        "manageability"
+      ],
+      "shared_target_keywords": [
+        "replay",
+        "restored",
+        "state"
+      ],
+      "shared_expected_keywords": [
+        "replay",
+        "restored",
+        "state"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:near_miss[1]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "near_miss",
+      "prompt": "Survive an outage.",
+      "expected_slug": "fault-failure-tolerance",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must service continue during a modeled fault, be restored afterward, or respond controllably to adverse input?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.034483,
+      "top_candidates": [
+        "nomadicity"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_pair_no_signal"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:near_miss[2]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "near_miss",
+      "prompt": "We cannot afford to lose changes.",
+      "expected_slug": "durability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the promise acknowledged-state preservation, all-or-none visibility, or reconstruction of usable service?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.08,
+      "top_candidates": [
+        "extendability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_pair_no_signal"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:near_miss[3]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "near_miss",
+      "prompt": "Hold a fail-stop worker fault while the alternate path continues the required business result with its state rules intact.",
+      "expected_slug": "fault-failure-tolerance",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.045455,
+      "expected_score": 0.046512,
+      "top_score": 0.073171,
+      "top_candidates": [
+        "controllability"
+      ],
+      "shared_target_keywords": [
+        "fault",
+        "state"
+      ],
+      "shared_expected_keywords": [
+        "fault",
+        "worker"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "080-recoverability:near_miss[4]",
+      "skill_id": 80,
+      "skill_slug": "recoverability",
+      "kind": "near_miss",
+      "prompt": "Align the confirmed-save response with the promised persistence condition and distinguish valid later supersession from lost state.",
+      "expected_slug": "durability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.023256,
+      "expected_score": 0.04878,
+      "top_score": 0.055556,
+      "top_candidates": [
+        "self-descriptiveness"
+      ],
+      "shared_target_keywords": [
+        "state"
+      ],
+      "shared_expected_keywords": [
+        "confirmed",
+        "state"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "083-replaceability:should_trigger[1]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "should_trigger",
+      "prompt": "Swap this backend.",
+      "expected_slug": "replaceability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?",
+      "target_score": 0.037037,
+      "expected_score": 0.037037,
+      "top_score": 0.045455,
+      "top_candidates": [
+        "agility"
+      ],
+      "shared_target_keywords": [
+        "backend"
+      ],
+      "shared_expected_keywords": [
+        "backend"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "083-replaceability:should_trigger[2]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "should_trigger",
+      "prompt": "We need to stop using the old provider.",
+      "expected_slug": "replaceability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the old implementation be replaced, run alongside another, or remain behind a new wrapper?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.04,
+      "top_candidates": [
+        "effectiveness"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "083-replaceability:should_trigger[3]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "should_trigger",
+      "prompt": "Replace and retire the old provider while preserving the surrounding callers' contract and required state.",
+      "expected_slug": "replaceability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.15625,
+      "expected_score": 0.15625,
+      "top_score": 0.15625,
+      "top_candidates": [
+        "replaceability"
+      ],
+      "shared_target_keywords": [
+        "callers",
+        "preserving",
+        "retire",
+        "state",
+        "while"
+      ],
+      "shared_expected_keywords": [
+        "callers",
+        "preserving",
+        "retire",
+        "state",
+        "while"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "083-replaceability:should_trigger[4]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "should_trigger",
+      "prompt": "Substitute this component without asking its callers to change their inputs or interpretation of the results.",
+      "expected_slug": "replaceability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.0625,
+      "expected_score": 0.0625,
+      "top_score": 0.0625,
+      "top_candidates": [
+        "replaceability"
+      ],
+      "shared_target_keywords": [
+        "callers",
+        "substitute"
+      ],
+      "shared_expected_keywords": [
+        "callers",
+        "substitute"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "083-replaceability:near_miss[1]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "near_miss",
+      "prompt": "These tools don't work together.",
+      "expected_slug": "compatibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must the tools coexist without interference, exchange data with matching meaning, or replace one another?",
+      "target_score": 0.0,
+      "expected_score": 0.047619,
+      "top_score": 0.047619,
+      "top_candidates": [
+        "compatibility"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "tools"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "083-replaceability:near_miss[2]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "near_miss",
+      "prompt": "Can we expose this engine differently?",
+      "expected_slug": "wrappability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will the implementation remain behind a new boundary, be substituted, or need assembly with other components?",
+      "target_score": 0.0,
+      "expected_score": 0.064516,
+      "top_score": 0.064516,
+      "top_candidates": [
+        "wrappability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "engine",
+        "expose"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "083-replaceability:near_miss[3]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "near_miss",
+      "prompt": "Installing the new client overwrites the old client's preferences; keep both usable side by side.",
+      "expected_slug": "compatibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.027778,
+      "expected_score": 0.12,
+      "top_score": 0.12,
+      "top_candidates": [
+        "compatibility"
+      ],
+      "shared_target_keywords": [
+        "keep"
+      ],
+      "shared_expected_keywords": [
+        "both",
+        "installing",
+        "side"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "083-replaceability:near_miss[4]",
+      "skill_id": 83,
+      "skill_slug": "replaceability",
+      "kind": "near_miss",
+      "prompt": "Add a new entrypoint around the retained implementation without silently changing what a successful native call does.",
+      "expected_slug": "wrappability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.057143,
+      "expected_score": 0.078947,
+      "top_score": 0.078947,
+      "top_candidates": [
+        "wrappability"
+      ],
+      "shared_target_keywords": [
+        "implementation",
+        "retained"
+      ],
+      "shared_expected_keywords": [
+        "implementation",
+        "native",
+        "retained"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "085-reusability:should_trigger[1]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "should_trigger",
+      "prompt": "Stop copying this helper.",
+      "expected_slug": "reusability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.04,
+      "top_candidates": [
+        "effectiveness"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "085-reusability:should_trigger[2]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "should_trigger",
+      "prompt": "Use the validator in the CLI too.",
+      "expected_slug": "reusability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we reusing an artifact in another context, broadening an abstraction's case family, or composing stages?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.037037,
+      "top_candidates": [
+        "decomposability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "085-reusability:should_trigger[3]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "should_trigger",
+      "prompt": "Use the same validator artifact in the CLI as well as the web path without depending on a web request object.",
+      "expected_slug": "reusability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.076923,
+      "expected_score": 0.076923,
+      "top_score": 0.076923,
+      "top_candidates": [
+        "reusability"
+      ],
+      "shared_target_keywords": [
+        "artifact",
+        "same",
+        "web"
+      ],
+      "shared_expected_keywords": [
+        "artifact",
+        "same",
+        "web"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "085-reusability:should_trigger[4]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "should_trigger",
+      "prompt": "Use this existing checker in the batch job without dragging in its web request dependencies or maintaining a copy.",
+      "expected_slug": "reusability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.076923,
+      "expected_score": 0.076923,
+      "top_score": 0.076923,
+      "top_candidates": [
+        "reusability"
+      ],
+      "shared_target_keywords": [
+        "checker",
+        "dependencies",
+        "web"
+      ],
+      "shared_expected_keywords": [
+        "checker",
+        "dependencies",
+        "web"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "085-reusability:near_miss[1]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "near_miss",
+      "prompt": "Stop adding a special case for every input.",
+      "expected_slug": "generality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Should one abstraction cover related cases, should an artifact be reused elsewhere, or should one product serve different roles?",
+      "target_score": 0.027027,
+      "expected_score": 0.055556,
+      "top_score": 0.058824,
+      "top_candidates": [
+        "demonstrability"
+      ],
+      "shared_target_keywords": [
+        "input"
+      ],
+      "shared_expected_keywords": [
+        "case",
+        "stop"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "085-reusability:near_miss[2]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "near_miss",
+      "prompt": "Help us combine these components.",
+      "expected_slug": "composability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem the joined stages' behavior, the work of wiring them up, or whether their gains add together?",
+      "target_score": 0.0,
+      "expected_score": 0.045455,
+      "top_score": 0.045455,
+      "top_candidates": [
+        "composability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "components"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "085-reusability:near_miss[3]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "near_miss",
+      "prompt": "Use one interval model for quantities and durations with the same interval rules instead of separate named-case branches.",
+      "expected_slug": "generality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.073171,
+      "expected_score": 0.128205,
+      "top_score": 0.128205,
+      "top_candidates": [
+        "generality"
+      ],
+      "shared_target_keywords": [
+        "model",
+        "one",
+        "same"
+      ],
+      "shared_expected_keywords": [
+        "branches",
+        "case",
+        "durations",
+        "one",
+        "quantities"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "085-reusability:near_miss[4]",
+      "skill_id": 85,
+      "skill_slug": "reusability",
+      "kind": "near_miss",
+      "prompt": "When the middle stage rejects a row, make the whole chain agree on what stops, what continues, and who releases the input.",
+      "expected_slug": "composability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.04878,
+      "expected_score": 0.0,
+      "top_score": 0.04878,
+      "top_candidates": [
+        "reusability"
+      ],
+      "shared_target_keywords": [
+        "input",
+        "stage"
+      ],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_target_outranks_sibling"
+      ]
+    },
+    {
+      "case_id": "090-self-descriptiveness:should_trigger[1]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "should_trigger",
+      "prompt": "Make the screen explain itself.",
+      "expected_slug": "self-descriptiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the missing information current state/action context, feedback timing, or standalone explanation meaning?",
+      "target_score": 0.076923,
+      "expected_score": 0.076923,
+      "top_score": 0.076923,
+      "top_candidates": [
+        "self-descriptiveness"
+      ],
+      "shared_target_keywords": [
+        "explain",
+        "screen"
+      ],
+      "shared_expected_keywords": [
+        "explain",
+        "screen"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "090-self-descriptiveness:should_trigger[2]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "should_trigger",
+      "prompt": "I cannot tell what is happening.",
+      "expected_slug": "self-descriptiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the missing information current state/action context, feedback timing, or standalone explanation meaning?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.04,
+      "top_candidates": [
+        "extendability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "090-self-descriptiveness:should_trigger[3]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "should_trigger",
+      "prompt": "At the disabled action, expose the current object's state and the condition that enables the next operation.",
+      "expected_slug": "self-descriptiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.090909,
+      "expected_score": 0.090909,
+      "top_score": 0.090909,
+      "top_candidates": [
+        "self-descriptiveness"
+      ],
+      "shared_target_keywords": [
+        "current",
+        "disabled",
+        "state"
+      ],
+      "shared_expected_keywords": [
+        "current",
+        "disabled",
+        "state"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "090-self-descriptiveness:should_trigger[4]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "should_trigger",
+      "prompt": "Show action meaning and effects in the current interface context instead of sending a separate explanation or later event message.",
+      "expected_slug": "self-descriptiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.083333,
+      "expected_score": 0.083333,
+      "top_score": 0.083333,
+      "top_candidates": [
+        "self-descriptiveness"
+      ],
+      "shared_target_keywords": [
+        "current",
+        "explanation",
+        "later"
+      ],
+      "shared_expected_keywords": [
+        "current",
+        "explanation",
+        "later"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "090-self-descriptiveness:near_miss[1]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "near_miss",
+      "prompt": "Keep people informed.",
+      "expected_slug": "communicativeness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the gap message timing in an interaction, current-state context, or interpretation of an explanation?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.04,
+      "top_candidates": [
+        "conciseness"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_pair_no_signal"
+      ]
+    },
+    {
+      "case_id": "090-self-descriptiveness:near_miss[2]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "near_miss",
+      "prompt": "Clarify this for readers.",
+      "expected_slug": "comprehensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.0,
+      "top_candidates": [],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "no_keyword_signal",
+        "near_pair_no_signal"
+      ]
+    },
+    {
+      "case_id": "090-self-descriptiveness:near_miss[3]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "near_miss",
+      "prompt": "Notify the affected user when the export finishes, through the agreed channel while the next action is still useful.",
+      "expected_slug": "communicativeness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.027027,
+      "expected_score": 0.078947,
+      "top_score": 0.083333,
+      "top_candidates": [
+        "learnability"
+      ],
+      "shared_target_keywords": [
+        "user"
+      ],
+      "shared_expected_keywords": [
+        "export",
+        "notify",
+        "user"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "090-self-descriptiveness:near_miss[4]",
+      "skill_id": 90,
+      "skill_slug": "self-descriptiveness",
+      "kind": "near_miss",
+      "prompt": "Test whether the intended audience can explain the meaning of this particular error paragraph using grounded scenarios.",
+      "expected_slug": "comprehensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.028571,
+      "expected_score": 0.108108,
+      "top_score": 0.108108,
+      "top_candidates": [
+        "comprehensibility"
+      ],
+      "shared_target_keywords": [
+        "explain"
+      ],
+      "shared_expected_keywords": [
+        "error",
+        "explain",
+        "intended",
+        "meaning"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "112-viability:should_trigger[1]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "should_trigger",
+      "prompt": "Is this still worth running?",
+      "expected_slug": "viability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we assessing continued value, whether a candidate can initially be built, or a spending ceiling?",
+      "target_score": 0.030303,
+      "expected_score": 0.030303,
+      "top_score": 0.035714,
+      "top_candidates": [
+        "affordability",
+        "feasibility",
+        "learnability"
+      ],
+      "shared_target_keywords": [
+        "worth"
+      ],
+      "shared_expected_keywords": [
+        "worth"
+      ],
+      "flags": [
+        "expected_not_top",
+        "top_tie"
+      ]
+    },
+    {
+      "case_id": "112-viability:should_trigger[2]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "should_trigger",
+      "prompt": "Should we keep this product?",
+      "expected_slug": "viability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are we assessing continued value, whether a candidate can initially be built, or a spending ceiling?",
+      "target_score": 0.03125,
+      "expected_score": 0.03125,
+      "top_score": 0.041667,
+      "top_candidates": [
+        "conciseness"
+      ],
+      "shared_target_keywords": [
+        "keep"
+      ],
+      "shared_expected_keywords": [
+        "keep"
+      ],
+      "flags": [
+        "expected_not_top"
+      ]
+    },
+    {
+      "case_id": "112-viability:should_trigger[3]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "should_trigger",
+      "prompt": "Decide whether this existing reporting service is worth keeping until our next review, including its upkeep and the value it provides.",
+      "expected_slug": "viability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.097561,
+      "expected_score": 0.097561,
+      "top_score": 0.097561,
+      "top_candidates": [
+        "viability"
+      ],
+      "shared_target_keywords": [
+        "review",
+        "upkeep",
+        "value",
+        "worth"
+      ],
+      "shared_expected_keywords": [
+        "review",
+        "upkeep",
+        "value",
+        "worth"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "112-viability:should_trigger[4]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "should_trigger",
+      "prompt": "Set a continue-or-retire decision for this existing service using its benefits and future obligations, rather than initial build feasibility.",
+      "expected_slug": "viability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.097561,
+      "expected_score": 0.097561,
+      "top_score": 0.097561,
+      "top_candidates": [
+        "viability"
+      ],
+      "shared_target_keywords": [
+        "feasibility",
+        "initial",
+        "retire",
+        "set"
+      ],
+      "shared_expected_keywords": [
+        "feasibility",
+        "initial",
+        "retire",
+        "set"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "112-viability:near_miss[1]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "near_miss",
+      "prompt": "Can we actually build this?",
+      "expected_slug": "feasibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the question initial technical achievability, spending limits, or whether continued operation remains worthwhile?",
+      "target_score": 0.0,
+      "expected_score": 0.037037,
+      "top_score": 0.037037,
+      "top_candidates": [
+        "feasibility"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "build"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "112-viability:near_miss[2]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "near_miss",
+      "prompt": "This service is getting expensive.",
+      "expected_slug": "affordability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision about a spending limit, whether a design can be built, or whether it remains worth running?",
+      "target_score": 0.0,
+      "expected_score": 0.0,
+      "top_score": 0.0625,
+      "top_candidates": [
+        "recoverability"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [],
+      "flags": [
+        "expected_not_top",
+        "near_pair_no_signal"
+      ]
+    },
+    {
+      "case_id": "112-viability:near_miss[3]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "near_miss",
+      "prompt": "Prove the candidate renderer can run locally with no network access before committing to this offline design.",
+      "expected_slug": "feasibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.0,
+      "expected_score": 0.1875,
+      "top_score": 0.1875,
+      "top_candidates": [
+        "feasibility"
+      ],
+      "shared_target_keywords": [],
+      "shared_expected_keywords": [
+        "access",
+        "before",
+        "candidate",
+        "design",
+        "offline",
+        "renderer"
+      ],
+      "flags": []
+    },
+    {
+      "case_id": "112-viability:near_miss[4]",
+      "skill_id": 112,
+      "skill_slug": "viability",
+      "kind": "near_miss",
+      "prompt": "Keep this workload within the team's approved budget, including support and migration costs.",
+      "expected_slug": "affordability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route",
+      "clarifying_question": null,
+      "target_score": 0.05,
+      "expected_score": 0.088235,
+      "top_score": 0.088235,
+      "top_candidates": [
+        "affordability"
+      ],
+      "shared_target_keywords": [
+        "budget",
+        "keep"
+      ],
+      "shared_expected_keywords": [
+        "budget",
+        "costs",
+        "workload"
+      ],
+      "flags": []
+    }
+  ]
+}

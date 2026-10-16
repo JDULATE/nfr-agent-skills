@@ -1,0 +1,214 @@
+[
+  {
+    "id": "r-00412786481d82e5",
+    "prompt": "Add a new entrypoint around the retained implementation without silently changing what a successful native call does."
+  },
+  {
+    "id": "r-021d92c5acc01525",
+    "prompt": "Use one interval model for quantities and durations with the same interval rules instead of separate named-case branches."
+  },
+  {
+    "id": "r-08f97ef5a186ae80",
+    "prompt": "Substitute this component without asking its callers to change their inputs or interpretation of the results."
+  },
+  {
+    "id": "r-0a22198d58f09dff",
+    "prompt": "Choose the report capability that fits this team's stated handoff context, rather than counting available features."
+  },
+  {
+    "id": "r-0b92fc33c482976f",
+    "prompt": "At the disabled action, expose the current object's state and the condition that enables the next operation."
+  },
+  {
+    "id": "r-0e6b88a273a7e7d3",
+    "prompt": "Map the callers and stored fields affected by removing this customer field before we choose the change."
+  },
+  {
+    "id": "r-136e0a1f295bde94",
+    "prompt": "Help me debug this failure."
+  },
+  {
+    "id": "r-14666de76d196d71",
+    "prompt": "The function takes the wrong branch for the boundary case in our agreed decision table; implement that table."
+  },
+  {
+    "id": "r-212433c508cb6344",
+    "prompt": "Use the validator in the CLI too."
+  },
+  {
+    "id": "r-2820e20b462b3c0d",
+    "prompt": "Stop copying this helper."
+  },
+  {
+    "id": "r-2875138ec6d35605",
+    "prompt": "Make our backups useful."
+  },
+  {
+    "id": "r-2a15293fe4223b00",
+    "prompt": "Stop adding a special case for every input."
+  },
+  {
+    "id": "r-2eec4750902942a8",
+    "prompt": "Should we keep this product?"
+  },
+  {
+    "id": "r-31dd2d97a1df9b05",
+    "prompt": "Test whether the intended audience can explain the meaning of this particular error paragraph using grounded scenarios."
+  },
+  {
+    "id": "r-31edd53005ca37f4",
+    "prompt": "We lose work after a crash."
+  },
+  {
+    "id": "r-32800fed628d4ba4",
+    "prompt": "Use this existing checker in the batch job without dragging in its web request dependencies or maintaining a copy."
+  },
+  {
+    "id": "r-34075badeb722eb3",
+    "prompt": "Can we expose this engine differently?"
+  },
+  {
+    "id": "r-38de958ba57dca4d",
+    "prompt": "Notify the affected user when the export finishes, through the agreed channel while the next action is still useful."
+  },
+  {
+    "id": "r-46f4fb4e3de43c5d",
+    "prompt": "Clarify this for readers."
+  },
+  {
+    "id": "r-473db3456a90cbc0",
+    "prompt": "Keep people informed."
+  },
+  {
+    "id": "r-4fe42cb616a5a186",
+    "prompt": "Replace and retire the old provider while preserving the surrounding callers' contract and required state."
+  },
+  {
+    "id": "r-5174f6e026d7200e",
+    "prompt": "We need to stop using the old provider."
+  },
+  {
+    "id": "r-52a947df69f074e1",
+    "prompt": "Keep this workload within the team's approved budget, including support and migration costs."
+  },
+  {
+    "id": "r-5792a42a89629f88",
+    "prompt": "When the middle stage rejects a row, make the whole chain agree on what stops, what continues, and who releases the input."
+  },
+  {
+    "id": "r-5bffefb34bdc97bc",
+    "prompt": "Set a continue-or-retire decision for this existing service using its benefits and future obligations, rather than initial build feasibility."
+  },
+  {
+    "id": "r-5e72b222cf2bbbf4",
+    "prompt": "Expose a test seam to force the timeout branch and observe its result without invoking the live service."
+  },
+  {
+    "id": "r-60130dbf2da5c8c5",
+    "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance."
+  },
+  {
+    "id": "r-668347a0cdc41cb3",
+    "prompt": "We can't reproduce the timeout in tests."
+  },
+  {
+    "id": "r-6d15b8b67c56d1cd",
+    "prompt": "Installing the new client overwrites the old client's preferences; keep both usable side by side."
+  },
+  {
+    "id": "r-7575f37abe25bdd0",
+    "prompt": "Help us combine these components."
+  },
+  {
+    "id": "r-79e7379966bc813d",
+    "prompt": "This function returns the wrong result."
+  },
+  {
+    "id": "r-8024de27c7216148",
+    "prompt": "Align the confirmed-save response with the promised persistence condition and distinguish valid later supersession from lost state."
+  },
+  {
+    "id": "r-808d30d85b9c52d6",
+    "prompt": "The export isn't useful for our handoff."
+  },
+  {
+    "id": "r-90e5f24ed5ee30be",
+    "prompt": "This service is getting expensive."
+  },
+  {
+    "id": "r-97ffad2125c5b921",
+    "prompt": "These tools don't work together."
+  },
+  {
+    "id": "r-9bc5df77b7002ca8",
+    "prompt": "Make the screen explain itself."
+  },
+  {
+    "id": "r-9d7e90652a465cfa",
+    "prompt": "We cannot afford to lose changes."
+  },
+  {
+    "id": "r-af99c38b79e557af",
+    "prompt": "Help us understand what broke."
+  },
+  {
+    "id": "r-b8705230a1b35a32",
+    "prompt": "Replay this saved failing request and trace where its correct input first becomes the wrong parsed value."
+  },
+  {
+    "id": "r-baf46ca02b55de64",
+    "prompt": "Use the same validator artifact in the CLI as well as the web path without depending on a web request object."
+  },
+  {
+    "id": "r-bf5bb2708b854660",
+    "prompt": "Hold a fail-stop worker fault while the alternate path continues the required business result with its state rules intact."
+  },
+  {
+    "id": "r-c25140895970cc45",
+    "prompt": "Prove the candidate renderer can run locally with no network access before committing to this offline design."
+  },
+  {
+    "id": "r-d5ba80fadc5945f7",
+    "prompt": "The restored process starts but cannot serve its saved orders; define and verify the usable restored condition."
+  },
+  {
+    "id": "r-d8fbd88e3c5c9e47",
+    "prompt": "Can we actually build this?"
+  },
+  {
+    "id": "r-dd8b0409043f8049",
+    "prompt": "Where did this wrong value come from?"
+  },
+  {
+    "id": "r-e7f93ec80c7a461b",
+    "prompt": "Is this still worth running?"
+  },
+  {
+    "id": "r-e9a0364dddb5ec2c",
+    "prompt": "Add the missing operation that lets a caller cancel a queued export and receive a defined result."
+  },
+  {
+    "id": "r-ebe06c04252d4ce8",
+    "prompt": "The export feature is missing."
+  },
+  {
+    "id": "r-ee88375638c9589f",
+    "prompt": "This stack trace points at the renderer; find the execution step that introduced the bad value for this exact input."
+  },
+  {
+    "id": "r-f02044e5b76544fb",
+    "prompt": "Swap this backend."
+  },
+  {
+    "id": "r-f5104ee00e36ed63",
+    "prompt": "Get the service back."
+  },
+  {
+    "id": "r-f813e6ab2bab850d",
+    "prompt": "Rehearse restoration from disruption through dependency bootstrap, coherent state replay and the verified usable business journey."
+  },
+  {
+    "id": "r-fea7a948bd276155",
+    "prompt": "Survive an outage."
+  }
+]

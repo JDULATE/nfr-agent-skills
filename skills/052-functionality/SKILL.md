@@ -1,7 +1,7 @@
 ---
 name: functionality
 description: >-
-  Specifies required operations when asked "add report downloads", "add queued-job cancellation", or "list required operations". Before routing feature complaints, Ask the user: absent operation, broken behavior, or task mismatch? Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).
+  Specifies absent operations when asked "add downloads", "cancel queued jobs", or "define supported actions". For a missing feature, Ask the user: absent action, wrong behavior, or task mismatch? Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).
 ---
 
 # Functionality

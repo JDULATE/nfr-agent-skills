@@ -1,0 +1,36 @@
+{
+  "groups": {
+    "explicit": {
+      "correct": 26,
+      "total": 26,
+      "answered": 26,
+      "missing": 0,
+      "accuracy": 1.0
+    },
+    "vague": {
+      "correct": 26,
+      "total": 27,
+      "answered": 27,
+      "missing": 0,
+      "accuracy": 0.9629629629629629
+    },
+    "user_voice": {
+      "correct": 0,
+      "total": 0,
+      "answered": 0,
+      "missing": 0,
+      "accuracy": null
+    }
+  },
+  "misses": [
+    {
+      "id": "r-e7f93ec80c7a461b",
+      "group": "vague",
+      "choice": "viability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    }
+  ]
+}

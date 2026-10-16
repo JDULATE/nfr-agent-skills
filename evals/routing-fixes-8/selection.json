@@ -1,0 +1,549 @@
+{
+  "source_score": "evals/routing-fixes-58/score.json",
+  "baseline_commit": "e4a52960ca5115929497393b4af742b5112e3713",
+  "failed_ids": [
+    "r-212433c508cb6344",
+    "r-2eec4750902942a8",
+    "r-9bc5df77b7002ca8",
+    "r-dd8b0409043f8049",
+    "r-e7f93ec80c7a461b",
+    "r-ebe06c04252d4ce8",
+    "r-f02044e5b76544fb",
+    "r-f5104ee00e36ed63"
+  ],
+  "affected_skills": [
+    "debuggability",
+    "functionality",
+    "recoverability",
+    "replaceability",
+    "reusability",
+    "self-descriptiveness",
+    "viability"
+  ],
+  "additional_control_ids": [
+    "r-00412786481d82e5",
+    "r-021d92c5acc01525",
+    "r-08f97ef5a186ae80",
+    "r-0a22198d58f09dff",
+    "r-0b92fc33c482976f",
+    "r-0e6b88a273a7e7d3",
+    "r-136e0a1f295bde94",
+    "r-14666de76d196d71",
+    "r-2820e20b462b3c0d",
+    "r-2875138ec6d35605",
+    "r-2a15293fe4223b00",
+    "r-31dd2d97a1df9b05",
+    "r-31edd53005ca37f4",
+    "r-32800fed628d4ba4",
+    "r-34075badeb722eb3",
+    "r-38de958ba57dca4d",
+    "r-46f4fb4e3de43c5d",
+    "r-473db3456a90cbc0",
+    "r-4fe42cb616a5a186",
+    "r-5174f6e026d7200e",
+    "r-52a947df69f074e1",
+    "r-5792a42a89629f88",
+    "r-5bffefb34bdc97bc",
+    "r-5e72b222cf2bbbf4",
+    "r-60130dbf2da5c8c5",
+    "r-668347a0cdc41cb3",
+    "r-6d15b8b67c56d1cd",
+    "r-7575f37abe25bdd0",
+    "r-79e7379966bc813d",
+    "r-8024de27c7216148",
+    "r-808d30d85b9c52d6",
+    "r-90e5f24ed5ee30be",
+    "r-97ffad2125c5b921",
+    "r-9d7e90652a465cfa",
+    "r-af99c38b79e557af",
+    "r-b8705230a1b35a32",
+    "r-baf46ca02b55de64",
+    "r-bf5bb2708b854660",
+    "r-c25140895970cc45",
+    "r-d5ba80fadc5945f7",
+    "r-d8fbd88e3c5c9e47",
+    "r-e9a0364dddb5ec2c",
+    "r-ee88375638c9589f",
+    "r-f813e6ab2bab850d",
+    "r-fea7a948bd276155"
+  ],
+  "control_sources": [
+    {
+      "id": "r-2eec4750902942a8",
+      "owner": "affordability",
+      "sibling": "viability",
+      "source": "evals/007-affordability.json",
+      "index": 1
+    },
+    {
+      "id": "r-5bffefb34bdc97bc",
+      "owner": "affordability",
+      "sibling": "viability",
+      "source": "evals/007-affordability.json",
+      "index": 3
+    },
+    {
+      "id": "r-136e0a1f295bde94",
+      "owner": "analyzability",
+      "sibling": "debuggability",
+      "source": "evals/009-analyzability.json",
+      "index": 0
+    },
+    {
+      "id": "r-b8705230a1b35a32",
+      "owner": "analyzability",
+      "sibling": "debuggability",
+      "source": "evals/009-analyzability.json",
+      "index": 2
+    },
+    {
+      "id": "r-2875138ec6d35605",
+      "owner": "atomicity",
+      "sibling": "recoverability",
+      "source": "evals/011-atomicity.json",
+      "index": 1
+    },
+    {
+      "id": "r-60130dbf2da5c8c5",
+      "owner": "atomicity",
+      "sibling": "recoverability",
+      "source": "evals/011-atomicity.json",
+      "index": 3
+    },
+    {
+      "id": "r-2875138ec6d35605",
+      "owner": "availability",
+      "sibling": "recoverability",
+      "source": "evals/015-availability.json",
+      "index": 1
+    },
+    {
+      "id": "r-60130dbf2da5c8c5",
+      "owner": "availability",
+      "sibling": "recoverability",
+      "source": "evals/015-availability.json",
+      "index": 3
+    },
+    {
+      "id": "r-9bc5df77b7002ca8",
+      "owner": "communicativeness",
+      "sibling": "self-descriptiveness",
+      "source": "evals/018-communicativeness.json",
+      "index": 0
+    },
+    {
+      "id": "r-0b92fc33c482976f",
+      "owner": "communicativeness",
+      "sibling": "self-descriptiveness",
+      "source": "evals/018-communicativeness.json",
+      "index": 2
+    },
+    {
+      "id": "r-5174f6e026d7200e",
+      "owner": "compatibility",
+      "sibling": "replaceability",
+      "source": "evals/019-compatibility.json",
+      "index": 1
+    },
+    {
+      "id": "r-08f97ef5a186ae80",
+      "owner": "compatibility",
+      "sibling": "replaceability",
+      "source": "evals/019-compatibility.json",
+      "index": 3
+    },
+    {
+      "id": "r-af99c38b79e557af",
+      "owner": "debuggability",
+      "sibling": "analyzability",
+      "source": "evals/033-debuggability.json",
+      "index": 0
+    },
+    {
+      "id": "r-668347a0cdc41cb3",
+      "owner": "debuggability",
+      "sibling": "testability",
+      "source": "evals/033-debuggability.json",
+      "index": 1
+    },
+    {
+      "id": "r-0e6b88a273a7e7d3",
+      "owner": "debuggability",
+      "sibling": "analyzability",
+      "source": "evals/033-debuggability.json",
+      "index": 2
+    },
+    {
+      "id": "r-5e72b222cf2bbbf4",
+      "owner": "debuggability",
+      "sibling": "testability",
+      "source": "evals/033-debuggability.json",
+      "index": 3
+    },
+    {
+      "id": "r-2875138ec6d35605",
+      "owner": "defensibility",
+      "sibling": "recoverability",
+      "source": "evals/035-defensibility.json",
+      "index": 1
+    },
+    {
+      "id": "r-60130dbf2da5c8c5",
+      "owner": "defensibility",
+      "sibling": "recoverability",
+      "source": "evals/035-defensibility.json",
+      "index": 3
+    },
+    {
+      "id": "r-2875138ec6d35605",
+      "owner": "durability",
+      "sibling": "recoverability",
+      "source": "evals/039-durability.json",
+      "index": 1
+    },
+    {
+      "id": "r-60130dbf2da5c8c5",
+      "owner": "durability",
+      "sibling": "recoverability",
+      "source": "evals/039-durability.json",
+      "index": 3
+    },
+    {
+      "id": "r-ebe06c04252d4ce8",
+      "owner": "effectiveness",
+      "sibling": "functionality",
+      "source": "evals/040-effectiveness.json",
+      "index": 0
+    },
+    {
+      "id": "r-e9a0364dddb5ec2c",
+      "owner": "effectiveness",
+      "sibling": "functionality",
+      "source": "evals/040-effectiveness.json",
+      "index": 2
+    },
+    {
+      "id": "r-f5104ee00e36ed63",
+      "owner": "fault-failure-tolerance",
+      "sibling": "recoverability",
+      "source": "evals/048-fault-failure-tolerance.json",
+      "index": 0
+    },
+    {
+      "id": "r-f813e6ab2bab850d",
+      "owner": "fault-failure-tolerance",
+      "sibling": "recoverability",
+      "source": "evals/048-fault-failure-tolerance.json",
+      "index": 2
+    },
+    {
+      "id": "r-2eec4750902942a8",
+      "owner": "feasibility",
+      "sibling": "viability",
+      "source": "evals/049-feasibility.json",
+      "index": 1
+    },
+    {
+      "id": "r-5bffefb34bdc97bc",
+      "owner": "feasibility",
+      "sibling": "viability",
+      "source": "evals/049-feasibility.json",
+      "index": 3
+    },
+    {
+      "id": "r-79e7379966bc813d",
+      "owner": "functionality",
+      "sibling": "correctness",
+      "source": "evals/052-functionality.json",
+      "index": 0
+    },
+    {
+      "id": "r-808d30d85b9c52d6",
+      "owner": "functionality",
+      "sibling": "suitability",
+      "source": "evals/052-functionality.json",
+      "index": 1
+    },
+    {
+      "id": "r-14666de76d196d71",
+      "owner": "functionality",
+      "sibling": "correctness",
+      "source": "evals/052-functionality.json",
+      "index": 2
+    },
+    {
+      "id": "r-0a22198d58f09dff",
+      "owner": "functionality",
+      "sibling": "suitability",
+      "source": "evals/052-functionality.json",
+      "index": 3
+    },
+    {
+      "id": "r-2820e20b462b3c0d",
+      "owner": "generality",
+      "sibling": "reusability",
+      "source": "evals/053-generality.json",
+      "index": 0
+    },
+    {
+      "id": "r-baf46ca02b55de64",
+      "owner": "generality",
+      "sibling": "reusability",
+      "source": "evals/053-generality.json",
+      "index": 2
+    },
+    {
+      "id": "r-31edd53005ca37f4",
+      "owner": "nomadicity",
+      "sibling": "recoverability",
+      "source": "evals/069-nomadicity.json",
+      "index": 1
+    },
+    {
+      "id": "r-d5ba80fadc5945f7",
+      "owner": "nomadicity",
+      "sibling": "recoverability",
+      "source": "evals/069-nomadicity.json",
+      "index": 3
+    },
+    {
+      "id": "r-dd8b0409043f8049",
+      "owner": "observability",
+      "sibling": "debuggability",
+      "source": "evals/070-observability.json",
+      "index": 1
+    },
+    {
+      "id": "r-ee88375638c9589f",
+      "owner": "observability",
+      "sibling": "debuggability",
+      "source": "evals/070-observability.json",
+      "index": 3
+    },
+    {
+      "id": "r-fea7a948bd276155",
+      "owner": "recoverability",
+      "sibling": "fault-failure-tolerance",
+      "source": "evals/080-recoverability.json",
+      "index": 0
+    },
+    {
+      "id": "r-9d7e90652a465cfa",
+      "owner": "recoverability",
+      "sibling": "durability",
+      "source": "evals/080-recoverability.json",
+      "index": 1
+    },
+    {
+      "id": "r-bf5bb2708b854660",
+      "owner": "recoverability",
+      "sibling": "fault-failure-tolerance",
+      "source": "evals/080-recoverability.json",
+      "index": 2
+    },
+    {
+      "id": "r-8024de27c7216148",
+      "owner": "recoverability",
+      "sibling": "durability",
+      "source": "evals/080-recoverability.json",
+      "index": 3
+    },
+    {
+      "id": "r-2875138ec6d35605",
+      "owner": "reliability",
+      "sibling": "recoverability",
+      "source": "evals/081-reliability.json",
+      "index": 1
+    },
+    {
+      "id": "r-60130dbf2da5c8c5",
+      "owner": "reliability",
+      "sibling": "recoverability",
+      "source": "evals/081-reliability.json",
+      "index": 3
+    },
+    {
+      "id": "r-97ffad2125c5b921",
+      "owner": "replaceability",
+      "sibling": "compatibility",
+      "source": "evals/083-replaceability.json",
+      "index": 0
+    },
+    {
+      "id": "r-34075badeb722eb3",
+      "owner": "replaceability",
+      "sibling": "wrappability",
+      "source": "evals/083-replaceability.json",
+      "index": 1
+    },
+    {
+      "id": "r-6d15b8b67c56d1cd",
+      "owner": "replaceability",
+      "sibling": "compatibility",
+      "source": "evals/083-replaceability.json",
+      "index": 2
+    },
+    {
+      "id": "r-00412786481d82e5",
+      "owner": "replaceability",
+      "sibling": "wrappability",
+      "source": "evals/083-replaceability.json",
+      "index": 3
+    },
+    {
+      "id": "r-2a15293fe4223b00",
+      "owner": "reusability",
+      "sibling": "generality",
+      "source": "evals/085-reusability.json",
+      "index": 0
+    },
+    {
+      "id": "r-7575f37abe25bdd0",
+      "owner": "reusability",
+      "sibling": "composability",
+      "source": "evals/085-reusability.json",
+      "index": 1
+    },
+    {
+      "id": "r-021d92c5acc01525",
+      "owner": "reusability",
+      "sibling": "generality",
+      "source": "evals/085-reusability.json",
+      "index": 2
+    },
+    {
+      "id": "r-5792a42a89629f88",
+      "owner": "reusability",
+      "sibling": "composability",
+      "source": "evals/085-reusability.json",
+      "index": 3
+    },
+    {
+      "id": "r-473db3456a90cbc0",
+      "owner": "self-descriptiveness",
+      "sibling": "communicativeness",
+      "source": "evals/090-self-descriptiveness.json",
+      "index": 0
+    },
+    {
+      "id": "r-46f4fb4e3de43c5d",
+      "owner": "self-descriptiveness",
+      "sibling": "comprehensibility",
+      "source": "evals/090-self-descriptiveness.json",
+      "index": 1
+    },
+    {
+      "id": "r-38de958ba57dca4d",
+      "owner": "self-descriptiveness",
+      "sibling": "communicativeness",
+      "source": "evals/090-self-descriptiveness.json",
+      "index": 2
+    },
+    {
+      "id": "r-31dd2d97a1df9b05",
+      "owner": "self-descriptiveness",
+      "sibling": "comprehensibility",
+      "source": "evals/090-self-descriptiveness.json",
+      "index": 3
+    },
+    {
+      "id": "r-ebe06c04252d4ce8",
+      "owner": "suitability",
+      "sibling": "functionality",
+      "source": "evals/095-suitability.json",
+      "index": 0
+    },
+    {
+      "id": "r-e9a0364dddb5ec2c",
+      "owner": "suitability",
+      "sibling": "functionality",
+      "source": "evals/095-suitability.json",
+      "index": 2
+    },
+    {
+      "id": "r-f5104ee00e36ed63",
+      "owner": "survivability",
+      "sibling": "recoverability",
+      "source": "evals/097-survivability.json",
+      "index": 0
+    },
+    {
+      "id": "r-f813e6ab2bab850d",
+      "owner": "survivability",
+      "sibling": "recoverability",
+      "source": "evals/097-survivability.json",
+      "index": 2
+    },
+    {
+      "id": "r-dd8b0409043f8049",
+      "owner": "testability",
+      "sibling": "debuggability",
+      "source": "evals/101-testability.json",
+      "index": 1
+    },
+    {
+      "id": "r-ee88375638c9589f",
+      "owner": "testability",
+      "sibling": "debuggability",
+      "source": "evals/101-testability.json",
+      "index": 3
+    },
+    {
+      "id": "r-212433c508cb6344",
+      "owner": "versatility",
+      "sibling": "reusability",
+      "source": "evals/111-versatility.json",
+      "index": 1
+    },
+    {
+      "id": "r-32800fed628d4ba4",
+      "owner": "versatility",
+      "sibling": "reusability",
+      "source": "evals/111-versatility.json",
+      "index": 3
+    },
+    {
+      "id": "r-d8fbd88e3c5c9e47",
+      "owner": "viability",
+      "sibling": "feasibility",
+      "source": "evals/112-viability.json",
+      "index": 0
+    },
+    {
+      "id": "r-90e5f24ed5ee30be",
+      "owner": "viability",
+      "sibling": "affordability",
+      "source": "evals/112-viability.json",
+      "index": 1
+    },
+    {
+      "id": "r-c25140895970cc45",
+      "owner": "viability",
+      "sibling": "feasibility",
+      "source": "evals/112-viability.json",
+      "index": 2
+    },
+    {
+      "id": "r-52a947df69f074e1",
+      "owner": "viability",
+      "sibling": "affordability",
+      "source": "evals/112-viability.json",
+      "index": 3
+    },
+    {
+      "id": "r-f02044e5b76544fb",
+      "owner": "wrappability",
+      "sibling": "replaceability",
+      "source": "evals/114-wrappability.json",
+      "index": 0
+    },
+    {
+      "id": "r-4fe42cb616a5a186",
+      "owner": "wrappability",
+      "sibling": "replaceability",
+      "source": "evals/114-wrappability.json",
+      "index": 2
+    }
+  ],
+  "selection_rule": "Eight requested historical misses, plus unchanged near-miss cases owned by affected skills or naming an affected skill as intended sibling; deduplicated against the original blinded prompts."
+}

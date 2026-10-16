@@ -1,7 +1,7 @@
 ---
 name: recoverability
 description: >-
-  Restores state when asked "restore orders", "check recovered checkout", or "avoid replay". Ask the user: restoration, write retention, or operation during faults? Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).
+  Restores state when asked "check restored orders", "verify replay", or "test recovery". For getting service back, Ask the user: restore state, retain writes, or sustain the mission? Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).
 ---
 # Recoverability
 

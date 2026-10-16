@@ -1,7 +1,7 @@
 ---
 name: replaceability
 description: >-
-  Substitutes components when asked "retire an old backend", "preserve replacement callers", or "migrate provider state". Before routing provider changes, Ask the user: replace, coexist, or retain behind a wrapper? Not for coexistence alone (see compatibility).
+  Substitutes components while preserving caller contracts when asked "retire this backend", "keep callers unchanged", or "migrate its saved state". For bare swaps, Ask the user: substitute the implementation, wrap the retained one, or coexist? Not for coexistence alone (see compatibility).
 ---
 
 # Replaceability

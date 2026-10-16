@@ -1,7 +1,7 @@
 ---
 name: self-descriptiveness
 description: >-
-  Explains action context when asked "explain this control", "explain this action now", or "label this object". Ask the user: state/action cues or a separate explanation? Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).
+  Explains state/actions when asked "explain disabled submit", "label pending work", or "name this record". For screen help, Ask the user: current state/actions or standalone explanation? Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).
 ---
 # Self-Descriptiveness
 

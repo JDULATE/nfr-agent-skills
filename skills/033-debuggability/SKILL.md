@@ -1,7 +1,7 @@
 ---
 name: debuggability
 description: >-
-  Localizes a captured execution when asked "replay a parser crash", "trace this bad value", or "inspect a failing input". Before routing debugging, Ask the user: one execution, wider causes, or missing test controls? Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).
+  Localizes a reproducible execution when asked "replay a crash", "find the first bad branch", or "inspect captured inputs". For a wrong value alone, Ask the user: trace one execution or analyze sources and dependencies? Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).
 ---
 
 # Debuggability

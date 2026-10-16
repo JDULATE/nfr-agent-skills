@@ -1,0 +1,72 @@
+{
+  "groups": {
+    "explicit": {
+      "correct": 26,
+      "total": 26,
+      "answered": 26,
+      "missing": 0,
+      "accuracy": 1.0
+    },
+    "vague": {
+      "correct": 22,
+      "total": 27,
+      "answered": 27,
+      "missing": 0,
+      "accuracy": 0.8148148148148148
+    },
+    "user_voice": {
+      "correct": 0,
+      "total": 0,
+      "answered": 0,
+      "missing": 0,
+      "accuracy": null
+    }
+  },
+  "misses": [
+    {
+      "id": "r-212433c508cb6344",
+      "group": "vague",
+      "choice": "reusability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-2eec4750902942a8",
+      "group": "vague",
+      "choice": "viability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-e7f93ec80c7a461b",
+      "group": "vague",
+      "choice": "viability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-ebe06c04252d4ce8",
+      "group": "vague",
+      "choice": "functionality",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-f5104ee00e36ed63",
+      "group": "vague",
+      "choice": "recoverability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    }
+  ]
+}

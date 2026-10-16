@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "debuggability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "functionality",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "recoverability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "replaceability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "reusability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "self-descriptiveness",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "viability",
+    "passed": true,
+    "message": "Skill is valid!"
+  }
+]

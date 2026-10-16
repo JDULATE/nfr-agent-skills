@@ -1,0 +1,65 @@
+[
+  {
+    "id": 33,
+    "slug": "debuggability",
+    "path": "skills/033-debuggability/SKILL.md",
+    "before": "Localizes a captured execution when asked \"replay a parser crash\", \"trace this bad value\", or \"inspect a failing input\". Before routing debugging, Ask the user: one execution, wider causes, or missing test controls? Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).",
+    "before_length": 327,
+    "after": "Localizes a reproducible execution when asked \"replay a crash\", \"find the first bad branch\", or \"inspect captured inputs\". For a wrong value alone, Ask the user: trace one execution or analyze sources and dependencies? Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).",
+    "after_length": 330
+  },
+  {
+    "id": 52,
+    "slug": "functionality",
+    "path": "skills/052-functionality/SKILL.md",
+    "before": "Specifies required operations when asked \"add report downloads\", \"add queued-job cancellation\", or \"list required operations\". Before routing feature complaints, Ask the user: absent operation, broken behavior, or task mismatch? Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).",
+    "before_length": 349,
+    "after": "Specifies absent operations when asked \"add downloads\", \"cancel queued jobs\", or \"define supported actions\". For a missing feature, Ask the user: absent action, wrong behavior, or task mismatch? Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).",
+    "after_length": 315
+  },
+  {
+    "id": 80,
+    "slug": "recoverability",
+    "path": "skills/080-recoverability/SKILL.md",
+    "before": "Restores state when asked \"restore orders\", \"check recovered checkout\", or \"avoid replay\". Ask the user: restoration, write retention, or operation during faults? Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).",
+    "before_length": 325,
+    "after": "Restores state when asked \"check restored orders\", \"verify replay\", or \"test recovery\". For getting service back, Ask the user: restore state, retain writes, or sustain the mission? Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).",
+    "after_length": 344
+  },
+  {
+    "id": 83,
+    "slug": "replaceability",
+    "path": "skills/083-replaceability/SKILL.md",
+    "before": "Substitutes components when asked \"retire an old backend\", \"preserve replacement callers\", or \"migrate provider state\". Before routing provider changes, Ask the user: replace, coexist, or retain behind a wrapper? Not for coexistence alone (see compatibility).",
+    "before_length": 259,
+    "after": "Substitutes implementations when asked \"retire this backend\", \"migrate its saved state\", or \"preserve existing callers\". For a bare swap request, Ask the user whether the implementation is retired, kept behind an adapter, or run alongside another. Not for coexistence alone (see compatibility).",
+    "after_length": 294
+  },
+  {
+    "id": 85,
+    "slug": "reusability",
+    "path": "skills/085-reusability/SKILL.md",
+    "before": "Shares an artifact across contexts when asked \"decouple a checker from HTTP\", \"share validation code\", or \"remove a copied helper\". Ask the user which artifact and new consumer must share code before routing reuse. Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).",
+    "before_length": 320,
+    "after": "Shares one artifact when asked \"reuse this exact checker\", \"remove web dependencies\", or \"share validation logic\". Before routing use elsewhere, Ask the user: same code, broader input model, or joined stages? Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).",
+    "after_length": 314
+  },
+  {
+    "id": 90,
+    "slug": "self-descriptiveness",
+    "path": "skills/090-self-descriptiveness/SKILL.md",
+    "before": "Explains action context when asked \"explain this control\", \"explain this action now\", or \"label this object\". Ask the user: state/action cues or a separate explanation? Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).",
+    "before_length": 312,
+    "after": "Explains state/actions when asked \"explain disabled submit\", \"label pending work\", or \"name this record\". For screen help, Ask the user: current state/actions or standalone explanation? Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).",
+    "after_length": 329
+  },
+  {
+    "id": 112,
+    "slug": "viability",
+    "path": "skills/112-viability/SKILL.md",
+    "before": "Checks continued value when asked \"review upkeep\", \"weigh ongoing obligations\", or \"plan retirement\". Ask the user: long-term value, budget fit, or initial feasibility? Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).",
+    "before_length": 302,
+    "after": "Checks continuing value when asked \"review renewal\", \"compare upkeep with value\", or \"set a retirement gate\". For keep-or-retire requests, Ask the user which concern drives it: value, cost, or ability to deliver? Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).",
+    "after_length": 346
+  }
+]
