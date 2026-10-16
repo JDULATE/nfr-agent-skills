@@ -1,18 +1,38 @@
+<div align="center">
+
 # nfr-agent-skills
 
-114 skills for turning software quality concerns into scoped agent work, plus a
-selector that helps choose among them. Give a coding agent a concern such as
-deployment downtime, unnecessary personal data, or hard-to-read code; the relevant
-skill guides it through clarification, requirements, implementation, and verification.
-These concerns are called **Non-Functional Requirements (NFRs)** in this catalogue.
+### Software quality workflows for your coding agent.
 
-**[v0.1.0 pre-release](https://github.com/JDULATE/nfr-agent-skills/releases/tag/v0.1.0):
-all 115 skills are drafts.** Terminology boundaries are repository conventions,
-not standardized definitions. Using a skill does not establish compliance or
-production readiness.
+**114 Non-Functional Requirement skills. One selector. Scoped changes with explicit verification.**
 
-[Browse the catalogue](INDEX.md) · [Quick start](#quick-start) ·
-[Evidence and limitations](#evidence-and-limitations) · [Contribute](CONTRIBUTING.md)
+[![Validate skills](https://github.com/JDULATE/nfr-agent-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/JDULATE/nfr-agent-skills/actions/workflows/validate.yml)
+
+**[v0.1.0 pre-release](https://github.com/JDULATE/nfr-agent-skills/releases/tag/v0.1.0) &middot; [115 draft skills](INDEX.md) &middot; [MIT license](LICENSE)**
+
+[Quick start](#quick-start) &middot; [How it works](#how-it-works) &middot; [What you can work on](#what-you-can-work-on) &middot; [Example requests](#example-requests) &middot; [FAQ](#faq) &middot; [Documentation](#documentation)
+
+<code>Clarify &rarr; Specify &rarr; Design/Implement &rarr; Verify &rarr; Report</code>
+
+</div>
+
+> [!IMPORTANT]
+> All 115 skills are drafts. Terminology boundaries are repository conventions,
+> not standardized definitions. Using a skill does not establish compliance,
+> production readiness, or better implementation outcomes.
+
+---
+
+Give your coding agent a concern: users lose sessions on deploy, personal data
+keeps reaching analytics, or a function is hard to follow. A relevant skill guides
+the agent through reading the project, defining the requirement, making a scoped
+change, and reporting what was checked.
+
+The catalogue covers software quality concerns called **Non-Functional
+Requirements (NFRs)**. Choose one skill for an identified concern, or use the
+selector when you need help choosing and prioritizing several.
+
+**[Browse the complete catalogue](INDEX.md)** or start with a request below.
 
 ## Quick start
 
@@ -41,6 +61,53 @@ The intended result is a scoped proposal for the affected data flow, followed by
 the authorized change and relevant checks. The agent should identify the producer
 and recipient, state assumptions, and report what it verified and what remains
 unknown. This is an example request, not a recorded successful implementation.
+
+## How it works
+
+A skill is a Markdown entrypoint with supporting references. Your agent reads
+the chosen SKILL.md, inspects your code and docs, and follows its Workflow.
+The instructions ask it to state assumptions before building, ask at most three
+questions, and build the smallest version that meets your request.
+
+```mermaid
+flowchart TD
+    Request["Your project concern"] --> Choice{"One identified quality?"}
+    Choice -->|Yes| Skill["Read the individual skill"]
+    Choice -->|Several or choosing NFRs| Selector["Selector: read index and sibling boundaries"]
+    Selector --> Skill
+    Skill --> Clarify["Clarify scope from code and docs"]
+    Clarify --> Specify["Specify requirements and state assumptions"]
+    Specify --> Build["Design and implement the smallest change"]
+    Build --> Verify["Verify against the requirement"]
+    Verify --> Report["Report changes, evidence, and what remains unknown"]
+```
+
+Use the [disambiguation map](references/disambiguation-map.md) when terms overlap.
+For an ambiguous single concern, ask a focused question before choosing a sibling.
+
+The selector needs this bundle's `INDEX.md`, `selector.json`, and
+`references/disambiguation-map.md`. If you copy its folder separately, also give
+the agent the bundle path; its folder alone lacks those shared resources.
+
+## What you can work on
+
+These are repository navigation categories, not a standardized quality model.
+Use [INDEX.md](INDEX.md) for all skills and their draft status.
+
+| Area | NFR skills | Examples |
+| --- | ---: | --- |
+| Business & Fitness | 7 | [Affordability](skills/007-affordability/SKILL.md), [Effectiveness](skills/040-effectiveness/SKILL.md) |
+| Correctness & Data Quality | 12 | [Accuracy](skills/003-accuracy/SKILL.md), [Certainty](skills/016-certainty/SKILL.md) |
+| Design Structure & Flexibility | 14 | [Complexity/Interacting Complexity](skills/021-complexity-interacting-complexity/SKILL.md), [Composability](skills/022-composability/SKILL.md) |
+| Maintainability & Evolvability | 20 | [Adaptability](skills/004-adaptability/SKILL.md), [Additivity](skills/005-additivity/SKILL.md) |
+| Observability & Operability | 9 | [Analyzability](skills/009-analyzability/SKILL.md), [Controllability](skills/030-controllability/SKILL.md) |
+| Performance & Efficiency | 5 | [Efficiency/Device Efficiency](skills/041-efficiency-device-efficiency/SKILL.md), [Performance/Efficiency/Time or Space Bounds](skills/072-performance-efficiency-time-or-space-bounds/SKILL.md) |
+| Portability & Interoperability | 10 | [Compatibility](skills/019-compatibility/SKILL.md), [Installability](skills/055-installability/SKILL.md) |
+| Reliability & Resilience | 12 | [Atomicity](skills/011-atomicity/SKILL.md), [Availability](skills/015-availability/SKILL.md) |
+| Security & Privacy | 11 | [Accountability](skills/002-accountability/SKILL.md), [Anonymity](skills/010-anonymity/SKILL.md) |
+| Usability & Comprehension | 14 | [Accessibility/Access Control](skills/001-accessibility-access-control/SKILL.md), [Attractiveness](skills/012-attractiveness/SKILL.md) |
+
+The selector is separate from these 114 NFR skills.
 
 ## Install selected skills in Codex
 
@@ -85,33 +152,96 @@ For other agents, use the explicit-file approach in the quick start. Automatic
 discovery, installation locations, and invocation syntax for other hosts have not
 been verified here.
 
-## Choose the right skill
+## Example requests
 
-Use an individual skill for one identified concern. Read the
-[disambiguation map](references/disambiguation-map.md) when nearby terms overlap.
+These are starting prompts, not recorded implementation results. The agent still
+needs your project context and the relevant skill's checks.
 
-| Request | Starting skill |
-| --- | --- |
-| Users get logged out every time we deploy. | [Availability](skills/015-availability/SKILL.md) |
-| We keep storing emails we never use. | [Privacy](skills/075-privacy/SKILL.md) |
-| Reduce nesting and rename confusing locals. | [Readability](skills/078-readability/SKILL.md) |
-| Which NFRs matter for this service? | [NFR selector](skills/000-nfr-selector/SKILL.md) |
+### Keep sessions working through a deployment
 
-Use `$nfr-selector` for explicit NFR selection, broad requests such as "make this
-production-ready", or several qualities together. It reads the index and sibling
-boundaries, proposes the smallest useful set, identifies conflicts, and sequences
-the individual skills. Selecting skills does not verify readiness.
+Read [availability](skills/015-availability/SKILL.md), or invoke it after installation:
 
-Keep the selector connected to this bundle's `INDEX.md`, `selector.json`, and
-`references/disambiguation-map.md`. If you copy its folder separately, also give
-the agent the bundle path; the selector folder alone lacks those shared resources.
+```text
+$availability Users get logged out every time we deploy. Inspect how sessions
+and shutdown work, propose the smallest fix, and tell me what you verified.
+```
 
-Each skill follows **Clarify → Specify → Design/Implement → Verify → Report**.
-The workflows ask the agent to inspect existing code and docs, state assumptions
-before building, ask at most three questions, build the smallest version that
-meets the request, and report verification limits. See [AGENTS.md](AGENTS.md)
-for consumer guidance; the phased authoring process applies to contributions,
-not to using a skill on your project.
+### Stop sending unnecessary personal data
+
+```text
+$privacy Stop sending email addresses to analytics; we only use account IDs.
+Inspect the data flow and state your assumptions before making changes.
+```
+
+Start with [privacy](skills/075-privacy/SKILL.md) for purpose and lifecycle.
+Use [confidentiality](skills/026-confidentiality/SKILL.md) when the question is
+who may read protected information.
+
+### Make a function easier to follow
+
+```text
+$readability Reduce nesting and rename confusing locals in this function.
+Preserve its behavior and report which checks support that.
+```
+
+Read [readability](skills/078-readability/SKILL.md) for reading flow;
+use the sibling boundaries when the issue is missing concepts or character recognition.
+
+### Choose a small set of NFRs
+
+```text
+$nfr-selector Which NFRs matter for this service? Read the project, propose the
+smallest useful set, and explain conflicts and the order of work.
+```
+
+Use the [selector](skills/000-nfr-selector/SKILL.md) for selection, broad readiness
+requests, or several qualities together. Selecting skills does not verify readiness.
+
+## FAQ
+
+<details>
+<summary><strong>Which coding agents can use these skills?</strong></summary>
+
+An agent that can read Markdown can use a skill when you provide its SKILL.md,
+references, and project access. Codex discovery and invocation are documented
+above. Automatic installation and discovery for other hosts remain unverified.
+
+</details>
+
+<details>
+<summary><strong>Should I install all 115 skills?</strong></summary>
+
+Start with the skills your project needs. Codex can shorten descriptions or omit
+skills from its initial discovery list when many are installed. Browse
+[INDEX.md](INDEX.md) and retain the complete folders of your chosen skills.
+
+</details>
+
+<details>
+<summary><strong>Do I need Python to use a skill?</strong></summary>
+
+Reading these Markdown workflows does not require Python. Python is used by this
+repository's validation and maintenance scripts. Tools needed to change or verify
+your own project depend on that project.
+
+</details>
+
+<details>
+<summary><strong>Will this make my project production-ready or compliant?</strong></summary>
+
+The skills guide engineering work. They do not establish either conclusion.
+All skills are drafts, and real-task evidence is limited. Review the
+[evidence and limitations](#evidence-and-limitations) before relying on a result.
+
+</details>
+
+<details>
+<summary><strong>Does the phased authoring process apply to using a skill?</strong></summary>
+
+No. Follow [AGENTS.md](AGENTS.md) when applying a skill to your project.
+[CONTRIBUTING.md](CONTRIBUTING.md) covers changes to this repository.
+
+</details>
 
 ## Evidence and limitations
 
@@ -127,6 +257,9 @@ not to using a skill on your project.
 - About 175 audited transferable Rules of thumb bullets in batches 2–9 were not
   retrofitted; that earlier estimate was not independently recounted during
   release preparation. Also, 21 skills have only three Rules of thumb.
+  Public follow-up: [rule retrofit #1](https://github.com/JDULATE/nfr-agent-skills/issues/1),
+  [design depth #2](https://github.com/JDULATE/nfr-agent-skills/issues/2), and
+  [real-task evidence #3](https://github.com/JDULATE/nfr-agent-skills/issues/3).
 - Host compatibility is not established by repository validation. Every skill's
   frontmatter contains only `name` and `description`; draft status lives in the
   catalogue.
@@ -135,6 +268,16 @@ The [final report in the repository](https://github.com/JDULATE/nfr-agent-skills
 contains counts, routing provenance, uncertain claims, and known weaknesses.
 The `reviews/` directory is development evidence retained in Git and excluded
 from Git archive exports, including release source archives.
+
+## Documentation
+
+- [Catalogue](INDEX.md): skill links and draft status.
+- [Consumer guide](AGENTS.md): choosing, reading, and applying a skill.
+- [Sibling boundaries](references/disambiguation-map.md): proposed distinctions between overlapping NFRs.
+- [Authoring guide](references/authoring-guide.md): content and review requirements.
+- [Quality rubric](references/quality-rubric.md): the repository's authoring quality bar.
+- [Standards allowlist](references/standards-allowlist.md): citation constraints.
+- [Contributing](CONTRIBUTING.md): maintenance workflow and validation commands.
 
 ## Repository layout
 
