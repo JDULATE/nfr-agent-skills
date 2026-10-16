@@ -4,13 +4,13 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Business & Fitness
 
-- [007 Affordability](skills/007-affordability/SKILL.md) — todo
-- [040 Effectiveness](skills/040-effectiveness/SKILL.md) — todo
-- [049 Feasibility](skills/049-feasibility/SKILL.md) — todo
-- [052 Functionality](skills/052-functionality/SKILL.md) — todo
-- [095 Suitability](skills/095-suitability/SKILL.md) — todo
+- [007 Affordability](skills/007-affordability/SKILL.md) — draft
+- [040 Effectiveness](skills/040-effectiveness/SKILL.md) — draft
+- [049 Feasibility](skills/049-feasibility/SKILL.md) — draft
+- [052 Functionality](skills/052-functionality/SKILL.md) — draft
+- [095 Suitability](skills/095-suitability/SKILL.md) — draft
 - [099 Sustainability](skills/099-sustainability/SKILL.md) — draft
-- [112 Viability](skills/112-viability/SKILL.md) — todo
+- [112 Viability](skills/112-viability/SKILL.md) — draft
 
 ## Correctness & Data Quality
 
