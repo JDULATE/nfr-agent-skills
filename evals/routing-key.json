@@ -1,0 +1,1313 @@
+[
+  {
+    "id": "r-00c77516ccfe73b7",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-00f98470b19196f0",
+    "group": "explicit",
+    "expected": "adaptability"
+  },
+  {
+    "id": "r-0104fba2948fbf6e",
+    "group": "explicit",
+    "expected": "immunity"
+  },
+  {
+    "id": "r-013631a3aef9e06f",
+    "group": "explicit",
+    "expected": "robustness"
+  },
+  {
+    "id": "r-01539b82579ccff1",
+    "group": "explicit",
+    "expected": "adaptability"
+  },
+  {
+    "id": "r-032c098268c74570",
+    "group": "explicit",
+    "expected": "accountability"
+  },
+  {
+    "id": "r-0579607589b1c4ac",
+    "group": "explicit",
+    "expected": "usability"
+  },
+  {
+    "id": "r-064244249a365da5",
+    "group": "explicit",
+    "expected": "maturity"
+  },
+  {
+    "id": "r-06ed290e69a36543",
+    "group": "explicit",
+    "expected": "traceability"
+  },
+  {
+    "id": "r-08368f566b19e819",
+    "group": "explicit",
+    "expected": "reliability"
+  },
+  {
+    "id": "r-08569fca852c0bf9",
+    "group": "explicit",
+    "expected": "auditability"
+  },
+  {
+    "id": "r-08769771d440517b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-091c33606e5419cc",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-0a3961631c0e4ac4",
+    "group": "explicit",
+    "expected": "sustainability"
+  },
+  {
+    "id": "r-0b92fc33c482976f",
+    "group": "explicit",
+    "expected": "self-descriptiveness"
+  },
+  {
+    "id": "r-0bff5059c3a3e659",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-0c93d961f201c70f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-0e4d9e045ccbe6de",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-10cea61997b8fdb2",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-10e9c7fb2fde201a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-10fa474e5e2b4e6c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1251385d0c7e8d54",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-15cc30a497cd2577",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-164395923c160f38",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-16cf8186495bbb9b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-17b5a1a66d0632f9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-18298ecf9b96923f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1a8f1f831a352ecc",
+    "group": "user_voice",
+    "expected": [
+      "readability",
+      "self-descriptiveness"
+    ]
+  },
+  {
+    "id": "r-1d3450cfae00e2ec",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1d6124c9354c782b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1d8c5d5257e59ead",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1df2182defb1844f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2004e0ec5ab9c662",
+    "group": "explicit",
+    "expected": "accountability"
+  },
+  {
+    "id": "r-20e2410890010159",
+    "group": "explicit",
+    "expected": "evolvability"
+  },
+  {
+    "id": "r-21f23a92c0ef4ac8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-223de1b1cdb74065",
+    "group": "user_voice",
+    "expected": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-22c92c1e27e60028",
+    "group": "explicit",
+    "expected": "extensibility"
+  },
+  {
+    "id": "r-230cb4e674df7914",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-238d7d057b24e6ef",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-23c054f5a5ab2699",
+    "group": "explicit",
+    "expected": "quality-of-service"
+  },
+  {
+    "id": "r-24442f066a014c10",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-24b691bf6b150499",
+    "group": "explicit",
+    "expected": "changeability"
+  },
+  {
+    "id": "r-26588c182888b466",
+    "group": "user_voice",
+    "expected": [
+      "adjustability",
+      "configurability"
+    ]
+  },
+  {
+    "id": "r-27ab27a7e5e93872",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2875138ec6d35605",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2ba3bc2b3f9a62a2",
+    "group": "user_voice",
+    "expected": "scalability"
+  },
+  {
+    "id": "r-2c9f9cdf7c34f936",
+    "group": "explicit",
+    "expected": "expandability"
+  },
+  {
+    "id": "r-2d726f7d0ddedd5b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2fba7c3a447165da",
+    "group": "explicit",
+    "expected": "survivability"
+  },
+  {
+    "id": "r-2fd5c74ab06efa38",
+    "group": "explicit",
+    "expected": "attractiveness"
+  },
+  {
+    "id": "r-31dd2d97a1df9b05",
+    "group": "explicit",
+    "expected": "comprehensibility"
+  },
+  {
+    "id": "r-32d3cd68e3eda168",
+    "group": "explicit",
+    "expected": "expandability"
+  },
+  {
+    "id": "r-336a344cc095a2d4",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3426cfe6d588294e",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-37eb69ec9d791f9d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-37f3d4ea4d68fff1",
+    "group": "explicit",
+    "expected": "dependability"
+  },
+  {
+    "id": "r-386f0951db48c822",
+    "group": "explicit",
+    "expected": "efficiency-device-efficiency"
+  },
+  {
+    "id": "r-38de958ba57dca4d",
+    "group": "explicit",
+    "expected": "communicativeness"
+  },
+  {
+    "id": "r-38e216f95092d864",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3a156d1ffc74a161",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3a93b57e292b6093",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3cb594049037d209",
+    "group": "explicit",
+    "expected": "comprehensiveness"
+  },
+  {
+    "id": "r-3cda6a03c6c7b3b3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3e20a3b68eff4295",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3e34ad3438069fae",
+    "group": "explicit",
+    "expected": "accessibility-access-control"
+  },
+  {
+    "id": "r-3f2eaac92c935785",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3f95a1a9e2d0d3f0",
+    "group": "explicit",
+    "expected": "trustability"
+  },
+  {
+    "id": "r-3f99dc55e48d1b89",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3ff33593a63f4538",
+    "group": "explicit",
+    "expected": "enhanceability"
+  },
+  {
+    "id": "r-40689c1f0bc1e130",
+    "group": "explicit",
+    "expected": "readability"
+  },
+  {
+    "id": "r-40992a76b6b94da4",
+    "group": "explicit",
+    "expected": "sustainability"
+  },
+  {
+    "id": "r-40ea526d0e358dbe",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-43ac8d1036d22bde",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-43cc98bae0a49eaf",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-448b8921d3874cf4",
+    "group": "explicit",
+    "expected": "predictability"
+  },
+  {
+    "id": "r-46f4fb4e3de43c5d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4702213686ff69af",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4712a66798dbd10d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-473db3456a90cbc0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-48121e003854c08f",
+    "group": "explicit",
+    "expected": "trustability"
+  },
+  {
+    "id": "r-496f4a0654eefc0b",
+    "group": "explicit",
+    "expected": "security-control-and-security"
+  },
+  {
+    "id": "r-4a4e58c6befa65ff",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4afcd522f69d758a",
+    "group": "explicit",
+    "expected": "agility"
+  },
+  {
+    "id": "r-4bc32bb365518dff",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4c339b43a9b59923",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4c69fad2d46bb2e7",
+    "group": "explicit",
+    "expected": "augmentability"
+  },
+  {
+    "id": "r-4c779e3bf6b01fa3",
+    "group": "explicit",
+    "expected": "additivity"
+  },
+  {
+    "id": "r-4ef7816fff7eaed3",
+    "group": "explicit",
+    "expected": "confidentiality"
+  },
+  {
+    "id": "r-522eb4b5697e10b3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-526b3ad54e859b5a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-53bb9c6161763cce",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-53d8912f4279c06a",
+    "group": "explicit",
+    "expected": "atomicity"
+  },
+  {
+    "id": "r-53e043e1939e8b3b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-544e2a4c3a959b68",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-558562ef5a4bc0fb",
+    "group": "explicit",
+    "expected": "trainability"
+  },
+  {
+    "id": "r-55cdffa4d3cb69a0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-56a4aeb64d9dd0a2",
+    "group": "explicit",
+    "expected": "maintainability"
+  },
+  {
+    "id": "r-56dd9a18cc7efb5d",
+    "group": "explicit",
+    "expected": "comprehensiveness"
+  },
+  {
+    "id": "r-573c69a5d243aebb",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-576b41827ff2869d",
+    "group": "explicit",
+    "expected": "durability"
+  },
+  {
+    "id": "r-57c0ab0e680f2a41",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-5858847318a21069",
+    "group": "explicit",
+    "expected": "configurability"
+  },
+  {
+    "id": "r-58be2272a38abc93",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-5904e73cf611aac0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-591489b007912170",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-5929e4dc4b473e3c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-59341513211f26ec",
+    "group": "explicit",
+    "expected": "likeability"
+  },
+  {
+    "id": "r-5a99728eb9a5b240",
+    "group": "explicit",
+    "expected": "availability"
+  },
+  {
+    "id": "r-5bcdd44bf4b7c3e5",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-60130dbf2da5c8c5",
+    "group": "explicit",
+    "expected": "recoverability"
+  },
+  {
+    "id": "r-6142779c22d7bbd8",
+    "group": "explicit",
+    "expected": "availability"
+  },
+  {
+    "id": "r-624d7ef8a7045067",
+    "group": "explicit",
+    "expected": "conciseness"
+  },
+  {
+    "id": "r-625806728696d50b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6509479e01b66713",
+    "group": "explicit",
+    "expected": "adjustability"
+  },
+  {
+    "id": "r-65962c0fc744f0cf",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6753b4b72a1bf7aa",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-677ac388c80fc716",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6934e7563ddacf71",
+    "group": "explicit",
+    "expected": "dependability"
+  },
+  {
+    "id": "r-6976b62b346e4e07",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-69f5c57c97d6d1ca",
+    "group": "explicit",
+    "expected": "tailorability"
+  },
+  {
+    "id": "r-6b1025fbebf059ab",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6bcce21598d877f9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6c693f5a694f673b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6fa5f18f3c835424",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-70a726446274b284",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-737a242f3235564c",
+    "group": "explicit",
+    "expected": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-74797fa5d3c2bc38",
+    "group": "explicit",
+    "expected": "additivity"
+  },
+  {
+    "id": "r-758b94d100438540",
+    "group": "explicit",
+    "expected": "accessibility-access-control"
+  },
+  {
+    "id": "r-763c5fbe2dfca612",
+    "group": "explicit",
+    "expected": "maintainability"
+  },
+  {
+    "id": "r-7834df1aca279a21",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-789b5ac3aa251075",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-79202efec6524daa",
+    "group": "explicit",
+    "expected": "susceptibility"
+  },
+  {
+    "id": "r-7955c6e9856502de",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7a0c6f2aa16dc2ee",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7b32c2b6e0388640",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7bd98ba2ba8e01c5",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7cc0ba9e45730834",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7cd3e6ece4f921e6",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7f9059bd6e2f24b0",
+    "group": "explicit",
+    "expected": "reconfigurability"
+  },
+  {
+    "id": "r-7fe916099edff214",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-8024de27c7216148",
+    "group": "explicit",
+    "expected": "durability"
+  },
+  {
+    "id": "r-80b83195c3213fd8",
+    "group": "explicit",
+    "expected": "integrity"
+  },
+  {
+    "id": "r-829ee8d31c479410",
+    "group": "explicit",
+    "expected": "configurability"
+  },
+  {
+    "id": "r-82a4867732ed4b5b",
+    "group": "explicit",
+    "expected": "privacy"
+  },
+  {
+    "id": "r-85312516f6e4ba88",
+    "group": "explicit",
+    "expected": "traceability"
+  },
+  {
+    "id": "r-85520825a6ce8bf8",
+    "group": "explicit",
+    "expected": "augmentability"
+  },
+  {
+    "id": "r-860bde7ea61265ef",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-8619785e76afc697",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-872578e633706422",
+    "group": "explicit",
+    "expected": "susceptibility"
+  },
+  {
+    "id": "r-8a9e152bde76d041",
+    "group": "explicit",
+    "expected": "quality-of-service"
+  },
+  {
+    "id": "r-8abb5433e79605cc",
+    "group": "explicit",
+    "expected": "reliability"
+  },
+  {
+    "id": "r-8addcc277daf14ca",
+    "group": "explicit",
+    "expected": "modifiability"
+  },
+  {
+    "id": "r-8bf21e7e6c594bae",
+    "group": "explicit",
+    "expected": "safety"
+  },
+  {
+    "id": "r-8e49d332ea1726f2",
+    "group": "explicit",
+    "expected": "integrity"
+  },
+  {
+    "id": "r-8ed8a21f0daa94d7",
+    "group": "explicit",
+    "expected": "supportability"
+  },
+  {
+    "id": "r-915e470bd1f5bff2",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-917c8b57d32e3594",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-91964c7b1654e2f3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-928d7c4ef87e485a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-92925812488295f3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-93bd3fbc46c5bd37",
+    "group": "explicit",
+    "expected": "privacy"
+  },
+  {
+    "id": "r-94a290786dde3ed3",
+    "group": "explicit",
+    "expected": "maturity"
+  },
+  {
+    "id": "r-94e3d0d51dd15ca6",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-94f72d16d75f0c8a",
+    "group": "explicit",
+    "expected": "robustness"
+  },
+  {
+    "id": "r-955c30e5342eb362",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-961b883264ad3f8b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-967b239111a35b26",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-969a626040451483",
+    "group": "explicit",
+    "expected": "attractiveness"
+  },
+  {
+    "id": "r-990bf1d636783aa5",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9a742aac491e4000",
+    "group": "explicit",
+    "expected": "comprehensibility"
+  },
+  {
+    "id": "r-9bc5df77b7002ca8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9c5f4abe8e1e6546",
+    "group": "explicit",
+    "expected": "self-descriptiveness"
+  },
+  {
+    "id": "r-9c67f3690663acb0",
+    "group": "explicit",
+    "expected": "conciseness"
+  },
+  {
+    "id": "r-9cd77687d3c5ff5e",
+    "group": "explicit",
+    "expected": "understandability"
+  },
+  {
+    "id": "r-9d43fa39e9b0530d",
+    "group": "explicit",
+    "expected": "communicativeness"
+  },
+  {
+    "id": "r-9d7e90652a465cfa",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9de6a4187e0396e8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9ec6768a7a73f28e",
+    "group": "explicit",
+    "expected": "atomicity"
+  },
+  {
+    "id": "r-9f6e34fc68670736",
+    "group": "explicit",
+    "expected": "supportability"
+  },
+  {
+    "id": "r-a044ca5f911f0691",
+    "group": "explicit",
+    "expected": "auditability"
+  },
+  {
+    "id": "r-a4a5743876323a31",
+    "group": "explicit",
+    "expected": "customizability"
+  },
+  {
+    "id": "r-a56b2e0715e81b81",
+    "group": "explicit",
+    "expected": "legibility"
+  },
+  {
+    "id": "r-a6d8ba442a3034e2",
+    "group": "explicit",
+    "expected": "evolvability"
+  },
+  {
+    "id": "r-a955ef5a8a0b861a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-a99048f421fc4cd9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ab3c6352559e382b",
+    "group": "explicit",
+    "expected": "adjustability"
+  },
+  {
+    "id": "r-ae194021d852b1f9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ae258406ad583e23",
+    "group": "explicit",
+    "expected": "modifiability"
+  },
+  {
+    "id": "r-af45b59af270f474",
+    "group": "explicit",
+    "expected": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-b05f4e1d2ceabe9f",
+    "group": "explicit",
+    "expected": "survivability"
+  },
+  {
+    "id": "r-b4f2c7711d799a00",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-b66cd17cff46dec8",
+    "group": "explicit",
+    "expected": "legibility"
+  },
+  {
+    "id": "r-b747e24a69197b64",
+    "group": "explicit",
+    "expected": "usability"
+  },
+  {
+    "id": "r-b86b8a4c929f6b55",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-b9f7d1a88072192f",
+    "group": "explicit",
+    "expected": "defensibility"
+  },
+  {
+    "id": "r-be2cc9d10a1d7593",
+    "group": "explicit",
+    "expected": "understandability"
+  },
+  {
+    "id": "r-bf5bb2708b854660",
+    "group": "explicit",
+    "expected": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-c1cb33a2b1af6534",
+    "group": "explicit",
+    "expected": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-c3a0a0f74cd69817",
+    "group": "explicit",
+    "expected": "safety"
+  },
+  {
+    "id": "r-c51c660b7b988928",
+    "group": "explicit",
+    "expected": "flexibility"
+  },
+  {
+    "id": "r-c5df00e6450f3eb9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-c5ef1fd45977fc6f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-c7490e02d72a00ae",
+    "group": "explicit",
+    "expected": "reconfigurability"
+  },
+  {
+    "id": "r-c767a2d18ade0424",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-c7db5126ce849eee",
+    "group": "explicit",
+    "expected": "immunity"
+  },
+  {
+    "id": "r-c95f76a1268420ab",
+    "group": "explicit",
+    "expected": "trainability"
+  },
+  {
+    "id": "r-c996e972a3e54e38",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-c9b5412a1e55146c",
+    "group": "explicit",
+    "expected": "defensibility"
+  },
+  {
+    "id": "r-ca67b415b8384e1f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-cac6582a9a1ddf0e",
+    "group": "explicit",
+    "expected": "confidentiality"
+  },
+  {
+    "id": "r-cc382c417659b490",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-cc9ff733087bcd4d",
+    "group": "explicit",
+    "expected": "predictability"
+  },
+  {
+    "id": "r-cd58360db7ab0823",
+    "group": "explicit",
+    "expected": "learnability"
+  },
+  {
+    "id": "r-cf2a3a3829e43038",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d0dc560dc9189d8e",
+    "group": "explicit",
+    "expected": "enhanceability"
+  },
+  {
+    "id": "r-d251713f660cc8fd",
+    "group": "explicit",
+    "expected": "efficiency-device-efficiency"
+  },
+  {
+    "id": "r-d48af82ba351ffe9",
+    "group": "explicit",
+    "expected": "readability"
+  },
+  {
+    "id": "r-d4be4d406f12390c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d4d39be78dc262a8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d860c62c401280ae",
+    "group": "explicit",
+    "expected": "customizability"
+  },
+  {
+    "id": "r-d9495ae05ecd042e",
+    "group": "explicit",
+    "expected": "tailorability"
+  },
+  {
+    "id": "r-d985628738145558",
+    "group": "user_voice",
+    "expected": "availability"
+  },
+  {
+    "id": "r-da04ab797f866312",
+    "group": "explicit",
+    "expected": "extendability"
+  },
+  {
+    "id": "r-da1753fea257c90f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-db2e1418bcacb95e",
+    "group": "explicit",
+    "expected": "security-control-and-security"
+  },
+  {
+    "id": "r-db77735fad4e445c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-dc35686fd9e8cf9f",
+    "group": "user_voice",
+    "expected": "extensibility"
+  },
+  {
+    "id": "r-dd63d9c8a246f9c7",
+    "group": "user_voice",
+    "expected": "privacy"
+  },
+  {
+    "id": "r-de52880d36a60b96",
+    "group": "explicit",
+    "expected": "scalability"
+  },
+  {
+    "id": "r-de81939d3dfd68c1",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-dea0caade4f6e0ef",
+    "group": "explicit",
+    "expected": "scalability"
+  },
+  {
+    "id": "r-deb8df5817f7a308",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e348ad5005ad71d2",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e37944566e76aaf2",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e491734c35b483bd",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e6a116cba651e2d9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e80d0070c41a343f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e84299105ce31573",
+    "group": "explicit",
+    "expected": "anonymity"
+  },
+  {
+    "id": "r-e906f9ac93ac06df",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e918926523f1cb7d",
+    "group": "user_voice",
+    "expected": [
+      "ask",
+      "atomicity",
+      "durability",
+      "recoverability"
+    ]
+  },
+  {
+    "id": "r-e9341b76ec6d22bf",
+    "group": "explicit",
+    "expected": "anonymity"
+  },
+  {
+    "id": "r-eb9484de4c2d1530",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ec20a9c9de374b9e",
+    "group": "explicit",
+    "expected": "extensibility"
+  },
+  {
+    "id": "r-ef4d8c228c48948d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ef76fb5f8071c582",
+    "group": "explicit",
+    "expected": "learnability"
+  },
+  {
+    "id": "r-efb18ff2440f573a",
+    "group": "explicit",
+    "expected": "flexibility"
+  },
+  {
+    "id": "r-efcbda989498d81c",
+    "group": "explicit",
+    "expected": "extendability"
+  },
+  {
+    "id": "r-efe02558bf600cbd",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f487cce8e685e7d4",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f4b883c03ac8e303",
+    "group": "explicit",
+    "expected": "stability"
+  },
+  {
+    "id": "r-f5104ee00e36ed63",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f74233bb37c0f533",
+    "group": "explicit",
+    "expected": "stability"
+  },
+  {
+    "id": "r-f813e6ab2bab850d",
+    "group": "explicit",
+    "expected": "recoverability"
+  },
+  {
+    "id": "r-f840b615d41cf571",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f995c50ca50697b9",
+    "group": "explicit",
+    "expected": "changeability"
+  },
+  {
+    "id": "r-f9b80679850c9047",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-fa4d7c768527ffb7",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-fa9cc30b8d455504",
+    "group": "explicit",
+    "expected": "likeability"
+  },
+  {
+    "id": "r-fd086dc0bfe562eb",
+    "group": "explicit",
+    "expected": "agility"
+  },
+  {
+    "id": "r-fea7a948bd276155",
+    "group": "vague",
+    "expected": "ask"
+  }
+]
