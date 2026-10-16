@@ -20,12 +20,12 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [028 Conformance](skills/028-conformance/SKILL.md) — todo
 - [029 Consistency](skills/029-consistency/SKILL.md) — todo
 - [031 Correctness](skills/031-correctness/SKILL.md) — todo
-- [036 Demonstrability](skills/036-demonstrability/SKILL.md) — todo
-- [051 Formality](skills/051-formality/SKILL.md) — todo
-- [076 Provability](skills/076-provability/SKILL.md) — todo
-- [082 Repeatability](skills/082-repeatability/SKILL.md) — todo
+- [036 Demonstrability](skills/036-demonstrability/SKILL.md) — draft
+- [051 Formality](skills/051-formality/SKILL.md) — draft
+- [076 Provability](skills/076-provability/SKILL.md) — draft
+- [082 Repeatability](skills/082-repeatability/SKILL.md) — draft
 - [084 Replicability](skills/084-replicability/SKILL.md) — todo
-- [110 Verifiability](skills/110-verifiability/SKILL.md) — todo
+- [110 Verifiability](skills/110-verifiability/SKILL.md) — draft
 
 ## Design Structure & Flexibility
 
@@ -65,7 +65,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [079 Reconfigurability](skills/079-reconfigurability/SKILL.md) — draft
 - [096 Supportability](skills/096-supportability/SKILL.md) — draft
 - [100 Tailorability](skills/100-tailorability/SKILL.md) — draft
-- [101 Testability](skills/101-testability/SKILL.md) — todo
+- [101 Testability](skills/101-testability/SKILL.md) — draft
 
 ## Observability & Operability
 
@@ -73,7 +73,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [030 Controllability](skills/030-controllability/SKILL.md) — todo
 - [033 Debuggability](skills/033-debuggability/SKILL.md) — todo
 - [064 Manageability](skills/064-manageability/SKILL.md) — todo
-- [066 Measurability](skills/066-measurability/SKILL.md) — todo
+- [066 Measurability](skills/066-measurability/SKILL.md) — draft
 - [070 Observability](skills/070-observability/SKILL.md) — todo
 - [071 Operability](skills/071-operability/SKILL.md) — todo
 - [102 Traceability](skills/102-traceability/SKILL.md) — draft

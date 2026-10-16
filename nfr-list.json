@@ -326,7 +326,7 @@
     "slug": "demonstrability",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
@@ -467,7 +467,7 @@
     "slug": "formality",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
@@ -602,7 +602,7 @@
     "slug": "measurability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
@@ -696,7 +696,7 @@
     "slug": "provability",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
@@ -750,7 +750,7 @@
     "slug": "repeatability",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
@@ -928,7 +928,7 @@
     "slug": "testability",
     "aliases": [],
     "category": "Maintainability & Evolvability",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
@@ -1009,7 +1009,7 @@
     "slug": "verifiability",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 11
   },
   {
