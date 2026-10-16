@@ -1,99 +1,173 @@
-# nfr-agent-skills - v0.1.0 pre-release
+# nfr-agent-skills
 
-114 Non-Functional Requirement (NFR) skills and a selector for choosing among them.
-Each skill helps an agent clarify a concern, propose requirements, make a scoped
-change, and report verification. Browse [INDEX.md](INDEX.md) for the catalogue.
+114 skills for turning software quality concerns into scoped agent work, plus a
+selector that helps choose among them. Give a coding agent a concern such as
+deployment downtime, unnecessary personal data, or hard-to-read code; the relevant
+skill guides it through clarification, requirements, implementation, and verification.
+These concerns are called **Non-Functional Requirements (NFRs)** in this catalogue.
 
-**v0.1.0 pre-release. All 115 skills are drafts.**
-The terminology boundaries are proposed repository conventions, not standardized
-definitions. These workflows do not establish compliance or production readiness.
+**[v0.1.0 pre-release](https://github.com/JDULATE/nfr-agent-skills/releases/tag/v0.1.0):
+all 115 skills are drafts.** Terminology boundaries are repository conventions,
+not standardized definitions. Using a skill does not establish compliance or
+production readiness.
 
-## Use with Codex
+[Browse the catalogue](INDEX.md) · [Quick start](#quick-start) ·
+[Evidence and limitations](#evidence-and-limitations) · [Contribute](CONTRIBUTING.md)
 
-Verified against [official OpenAI skill documentation](https://developers.openai.com/codex/skills):
-Codex discovers skill names, descriptions, and paths, then reads the full SKILL.md
-when a skill is selected. SKILL.md requires name and description frontmatter.
-Repository discovery scans `.agents/skills` from the working directory up to the
-repository root; the documented user location is `$HOME/.agents/skills`.
-Symlinked skill folders are supported. Large installed collections can have
-descriptions shortened or skills omitted from the initial discovery list.
+## Quick start
 
-Keep this checkout accessible. Copy or link selected complete skill folders from
-`skills/` into your project's `.agents/skills/`, for example:
+You need a coding agent that can read Markdown and access your project's files.
+Git is needed for cloning; Python is needed only for repository maintenance checks.
+
+1. Download this repository or clone it:
+
+   ```sh
+   git clone https://github.com/JDULATE/nfr-agent-skills.git
+   ```
+
+2. Choose a skill from [INDEX.md](INDEX.md). Keep its entire folder, including
+   `references/`, accessible to your agent.
+
+3. In your project's agent session, give the agent the checkout path and a request:
+
+   ```text
+   Read skills/075-privacy/SKILL.md in the nfr-agent-skills checkout I provided.
+   Follow its Workflow for this project: we keep sending email addresses to
+   analytics, but we only use account IDs. Propose the smallest change that
+   stops sending email addresses. State assumptions before building.
+   ```
+
+The intended result is a scoped proposal for the affected data flow, followed by
+the authorized change and relevant checks. The agent should identify the producer
+and recipient, state assumptions, and report what it verified and what remains
+unknown. This is an example request, not a recorded successful implementation.
+
+## Install selected skills in Codex
+
+According to [official OpenAI documentation](https://developers.openai.com/codex/skills),
+Codex discovers skill names, descriptions, and paths, then reads the full
+`SKILL.md` when selected. For project discovery, put complete skill folders in
+`.agents/skills/` within your project. Codex scans these directories from its
+working directory up to the repository root. The documented user-wide location
+is `$HOME/.agents/skills`; symlinked skill folders are also supported.
+
+For example, copy `skills/075-privacy/` into your project so it looks like this:
 
 ```text
 your-project/
-  .agents/skills/
-    006-adjustability/
-      SKILL.md
-      references/
-    000-nfr-selector/
-      SKILL.md
-      references/
+  AGENTS.md
+  .agents/
+    skills/
+      075-privacy/
+        SKILL.md
+        references/
 ```
 
-If you install only skill folders, copy the "Apply the skill" section of this
-repository's AGENTS.md into your own project's AGENTS.md. This repository's
-AGENTS.md is not read from your project merely because the skill folders are installed.
+If you install only skill folders, copy the **Apply the skill** section of this
+repository's [AGENTS.md](AGENTS.md#apply-the-skill) into your own project's
+`AGENTS.md`. This repository's `AGENTS.md` is not read from your project merely
+because the skill folders are installed.
 
-The top-level `skills/` directory in this checkout is not itself a documented
-Codex discovery location. Installing a few relevant skills avoids relying on
-every description fitting in the discovery list. No installation was performed
-or tested on another machine during this work; the documented locations and
-format were confirmed, while environment-specific installation remains unverified.
+In Codex CLI or the IDE extension, use `/skills` or a `$` mention with the skill's
+frontmatter name, which omits the numeric folder prefix:
 
-For the selector, retain access to this bundle's INDEX.md, selector.json, and
-references/disambiguation-map.md. If copied separately, give the agent the bundle
-path; copying the selector folder alone does not supply its catalogue resources.
+```text
+$privacy Stop sending email addresses to analytics; we only use account IDs.
+```
 
-In Codex CLI or the IDE extension, use `/skills` or a `$` mention to select a
-skill by its frontmatter name, such as `$adjustability` or `$nfr-selector`.
-Codex can also choose a skill from its description.
+Codex can also select a skill from its description. Install only the skills you
+need: large collections can have descriptions shortened or skills omitted from
+the initial discovery list. This checkout's top-level `skills/` directory is not
+itself a documented discovery location. The documented format and locations were
+checked, but installation on another machine remains unverified.
 
-Example requests:
+For other agents, use the explicit-file approach in the quick start. Automatic
+discovery, installation locations, and invocation syntax for other hosts have not
+been verified here.
 
-- `$adjustability Make this batch cap runtime-changeable within the same worker setup.`
-- `$nfr-selector Which NFRs matter for this service? Propose the smallest useful set.`
+## Choose the right skill
 
-Use the selector for explicit NFR selection, broad readiness requests, or several
-qualities together. Use an individual skill directly for one identified concern.
+Use an individual skill for one identified concern. Read the
+[disambiguation map](references/disambiguation-map.md) when nearby terms overlap.
 
-## Other agents
+| Request | Starting skill |
+| --- | --- |
+| Users get logged out every time we deploy. | [Availability](skills/015-availability/SKILL.md) |
+| We keep storing emails we never use. | [Privacy](skills/075-privacy/SKILL.md) |
+| Reduce nesting and rename confusing locals. | [Readability](skills/078-readability/SKILL.md) |
+| Which NFRs matter for this service? | [NFR selector](skills/000-nfr-selector/SKILL.md) |
 
-For an agent that can read Markdown files, explicitly point it to the chosen
-`skills/NNN-slug/SKILL.md`, ask it to read the file before building, and follow its
-Workflow. Provide linked references and project access as needed. Automatic
-discovery, invocation syntax, and installation locations for other hosts are
-unverified here; do not assume that they scan Codex's directories.
-Read [AGENTS.md](AGENTS.md) for consumer guidance.
+Use `$nfr-selector` for explicit NFR selection, broad requests such as "make this
+production-ready", or several qualities together. It reads the index and sibling
+boundaries, proposes the smallest useful set, identifies conflicts, and sequences
+the individual skills. Selecting skills does not verify readiness.
 
-## Quality and evidence limits
+Keep the selector connected to this bundle's `INDEX.md`, `selector.json`, and
+`references/disambiguation-map.md`. If you copy its folder separately, also give
+the agent the bundle path; the selector folder alone lacks those shared resources.
 
-Routing was tested on a small authored set and selected reruns, including 12
-held-out prompts. The held-out result was 11/12; one ambiguous recurring-bug
-prompt chose maturity, where asking the user was judged better. Routing accuracy
-does not demonstrate that the workflows produce better implementations.
+Each skill follows **Clarify → Specify → Design/Implement → Verify → Report**.
+The workflows ask the agent to inspect existing code and docs, state assumptions
+before building, ask at most three questions, build the smallest version that
+meets the request, and report verification limits. See [AGENTS.md](AGENTS.md)
+for consumer guidance; the phased authoring process applies to contributions,
+not to using a skill on your project.
 
-Fast paths were exercised in a few manual scratch runs by the maintainer.
-A no-skills baseline behaved about the same on one task. These observations do
-not establish a benefit over the baseline. Broad real-task workflow coverage,
-independent replication, and deployment-level results are missing.
-Every SKILL.md frontmatter contains only name and description; status remains
-in the catalogue. Runtime host compatibility is not established by repository
-validation alone.
-Development checkouts retain counts, routing provenance, uncertain claims, and
-known weaknesses in `reviews/final-report.md`. Reviews are development evidence
-and are excluded from future Git archive exports.
+## Evidence and limitations
 
-## Repository layout and contributions
+- All skills remain drafts. Repository validation checks structure and content
+  constraints; it does not establish that workflows produce better implementations.
+- Routing was tested on a small authored set and selected reruns, including
+  **12 held-out prompts, with 11/12 accepted choices**. The remaining prompt
+  concerned a recurring bug: the router chose maturity, while asking the user
+  was judged better. This result is not a catalogue-wide accuracy estimate.
+- Fast paths were exercised in a few manual scratch runs by the maintainer.
+  A no-skills baseline behaved about the same on one task. Broad real-task
+  coverage, independent replication, and deployment-level evidence are missing.
+- About 175 audited transferable Rules of thumb bullets in batches 2–9 were not
+  retrofitted; that earlier estimate was not independently recounted during
+  release preparation. Also, 21 skills have only three Rules of thumb.
+- Host compatibility is not established by repository validation. Every skill's
+  frontmatter contains only `name` and `description`; draft status lives in the
+  catalogue.
 
-- `skills/`: 114 NFR entrypoints plus `000-nfr-selector`, with local references.
-- `nfr-list.json`: the unchanged 114-NFR catalogue; `selector.json`: selector status.
-- `INDEX.md`: generated skill links and draft status.
-- `references/`: terminology conventions, standards allowlist, and quality rubric.
-- `evals/`: routing fixtures, frozen keys, historical snapshots, and supplied results.
-- `scripts/`, `tests/`: scaffolding, validation, indexing, and routing scoring.
-- `reviews/`: retained development findings, not release documentation.
+The [final report in the repository](https://github.com/JDULATE/nfr-agent-skills/blob/master/reviews/final-report.md)
+contains counts, routing provenance, uncertain claims, and known weaknesses.
+The `reviews/` directory is development evidence retained in Git and excluded
+from Git archive exports, including release source archives.
 
-For authoring rules and commands, read [CONTRIBUTING.md](CONTRIBUTING.md).
-The phased authoring process applies to contributions, not to using a skill.
+## Repository layout
+
+| Path | Contents |
+| --- | --- |
+| [skills/](skills/) | 114 NFR entrypoints and the selector, with local references |
+| [INDEX.md](INDEX.md) | Generated catalogue with links and status |
+| [nfr-list.json](nfr-list.json), [selector.json](selector.json) | Catalogue metadata and draft status |
+| [references/](references/) | Terminology conventions, standards allowlist, authoring guide, and rubric |
+| [evals/](evals/) | Routing fixtures, frozen keys, historical snapshots, and supplied results |
+| [scripts/](scripts/), [tests/](tests/) | Validation, indexing, routing scoring, and maintenance tooling |
+
+## Contributing and checks
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing a skill. It defines scope,
+authoring phases, the quality rubric, and validation requirements. Run these
+checks from the repository root with Python; the scripts use its standard library:
+
+```sh
+python scripts/validate_skills.py
+python -m unittest discover -s tests
+python scripts/build_index.py
+```
+
+A successful validator run reports zero errors; tests should report `OK`, and
+the index builder should report 115 entries. CI runs on pushes and pull requests
+and also checks that the generated index matches the committed file. A passing
+check is not skill approval or evidence of better implementation outcomes.
+
+Report defects or unclear sibling boundaries through
+[GitHub issues](https://github.com/JDULATE/nfr-agent-skills/issues), with the skill
+slug, request, observed behavior, and expected behavior.
+
+## License
+
+[MIT](LICENSE).
