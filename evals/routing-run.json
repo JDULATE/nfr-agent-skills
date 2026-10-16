@@ -1,0 +1,37 @@
+{
+  "preparation_commit": "bc5c71616a796f60bf7beb808e9deee18c64cc51",
+  "session_id": "01a14599-513d-74a2-ac72-344065c0b3a2",
+  "cli_version": "codex-cli 0.162.1",
+  "model": "CLI default; no model override; model name not reported in JSONL",
+  "fresh_session": true,
+  "ephemeral": true,
+  "user_config_ignored": true,
+  "sandbox": "read-only",
+  "input_delivery": "full blinded file contents inline on stdin",
+  "input_files": {
+    "routing-catalog.md": "f19a39447bd4a15acd3a5f906134205a76fe30afa83af2ff47161aee1195292d",
+    "routing-prompts.json": "b55d8ee2a5bde547c237827a5be7baca2471b1a854e9f474e4024f5da9bee71a"
+  },
+  "stdin_sha256": "cde5f4ef62a61ede46689eb615b5f9e5ac722cb7e411873cd9439d8adce31a91",
+  "router_instruction_prefix": "The complete contents of the two requested files are supplied inline below. Read these supplied contents directly. Do not use tools, run commands, read local files, or search for other context.\n\nRoute each developer request using only routing-catalog.md and routing-prompts.json in the working directory.\nRead both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.\nFor every prompt, choose one exact catalogue slug or \"ask\". Choose \"ask\" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.\nUse the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.\nReturn only a complete JSON array of objects with exactly the fields \"id\" and \"choice\". Include every input id exactly once. Use the literal value \"ask\" for asking the user. No Markdown fences, commentary, explanations, or additional fields.\n",
+  "answer_key_supplied": false,
+  "tool_calls": 0,
+  "exit_code": 0,
+  "elapsed_seconds": 142.21,
+  "results_sha256": "fb43b1309baaf0d97266a12bb33f2700e0c4a383bbbac4197033ec88cfbdbdb0",
+  "session_transcript_sha256": "b7500be707d0dbb353fe2c09f59d5e4ac1bb90caf663d446bcd78f08c8fe09b8",
+  "usage": {
+    "input_tokens": 41417,
+    "cached_input_tokens": 12544,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9951,
+    "reasoning_output_tokens": 22
+  },
+  "earlier_unscored_attempt": "01a14598-4e40-70a1-a90d-7c02b5567b06: file reads blocked by CLI policy; no routing answers",
+  "answers": 490,
+  "answer_normalization": "none; output-last-message bytes copied unchanged",
+  "scoring_command": "python scripts/score_routing.py routing-results.json",
+  "score_sha256": "b09cdb70c81be6ec45711d2929ed2919ef1b7dab68ca2349dbbd0653c43ebaca",
+  "key_sha256": "58c6535aba33556e2d5e2720c80fb3669754df4f733a200c56242e182e9fe0f2",
+  "misses": 94
+}
