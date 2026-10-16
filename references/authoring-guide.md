@@ -19,12 +19,13 @@ Work happens in phases. Do only the phase you are told to run, then stop.
 ## Skill-writing rules from Phase 3
 
 - Voice: imperative, addressed to the agent ("Ask...", "Add...", "Reject..."). No marketing language, no "it is important to".
-- Description: third person, includes what + when + 3-6 natural trigger phrases a user might say + "Not for ..." clause naming sibling slugs.
+- Description: third person, includes what + when + 3-6 natural trigger phrases a user might say + "Not for ..." clause naming sibling slugs. Keep it at 350 characters or fewer and state the nearest-sibling ambiguity in the description itself.
 - The Workflow must contain real decision rules and must tell the agent to read the existing codebase/docs before specifying anything.
 - Specification patterns must give the agent a way to produce a requirement even when the user gives no numbers: propose labeled-illustrative defaults and ask the user to confirm.
-- Rules of thumb must be things that could be WRONG for another NFR. If a bullet would fit any skill, delete it.
+- Rules of thumb contain only rules whose acceptance question is specific to this skill. Use 4-6 bullets; move shared safeguards to Workflow or Verification rather than padding the list.
 - Put long material (checklists, worked examples, a requirement-spec example, anti-pattern catalog) in `references/*.md`, each under 150 lines, each linked from SKILL.md.
-- Include at least one short worked example per skill in references/.
+- Include at least one short worked example per skill in references/. Fill every input the example names, include a failing case and a before/after remediation, and make no causal claim the fixture does not support.
+- Keep scope honest: every branch promised in the description needs an example. If a branch has no example, narrow the description.
 - Update `status` to "draft" in nfr-list.json for these.
 
 In the final rule above, "these" means the skills explicitly authorized in the
@@ -32,21 +33,44 @@ current pilot or batch. Phase 2 keeps all 114 entries at `todo` and writes no bo
 
 ## Structure and execution contract
 
+These updated authoring limits supersede older limits in the template. A validator
+pass does not replace manual review of the authoring contract.
+
 - Use `templates/SKILL.template.md` for section order. Target 80-180 body lines;
-  do not exceed 250. Keep the description between 60 and 1024 characters.
-- Review the combined footprint: use 150-250 lines as a guideline for the complete
+  do not exceed 250. Keep the description between 60 and 350 characters. State
+  the nearest-sibling ambiguity, such as tail latency versus variation, within
+  the description; do not leave that boundary only in the body.
+- Review the combined footprint: use 200-300 lines as a guideline for the complete
   SKILL.md plus its directly linked reference files, including blank lines and
-  frontmatter. Keep each reference under 150 lines. Report the combined count;
+  frontmatter. This combined guideline is not a ceiling. Keep each reference
+  under 150 lines, with design guides up to 80 lines. Report the combined count;
   do not pad short useful material or duplicate sections to reach a lower bound.
   Meeting a line budget does not demonstrate distinct decisions or sufficient depth.
+- Write design guides as decision tables: observed evidence -> intervention ->
+  how to verify. Include at least three concrete interventions and a short code,
+  config, or pseudocode sketch where one applies. Retain use-when context and
+  trade-offs in the decisions. Allow up to 80 lines; do not fit every guide to
+  the same line count.
+- Fill every input named in a worked example, including carried state, conditions,
+  and evidence used to decide the result. Do not leave unfilled "retain X" lists.
+  Show a failing case and one before/after remediation with actual fixture inputs
+  and outputs. Attribute a cause only when the fixture supports it; distinguish
+  an observed failed requirement from an unestablished diagnosis.
 - Keep folder names as a three-digit, zero-padded id plus slug, such as
   `skills/015-availability/SKILL.md`. Use the unprefixed slug in frontmatter `name`.
 - Follow Clarify, Specify, Design/Implement, Verify, Report in that order. Put
   an imperative instruction and an explicit conditional decision in every step.
 - Include 2-3 measurable specification patterns. Let content determine item counts:
-  use 5-10 NFR-specific rules, 6-10 objective done checks, and 3-6 concrete
+  use 4-6 NFR-specific rules, 6-10 objective done checks, and 3-6 concrete
   failure modes. Do not impose a fixed shape across skills or add filler to reach
   matching counts; do not vary counts merely to make skills appear different.
+- Test every Rules of thumb bullet against its nearest sibling's acceptance
+  question. Before committing, move or delete every bullet whose verdict is
+  "transferable". Shared measurement safeguards belong in Workflow or Verification:
+  denominators, retaining raw samples, preserving timeouts and unfinished work,
+  predeclared exclusions, and matched conditions. A different noun does not make
+  an acceptance question specific. Report the transfer-test counts after fixing;
+  do not put a transfer-test table in the authoring review.
 - Use named placeholders such as `{behavior}`, `{condition}`, `{metric}`, and
   `{stakeholder_confirmed_target}` in authored requirement patterns. The current
   validator rejects unresolved angle-bracket template text, including in references.
@@ -75,7 +99,8 @@ current pilot or batch. Phase 2 keeps all 114 entries at `todo` and writes no bo
 
 Phase 3 authors only `015-availability`, `075-privacy`, and `078-readability`.
 Run `python scripts/validate_skills.py --only 15,75,78`. Score each against the
-rubric in `reviews/pilot-review.md`; fix every weakness scoring below 2. Commit
+rubric internally; fix every weakness scoring below 2. Write findings only in
+`reviews/pilot-review.md`, without a self-score or transfer-test table. Commit
 `phase 3: pilot skills` and stop for approval. Pilot approval is a separate gate
 from validation or a `draft` status.
 
@@ -104,7 +129,9 @@ Run `python scripts/validate_skills.py --only` followed by the comma-separated
 batch ids. Assess the rubric internally and fix any result below 17/20 or any
 zero. Write `reviews/batch-N-review.md` as findings only: per-skill weaknesses,
 evidence, limitations, and an "Uncertain claims" section. Do not include prompt
-text, task instructions, or self-score tables in batch reviews. Set the authorized batch
+text, task instructions, self-score tables, or transfer-test tables in authoring
+reviews. Include only transfer-test counts after fixes. Keep authoring reviews
+focused on authoring findings; do not duplicate the independent audit. Set the authorized batch
 to `draft`, run `python scripts/build_index.py`, commit using the requested Phase 4
 batch message, report done / uncertain / needs human review, and stop.
 
