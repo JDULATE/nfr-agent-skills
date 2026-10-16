@@ -1,7 +1,7 @@
 ---
 name: versatility
 description: >-
-  Supports distinct product roles when asked "import and audit stock", "add read-only inventory checking", or "keep audit mode nonmutating". Ask the user if new roles vs related cases or reuse is unclear. Not for one abstraction covering related cases (see generality) or reusing an artifact elsewhere (see reusability).
+  Supports distinct task roles when asked "import and audit stock", "add read-only checking", or "keep audits nonmutating". Ask the user which roles differ in outcomes, rather than input variants, before routing new uses. Not for one abstraction covering related cases (see generality) or reusing an artifact elsewhere (see reusability).
 ---
 
 # Versatility

@@ -1,7 +1,7 @@
 ---
 name: supportability
 description: >-
-  Supports a specific user case when asked "prepare support diagnostics", "give support an investigation path", or "resolve this export case". Ask the user if support work vs code upkeep is unclear. Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).
+  Equips support investigation when asked "prepare safe diagnostics", "give support evidence", or "resolve an export case". Ask the user: support investigation or implementation upkeep? Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).
 ---
 # Supportability
 

@@ -1,7 +1,7 @@
 ---
 name: likeability
 description: >-
-  Checks feelings after use when asked "compare workflow preferences", "collect user frustration", or "review session satisfaction". Ask the user if sentiment vs appearance or task success is unclear. Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).
+  Evaluates post-use sentiment when asked "compare workflow preferences", "collect user frustration", or "review session satisfaction". Before routing enjoyment complaints, Ask the user: feelings, visual appeal, or task success? Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).
 ---
 # Likeability
 

@@ -1,7 +1,7 @@
 ---
 name: transferability
 description: >-
-  Transfers project assets when asked "handoff linked project files", "map recipient owners", or "preserve links on transfer". Ask the user if recipient handoff vs installation or exchange is unclear. Not for moving execution platforms (see portability), ongoing system exchange (see interoperability), or rebuilding an experiment (see replicability).
+  Hands assets to recipients when asked "handoff project files", "map recipient owners", or "preserve transfer links". Ask the user: asset ownership, execution hosts, or data exchange? Not for moving execution platforms (see portability), ongoing system exchange (see interoperability), or rebuilding an experiment (see replicability).
 ---
 
 # Transferability

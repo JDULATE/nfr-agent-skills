@@ -1,7 +1,7 @@
 ---
 name: demonstrability
 description: >-
-  Builds inspectable demos when asked "show the payment failure", "replay the approval demo", or "let reviewers inspect the result". Ask the user if demonstration vs acceptance evidence is unclear. Not for proving every possible case (see provability) or designing acceptance evidence (see verifiability).
+  Makes scenarios inspectable when asked "show payment failure", "replay an approval demo", or "let reviewers inspect results". Before routing a showing, Ask the user: inspect behavior or decide requirement acceptance? Not for proving every possible case (see provability) or designing acceptance evidence (see verifiability).
 ---
 
 # Demonstrability

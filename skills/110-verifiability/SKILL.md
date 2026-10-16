@@ -1,7 +1,7 @@
 ---
 name: verifiability
 description: >-
-  Designs acceptance evidence when asked "replace an unworkable check", "tie evidence to this claim", or "define the pass decision". Ask the user if acceptance method vs test seams or proof is unclear. Not for adding test seams (see testability), defining units (see measurability), or constructing proofs (see provability).
+  Designs acceptance methods when asked "replace an impossible check", "choose claim evidence", or "define a pass rule". Ask the user: feasible check, test controls, proof, or existing-result review? Not for adding test seams (see testability), defining units (see measurability), or constructing proofs (see provability).
 ---
 
 # Verifiability

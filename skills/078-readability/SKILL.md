@@ -1,7 +1,7 @@
 ---
 name: readability
 description: >-
-  Improves reading flow when asked "reduce this nesting", "rename confusing locals", or "reorder these sentences". Ask the user if structure vs missing concepts or character recognition is unclear. Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).
+  Improves reading representation when asked "reduce nesting", "rename confusing locals", or "reorder sentences". Before routing readability complaints, Ask the user: reading flow, missing concepts, or character recognition? Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).
 status: draft
 ---
 # Readability

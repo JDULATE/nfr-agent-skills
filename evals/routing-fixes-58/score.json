@@ -1,0 +1,108 @@
+{
+  "groups": {
+    "explicit": {
+      "correct": 80,
+      "total": 80,
+      "answered": 80,
+      "missing": 0,
+      "accuracy": 1.0
+    },
+    "vague": {
+      "correct": 106,
+      "total": 115,
+      "answered": 115,
+      "missing": 0,
+      "accuracy": 0.9217391304347826
+    },
+    "user_voice": {
+      "correct": 0,
+      "total": 0,
+      "answered": 0,
+      "missing": 0,
+      "accuracy": null
+    }
+  },
+  "misses": [
+    {
+      "id": "r-212433c508cb6344",
+      "group": "vague",
+      "choice": "reusability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-2eec4750902942a8",
+      "group": "vague",
+      "choice": "viability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-8bfd522e94801264",
+      "group": "vague",
+      "choice": "formality",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-9bc5df77b7002ca8",
+      "group": "vague",
+      "choice": "self-descriptiveness",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-dd8b0409043f8049",
+      "group": "vague",
+      "choice": "debuggability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-e7f93ec80c7a461b",
+      "group": "vague",
+      "choice": "viability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-ebe06c04252d4ce8",
+      "group": "vague",
+      "choice": "functionality",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-f02044e5b76544fb",
+      "group": "vague",
+      "choice": "replaceability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    },
+    {
+      "id": "r-f5104ee00e36ed63",
+      "group": "vague",
+      "choice": "recoverability",
+      "expected": [
+        "ask"
+      ],
+      "reason": "incorrect"
+    }
+  ]
+}

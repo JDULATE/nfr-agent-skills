@@ -1,7 +1,7 @@
 ---
 name: reconfigurability
 description: >-
-  Controls configuration transitions when asked "preserve queued work on mode switch", "resume a config change", or "check ownership during cutover". Ask the user if a transition vs tuning is unclear. Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).
+  Preserves state across configuration transitions when asked "switch modes with queued work", "resume a config change", or "check cutover ownership". Ask the user whether the arrangement changes or a value is tuned. Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).
 ---
 # Reconfigurability
 

@@ -1,7 +1,7 @@
 ---
 name: comprehensibility
 description: >-
-  Clarifies meaning when asked "explain this error", "name the actor", or "define this term". Ask the user if unclear concepts, reading flow, or notation rules are the issue. Not for reading flow (see readability), the whole system model (see understandability), or in-context state cues (see self-descriptiveness).
+  Clarifies intended meaning when asked "explain this error", "identify the actor", or "define this term". Before routing clarity complaints, Ask the user: misunderstood meaning, reading flow, or missing topics? Not for reading flow (see readability), the whole system model (see understandability), or in-context state cues (see self-descriptiveness).
 ---
 # Comprehensibility
 

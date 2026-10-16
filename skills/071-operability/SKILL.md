@@ -1,7 +1,7 @@
 ---
 name: operability
 description: >-
-  Builds operator task paths when asked "handle a partial rerun", "verify the runtime task finished", or "define on-call exit checks". Ask the user if a whole task vs one control or support case is unclear. Not for fleet policy (see manageability), a single control action (see controllability), or a user support case (see supportability).
+  Defines operator task paths when asked "handle a partial rerun", "verify task completion", or "set on-call exit checks". Before routing operator trouble, Ask the user: whole task, single command, or support case? Not for fleet policy (see manageability), a single control action (see controllability), or a user support case (see supportability).
 ---
 
 # Operability

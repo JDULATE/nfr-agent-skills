@@ -1,7 +1,7 @@
 ---
 name: replaceability
 description: >-
-  Checks substitution when asked "retire the old backend", "preserve callers on replacement", or "migrate provider state". Ask the user if replacement vs coexistence or wrapping is unclear. Not for coexistence alone (see compatibility).
+  Substitutes components when asked "retire an old backend", "preserve replacement callers", or "migrate provider state". Before routing provider changes, Ask the user: replace, coexist, or retain behind a wrapper? Not for coexistence alone (see compatibility).
 ---
 
 # Replaceability

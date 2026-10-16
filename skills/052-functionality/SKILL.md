@@ -1,7 +1,7 @@
 ---
 name: functionality
 description: >-
-  Defines absent capabilities when asked "add export downloads", "add queued-job cancellation", or "list required operations". Ask the user if a missing operation vs broken existing behavior is unclear. Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).
+  Specifies required operations when asked "add report downloads", "add queued-job cancellation", or "list required operations". Before routing feature complaints, Ask the user: absent operation, broken behavior, or task mismatch? Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).
 ---
 
 # Functionality

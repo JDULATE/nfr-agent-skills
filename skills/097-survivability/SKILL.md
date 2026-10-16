@@ -1,7 +1,7 @@
 ---
 name: survivability
 description: >-
-  Preserves essential mission work when asked "dispatch after site loss", "operate without central login", or "reconcile offline assignments". Ask the user if essential continuity vs restoration is unclear. Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).
+  Keeps missions running when asked "dispatch after site loss", "work without login", or "reconcile offline work". Ask the user what must continue during disruption rather than be restored afterward. Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).
 ---
 # Survivability
 

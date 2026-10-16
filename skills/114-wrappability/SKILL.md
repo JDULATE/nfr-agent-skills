@@ -1,7 +1,7 @@
 ---
 name: wrappability
 description: >-
-  Wraps retained implementations when asked "keep the engine behind an API", "translate native errors", or "expose the old function unchanged". Ask the user if retention vs substitution is unclear. Not for substituting the engine (see replaceability) or just wiring components (see integratability).
+  Wraps retained behavior when asked "keep an engine behind an API", "translate native errors", or "expose an old function". Ask the user whether the implementation and required behavior stay unchanged before routing adapter work. Not for substituting the engine (see replaceability) or just wiring components (see integratability).
 ---
 
 # Wrappability

@@ -1,7 +1,7 @@
 ---
 name: sustainability
 description: >-
-  Checks environmental stewardship when asked "measure report energy", "extend useful device life", or "avoid replacing usable hardware". Ask the user which environmental objective is intended. Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).
+  Evaluates environmental outcomes when asked "measure job energy", "extend device life", or "avoid hardware replacement". Ask the user which environmental outcome is intended before routing green claims. Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).
 ---
 # Sustainability
 

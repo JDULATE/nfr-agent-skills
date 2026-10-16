@@ -1,7 +1,7 @@
 ---
 name: usability
 description: >-
-  Checks whole-task interaction when asked "observe checkout errors", "test unaided task completion", or "measure effort through recovery". Ask the user if task success vs learning or sentiment is unclear. Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).
+  Checks task interaction when asked "observe checkout errors", "test unaided completion", or "measure recovery effort". Before routing ease complaints, Ask the user: task success/effort, learning, feelings, or appearance? Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).
 ---
 # Usability
 

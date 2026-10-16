@@ -1,7 +1,7 @@
 ---
 name: interoperability
 description: >-
-  Aligns exchanged meaning when asked "agree on timestamp units", "fix payload interpretation", or "distinguish queued from completed". Ask the user if meaning vs connection setup is unclear. Not for assembly effort (see integratability).
+  Aligns exchange semantics when asked "agree on units", "fix payload meanings", or "separate queued from completed". Before routing receiver complaints, Ask the user: wiring, interpretation, or coexistence? Not for assembly effort (see integratability).
 ---
 
 # Interoperability

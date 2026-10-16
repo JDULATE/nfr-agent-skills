@@ -1,7 +1,7 @@
 ---
 name: availability
 description: >-
-  Measures usable service time when asked "count checkout downtime", "keep sessions through deploys", or "measure service readiness". Ask the user if outage time vs failure counts is unclear. Not for failure-free operation (see reliability) or restoring usable state (see recoverability).
+  Measures usable journey time when asked "count checkout downtime", "keep sessions on deploy", or "measure service readiness". Before routing uptime concerns, Ask the user: usable journeys, process health, or failures? Not for failure-free operation (see reliability) or restoring usable state (see recoverability).
 status: draft
 ---
 # Availability

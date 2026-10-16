@@ -1,0 +1,32 @@
+{
+  "run_directory": "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-58-after-1wjhbyr5",
+  "cli_version": "codex-cli 0.162.1",
+  "arguments": [
+    "C:\\Users\\ulate\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.EXE",
+    "--no-daemon",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--config",
+    "approval_policy=\"never\"",
+    "--color",
+    "never",
+    "--json",
+    "--output-last-message",
+    "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-58-after-1wjhbyr5\\router-response.json",
+    "-"
+  ],
+  "router_instruction_prefix": "The complete contents of the two requested files are supplied inline below. Read these supplied contents directly. Do not use tools, run commands, read local files, or search for other context.\n\nRoute each developer request using only routing-catalog.md and routing-prompts.json in the working directory.\nRead both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.\nFor every prompt, choose one exact catalogue slug or \"ask\". Choose \"ask\" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.\nUse the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.\nReturn only a complete JSON array of objects with exactly the fields \"id\" and \"choice\". Include every input id exactly once. Use the literal value \"ask\" for asking the user. No Markdown fences, commentary, explanations, or additional fields.\n",
+  "stdin_sha256": "548c0a9f79efebf0b177b2ae9420a2a6e2b0f48a18d96fd8977784c3fbec73e9",
+  "input_files": {
+    "routing-catalog.md": "380f7f25aa2c818c03f319154a340dac9d73eb1123e91d82e1ba4c56a82de313",
+    "routing-prompts.json": "681f7112b2ea8a7defca457f23e70f08c4f4a5b07e47f6ff92ef49a272e9e389"
+  },
+  "stage": "after",
+  "answers_expected": 195,
+  "exit_code": 0,
+  "elapsed_seconds": 64.64
+}

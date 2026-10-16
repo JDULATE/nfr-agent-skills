@@ -1,7 +1,7 @@
 ---
 name: viability
 description: >-
-  Checks continued value when asked "review upkeep at renewal", "compare benefits with ongoing obligations", or "plan service retirement". Ask the user if continued worth vs build feasibility or budget is unclear. Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).
+  Checks continued value when asked "review upkeep", "weigh ongoing obligations", or "plan retirement". Ask the user: long-term value, budget fit, or initial feasibility? Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).
 ---
 
 # Viability

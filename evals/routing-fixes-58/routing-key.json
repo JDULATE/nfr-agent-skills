@@ -1,0 +1,977 @@
+[
+  {
+    "id": "r-00142465219fbaa9",
+    "group": "explicit",
+    "expected": "scalability"
+  },
+  {
+    "id": "r-00412786481d82e5",
+    "group": "explicit",
+    "expected": "wrappability"
+  },
+  {
+    "id": "r-013631a3aef9e06f",
+    "group": "explicit",
+    "expected": "robustness"
+  },
+  {
+    "id": "r-013c18dc521eb11c",
+    "group": "explicit",
+    "expected": "operability"
+  },
+  {
+    "id": "r-021d92c5acc01525",
+    "group": "explicit",
+    "expected": "generality"
+  },
+  {
+    "id": "r-04e13c43038096d8",
+    "group": "explicit",
+    "expected": "interoperability"
+  },
+  {
+    "id": "r-08569fca852c0bf9",
+    "group": "explicit",
+    "expected": "auditability"
+  },
+  {
+    "id": "r-091c33606e5419cc",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-09b28c71fc1887dc",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-0a22198d58f09dff",
+    "group": "explicit",
+    "expected": "suitability"
+  },
+  {
+    "id": "r-0e6b88a273a7e7d3",
+    "group": "explicit",
+    "expected": "analyzability"
+  },
+  {
+    "id": "r-10e9c7fb2fde201a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-10fa474e5e2b4e6c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-11a7978c48245818",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-136e0a1f295bde94",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-14666de76d196d71",
+    "group": "explicit",
+    "expected": "correctness"
+  },
+  {
+    "id": "r-16cf8186495bbb9b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1710bd38806aa8a1",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-171946a9fc20bdee",
+    "group": "explicit",
+    "expected": "compatibility"
+  },
+  {
+    "id": "r-18298ecf9b96923f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1a163ca7f836ff18",
+    "group": "explicit",
+    "expected": "affordability"
+  },
+  {
+    "id": "r-1aacb2250866dd84",
+    "group": "explicit",
+    "expected": "integratability"
+  },
+  {
+    "id": "r-1d3450cfae00e2ec",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1d6124c9354c782b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1d8c5d5257e59ead",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1e6b8acc8d9139d7",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-1f048d09fda1755a",
+    "group": "explicit",
+    "expected": "interoperability"
+  },
+  {
+    "id": "r-212433c508cb6344",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-21f23a92c0ef4ac8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-25efb477bee0fd0a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-27ab27a7e5e93872",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2820e20b462b3c0d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2875138ec6d35605",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2a15293fe4223b00",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-2a752499b3a4288a",
+    "group": "explicit",
+    "expected": "formality"
+  },
+  {
+    "id": "r-2eec4750902942a8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-301e07759cc0eb64",
+    "group": "explicit",
+    "expected": "portability"
+  },
+  {
+    "id": "r-31dd2d97a1df9b05",
+    "group": "explicit",
+    "expected": "comprehensibility"
+  },
+  {
+    "id": "r-32800fed628d4ba4",
+    "group": "explicit",
+    "expected": "reusability"
+  },
+  {
+    "id": "r-32d3cd68e3eda168",
+    "group": "explicit",
+    "expected": "expandability"
+  },
+  {
+    "id": "r-34075badeb722eb3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-37eb69ec9d791f9d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-386f0951db48c822",
+    "group": "explicit",
+    "expected": "efficiency-device-efficiency"
+  },
+  {
+    "id": "r-38de958ba57dca4d",
+    "group": "explicit",
+    "expected": "communicativeness"
+  },
+  {
+    "id": "r-395aa30520cc1f56",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3caae219ae15a22e",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3cc486f153304550",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3e20a3b68eff4295",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-3f2eaac92c935785",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-40689c1f0bc1e130",
+    "group": "explicit",
+    "expected": "readability"
+  },
+  {
+    "id": "r-40c0859ae907228b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-40ea526d0e358dbe",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-423d17eb232af336",
+    "group": "explicit",
+    "expected": "readability"
+  },
+  {
+    "id": "r-43071ab7a17cb5f6",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-43ac8d1036d22bde",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-46f4fb4e3de43c5d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4702213686ff69af",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-473db3456a90cbc0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4bc32bb365518dff",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4c69fad2d46bb2e7",
+    "group": "explicit",
+    "expected": "augmentability"
+  },
+  {
+    "id": "r-4ef7816fff7eaed3",
+    "group": "explicit",
+    "expected": "confidentiality"
+  },
+  {
+    "id": "r-4f1aa613fb568ad4",
+    "group": "explicit",
+    "expected": "verifiability"
+  },
+  {
+    "id": "r-4f4b7285460d8e7b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-4fe42cb616a5a186",
+    "group": "explicit",
+    "expected": "replaceability"
+  },
+  {
+    "id": "r-5174f6e026d7200e",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-522eb4b5697e10b3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-526b3ad54e859b5a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-52a947df69f074e1",
+    "group": "explicit",
+    "expected": "affordability"
+  },
+  {
+    "id": "r-52c0dc8b3ab03d92",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-53bb9c6161763cce",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-56677163d27567d6",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-56dd9a18cc7efb5d",
+    "group": "explicit",
+    "expected": "comprehensiveness"
+  },
+  {
+    "id": "r-5792a42a89629f88",
+    "group": "explicit",
+    "expected": "composability"
+  },
+  {
+    "id": "r-5858847318a21069",
+    "group": "explicit",
+    "expected": "configurability"
+  },
+  {
+    "id": "r-58be2272a38abc93",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-5904e73cf611aac0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-5929e4dc4b473e3c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-59341513211f26ec",
+    "group": "explicit",
+    "expected": "likeability"
+  },
+  {
+    "id": "r-5bffefb34bdc97bc",
+    "group": "explicit",
+    "expected": "viability"
+  },
+  {
+    "id": "r-5c2b9641f0aa635c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-5e72b222cf2bbbf4",
+    "group": "explicit",
+    "expected": "testability"
+  },
+  {
+    "id": "r-60130dbf2da5c8c5",
+    "group": "explicit",
+    "expected": "recoverability"
+  },
+  {
+    "id": "r-608f51b62b135457",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-625806728696d50b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-65211bcbb6955743",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-65962c0fc744f0cf",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-665c3cee81b33a2a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-668347a0cdc41cb3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-67191eb0ee8982c0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-695603b91f39f0fe",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-6d15b8b67c56d1cd",
+    "group": "explicit",
+    "expected": "compatibility"
+  },
+  {
+    "id": "r-737a242f3235564c",
+    "group": "explicit",
+    "expected": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-7575f37abe25bdd0",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-763c5fbe2dfca612",
+    "group": "explicit",
+    "expected": "maintainability"
+  },
+  {
+    "id": "r-779c30432ea37800",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-79e7379966bc813d",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7a4eb6ae6c5efa60",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7ba78f90fa644b37",
+    "group": "explicit",
+    "expected": "testability"
+  },
+  {
+    "id": "r-7bbaf31c02347e16",
+    "group": "explicit",
+    "expected": "conformance"
+  },
+  {
+    "id": "r-7bd98ba2ba8e01c5",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-7eec1af519af1537",
+    "group": "explicit",
+    "expected": "installability"
+  },
+  {
+    "id": "r-7fe916099edff214",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-8024de27c7216148",
+    "group": "explicit",
+    "expected": "durability"
+  },
+  {
+    "id": "r-808d30d85b9c52d6",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-85312516f6e4ba88",
+    "group": "explicit",
+    "expected": "traceability"
+  },
+  {
+    "id": "r-8603efdd7d009787",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-860bde7ea61265ef",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-8abb5433e79605cc",
+    "group": "explicit",
+    "expected": "reliability"
+  },
+  {
+    "id": "r-8acb151f93497cc1",
+    "group": "explicit",
+    "expected": "repeatability"
+  },
+  {
+    "id": "r-8addcc277daf14ca",
+    "group": "explicit",
+    "expected": "modifiability"
+  },
+  {
+    "id": "r-8b076602fa74b927",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-8bb78924fbb37f35",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-8bfd522e94801264",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-90a885445e668703",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-90e5f24ed5ee30be",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-915e470bd1f5bff2",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-91dadf4f75caa790",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-932ea74f1519cc78",
+    "group": "explicit",
+    "expected": "controllability"
+  },
+  {
+    "id": "r-93bd3fbc46c5bd37",
+    "group": "explicit",
+    "expected": "privacy"
+  },
+  {
+    "id": "r-94e3d0d51dd15ca6",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-95433a841e4d7f59",
+    "group": "explicit",
+    "expected": "manageability"
+  },
+  {
+    "id": "r-9664816a60d3c8b1",
+    "group": "explicit",
+    "expected": "observability"
+  },
+  {
+    "id": "r-969a626040451483",
+    "group": "explicit",
+    "expected": "attractiveness"
+  },
+  {
+    "id": "r-97d13e456376587b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-97ffad2125c5b921",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-990bf1d636783aa5",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9a742aac491e4000",
+    "group": "explicit",
+    "expected": "comprehensibility"
+  },
+  {
+    "id": "r-9bc5df77b7002ca8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9d5130866c3f7b13",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9d7e90652a465cfa",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-9f6e34fc68670736",
+    "group": "explicit",
+    "expected": "supportability"
+  },
+  {
+    "id": "r-a006780d6cabc834",
+    "group": "explicit",
+    "expected": "verifiability"
+  },
+  {
+    "id": "r-a56b2e0715e81b81",
+    "group": "explicit",
+    "expected": "legibility"
+  },
+  {
+    "id": "r-a6d8ba442a3034e2",
+    "group": "explicit",
+    "expected": "evolvability"
+  },
+  {
+    "id": "r-a8b80f08c359eb8b",
+    "group": "explicit",
+    "expected": "complexity-interacting-complexity"
+  },
+  {
+    "id": "r-ab3c6352559e382b",
+    "group": "explicit",
+    "expected": "adjustability"
+  },
+  {
+    "id": "r-af45b59af270f474",
+    "group": "explicit",
+    "expected": "performance-efficiency-time-or-space-bounds"
+  },
+  {
+    "id": "r-af99c38b79e557af",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-b4f2c7711d799a00",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-b747e24a69197b64",
+    "group": "explicit",
+    "expected": "usability"
+  },
+  {
+    "id": "r-b7dc1785ad471f9d",
+    "group": "explicit",
+    "expected": "reconfigurability"
+  },
+  {
+    "id": "r-be2cc9d10a1d7593",
+    "group": "explicit",
+    "expected": "understandability"
+  },
+  {
+    "id": "r-bf22552eb7865121",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-bf5bb2708b854660",
+    "group": "explicit",
+    "expected": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-c1cb33a2b1af6534",
+    "group": "explicit",
+    "expected": "fault-failure-tolerance"
+  },
+  {
+    "id": "r-c249dbb555af5508",
+    "group": "explicit",
+    "expected": "provability"
+  },
+  {
+    "id": "r-c25140895970cc45",
+    "group": "explicit",
+    "expected": "feasibility"
+  },
+  {
+    "id": "r-c342a78b6a6a6a51",
+    "group": "explicit",
+    "expected": "integratability"
+  },
+  {
+    "id": "r-c4f7c2d7df86cbbb",
+    "group": "explicit",
+    "expected": "generality"
+  },
+  {
+    "id": "r-c5df00e6450f3eb9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-c6003b5136a7f04a",
+    "group": "explicit",
+    "expected": "effectiveness"
+  },
+  {
+    "id": "r-c767a2d18ade0424",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ca67b415b8384e1f",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-cab803755979f1b7",
+    "group": "explicit",
+    "expected": "uniformity"
+  },
+  {
+    "id": "r-cbbab0547d8fcff7",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-cd58360db7ab0823",
+    "group": "explicit",
+    "expected": "learnability"
+  },
+  {
+    "id": "r-cdb119bd268c8ba9",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-cf7db5d551f8a87d",
+    "group": "explicit",
+    "expected": "accuracy"
+  },
+  {
+    "id": "r-cfa11658661e7b94",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-cff94eb9c9b72d70",
+    "group": "explicit",
+    "expected": "formality"
+  },
+  {
+    "id": "r-d13d56649866b943",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d251713f660cc8fd",
+    "group": "explicit",
+    "expected": "efficiency-device-efficiency"
+  },
+  {
+    "id": "r-d32d9053e5eb455a",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d3dc202ad6acb822",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d4d39be78dc262a8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d80e4afa0c3a60d8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-d8fbd88e3c5c9e47",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-dd8b0409043f8049",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-df25f727bda85530",
+    "group": "explicit",
+    "expected": "expandability"
+  },
+  {
+    "id": "r-e1ef58b88335057c",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e202f25015e74188",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e35b63c6e94e25e8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e37944566e76aaf2",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e5a4d18a59da6042",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e7f93ec80c7a461b",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e906f9ac93ac06df",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-e9a0364dddb5ec2c",
+    "group": "explicit",
+    "expected": "functionality"
+  },
+  {
+    "id": "r-eb9484de4c2d1530",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ebe06c04252d4ce8",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f02044e5b76544fb",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f0ea1a4c1fd6cc90",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f487cce8e685e7d4",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f499a63d814b3af6",
+    "group": "explicit",
+    "expected": "configurability"
+  },
+  {
+    "id": "r-f5104ee00e36ed63",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f6f5291508e402a3",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f74233bb37c0f533",
+    "group": "explicit",
+    "expected": "stability"
+  },
+  {
+    "id": "r-f813e6ab2bab850d",
+    "group": "explicit",
+    "expected": "recoverability"
+  },
+  {
+    "id": "r-f840b615d41cf571",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f995c50ca50697b9",
+    "group": "explicit",
+    "expected": "changeability"
+  },
+  {
+    "id": "r-f9a6306357de5710",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-f9b80679850c9047",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-fa4d7c768527ffb7",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-fe27712e62d948ec",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-fea7a948bd276155",
+    "group": "vague",
+    "expected": "ask"
+  },
+  {
+    "id": "r-ffb5cd29876f1de5",
+    "group": "vague",
+    "expected": "ask"
+  }
+]

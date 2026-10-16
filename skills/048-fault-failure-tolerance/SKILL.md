@@ -1,7 +1,7 @@
 ---
 name: fault-failure-tolerance
 description: >-
-  Checks service during faults when asked "serve with a dead worker", "write through a partition", or "test failover under load". Ask the user if continued service vs restoration is unclear. Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).
+  Preserves service through faults when asked "serve with a dead worker", "write during a partition", or "test live failover". Ask the user what must continue during which fault before routing failure protection. Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).
 ---
 # Fault/Failure Tolerance
 

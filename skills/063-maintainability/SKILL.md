@@ -1,7 +1,7 @@
 ---
 name: maintainability
 description: >-
-  Reduces recurring upkeep when asked "stop repeated repair work", "help future maintainers", or "review ongoing fix effort". Ask the user if ongoing upkeep vs one edit or support case is unclear. Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).
+  Improves recurring upkeep when asked "reduce repeat repair work", "help future maintainers", or "review repeated fix effort". Before routing upkeep requests, Ask the user: ongoing repairs, one edit, or user support? Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).
 ---
 # Maintainability
 

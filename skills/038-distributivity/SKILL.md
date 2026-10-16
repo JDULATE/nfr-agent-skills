@@ -1,7 +1,7 @@
 ---
 name: distributivity
 description: >-
-  Defines node placement when asked "assign key ranges", "prevent duplicate shard owners", or "redistribute partitions". Ask the user if placement rules vs observing current ownership is unclear. Not for workload growth curves (see scalability).
+  Defines placement rules when asked "assign key ranges", "prevent duplicate owners", or "redistribute shards". Before routing distribution requests, Ask the user: placement, capacity admission, or workload growth? Not for workload growth curves (see scalability).
 ---
 
 # Distributivity

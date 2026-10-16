@@ -1,7 +1,7 @@
 ---
 name: installability
 description: >-
-  Checks installation state when asked "fix partial upgrades", "start a clean install", or "keep user data on uninstall". Ask the user if setup on one target vs platform adaptation is unclear. Not for moving between execution platforms (see portability) or deployment uptime (see availability).
+  Checks installation lifecycle when asked "fix a partial upgrade", "start a clean installation", or "retain data on uninstall". Before routing startup failures, Ask the user: setup state, application behavior, or platform change? Not for moving between execution platforms (see portability) or deployment uptime (see availability).
 ---
 
 # Installability

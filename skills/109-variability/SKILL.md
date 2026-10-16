@@ -1,7 +1,7 @@
 ---
 name: variability
 description: >-
-  Defines product-family combinations when asked "reject invalid edition builds", "make export require audit", or "list allowed feature sets". Ask the user if family variants vs instance settings is unclear. Not for settings of one instance (see configurability) or applying a transition (see reconfigurability).
+  Constrains product-family features when asked "reject invalid builds", "make export require audit", or "list allowed feature sets". Before routing editions, Ask the user: feature-combination rules, instance settings, or custom content? Not for settings of one instance (see configurability) or applying a transition (see reconfigurability).
 ---
 
 # Variability

@@ -1,0 +1,227 @@
+[
+  {
+    "slug": "accountability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "affordability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "anonymity",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "availability",
+    "passed": false,
+    "message": "Unexpected key(s) in SKILL.md frontmatter: status. Allowed properties are: allowed-tools, description, license, metadata, name"
+  },
+  {
+    "slug": "certainty",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "comprehensibility",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "debuggability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "demonstrability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "distributivity",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "enhanceability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "expressiveness",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "fault-failure-tolerance",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "feasibility",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "functionality",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "installability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "integratability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "interoperability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "likeability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "maintainability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "manageability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "measurability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "operability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "predictability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "provability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "readability",
+    "passed": false,
+    "message": "Unexpected key(s) in SKILL.md frontmatter: status. Allowed properties are: allowed-tools, description, license, metadata, name"
+  },
+  {
+    "slug": "reconfigurability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "recoverability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "replaceability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "reusability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "scalability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "self-descriptiveness",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "simplicity",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "standardizability-standardization-standard",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "suitability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "supportability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "survivability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "sustainability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "transferability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "understandability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "usability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "variability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "verifiability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "versatility",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "viability",
+    "passed": true,
+    "message": "Skill is valid!"
+  },
+  {
+    "slug": "wrappability",
+    "passed": true,
+    "message": "Skill is valid!"
+  }
+]

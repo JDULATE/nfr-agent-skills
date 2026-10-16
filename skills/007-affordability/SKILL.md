@@ -1,7 +1,7 @@
 ---
 name: affordability
 description: >-
-  Checks financial limits when asked "cap running costs", "include setup costs", or "price this workload". Ask the user if budget fit vs delivery feasibility is unclear. Not for delivery under all constraints (see feasibility) or continued value (see viability).
+  Checks budget fit when asked "price this workload", "cap running costs", or "include setup costs". Before routing cost concerns, Ask the user: spending ceiling, delivery constraints, or continued value? Not for delivery under all constraints (see feasibility) or continued value (see viability).
 ---
 
 # Affordability

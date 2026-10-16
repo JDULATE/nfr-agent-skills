@@ -1,7 +1,7 @@
 ---
 name: suitability
 description: >-
-  Checks capability fit when asked "feed this offline importer", "match this handoff format", or "compare features for our task". Ask the user if task fit vs achieved outcome is unclear. Not for capability presence alone (see functionality) or achieved outcomes (see effectiveness).
+  Checks available capability fit when asked "feed an offline importer", "match a handoff format", or "compare task options". Before routing workflow complaints, Ask the user: missing capability, task fit, or actual outcomes? Not for capability presence alone (see functionality) or achieved outcomes (see effectiveness).
 ---
 
 # Suitability

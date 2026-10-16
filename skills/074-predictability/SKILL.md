@@ -1,7 +1,7 @@
 ---
 name: predictability
 description: >-
-  Bounds run variation when asked "limit completion-time spread", "measure rare pauses", or "compare fast and slow runs". Ask the user if variation vs an absolute deadline is unclear. Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).
+  Bounds variation when asked "limit timing spread", "compare matched runs", or "bound pauses". Ask the user: spread across runs or an absolute deadline? Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).
 ---
 # Predictability
 

@@ -1,0 +1,39 @@
+{
+  "run_directory": "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-58-before-ku0b55u_",
+  "cli_version": "codex-cli 0.162.1",
+  "arguments": [
+    "C:\\Users\\ulate\\AppData\\Local\\Programs\\OpenAI\\Codex\\bin\\codex.EXE",
+    "--no-daemon",
+    "exec",
+    "--ignore-user-config",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--config",
+    "approval_policy=\"never\"",
+    "--color",
+    "never",
+    "--json",
+    "--output-last-message",
+    "C:\\Users\\ulate\\AppData\\Local\\Temp\\nfr-routing-58-before-ku0b55u_\\router-response.json",
+    "-"
+  ],
+  "router_instruction_prefix": "The complete contents of the two requested files are supplied inline below. Read these supplied contents directly. Do not use tools, run commands, read local files, or search for other context.\n\nRoute each developer request using only routing-catalog.md and routing-prompts.json in the working directory.\nRead both files completely. The catalogue contains the available skill slugs and descriptions. Each prompt is an independent request; do not carry facts between requests.\nFor every prompt, choose one exact catalogue slug or \"ask\". Choose \"ask\" when the request lacks the fact needed to distinguish plausible skills, or multiple skills are equally supported. A known skill may still require implementation details later; distinguish that from missing routing information.\nUse the descriptions and their exclusions. Do not infer unstated facts. Do not execute the developer requests, search the web, inspect other files, use other agents, or implement a keyword router.\nReturn only a complete JSON array of objects with exactly the fields \"id\" and \"choice\". Include every input id exactly once. Use the literal value \"ask\" for asking the user. No Markdown fences, commentary, explanations, or additional fields.\n",
+  "stdin_sha256": "6faff0011b8bae35626678d60c71dea3d82bbaf7a7a7a7990f7989fc5b3d9be2",
+  "input_files": {
+    "routing-catalog.md": "a1ee36bfba6b2c0dbce9102d1fe2db5c6bfda3f069386673630865c70823299e",
+    "routing-prompts.json": "681f7112b2ea8a7defca457f23e70f08c4f4a5b07e47f6ff92ef49a272e9e389"
+  },
+  "stage": "before",
+  "answers_expected": 195,
+  "exit_code": 0,
+  "elapsed_seconds": 64.69,
+  "fresh_session": true,
+  "answer_key_supplied": false,
+  "model": "CLI default; no override; model name not reported",
+  "tool_calls": 0,
+  "session_id": "01a14633-cd2c-7292-8ff6-8ea0b6ff0b3c",
+  "results_sha256": "8ae246fd39c783c299d50507b7e30c26b135c3c9b5d740c747c41bfea7400503",
+  "session_transcript_sha256": "fecc5d81212a68f30ac9d11b950fda13f33b301c096b566b55beef2bf077eac3"
+}

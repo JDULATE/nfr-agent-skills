@@ -1,7 +1,7 @@
 ---
 name: integratability
 description: >-
-  Bounds assembly work when asked "reduce adapter glue", "wire agreed message contracts", or "assign integration ownership". Ask the user if wiring effort vs exchanged meaning is unclear. Not for exchange meaning (see interoperability).
+  Bounds integration work when asked "reduce adapter glue", "wire agreed contracts", or "assign glue-code ownership". Before routing connection work, Ask the user: assembly effort, exchange meaning, or joined behavior? Not for exchange meaning (see interoperability).
 ---
 
 # Integratability

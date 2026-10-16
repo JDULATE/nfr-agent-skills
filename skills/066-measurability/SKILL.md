@@ -1,7 +1,7 @@
 ---
 name: measurability
 description: >-
-  Defines measurements when asked "define queue-delay units", "choose counting boundaries", or "check instrument resolution". Ask the user if measurement vs state inference or acceptance evidence is unclear. Not for inferring hidden runtime state (see observability) or selecting acceptance evidence (see verifiability).
+  Defines a measure when asked "define queue-delay units", "choose counting boundaries", or "check instrument resolution". Ask the user which property needs measuring and whether units or acceptance evidence are missing. Not for inferring hidden runtime state (see observability) or selecting acceptance evidence (see verifiability).
 ---
 
 # Measurability

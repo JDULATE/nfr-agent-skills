@@ -1,7 +1,7 @@
 ---
 name: expressiveness
 description: >-
-  Adds missing meanings when asked "express an owner-only rule", "add explicit denial", or "keep distinct policies distinct". Ask the user if missing constructs vs ambiguous wording is unclear. Not for shortening adequate notation (see conciseness) or setting precision alone (see formality).
+  Adds unrepresentable distinctions when asked "express owner-only access", "add a deny rule", or "keep policies distinct". Ask the user which meaning cannot be expressed before routing notation changes. Not for shortening adequate notation (see conciseness) or setting precision alone (see formality).
 ---
 
 # Expressiveness

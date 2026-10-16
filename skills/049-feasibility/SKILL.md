@@ -1,7 +1,7 @@
 ---
 name: feasibility
 description: >-
-  Tests initial delivery constraints when asked "try the offline renderer", "check dependency access", or "test this design here". Ask the user if build feasibility vs budget or continued worth is unclear. Not for budget fit alone (see affordability) or ongoing worth (see viability).
+  Checks a delivery candidate when asked "try the offline renderer", "test dependency access", or "probe this design". Before routing build concerns, Ask the user: technical constraints, budget, or continued worth? Not for budget fit alone (see affordability) or ongoing worth (see viability).
 ---
 
 # Feasibility

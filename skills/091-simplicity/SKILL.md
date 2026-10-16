@@ -1,7 +1,7 @@
 ---
 name: simplicity
 description: >-
-  Removes unjustified mechanisms when asked "remove this unused dispatcher", "drop the fixed-path registry", or "justify this plugin framework". Ask the user if unnecessary machinery vs interaction burden is unclear. Not for mapping interaction burden (see complexity-interacting-complexity) or reading flow alone (see readability).
+  Removes unjustified machinery when asked "remove an unused dispatcher", "drop a fixed-path registry", or "justify a plugin framework". Ask the user which mechanism lacks a requirement before routing complexity complaints. Not for mapping interaction burden (see complexity-interacting-complexity) or reading flow alone (see readability).
 ---
 
 # Simplicity

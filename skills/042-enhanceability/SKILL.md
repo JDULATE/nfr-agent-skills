@@ -1,7 +1,7 @@
 ---
 name: enhanceability
 description: >-
-  Refines existing capabilities when asked "improve the current parser", "replace this algorithm with a better one", or "upgrade this feature in place". Ask the user if refinement vs a new helper is unclear. Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged changes (see evolvability).
+  Refines an existing result when asked "improve this parser in place", "replace an inferior algorithm", or "upgrade the current feature". Ask the user what existing result must improve before routing an algorithm change. Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged changes (see evolvability).
 ---
 # Enhanceability
 

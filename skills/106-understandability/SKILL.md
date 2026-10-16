@@ -1,7 +1,7 @@
 ---
 name: understandability
 description: >-
-  Explains the system model when asked "map component responsibilities", "explain state ownership", or "follow the request across services". Ask the user if whole-system meaning vs one passage is unclear. Not for one unclear explanation (see comprehensibility), reading flow (see readability), or topic breadth (see comprehensiveness).
+  Explains a system model when asked "map component duties", "explain state ownership", or "follow service interactions". Before routing comprehension requests, Ask the user: whole-system relationships or one explanation? Not for one unclear explanation (see comprehensibility), reading flow (see readability), or topic breadth (see comprehensiveness).
 ---
 # Understandability
 

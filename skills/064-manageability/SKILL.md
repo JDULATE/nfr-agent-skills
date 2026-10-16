@@ -1,7 +1,7 @@
 ---
 name: manageability
 description: >-
-  Coordinates fleet policy when asked "reconcile node settings", "find missed fleet updates", or "track local exceptions". Ask the user if fleet policy vs one runtime task is unclear. Not for one runtime task (see operability), one state-changing command (see controllability), or configuration transitions (see reconfigurability).
+  Reconciles fleet policy when asked "reconcile nodes", "find missed rollouts", or "track local exceptions". Ask the user what fleet policy needs reconciliation before routing control requests. Not for one runtime task (see operability), one state-changing command (see controllability), or configuration transitions (see reconfigurability).
 ---
 
 # Manageability

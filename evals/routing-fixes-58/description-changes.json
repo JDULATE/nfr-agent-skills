@@ -1,0 +1,407 @@
+[
+  {
+    "id": 2,
+    "slug": "accountability",
+    "path": "skills/002-accountability/SKILL.md",
+    "before": "Attributes actions when asked \"keep the initiator\", \"tag delegated jobs\", or \"link actions to logins\". Ask the user if identity vs review evidence is unclear. Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).",
+    "after": "Attributes actions when asked \"retain the approving user\", \"tag delegated work\", or \"link actions to logins\". Before routing an investigation, Ask the user: actor identity, audit evidence, or artifact history? Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).",
+    "before_length": 278,
+    "after_length": 329
+  },
+  {
+    "id": 7,
+    "slug": "affordability",
+    "path": "skills/007-affordability/SKILL.md",
+    "before": "Checks financial limits when asked \"cap running costs\", \"include setup costs\", or \"price this workload\". Ask the user if budget fit vs delivery feasibility is unclear. Not for delivery under all constraints (see feasibility) or continued value (see viability).",
+    "after": "Checks budget fit when asked \"price this workload\", \"cap running costs\", or \"include setup costs\". Before routing cost concerns, Ask the user: spending ceiling, delivery constraints, or continued value? Not for delivery under all constraints (see feasibility) or continued value (see viability).",
+    "before_length": 260,
+    "after_length": 295
+  },
+  {
+    "id": 10,
+    "slug": "anonymity",
+    "path": "skills/010-anonymity/SKILL.md",
+    "before": "Tests identity linkage when asked \"can this export identify people\", \"check linked fake IDs\", or \"compare repeated releases\". Ask the user which observer and linkage are in scope. Not for data purpose/lifecycle (see privacy), recipient permissions (see confidentiality), or actor attribution (see accountability).",
+    "after": "Tests identity linkage when asked \"check fake IDs\", \"test identity joins\", or \"compare releases\". Ask the user which observer and linking data apply before routing identification concerns. Not for data purpose/lifecycle (see privacy), recipient permissions (see confidentiality), or actor attribution (see accountability).",
+    "before_length": 313,
+    "after_length": 322
+  },
+  {
+    "id": 15,
+    "slug": "availability",
+    "path": "skills/015-availability/SKILL.md",
+    "before": "Measures usable service time when asked \"count checkout downtime\", \"keep sessions through deploys\", or \"measure service readiness\". Ask the user if outage time vs failure counts is unclear. Not for failure-free operation (see reliability) or restoring usable state (see recoverability).",
+    "after": "Measures usable journey time when asked \"count checkout downtime\", \"keep sessions on deploy\", or \"measure service readiness\". Before routing uptime concerns, Ask the user: usable journeys, process health, or failures? Not for failure-free operation (see reliability) or restoring usable state (see recoverability).",
+    "before_length": 286,
+    "after_length": 314
+  },
+  {
+    "id": 16,
+    "slug": "certainty",
+    "path": "skills/016-certainty/SKILL.md",
+    "before": "Bounds confidence when asked \"label missing evidence\", \"show conflicting sources\", or \"mark unverified results\". Ask the user if confidence vs value error is unclear. Not for value error (see accuracy) or formal guarantees (see provability).",
+    "after": "Bounds evidence-backed confidence when asked \"label unsupported claims\", \"show conflicting sources\", or \"mark unverified output\". Before routing confidence concerns, Ask the user: evidence support, value error, or proof? Not for value error (see accuracy) or formal guarantees (see provability).",
+    "before_length": 241,
+    "after_length": 295
+  },
+  {
+    "id": 23,
+    "slug": "comprehensibility",
+    "path": "skills/023-comprehensibility/SKILL.md",
+    "before": "Clarifies meaning when asked \"explain this error\", \"name the actor\", or \"define this term\". Ask the user if unclear concepts, reading flow, or notation rules are the issue. Not for reading flow (see readability), the whole system model (see understandability), or in-context state cues (see self-descriptiveness).",
+    "after": "Clarifies intended meaning when asked \"explain this error\", \"identify the actor\", or \"define this term\". Before routing clarity complaints, Ask the user: misunderstood meaning, reading flow, or missing topics? Not for reading flow (see readability), the whole system model (see understandability), or in-context state cues (see self-descriptiveness).",
+    "before_length": 313,
+    "after_length": 350
+  },
+  {
+    "id": 33,
+    "slug": "debuggability",
+    "path": "skills/033-debuggability/SKILL.md",
+    "before": "Localizes one execution defect when asked \"replay this parser crash\", \"trace this bad value\", or \"inspect this failing input\". Ask the user if one replay vs system analysis is unclear. Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).",
+    "after": "Localizes a captured execution when asked \"replay a parser crash\", \"trace this bad value\", or \"inspect a failing input\". Before routing debugging, Ask the user: one execution, wider causes, or missing test controls? Not for system-wide cause or change-impact analysis (see analyzability) or adding test seams (see testability).",
+    "before_length": 296,
+    "after_length": 327
+  },
+  {
+    "id": 36,
+    "slug": "demonstrability",
+    "path": "skills/036-demonstrability/SKILL.md",
+    "before": "Builds inspectable demos when asked \"show the payment failure\", \"replay the approval demo\", or \"let reviewers inspect the result\". Ask the user if demonstration vs acceptance evidence is unclear. Not for proving every possible case (see provability) or designing acceptance evidence (see verifiability).",
+    "after": "Makes scenarios inspectable when asked \"show payment failure\", \"replay an approval demo\", or \"let reviewers inspect results\". Before routing a showing, Ask the user: inspect behavior or decide requirement acceptance? Not for proving every possible case (see provability) or designing acceptance evidence (see verifiability).",
+    "before_length": 303,
+    "after_length": 324
+  },
+  {
+    "id": 38,
+    "slug": "distributivity",
+    "path": "skills/038-distributivity/SKILL.md",
+    "before": "Defines node placement when asked \"assign key ranges\", \"prevent duplicate shard owners\", or \"redistribute partitions\". Ask the user if placement rules vs observing current ownership is unclear. Not for workload growth curves (see scalability).",
+    "after": "Defines placement rules when asked \"assign key ranges\", \"prevent duplicate owners\", or \"redistribute shards\". Before routing distribution requests, Ask the user: placement, capacity admission, or workload growth? Not for workload growth curves (see scalability).",
+    "before_length": 243,
+    "after_length": 262
+  },
+  {
+    "id": 42,
+    "slug": "enhanceability",
+    "path": "skills/042-enhanceability/SKILL.md",
+    "before": "Refines existing capabilities when asked \"improve the current parser\", \"replace this algorithm with a better one\", or \"upgrade this feature in place\". Ask the user if refinement vs a new helper is unclear. Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged changes (see evolvability).",
+    "after": "Refines an existing result when asked \"improve this parser in place\", \"replace an inferior algorithm\", or \"upgrade the current feature\". Ask the user what existing result must improve before routing an algorithm change. Not for judging output error alone (see accuracy), adding helpers (see augmentability), or staged changes (see evolvability).",
+    "before_length": 331,
+    "after_length": 345
+  },
+  {
+    "id": 45,
+    "slug": "expressiveness",
+    "path": "skills/045-expressiveness/SKILL.md",
+    "before": "Adds missing meanings when asked \"express an owner-only rule\", \"add explicit denial\", or \"keep distinct policies distinct\". Ask the user if missing constructs vs ambiguous wording is unclear. Not for shortening adequate notation (see conciseness) or setting precision alone (see formality).",
+    "after": "Adds unrepresentable distinctions when asked \"express owner-only access\", \"add a deny rule\", or \"keep policies distinct\". Ask the user which meaning cannot be expressed before routing notation changes. Not for shortening adequate notation (see conciseness) or setting precision alone (see formality).",
+    "before_length": 290,
+    "after_length": 300
+  },
+  {
+    "id": 48,
+    "slug": "fault-failure-tolerance",
+    "path": "skills/048-fault-failure-tolerance/SKILL.md",
+    "before": "Checks service during faults when asked \"serve with a dead worker\", \"write through a partition\", or \"test failover under load\". Ask the user if continued service vs restoration is unclear. Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).",
+    "after": "Preserves service through faults when asked \"serve with a dead worker\", \"write during a partition\", or \"test live failover\". Ask the user what must continue during which fault before routing failure protection. Not for restoration (see recoverability), uptime accounting (see availability), or adverse input (see robustness).",
+    "before_length": 303,
+    "after_length": 325
+  },
+  {
+    "id": 49,
+    "slug": "feasibility",
+    "path": "skills/049-feasibility/SKILL.md",
+    "before": "Tests initial delivery constraints when asked \"try the offline renderer\", \"check dependency access\", or \"test this design here\". Ask the user if build feasibility vs budget or continued worth is unclear. Not for budget fit alone (see affordability) or ongoing worth (see viability).",
+    "after": "Checks a delivery candidate when asked \"try the offline renderer\", \"test dependency access\", or \"probe this design\". Before routing build concerns, Ask the user: technical constraints, budget, or continued worth? Not for budget fit alone (see affordability) or ongoing worth (see viability).",
+    "before_length": 282,
+    "after_length": 291
+  },
+  {
+    "id": 52,
+    "slug": "functionality",
+    "path": "skills/052-functionality/SKILL.md",
+    "before": "Defines absent capabilities when asked \"add export downloads\", \"add queued-job cancellation\", or \"list required operations\". Ask the user if a missing operation vs broken existing behavior is unclear. Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).",
+    "after": "Specifies required operations when asked \"add report downloads\", \"add queued-job cancellation\", or \"list required operations\". Before routing feature complaints, Ask the user: absent operation, broken behavior, or task mismatch? Not for wrong existing behavior (see correctness), task fit (see suitability), or achieved outcomes (see effectiveness).",
+    "before_length": 321,
+    "after_length": 349
+  },
+  {
+    "id": 55,
+    "slug": "installability",
+    "path": "skills/055-installability/SKILL.md",
+    "before": "Checks installation state when asked \"fix partial upgrades\", \"start a clean install\", or \"keep user data on uninstall\". Ask the user if setup on one target vs platform adaptation is unclear. Not for moving between execution platforms (see portability) or deployment uptime (see availability).",
+    "after": "Checks installation lifecycle when asked \"fix a partial upgrade\", \"start a clean installation\", or \"retain data on uninstall\". Before routing startup failures, Ask the user: setup state, application behavior, or platform change? Not for moving between execution platforms (see portability) or deployment uptime (see availability).",
+    "before_length": 292,
+    "after_length": 330
+  },
+  {
+    "id": 56,
+    "slug": "integratability",
+    "path": "skills/056-integratability/SKILL.md",
+    "before": "Bounds assembly work when asked \"reduce adapter glue\", \"wire agreed message contracts\", or \"assign integration ownership\". Ask the user if wiring effort vs exchanged meaning is unclear. Not for exchange meaning (see interoperability).",
+    "after": "Bounds integration work when asked \"reduce adapter glue\", \"wire agreed contracts\", or \"assign glue-code ownership\". Before routing connection work, Ask the user: assembly effort, exchange meaning, or joined behavior? Not for exchange meaning (see interoperability).",
+    "before_length": 234,
+    "after_length": 265
+  },
+  {
+    "id": 58,
+    "slug": "interoperability",
+    "path": "skills/058-interoperability/SKILL.md",
+    "before": "Aligns exchanged meaning when asked \"agree on timestamp units\", \"fix payload interpretation\", or \"distinguish queued from completed\". Ask the user if meaning vs connection setup is unclear. Not for assembly effort (see integratability).",
+    "after": "Aligns exchange semantics when asked \"agree on units\", \"fix payload meanings\", or \"separate queued from completed\". Before routing receiver complaints, Ask the user: wiring, interpretation, or coexistence? Not for assembly effort (see integratability).",
+    "before_length": 236,
+    "after_length": 252
+  },
+  {
+    "id": 61,
+    "slug": "likeability",
+    "path": "skills/061-likeability/SKILL.md",
+    "before": "Checks feelings after use when asked \"compare workflow preferences\", \"collect user frustration\", or \"review session satisfaction\". Ask the user if sentiment vs appearance or task success is unclear. Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).",
+    "after": "Evaluates post-use sentiment when asked \"compare workflow preferences\", \"collect user frustration\", or \"review session satisfaction\". Before routing enjoyment complaints, Ask the user: feelings, visual appeal, or task success? Not for visual appeal (see attractiveness), task completion (see usability), or acquiring skill (see learnability).",
+    "before_length": 314,
+    "after_length": 342
+  },
+  {
+    "id": 63,
+    "slug": "maintainability",
+    "path": "skills/063-maintainability/SKILL.md",
+    "before": "Reduces recurring upkeep when asked \"stop repeated repair work\", \"help future maintainers\", or \"review ongoing fix effort\". Ask the user if ongoing upkeep vs one edit or support case is unclear. Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).",
+    "after": "Improves recurring upkeep when asked \"reduce repeat repair work\", \"help future maintainers\", or \"review repeated fix effort\". Before routing upkeep requests, Ask the user: ongoing repairs, one edit, or user support? Not for one edit (see modifiability), a support encounter (see supportability), or successive migrations (see evolvability).",
+    "before_length": 319,
+    "after_length": 340
+  },
+  {
+    "id": 64,
+    "slug": "manageability",
+    "path": "skills/064-manageability/SKILL.md",
+    "before": "Coordinates fleet policy when asked \"reconcile node settings\", \"find missed fleet updates\", or \"track local exceptions\". Ask the user if fleet policy vs one runtime task is unclear. Not for one runtime task (see operability), one state-changing command (see controllability), or configuration transitions (see reconfigurability).",
+    "after": "Reconciles fleet policy when asked \"reconcile nodes\", \"find missed rollouts\", or \"track local exceptions\". Ask the user what fleet policy needs reconciliation before routing control requests. Not for one runtime task (see operability), one state-changing command (see controllability), or configuration transitions (see reconfigurability).",
+    "before_length": 329,
+    "after_length": 339
+  },
+  {
+    "id": 66,
+    "slug": "measurability",
+    "path": "skills/066-measurability/SKILL.md",
+    "before": "Defines measurements when asked \"define queue-delay units\", \"choose counting boundaries\", or \"check instrument resolution\". Ask the user if measurement vs state inference or acceptance evidence is unclear. Not for inferring hidden runtime state (see observability) or selecting acceptance evidence (see verifiability).",
+    "after": "Defines a measure when asked \"define queue-delay units\", \"choose counting boundaries\", or \"check instrument resolution\". Ask the user which property needs measuring and whether units or acceptance evidence are missing. Not for inferring hidden runtime state (see observability) or selecting acceptance evidence (see verifiability).",
+    "before_length": 318,
+    "after_length": 331
+  },
+  {
+    "id": 71,
+    "slug": "operability",
+    "path": "skills/071-operability/SKILL.md",
+    "before": "Builds operator task paths when asked \"handle a partial rerun\", \"verify the runtime task finished\", or \"define on-call exit checks\". Ask the user if a whole task vs one control or support case is unclear. Not for fleet policy (see manageability), a single control action (see controllability), or a user support case (see supportability).",
+    "after": "Defines operator task paths when asked \"handle a partial rerun\", \"verify task completion\", or \"set on-call exit checks\". Before routing operator trouble, Ask the user: whole task, single command, or support case? Not for fleet policy (see manageability), a single control action (see controllability), or a user support case (see supportability).",
+    "before_length": 338,
+    "after_length": 346
+  },
+  {
+    "id": 74,
+    "slug": "predictability",
+    "path": "skills/074-predictability/SKILL.md",
+    "before": "Bounds run variation when asked \"limit completion-time spread\", \"measure rare pauses\", or \"compare fast and slow runs\". Ask the user if variation vs an absolute deadline is unclear. Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).",
+    "after": "Bounds variation when asked \"limit timing spread\", \"compare matched runs\", or \"bound pauses\". Ask the user: spread across runs or an absolute deadline? Not for an absolute tail-latency limit (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or product options (see variability).",
+    "before_length": 343,
+    "after_length": 313
+  },
+  {
+    "id": 76,
+    "slug": "provability",
+    "path": "skills/076-provability/SKILL.md",
+    "before": "Proves modeled claims when asked \"prove the balance invariant\", \"check every allowed transition\", or \"list proof assumptions\". Ask the user if proof vs selected test evidence is unclear. Not for testing selected cases (see verifiability) or defining notation alone (see formality).",
+    "after": "Proves modeled claims when asked \"prove the balance invariant\", \"check all transitions\", or \"list proof assumptions\". Before routing proof requests, Ask the user: all modeled cases or selected test evidence? Not for testing selected cases (see verifiability) or defining notation alone (see formality).",
+    "before_length": 281,
+    "after_length": 302
+  },
+  {
+    "id": 78,
+    "slug": "readability",
+    "path": "skills/078-readability/SKILL.md",
+    "before": "Improves reading flow when asked \"reduce this nesting\", \"rename confusing locals\", or \"reorder these sentences\". Ask the user if structure vs missing concepts or character recognition is unclear. Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).",
+    "after": "Improves reading representation when asked \"reduce nesting\", \"rename confusing locals\", or \"reorder sentences\". Before routing readability complaints, Ask the user: reading flow, missing concepts, or character recognition? Not for character recognition (see legibility) or explaining missing concepts (see comprehensibility).",
+    "before_length": 298,
+    "after_length": 325
+  },
+  {
+    "id": 79,
+    "slug": "reconfigurability",
+    "path": "skills/079-reconfigurability/SKILL.md",
+    "before": "Controls configuration transitions when asked \"preserve queued work on mode switch\", \"resume a config change\", or \"check ownership during cutover\". Ask the user if a transition vs tuning is unclear. Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).",
+    "after": "Preserves state across configuration transitions when asked \"switch modes with queued work\", \"resume a config change\", or \"check cutover ownership\". Ask the user whether the arrangement changes or a value is tuned. Not for the options menu (see configurability), tuning a value (see adjustability), or supporting alternatives (see flexibility).",
+    "before_length": 328,
+    "after_length": 344
+  },
+  {
+    "id": 80,
+    "slug": "recoverability",
+    "path": "skills/080-recoverability/SKILL.md",
+    "before": "Restores usable state when asked \"restore saved orders\", \"check restored checkout\", or \"avoid duplicate replays\". Ask the user if restoring service vs preserving writes is unclear. Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).",
+    "after": "Restores state when asked \"restore orders\", \"check recovered checkout\", or \"avoid replay\". Ask the user: restoration, write retention, or operation during faults? Not for operation during faults (see fault-failure-tolerance), acknowledged-state retention (see durability), or essential mission continuity (see survivability).",
+    "before_length": 343,
+    "after_length": 325
+  },
+  {
+    "id": 83,
+    "slug": "replaceability",
+    "path": "skills/083-replaceability/SKILL.md",
+    "before": "Checks substitution when asked \"retire the old backend\", \"preserve callers on replacement\", or \"migrate provider state\". Ask the user if replacement vs coexistence or wrapping is unclear. Not for coexistence alone (see compatibility).",
+    "after": "Substitutes components when asked \"retire an old backend\", \"preserve replacement callers\", or \"migrate provider state\". Before routing provider changes, Ask the user: replace, coexist, or retain behind a wrapper? Not for coexistence alone (see compatibility).",
+    "before_length": 234,
+    "after_length": 259
+  },
+  {
+    "id": 85,
+    "slug": "reusability",
+    "path": "skills/085-reusability/SKILL.md",
+    "before": "Reuses a shared artifact when asked \"decouple the checker from HTTP\", \"run one validator in web and CLI\", or \"remove the copied helper\". Ask the user if reuse vs broader cases or joined stages is unclear. Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).",
+    "after": "Shares an artifact across contexts when asked \"decouple a checker from HTTP\", \"share validation code\", or \"remove a copied helper\". Ask the user which artifact and new consumer must share code before routing reuse. Not for broadening an abstraction family (see generality) or joining stage contracts (see composability).",
+    "before_length": 310,
+    "after_length": 320
+  },
+  {
+    "id": 88,
+    "slug": "scalability",
+    "path": "skills/088-scalability/SKILL.md",
+    "before": "Tests demand growth when asked \"plot throughput growth\", \"find the load plateau\", or \"compare workers under load\". Ask the user if growth vs resource admission is unclear. Not for resource admission (see expandability), fixed-load bounds (see performance-efficiency-time-or-space-bounds), or unit resource cost (see efficiency-device-efficiency).",
+    "after": "Tests growth curves when asked \"plot throughput growth\", \"find load plateaus\", or \"compare workers\". Ask the user: growth curves, resource admission, or fixed-load bounds? Not for resource admission (see expandability), fixed-load bounds (see performance-efficiency-time-or-space-bounds), or unit resource cost (see efficiency-device-efficiency).",
+    "before_length": 346,
+    "after_length": 346
+  },
+  {
+    "id": 90,
+    "slug": "self-descriptiveness",
+    "path": "skills/090-self-descriptiveness/SKILL.md",
+    "before": "Explains context at the action when asked \"show why this control is disabled\", \"explain this action now\", or \"label the current report\". Ask the user if in-context cues vs a separate explanation is unclear. Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).",
+    "after": "Explains action context when asked \"explain this control\", \"explain this action now\", or \"label this object\". Ask the user: state/action cues or a separate explanation? Not for later notifications (see communicativeness), standalone explanations (see comprehensibility), or backend diagnosis (see observability).",
+    "before_length": 350,
+    "after_length": 312
+  },
+  {
+    "id": 91,
+    "slug": "simplicity",
+    "path": "skills/091-simplicity/SKILL.md",
+    "before": "Removes unjustified mechanisms when asked \"remove this unused dispatcher\", \"drop the fixed-path registry\", or \"justify this plugin framework\". Ask the user if unnecessary machinery vs interaction burden is unclear. Not for mapping interaction burden (see complexity-interacting-complexity) or reading flow alone (see readability).",
+    "after": "Removes unjustified machinery when asked \"remove an unused dispatcher\", \"drop a fixed-path registry\", or \"justify a plugin framework\". Ask the user which mechanism lacks a requirement before routing complexity complaints. Not for mapping interaction burden (see complexity-interacting-complexity) or reading flow alone (see readability).",
+    "before_length": 330,
+    "after_length": 337
+  },
+  {
+    "id": 93,
+    "slug": "standardizability-standardization-standard",
+    "path": "skills/093-standardizability-standardization-standard/SKILL.md",
+    "before": "Selects common conventions when asked \"adopt an event format\", \"publish naming rules\", or \"agree on field names\". Ask the user whether a convention exists before routing a consistency request. Not for checking already selected rules (see conformance).",
+    "after": "Selects conventions when asked \"adopt an event format\", \"publish naming rules\", or \"agree on field names\". Before routing standardization, Ask the user: choose a rule, enforce an existing rule, or align peers? Not for checking already selected rules (see conformance).",
+    "before_length": 251,
+    "after_length": 268
+  },
+  {
+    "id": 95,
+    "slug": "suitability",
+    "path": "skills/095-suitability/SKILL.md",
+    "before": "Checks capability fit when asked \"feed this offline importer\", \"match this handoff format\", or \"compare features for our task\". Ask the user if task fit vs achieved outcome is unclear. Not for capability presence alone (see functionality) or achieved outcomes (see effectiveness).",
+    "after": "Checks available capability fit when asked \"feed an offline importer\", \"match a handoff format\", or \"compare task options\". Before routing workflow complaints, Ask the user: missing capability, task fit, or actual outcomes? Not for capability presence alone (see functionality) or achieved outcomes (see effectiveness).",
+    "before_length": 280,
+    "after_length": 319
+  },
+  {
+    "id": 96,
+    "slug": "supportability",
+    "path": "skills/096-supportability/SKILL.md",
+    "before": "Supports a specific user case when asked \"prepare support diagnostics\", \"give support an investigation path\", or \"resolve this export case\". Ask the user if support work vs code upkeep is unclear. Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).",
+    "after": "Equips support investigation when asked \"prepare safe diagnostics\", \"give support evidence\", or \"resolve an export case\". Ask the user: support investigation or implementation upkeep? Not for recurring upkeep (see maintainability), state inference alone (see observability), or delivery handoffs (see changeability).",
+    "before_length": 329,
+    "after_length": 316
+  },
+  {
+    "id": 97,
+    "slug": "survivability",
+    "path": "skills/097-survivability/SKILL.md",
+    "before": "Preserves essential mission work when asked \"dispatch after site loss\", \"operate without central login\", or \"reconcile offline assignments\". Ask the user if essential continuity vs restoration is unclear. Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).",
+    "after": "Keeps missions running when asked \"dispatch after site loss\", \"work without login\", or \"reconcile offline work\". Ask the user what must continue during disruption rather than be restored afterward. Not for normal restoration (see recoverability), routine fault handling (see fault-failure-tolerance), or uptime accounting (see availability).",
+    "before_length": 348,
+    "after_length": 341
+  },
+  {
+    "id": 99,
+    "slug": "sustainability",
+    "path": "skills/099-sustainability/SKILL.md",
+    "before": "Checks environmental stewardship when asked \"measure report energy\", \"extend useful device life\", or \"avoid replacing usable hardware\". Ask the user which environmental objective is intended. Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).",
+    "after": "Evaluates environmental outcomes when asked \"measure job energy\", \"extend device life\", or \"avoid hardware replacement\". Ask the user which environmental outcome is intended before routing green claims. Not for resources per result (see efficiency-device-efficiency), purchase price (see affordability), or continued business value (see viability).",
+    "before_length": 337,
+    "after_length": 348
+  },
+  {
+    "id": 104,
+    "slug": "transferability",
+    "path": "skills/104-transferability/SKILL.md",
+    "before": "Transfers project assets when asked \"handoff linked project files\", \"map recipient owners\", or \"preserve links on transfer\". Ask the user if recipient handoff vs installation or exchange is unclear. Not for moving execution platforms (see portability), ongoing system exchange (see interoperability), or rebuilding an experiment (see replicability).",
+    "after": "Hands assets to recipients when asked \"handoff project files\", \"map recipient owners\", or \"preserve transfer links\". Ask the user: asset ownership, execution hosts, or data exchange? Not for moving execution platforms (see portability), ongoing system exchange (see interoperability), or rebuilding an experiment (see replicability).",
+    "before_length": 349,
+    "after_length": 333
+  },
+  {
+    "id": 106,
+    "slug": "understandability",
+    "path": "skills/106-understandability/SKILL.md",
+    "before": "Explains the system model when asked \"map component responsibilities\", \"explain state ownership\", or \"follow the request across services\". Ask the user if whole-system meaning vs one passage is unclear. Not for one unclear explanation (see comprehensibility), reading flow (see readability), or topic breadth (see comprehensiveness).",
+    "after": "Explains a system model when asked \"map component duties\", \"explain state ownership\", or \"follow service interactions\". Before routing comprehension requests, Ask the user: whole-system relationships or one explanation? Not for one unclear explanation (see comprehensibility), reading flow (see readability), or topic breadth (see comprehensiveness).",
+    "before_length": 333,
+    "after_length": 350
+  },
+  {
+    "id": 108,
+    "slug": "usability",
+    "path": "skills/108-usability/SKILL.md",
+    "before": "Checks whole-task interaction when asked \"observe checkout errors\", \"test unaided task completion\", or \"measure effort through recovery\". Ask the user if task success vs learning or sentiment is unclear. Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).",
+    "after": "Checks task interaction when asked \"observe checkout errors\", \"test unaided completion\", or \"measure recovery effort\". Before routing ease complaints, Ask the user: task success/effort, learning, feelings, or appearance? Not for learning (see learnability), feelings after use (see likeability), or visual appeal (see attractiveness).",
+    "before_length": 317,
+    "after_length": 334
+  },
+  {
+    "id": 109,
+    "slug": "variability",
+    "path": "skills/109-variability/SKILL.md",
+    "before": "Defines product-family combinations when asked \"reject invalid edition builds\", \"make export require audit\", or \"list allowed feature sets\". Ask the user if family variants vs instance settings is unclear. Not for settings of one instance (see configurability) or applying a transition (see reconfigurability).",
+    "after": "Constrains product-family features when asked \"reject invalid builds\", \"make export require audit\", or \"list allowed feature sets\". Before routing editions, Ask the user: feature-combination rules, instance settings, or custom content? Not for settings of one instance (see configurability) or applying a transition (see reconfigurability).",
+    "before_length": 310,
+    "after_length": 340
+  },
+  {
+    "id": 110,
+    "slug": "verifiability",
+    "path": "skills/110-verifiability/SKILL.md",
+    "before": "Designs acceptance evidence when asked \"replace an unworkable check\", \"tie evidence to this claim\", or \"define the pass decision\". Ask the user if acceptance method vs test seams or proof is unclear. Not for adding test seams (see testability), defining units (see measurability), or constructing proofs (see provability).",
+    "after": "Designs acceptance methods when asked \"replace an impossible check\", \"choose claim evidence\", or \"define a pass rule\". Ask the user: feasible check, test controls, proof, or existing-result review? Not for adding test seams (see testability), defining units (see measurability), or constructing proofs (see provability).",
+    "before_length": 322,
+    "after_length": 320
+  },
+  {
+    "id": 111,
+    "slug": "versatility",
+    "path": "skills/111-versatility/SKILL.md",
+    "before": "Supports distinct product roles when asked \"import and audit stock\", \"add read-only inventory checking\", or \"keep audit mode nonmutating\". Ask the user if new roles vs related cases or reuse is unclear. Not for one abstraction covering related cases (see generality) or reusing an artifact elsewhere (see reusability).",
+    "after": "Supports distinct task roles when asked \"import and audit stock\", \"add read-only checking\", or \"keep audits nonmutating\". Ask the user which roles differ in outcomes, rather than input variants, before routing new uses. Not for one abstraction covering related cases (see generality) or reusing an artifact elsewhere (see reusability).",
+    "before_length": 318,
+    "after_length": 335
+  },
+  {
+    "id": 112,
+    "slug": "viability",
+    "path": "skills/112-viability/SKILL.md",
+    "before": "Checks continued value when asked \"review upkeep at renewal\", \"compare benefits with ongoing obligations\", or \"plan service retirement\". Ask the user if continued worth vs build feasibility or budget is unclear. Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).",
+    "after": "Checks continued value when asked \"review upkeep\", \"weigh ongoing obligations\", or \"plan retirement\". Ask the user: long-term value, budget fit, or initial feasibility? Not for initial delivery (see feasibility), spending cap alone (see affordability), or environmental objectives (see sustainability).",
+    "before_length": 345,
+    "after_length": 302
+  },
+  {
+    "id": 114,
+    "slug": "wrappability",
+    "path": "skills/114-wrappability/SKILL.md",
+    "before": "Wraps retained implementations when asked \"keep the engine behind an API\", \"translate native errors\", or \"expose the old function unchanged\". Ask the user if retention vs substitution is unclear. Not for substituting the engine (see replaceability) or just wiring components (see integratability).",
+    "after": "Wraps retained behavior when asked \"keep an engine behind an API\", \"translate native errors\", or \"expose an old function\". Ask the user whether the implementation and required behavior stay unchanged before routing adapter work. Not for substituting the engine (see replaceability) or just wiring components (see integratability).",
+    "before_length": 297,
+    "after_length": 330
+  }
+]

@@ -1,7 +1,7 @@
 ---
 name: anonymity
 description: >-
-  Tests identity linkage when asked "can this export identify people", "check linked fake IDs", or "compare repeated releases". Ask the user which observer and linkage are in scope. Not for data purpose/lifecycle (see privacy), recipient permissions (see confidentiality), or actor attribution (see accountability).
+  Tests identity linkage when asked "check fake IDs", "test identity joins", or "compare releases". Ask the user which observer and linking data apply before routing identification concerns. Not for data purpose/lifecycle (see privacy), recipient permissions (see confidentiality), or actor attribution (see accountability).
 ---
 # Anonymity
 

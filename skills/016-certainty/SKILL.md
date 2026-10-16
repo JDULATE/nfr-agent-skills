@@ -1,7 +1,7 @@
 ---
 name: certainty
 description: >-
-  Bounds confidence when asked "label missing evidence", "show conflicting sources", or "mark unverified results". Ask the user if confidence vs value error is unclear. Not for value error (see accuracy) or formal guarantees (see provability).
+  Bounds evidence-backed confidence when asked "label unsupported claims", "show conflicting sources", or "mark unverified output". Before routing confidence concerns, Ask the user: evidence support, value error, or proof? Not for value error (see accuracy) or formal guarantees (see provability).
 ---
 
 # Certainty

@@ -1,7 +1,7 @@
 ---
 name: provability
 description: >-
-  Proves modeled claims when asked "prove the balance invariant", "check every allowed transition", or "list proof assumptions". Ask the user if proof vs selected test evidence is unclear. Not for testing selected cases (see verifiability) or defining notation alone (see formality).
+  Proves modeled claims when asked "prove the balance invariant", "check all transitions", or "list proof assumptions". Before routing proof requests, Ask the user: all modeled cases or selected test evidence? Not for testing selected cases (see verifiability) or defining notation alone (see formality).
 ---
 
 # Provability

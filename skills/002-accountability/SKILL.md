@@ -1,7 +1,7 @@
 ---
 name: accountability
 description: >-
-  Attributes actions when asked "keep the initiator", "tag delegated jobs", or "link actions to logins". Ask the user if identity vs review evidence is unclear. Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).
+  Attributes actions when asked "retain the approving user", "tag delegated work", or "link actions to logins". Before routing an investigation, Ask the user: actor identity, audit evidence, or artifact history? Not for evidence sufficiency (see auditability), artifact links (see traceability), or hiding identity (see anonymity).
 ---
 # Accountability
 

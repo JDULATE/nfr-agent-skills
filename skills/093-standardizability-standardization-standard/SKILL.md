@@ -1,7 +1,7 @@
 ---
 name: standardizability-standardization-standard
 description: >-
-  Selects common conventions when asked "adopt an event format", "publish naming rules", or "agree on field names". Ask the user whether a convention exists before routing a consistency request. Not for checking already selected rules (see conformance).
+  Selects conventions when asked "adopt an event format", "publish naming rules", or "agree on field names". Before routing standardization, Ask the user: choose a rule, enforce an existing rule, or align peers? Not for checking already selected rules (see conformance).
 ---
 
 # Standardizability/Standardization/Standard
