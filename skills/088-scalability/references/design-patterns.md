@@ -1,35 +1,43 @@
-# Growth-curve practices
+# Growth-curve decisions
 
-Vary a named demand axis and record the resource policy at every tested point.
+Choose an intervention only after separating workload growth from resource changes.
+A plateau alone does not identify a store, partition, coordinator or generator.
 
-## Workload axis and data distribution
+## Decision table
 
-- Use when users, arrivals, data size or tenants may mean different growth questions.
-- Trade-off: holding dimensions fixed isolates an axis, while declared skew or
-  mixed growth can reveal bottlenecks absent from a uniform synthetic workload.
-- Verify: record each axis, held conditions, data size/distribution and hot partitions;
-  do not infer active request capacity from an increased count of idle accounts.
+| Observed evidence | Intervention | Trade-off | How to verify |
+| --- | --- | --- | --- |
+| Added workers wait on the same global coordinator | Partition coordination by an independent business key | Cross-key ordering or transactions may forbid that split | Compare fixed and added-worker curves; inspect same-key ordering and cross-key concurrency |
+| A declared hot key fills one partition while others are idle | Split only work whose semantics permit smaller independent keys | Additional keys can change ordering or introduce merge work | Replay the same skew, compare the hot partition and retain the unsplittable case |
+| Useful per-worker capacity rises with fewer repeated shared reads | Coalesce reads or reuse a versioned projection before adding workers | Retained state adds freshness and invalidation costs | Compare the growth series with and without reuse plus actual version/result checks |
+| Demand bursts fill an unbounded queue before workers can recover | Bound admission and expose backpressure under the accepted service policy | Rejection/backpressure does not itself satisfy a no-loss growth promise | Keep every admitted/rejected unit visible and test queue drain after the burst |
 
-## Fixed and added-resource series
+## Partitioned-owner sketch
 
-- Use when a candidate can change workers, partitions or device capacity.
-- Trade-off: extra resources may improve a point while hiding fixed-resource limits
-  and costs; resource admission and improved useful service are separate observations.
-- Verify: label each series and resource amount, compare useful outcomes and retain
-  shared-state/coordination constraints instead of counting replicas as linear capacity.
+Pseudocode for a contract with ordering within a key and independence across keys.
+Ask the user if cross-key ordering is required; then this split may be invalid.
 
-## Saturation and generator probe
+~~~text
+submit(work, ownership_epoch):
+    key = business_partition_key(work)
+    owner = owner_for(key, ownership_epoch)
+    enqueue_in_key_order(owner, work)
 
-- Use when completed throughput plateaus or backlog/rejections rise.
-- Trade-off: a generator or downstream test dependency can limit the observation;
-  a flat completion curve alone does not identify which component saturated.
-- Verify: retain offered/admitted/completed work, source capability, backlog and
-  service bounds, then inspect the actual limiting path before assigning a cause.
+commit(work, ownership_epoch):
+    require_current_owner(work.key, ownership_epoch)
+    apply_required_effect_once_under_confirmed_identity_rule(work)
+~~~
 
-## Tested-range and cost boundary
+The owner check and effect need real supported concurrency semantics.
+During movement, prevent stale owners from committing and reconcile in-flight work.
+A hash or more partitions does not supply those semantics.
 
-- Use when passing points are proposed as evidence for future growth.
-- Trade-off: finite trials can locate supported points and failures but cannot
-  establish unlimited capacity or constant marginal resource cost.
-- Verify: preserve every tested point, resource policy, failed bound and duration;
-  report untested ranges and avoid a fitted-line guarantee beyond observed conditions.
+## Series and cause checks
+
+At each point fill offered demand, useful completions, rejects, backlog change,
+duration, data/skew and actual resource amounts. Label fixed-resource and
+added-resource series separately, including resource costs.
+Exercise the generator beyond the requested points before blaming service capacity.
+Use a coordination intervention only when source/trace evidence identifies it;
+retain alternative causes as unknown when observations do not distinguish them.
+Report tested ranges rather than linear or unlimited extrapolation.

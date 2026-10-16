@@ -1,35 +1,68 @@
-# Export acceptance hides completion latency
+# Batched lookup and bounded-page export
 
-The fictional export contract requires the completed artifact, not just queue acceptance.
-Its response can acknowledge a request before that artifact exists.
+Use this synthetic fixture to inspect completed exports, not queue receipts.
+Every numeric value, observation and target below is illustrative;
+confirm with the user/stakeholder before adopting any requirement.
 
-## Illustrative latency fixture
+## Filled operation record
 
-Illustrative values and target; confirm with the user/stakeholder:
-An eligible set has 100 completed exports: 90 take 100 ms and 10 take 500 ms.
-For this example only, define p95 as the sorted sample at rank ceil(0.95 * count).
-That rank is 95, giving 500 ms, so it fails the illustrative 300 ms budget.
-A 20 ms queue-acceptance response does not replace the completion measurement.
+Worker profile export-slate runs one operation at a time on snapshot rev-amber.
+Offer E001 through E100 at 600 ms intervals from time zero; observe for 60 seconds.
+The source follows that schedule independently of responses. There are no retries,
+background jobs or network errors in the direct/candidate runs.
+E001 through E090 have 64 rows; E091 through E100 have 640 rows.
+Required contents are ordered row identities from 1 through that export's row count.
+The artifact is private until all rows are validated and published.
+Queue acceptance takes 20 ms in both plans and is not the required completion.
 
-| Checkpoint | Required observation | Carried result state |
+Illustrative acceptance; confirm with the user/stakeholder:
+require every offered export completed by run end, completed p95 at most 300 ms,
+and peak worker memory at most 16 MiB. Define p95 as sorted rank ceil(0.95 * n).
+Correct output count over the fixed observation window is the useful throughput.
+
+## Before and remediation
+
+The fixture's stage ledger assigns the following elapsed durations:
+
+| Cohort / plan | Queue ms | Lookup ms | Serialize/publish ms | Completion ms |
+| --- | ---: | ---: | ---: | ---: |
+| Small / per-row lookup | 20 | 40 | 40 | 100 |
+| Large / per-row lookup | 20 | 440 | 40 | 500 |
+| Small / bounded batched lookup | 20 | 20 | 60 | 100 |
+| Large / bounded batched lookup | 20 | 40 | 60 | 120 |
+
+The candidate fetches each page's required fields together and streams that page
+to a private artifact; final publication still requires every ordered row.
+Base memory is 4.8 MiB; each buffered row occupies 0.1 MiB in this model.
+Direct materialization therefore peaks at 11.2 or 68.8 MiB.
+Candidate pages hold at most 32 rows, so peak modeled memory is 8 MiB.
+No content is dropped; the larger serialization time is included above.
+
+| Result | Before | After |
 | --- | --- | --- |
-| Request accepted | Queue receipt | Artifact pending, timing continues |
-| Artifact completed | Required content and completion time | Raw eligible result retained |
-| Slow export | Retained in full sample | No favorable completed-only subset selected |
-| Rejected/unfinished export in another case | Separate outcome and elapsed/censoring evidence | Cannot invent true completion time |
+| Completion set | All 100 correct | All 100 correct |
+| Completed p95 | 500 ms: rank 95 is in the large cohort | 120 ms: rank 95 is in the large cohort |
+| Useful throughput | 100 exports / 60 seconds | 100 exports / 60 seconds |
+| Peak space | 68.8 MiB: fails proposed bound | 8 MiB: passes proposed bound |
+| Pending/rejected/failed at run end | None | None |
+
+This remedy changes the latency and space verdict, not the fixed-window completion
+count. The supplied lookup ledger supports the modeled intervention; a real
+critical-path investigation must establish those stage costs before choosing it.
+
+## Mixed-outcome failing case
+
+Keep the same arrivals, contents, profile and window. Complete E001 through E090
+at 100 ms each, time out E091 through E098 at 500 ms without a completion record,
+and reject E099 through E100 at admission. Disable retries for this case.
+At run end: 90 correct, 8 timeout outcomes with completion unknown, 2 rejected.
+Its completed p95 is 100 ms, but the explicit all-offered-complete rule fails.
+Do not invent true completion times for the timed-out exports.
 
 ## Statistic counterexample
 
 Illustrative sample calculation; confirm with the user/stakeholder:
-If one instance completes 1 export at 500 ms and another completes 99 at 100 ms,
-their separate p95 values are 500 and 100 ms. Their unweighted average is 300 ms;
-the pooled sample's declared rank rule gives 100 ms. The methods answer different
-questions, so apply the confirmed observation-set rule rather than averaging summaries.
-
-## Verification boundary
-
-Trace queue and required completion, generate the declared workload and inspect
-space under its actual concurrency/data. Record errors, rejects and unfinished
-work even when not part of a finite completed sample; resolve their acceptance
-policy before claiming the whole offered-work envelope passed.
-No export, timing distribution or memory peak was measured in a real system here.
+an instance with 1 completed sample of 500 ms has p95 500 ms; another with 99
+samples of 100 ms has p95 100 ms. Averaging those summaries gives 300 ms,
+whereas the pooled rank rule gives 100 ms. Use the agreed eligible sample,
+not an average of instance percentiles. No actual export or memory trial ran here.

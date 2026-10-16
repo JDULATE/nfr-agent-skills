@@ -1,33 +1,51 @@
-# Consistent results that are too slow
+# Incremental cleanup narrows a task range
 
-This hypothetical task preserves its required result in both candidates.
-The accepted absolute deadline and variation criterion are separate obligations.
+This is a deterministic synthetic work model, not measured latency.
+All numeric inputs, observations and targets are illustrative examples;
+confirm with the user/stakeholder before treating them as requirements.
 
-## Illustrative observations
+## Filled conditions and rule
 
-Illustrative fixtures and targets; confirm with the user/stakeholder:
-Propose an observed range of at most 50 ms and an independent 300 ms deadline.
+- Tasks T01 through T20 arrive at one-second intervals on serial profile task-slate.
+  Each has identical payload amber and must return exactly accepted:amber.
+- No cold initialization, cache misses, retries, network waits or other tasks
+  occur. All tasks belong to one accepted condition group; none are excluded.
+- Base task work takes 100 ms. Cleanup begins with exactly 140 expired entries,
+  visits them in index order, costs 5 ms per entry and gains no new entries.
+- Window: from the first arrival through the final result. Every task finishes;
+  missing, rejected and timed-out counts are zero in these modeled runs.
+- Proposed limits: observed max-minus-min at most 50 ms and every completion
+  within 300 ms of its arrival. These limits are illustrative;
+  confirm with the user/stakeholder.
 
-| Trace | Completion observations, ms | Observed range, ms | Result against proposed rules |
-| --- | --- | ---: | --- |
-| Baseline | 100, 100, 800 | 700 | Range fails; slow case exceeds deadline |
-| Uniformly slow candidate | 900, 910, 905 | 10 | Range passes; absolute deadline fails |
+## Before and after the change
 
-The finite candidate observations do not establish that future outcomes cannot
-vary more. Passing a spread rule cannot waive the independent timing obligation.
+Before: task T03 performs the full expired-entry sweep; all others do base work.
+Its trace contains 800 ms for T03 and 100 ms for every other named task.
+The cleanup cursor reaches the end at T03; no cleanup backlog remains afterward.
 
-## Carried conditions and missing outcome
+After: every task advances the shared cleanup cursor by at most 7 entries.
+Each task takes 100 + 7 * 5 = 135 ms; cursor progression is 7, 14, ... , 140.
+After T20 every expired entry is removed; no new work was silently deferred
+beyond the observation window.
 
-Retain input/data, load, device/config and warm-state group for each trace.
-If the slow baseline case was a distinct cold condition, report that group and
-its scope rather than blaming an unexplained within-group spread automatically.
-If another task never finished, preserve it as pending/censored; the completed
-observations' narrow range says nothing conclusive about that unknown outcome.
+| Plan | Completion sequence definition | Range ms | Deadline verdict | Cleanup end state |
+| --- | --- | ---: | --- | --- |
+| Full sweep | T03 = 800; all others = 100 | 700 | T03 fails | All expired entries removed |
+| Incremental | T01 through T20 = 135 each | 0 | All pass | Same entries removed by T20 |
+| Pad full-sweep results | Every task waits until 900 ms before returning | 0 | All fail | Original sweep still finishes at T03 |
 
-## Requirement and verification
+All numeric comparisons remain illustrative; confirm with the user/stakeholder.
+The padding control preserves contents and performs the original cleanup, but
+a narrow range cannot waive the independent absolute deadline.
+The mean of both the full-sweep and incremental plans is 135 ms; an unchanged
+mean therefore does not imply unchanged variation.
 
-Under confirmed condition groups, compare raw outcomes with the agreed range,
-eligibility and absolute limits. Trace rare branches and retain inconvenient
-extremes rather than dropping them. A stable average, frozen control or selected
-quiet window is not the specified distribution evidence.
-No actual timing trial, exceptional-path diagnosis or future guarantee is supplied here.
+## Supported cause and limits
+
+The supplied per-entry costs and cursor positions establish the modeled sweep
+contribution. They do not prove that cleanup causes pauses in an unseen repository.
+No condition-group field or pending case is left implicit in this fixture.
+A real run with unfinished tasks cannot substitute these complete observations.
+If new expiry work appears, measure its arrival and drain rates; this finite
+cohort supplies no sustained cleanup-capacity or future no-outlier guarantee.

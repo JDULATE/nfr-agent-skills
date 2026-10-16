@@ -1,7 +1,7 @@
 ---
 name: quality-of-service
 description: >-
-  Defines differentiated treatment for explicit service classes sharing constrained resources when users say "protect interactive work from batch jobs", "give background jobs a minimum share", or "keep one tenant from starving another class". Binds trusted classification, admission, scheduling and per-class outcomes under contention. Not for one operation's envelope alone (see performance-efficiency-time-or-space-bounds), generic workload growth (see scalability), or permission to access data (see accessibility-access-control).
+  Sets per-class treatment under contention when asked "protect checkout", "reserve batch progress" or "isolate tenants". Not for one operation's bounds (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or permission grants (see accessibility-access-control).
 ---
 # Quality of Service
 
@@ -55,6 +55,10 @@ and action permission (`accessibility-access-control`).
    when selecting admission, isolation, priority or minimum-progress handling.
    If strict priority starves a class with a positive progress obligation, then
    revise admission/scheduling or negotiate the conflicting contract instead of dropping that obligation.
+   If dispatch/service evidence shows preferred work delaying required progress,
+   then test the table's reservation policy against both classes' limits.
+   If borrowing can outlast the reservation's return deadline, then cap borrowing
+   or reserve nonborrowable capacity; an opportunity count alone promises no completion time.
    If classes share downstream pools, then inspect that contention too; separate
    ingress queues alone cannot establish differentiated end-to-end treatment.
 
@@ -82,18 +86,11 @@ user/stakeholder. Ask the user how to resolve obligations that cannot coexist wi
 
 ## Rules of thumb
 
-- Don't use an aggregate latency pass to accept every service class;
-  one class can satisfy it while another violates its own declared treatment.
-- Do test lower-class progress under sustained favored-class demand when that
-  progress is required; an idle favored queue cannot expose starvation.
-- Don't apply strict priority blindly when another class has a positive minimum;
-  preserving the favored class alone can violate the joint service contract.
-- Do derive class entitlement from the trusted policy source; a caller labeling
-  itself urgent must not silently seize the protected resource treatment.
-- Do inspect downstream shared pools after separating ingress queues;
-  hidden recombination can erase the end-to-end differentiation the classes were promised.
-- Do count admitted, rejected and unfinished work by class; rejecting one class
-  without the agreed policy cannot become an apparent scheduling-quality improvement.
+- Don't use an aggregate latency pass to accept every service class; one class can satisfy it while another violates its own declared treatment.
+- Do test lower-class progress under sustained favored-class demand when that progress is required; an idle favored queue cannot expose starvation.
+- Don't apply strict priority blindly when another class has a positive minimum; preserving the favored class alone can violate the joint service contract.
+- Do inspect downstream shared pools after separating ingress queues; hidden recombination can erase the end-to-end differentiation the classes were promised.
+- Do permit borrowing an idle class's reservation only with a rule for returning its promised service when eligible work appears; an unbounded borrowed task can defeat the class minimum.
 
 ## Verification
 
@@ -102,6 +99,11 @@ inspection categories. Retain actual assignment, offered mix, queue/wait/service
 outcomes, rejects and progress windows for each class. Exercise privileged-class
 spoofing and lower-class eligibility. Record capacity assumptions and downstream
 contention; a priority flag or an empty batch queue alone establishes no differentiated service contract.
+
+Apply these measurement and policy checks during verification:
+
+- Do derive class entitlement from the trusted policy source; a caller labeling itself urgent must not silently seize the protected resource treatment.
+- Do count admitted, rejected and unfinished work by class; rejecting one class without the agreed policy cannot become an apparent scheduling-quality improvement.
 
 ## Done checklist
 
@@ -126,5 +128,5 @@ contention; a priority flag or an empty batch queue alone establishes no differe
 
 - Read [class-treatment practices](./references/design-patterns.md) when choosing
   classification, admission, isolation or a minimum-progress mechanism.
-- Read [interactive-and-batch example](./references/worked-example.md) when a favored
-  class passes its latency trial but the joint treatment contract still fails.
+- Read [reserved-dispatch example](./references/worked-example.md) when a class
+  misses its progress deadline and a reservation must preserve both obligations.

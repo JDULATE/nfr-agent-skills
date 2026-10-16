@@ -1,7 +1,7 @@
 ---
 name: predictability
 description: >-
-  Bounds observed variation and outliers under stated conditions when users say "the same task sometimes takes much longer", "make completion times consistent", or "stop rare long pauses from surprising callers". Separates conditional distributions, extreme observations and missing/censored work. Not for a central timing target alone (see performance-efficiency-time-or-space-bounds), control drift or oscillation (see stability), or product-family variation points (see variability).
+  Bounds variation when asked "consistent completion", "less jitter" or "fewer surprise pauses". Asks whether a tail complaint means spread or an absolute deadline. Not for tail-latency bounds alone (see performance-efficiency-time-or-space-bounds), control flapping (see stability), or family options (see variability).
 ---
 # Predictability
 
@@ -52,6 +52,8 @@ control drift/oscillation (`stability`) and product-family options (`variability
    when reducing variable work or separating warm, queued and competing conditions.
    If extreme cases reveal a distinct input/cache/dependency path, then inspect
    that path rather than smoothing away the observation that exposed it.
+   If a full maintenance sweep causes rare pauses, then use the decision table
+   to test incremental work and its backlog; do not replace spread with a faster mean.
    If a candidate makes every result equally slow, then assess the separate
    absolute deadline; lower variation alone cannot establish overall acceptable service.
 
@@ -79,18 +81,10 @@ the user/stakeholder. Ask the user which unobserved/timeout cases block acceptan
 
 ## Rules of thumb
 
-- Don't replace raw extremes with a stable average; similar means can conceal
-  very different surprises in the individual completion outcomes the user needs bounded.
-- Do compare meaningful condition groups before blaming variability; cold starts
-  and cached repeats may answer different conditional questions rather than one unexplained spread.
-- Do preserve timeouts and unfinished work beside completed observations;
-  dropping the slowest unknown outcomes can manufacture a narrow observed range.
-- Don't call uniform slowness acceptable solely because spread improved;
-  predictable completion can still violate the independent absolute deadline.
-- Do predeclare window and outlier exclusions; deleting inconvenient pauses
-  after observation changes the variability contract instead of meeting it.
-- Do trace rare variable-work paths, not only the usual hotspot; eliminating
-  typical cost can leave the exceptional branch that dominates the surprise unchanged.
+- Do choose separate cold and warm variation budgets only when those are accepted outcome classes; a single narrow-range promise still has to cover its slow cold branch.
+- Don't call uniform slowness acceptable solely because spread improved; predictable completion can still violate the independent absolute deadline.
+- Do trace rare variable-work paths, not only the usual hotspot; eliminating typical cost can leave the exceptional branch that dominates the surprise unchanged.
+- Do slice an occasional full cleanup sweep into bounded task increments when that sweep creates the spread; accept added steady work only if both variation and the absolute deadline pass.
 
 ## Verification
 
@@ -99,6 +93,13 @@ tracing categories. Retain input/cache/load groups, individual outcomes, extrema
 timeouts, missing observations and absolute deadlines. Compare the same eligibility
 rules before/after. Record finite coverage and hypothesized causes separately;
 observed spread alone establishes neither future absence of outliers nor control-loop stability.
+
+Apply these measurement and policy checks during verification:
+
+- Don't replace raw extremes with a stable average; similar means can conceal very different surprises in the individual completion outcomes the user needs bounded.
+- Do preserve timeouts and unfinished work beside completed observations; dropping the slowest unknown outcomes can manufacture a narrow observed range.
+- Do predeclare window and outlier exclusions; deleting inconvenient pauses after observation changes the variability contract instead of meeting it.
+- Do compare meaningful condition groups before blaming variability; cold starts and cached repeats may answer different conditional questions rather than one unexplained spread.
 
 ## Done checklist
 
@@ -122,5 +123,5 @@ observed spread alone establishes neither future absence of outliers nor control
 
 - Read [variation practices](./references/design-patterns.md) when defining groups,
   retaining censored outcomes or inspecting exceptional work paths.
-- Read [consistent-but-slow example](./references/worked-example.md) when variation
-  improves but the independent timing requirement remains unsatisfied.
+- Read [incremental-cleanup example](./references/worked-example.md) when choosing
+  a spread-reducing change and rejecting a uniformly slow false positive.

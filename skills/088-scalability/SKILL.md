@@ -1,7 +1,7 @@
 ---
 name: scalability
 description: >-
-  Tests acceptable service behavior and resource needs as a declared workload dimension grows when users say "handle twice the users without losing service quality", "find where throughput stops increasing", or "compare scaling with fixed and added resources". Separates offered demand, resource policy, skew and observed growth limits. Not for admitting a new deployment unit alone (see expandability), one fixed-load timing check (see performance-efficiency-time-or-space-bounds), or device cost per result alone (see efficiency-device-efficiency).
+  Tests growth curves when asked "handle more users", "find the plateau" or "compare added workers". Not for resource admission alone (see expandability), one load's bounds (see performance-efficiency-time-or-space-bounds), or cost per result (see efficiency-device-efficiency).
 ---
 # Scalability
 
@@ -52,6 +52,10 @@ envelope (`performance-efficiency-time-or-space-bounds`) and resource per result
    when locating shared work, skew, coordination or a resource-dependent bottleneck.
    If added workers do not improve useful completions, then inspect shared state,
    serial work and demand distribution before claiming admission itself solved scalability.
+   If source and wait evidence identify shared coordination as the cap, then
+   test independent key ownership only where the ordering contract permits it.
+   If declared skew concentrates work on an unsplittable key, then retain that
+   limit rather than assuming more partitions admit the required growth.
    If resources change between points, then retain that policy and its costs;
    compare fixed-resource and added-resource behavior rather than presenting one unlabeled curve.
 
@@ -79,18 +83,10 @@ confirm with the user/stakeholder. Ask the user for service and resource limits 
 
 ## Rules of thumb
 
-- Do name the growing dimension and held conditions; more stored accounts is
-  not evidence for more simultaneously active requests or larger per-request data.
-- Don't call resource admission a successful growth curve; a new worker may be
-  usable while the shared bottleneck still caps useful service at rising demand.
-- Do keep offered work, completed work and backlog together at each point;
-  a throughput plateau with accumulating demand is not successful scaling of that demand.
-- Do label resource changes separately from workload changes; extra capacity can
-  hide fixed-resource saturation and its cost when both axes move without explanation.
-- Do exercise declared hot-key/tenant skew, not just evenly spread work;
-  balanced test traffic can miss the partition that limits the requested growth envelope.
-- Don't extrapolate linear improvement beyond the tested range; coordination
-  and changed data distribution remain unverified rather than solved by a fitted line.
+- Do name the growing dimension and held conditions; more stored accounts is not evidence for more simultaneously active requests or larger per-request data.
+- Don't call resource admission a successful growth curve; a new worker may be usable while the shared bottleneck still caps useful service at rising demand.
+- Don't extrapolate linear improvement beyond the tested range; coordination and changed data distribution remain unverified rather than solved by a fitted line.
+- Do reduce shared coordination before buying another worker when added workers flatten the capacity curve; compare demand growth with coordination removed and retained to test that specific growth limit.
 
 ## Verification
 
@@ -99,6 +95,12 @@ series comparison categories. Retain per-point demand, data/skew, environment,
 resource amounts, useful completion, rejects/errors, backlog and timing bounds.
 Check generator limits and observation duration. Preserve failed points and
 plateaus; an admitted replica or a single peak-throughput number is not a verified growth envelope.
+
+Apply these measurement and policy checks during verification:
+
+- Do keep offered work, completed work and backlog together at each point; a throughput plateau with accumulating demand is not successful scaling of that demand.
+- Do exercise declared hot-key/tenant skew, not just evenly spread work; balanced test traffic can miss the partition that limits the requested growth envelope.
+- Do label resource changes separately from workload changes; extra capacity can hide fixed-resource saturation and its cost when both axes move without explanation.
 
 ## Done checklist
 
@@ -122,5 +124,5 @@ plateaus; an admitted replica or a single peak-throughput number is not a verifi
 
 - Read [growth-curve practices](./references/design-patterns.md) when choosing
   axes, resource series, skew or a saturation/bottleneck probe.
-- Read [throughput-plateau example](./references/worked-example.md) when offered
-  demand grows but useful completion and backlog reveal an unacceptable point.
+- Read [coordination-ceiling example](./references/worked-example.md) when comparing
+  a fixed-resource intervention with a separate added-worker growth series.

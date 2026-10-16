@@ -1,7 +1,7 @@
 ---
 name: sustainability
 description: >-
-  Connects resource and lifecycle choices to an explicit environmental or long-term stewardship objective when users say "reduce energy for this workload", "extend the useful life of these devices", or "show the lifecycle tradeoffs of this optimization". Names functional output, system boundary, horizon and measurement or evidence limits. Not for resource cost per operation alone (see efficiency-device-efficiency), financial cost alone (see affordability), or continued business value alone (see viability).
+  Evaluates operational energy and device-life choices when asked "use less energy", "keep these devices useful" or "delay replacement". Not for device resource ratios alone (see efficiency-device-efficiency), price alone (see affordability), or business continuation (see viability).
 ---
 # Sustainability
 
@@ -49,7 +49,8 @@ continued stakeholder value (`viability`).
    If no numeric criterion exists for the chosen energy objective, then offer the
    illustrative trial and confirm with the user/stakeholder before adopting it.
    If the chosen objective is device life instead, then specify usable-service
-   and retirement evidence with the user rather than imposing the energy target.
+   and review-event evidence with the user rather than imposing the energy target;
+   use the device-life example to propose a bounded continued-service trial.
 
 3. Design/Implement: Read [stewardship-evidence practices](./references/design-patterns.md)
    when reducing measured work, extending useful operation or comparing lifecycle boundaries.
@@ -57,6 +58,8 @@ continued stakeholder value (`viability`).
    that displacement and boundary difference instead of claiming a whole-system benefit.
    If a proposed replacement changes lifecycle burdens outside available evidence,
    then report the tradeoff as unknown rather than declaring a net environmental improvement.
+   If retained working state forces premature retirement of an otherwise accepted
+   device profile, then test bounded temporary state against service through its review event.
 
 4. Verify: Compare the selected objective against equivalent useful output and
    conditions, retaining measured/proxy distinctions, scope and lifecycle exclusions.
@@ -82,18 +85,10 @@ confirm with the user/stakeholder. Ask the user for supported impact factors bef
 
 ## Rules of thumb
 
-- Don't equate lower CPU, a smaller bill or newer hardware with environmental
-  improvement; each can change without establishing the chosen stewardship objective.
-- Do keep useful output and quality fixed in the comparison; stopping required
-  service can reduce measured energy while defeating the agreed functional unit.
-- Do include idle/shared-device allocation and displaced work within the declared
-  boundary; moving consumption outside a narrow counter is not a whole-system saving.
-- Don't convert energy to emissions using an invented factor; source, location,
-  period and boundary limits must support that distinct claim or remain unknown.
-- Do separate operational savings from acquisition/replacement/retirement effects;
-  a lower running measurement cannot settle an unmeasured lifecycle tradeoff.
-- Do test service adequacy when extending device life; retaining unusable equipment
-  does not meet a stewardship objective defined around continued useful service.
+- Do separate operational savings from acquisition/replacement/retirement effects; a lower running measurement cannot settle an unmeasured lifecycle tradeoff.
+- Do test service adequacy when extending device life; retaining unusable equipment does not meet a stewardship objective defined around continued useful service.
+- Do evaluate a bounded working-set path before retiring a memory-limited device when continued useful service is the objective; a cheaper replacement quote alone cannot decide that service-life extension.
+- Do end a proposed device-life extension at an explicit maintenance or review event; a passing present-day task fixture does not approve indefinite equipment retention.
 
 ## Verification
 
@@ -103,13 +98,21 @@ status, scope, horizon, allocation, useful results and excluded effects. Inspect
 service-life conditions and displacement. Report unsupported factors or lifecycle
 stages explicitly; an operational ratio or purchasing label alone establishes no total impact result.
 
+Apply these measurement and policy checks during verification:
+
+- Don't equate lower CPU, a smaller bill or newer hardware with environmental improvement; each can change without establishing the chosen stewardship objective.
+- Do keep useful output and quality fixed in the comparison; stopping required service can reduce measured energy while defeating the agreed functional unit.
+- Do include idle/shared-device allocation and displaced work within the declared boundary; moving consumption outside a narrow counter is not a whole-system saving.
+- Don't convert energy to emissions using an invented factor; source, location, period and boundary limits must support that distinct claim or remain unknown.
+
 ## Done checklist
 
 - [ ] Confirm the stewardship objective rather than assuming energy, money or carbon.
 - [ ] Define equivalent useful output, quality, service constraints and horizon.
 - [ ] Record system/lifecycle boundary, allocation and displaced work.
 - [ ] Distinguish measured evidence, proxies, supplied factors and unknown effects.
-- [ ] Verify the selected objective and preserved useful-service conditions.
+- [ ] Compare the selected objective with its confirmed acceptance criterion.
+- [ ] Verify useful-service outputs through the stated operational or review horizon.
 - [ ] Inspect device-life/replacement tradeoffs and lifecycle exclusions separately.
 - [ ] Limit conclusions to supported units, scope and provenance without invented conversions.
 
@@ -127,3 +130,5 @@ stages explicitly; an operational ratio or purchasing label alone establishes no
   boundaries, evidence, functional units or operational-versus-lifecycle comparisons.
 - Read [report-energy example](./references/worked-example.md) when a measured
   operational improvement still leaves replacement and total impact unresolved.
+- Read [device-life example](./references/device-life-example.md) when bounded
+  working state may keep an existing device useful until a defined review event.

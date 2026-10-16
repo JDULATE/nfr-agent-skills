@@ -1,35 +1,42 @@
-# Variation practices
+# Variation decisions
 
-Choose the conditional variation question and keep absolute service constraints separate.
+Use the source-backed exceptional path, not a smooth mean, to choose a change.
+Ask whether the user wants a spread rule or an absolute tail-latency deadline;
+a percentile complaint can mean either and may need both.
 
-## Conditional observation groups
+## Decision table
 
-- Use when input size, warm state, demand or environment differ between samples.
-- Trade-off: grouping makes causes clearer but very narrow groups can conceal
-  the broader conditions the stakeholder actually needs covered.
-- Verify: retain group membership, eligibility and raw outcomes; declare which
-  differences are intentional conditions rather than deleting unfavorable samples.
+| Observed evidence | Intervention | Trade-off | How to verify |
+| --- | --- | --- | --- |
+| A periodic full cleanup sweep aligns with rare pauses | Replace the sweep with bounded incremental cleanup | Steady work can increase and expired state can persist until visited | Trace work per task, cleanup backlog, raw range and the independent deadline |
+| Cold initialization is the only slow branch and readiness can wait | Complete that initialization before accepting the scoped task class | Startup takes longer and moves work; it does not erase startup obligations | Test cold startup separately and every accepted task's grouped completion range |
+| Retry count varies within equivalent tasks | Bound total retry work under the accepted response/result policy | Some tasks may fail rather than finish after a long retry tail | Keep failed/pending tasks visible; test both the range claim and required result policy |
+| Cache eviction triggers repeated full rebuilds | Rebuild in bounded chunks or prebuild before the affected task class | Memory and freshness constraints can rule out prebuilding | Exercise eviction/rebuild states and inspect worst task work, spread and content |
 
-## Extremes and censored work
+## Incremental-cleanup sketch
 
-- Use when rare pauses or unfinished tasks matter to the variation promise.
-- Trade-off: finite extrema depend on observed coverage; missing or timed-out
-  outcomes can leave the whole set's range unestablished.
-- Verify: retain actual extremes, timeout cutoffs, pending/missing samples and
-  window scope. Never substitute an unknown completion with a conveniently short value.
+Pseudocode; state is shared with normal cleanup ownership, not a private counter
+reset on every request. cleanup_quota is a confirmed work limit, not a time guarantee.
 
-## Exceptional work path
+~~~text
+handle(task, cleanup_state, cleanup_quota):
+    result = produce_required_result(task)
+    examined = take_next_entries(cleanup_state.cursor, cleanup_quota)
+    for entry in examined:
+        remove_if_expired(entry)
+    cleanup_state.cursor = successor_of_last_examined(examined)
+    return result
+~~~
 
-- Use when uncommon cache misses, dependencies, retries or cleanup cause surprise.
-- Trade-off: optimizing the usual path can improve central timing without changing
-  the exceptional branch; bounding that branch can trade resource or absolute delay.
-- Verify: correlate raw slow cases with actual execution paths and compare the
-  same condition groups after the change, including preserved result correctness.
+Compare the full observed task range before and after; include cleanup time.
+If arrival of cleanup work outpaces that quota, then expose the growing backlog
+rather than claiming the incremental design is complete.
 
-## Variation versus absolute deadline
+## Conditional and finite evidence
 
-- Use when a candidate produces a narrower but slower distribution.
-- Trade-off: a controlled spread may aid predictability while violating another
-  task's required deadline; neither metric automatically compensates for the other.
-- Verify: evaluate both confirmed rules independently with unchanged eligibility;
-  report finite observations without inferring the absence of all future outliers.
+Use predeclared groups for meaningful input, warm-state and load differences.
+Do not split groups merely to exclude an inconvenient branch from its promise.
+Retain extremes, timeout cutoffs, pending and missing work with the observation
+window. A smaller completed-only range supplies no value for an unknown completion.
+Verify the absolute deadline and required output independently. Finite traces
+cannot establish that future outliers are impossible or that a control loop is stable.

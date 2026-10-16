@@ -1,7 +1,7 @@
 ---
 name: efficiency-device-efficiency
 description: >-
-  Improves useful work relative to consumed device resources when users say "use less CPU per completed report", "reduce bytes moved for the same useful result", or "compare resource cost of these implementations". Fixes result quality, accounting scope, workload and idle/background allocation before comparing ratios. Not for an operation's latency or space ceiling alone (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or environmental lifecycle claims (see sustainability).
+  Optimizes device resources per useful result when asked "less CPU per report", "fewer bytes per result" or "compare compute costs". Not for operation bounds (see performance-efficiency-time-or-space-bounds), growth curves (see scalability), or stewardship outcomes (see sustainability).
 ---
 # Efficiency/Device Efficiency
 
@@ -54,6 +54,8 @@ workload growth (`scalability`) and stewardship/lifecycle objectives (`sustainab
    expiry, background and storage costs under the chosen scope before declaring a saving.
    If a candidate finishes fewer correct results, then compare useful-result
    ratios and service constraints rather than accepting its lower aggregate resource total.
+   If repeated decoding dominates CPU, then coalesce equivalent work within the
+   useful result; if batch setup dominates small runs, then use the guide's cost crossover.
 
 4. Verify: Run comparable baseline/candidate workloads, validate outputs and
    retain scoped resource consumption, useful work, failed/retried work and conditions.
@@ -70,25 +72,20 @@ workload growth (`scalability`) and stewardship/lifecycle objectives (`sustainab
 - **Resource ratio:** For `{useful_output_and_quality}` under `{workload_and_environment}`,
   consume `{resource_unit}` per useful result at `{confirmed_target}`, using
   `{boundary_and_idle_background_retry_allocation}`, verified by `{ratio_and_quality_checks}`.
-- **Equivalent work:** Compare `{baseline_and_candidate}` on `{matched_inputs_and_conditions}`,
-  preserving `{service_and_result_constraints}` while reporting `{resource_dimensions}`
-  and `{displaced_or_unmeasured_costs}` separately.
+- **Plan selection:** For `{confirmed_volumes_and_output_contract}`, select
+  `{direct_or_reuse_batch_plan}` only when `{accounted_resource_cost}` meets
+  `{confirmed_cost_rule}`, verified by `{setup_marginal_cost_and_output_checks}`
+  while preserving `{service_and_result_constraints}`.
 
 Use the illustrative reduction trial if no target exists; confirm with the
 user/stakeholder. Ask the user which resource and useful-result boundary is authoritative.
 
 ## Rules of thumb
 
-- Do divide by correct useful results rather than attempts; dropping required
-  results can reduce total CPU while leaving resource per valid outcome unchanged or worse.
-- Don't call a faster implementation more resource-efficient without measuring
-  consumption; parallel work can change elapsed time without reducing the chosen resource total.
-- Do include cache fill, retries and background work under the agreed boundary;
-  moving consumption outside the foreground timer can fabricate a per-result saving.
-- Do keep CPU time, transferred bytes and peak retained space as distinct measures;
-  an improvement in one dimension cannot silently compensate for another required bound.
-- Don't infer energy, emissions or monetary savings from a CPU ratio alone;
-  those claims need their own objective, boundary and supported conversion evidence.
+- Do coalesce identical computation within a report before adding a persistent cache; choose persistence only when reuse repays fill and maintenance in the selected resource-per-result objective.
+- Do select batching from its setup-cost crossover in the chosen resource unit; use the direct path below that crossover rather than choosing from a high-volume average alone.
+- Do reduce repeated wire representations when transferred bytes per useful result dominate the objective; accept packing overhead only within the separate compute and completion constraints.
+- Do fetch the required projection when unused fields dominate storage work per result; choose whole-object reuse only if its measured retrieval cost beats the narrower path for the accepted output.
 
 ## Verification
 
@@ -97,6 +94,14 @@ categories. Retain device/config, input mix, warm state, scope, resource totals,
 correct-result counts, retry/background work and timing/space constraints.
 Check for displaced consumption and dimension tradeoffs. Recompute ratios from
 retained totals; a lower process metric alone does not establish whole-task resource efficiency.
+
+Apply these measurement and policy checks during verification:
+
+- Do divide by correct useful results rather than attempts; dropping required results can reduce total CPU while leaving resource per valid outcome unchanged or worse.
+- Don't call a faster implementation more resource-efficient without measuring consumption; parallel work can change elapsed time without reducing the chosen resource total.
+- Do include cache fill, retries and background work under the agreed boundary; moving consumption outside the foreground timer can fabricate a per-result saving.
+- Do keep CPU time, transferred bytes and peak retained space as distinct measures; an improvement in one dimension cannot silently compensate for another required bound.
+- Don't infer energy, emissions or monetary savings from a CPU ratio alone; those claims need their own objective, boundary and supported conversion evidence.
 
 ## Done checklist
 

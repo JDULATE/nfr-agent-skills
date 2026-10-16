@@ -1,7 +1,7 @@
 ---
 name: performance-efficiency-time-or-space-bounds
 description: >-
-  Specifies and verifies operation latency, throughput or space bounds under a declared workload when users say "make this endpoint faster", "set a response-time budget", or "keep this operation within its memory limit". Names measurement boundaries, result correctness, offered/completed work and test conditions. Not for resource cost per useful result alone (see efficiency-device-efficiency), outcome variation alone (see predictability), or class differentiation under contention (see quality-of-service).
+  Bounds latency, including tail-percentile deadlines, throughput and space at a stated load when asked "faster exports", "response budget" or "memory ceiling". Not for spread/variation (see predictability), resource per result (see efficiency-device-efficiency), or class treatment (see quality-of-service).
 ---
 # Performance/Efficiency/Time or Space Bounds
 
@@ -55,6 +55,8 @@ result and measurement envelope; distinguish resource per useful result
    required boundary before choosing a fix that merely moves elapsed work elsewhere.
    If a candidate trades memory, correctness or rejected work for speed, then
    check the confirmed constraints instead of declaring a latency-only improvement sufficient.
+   If independent lookups dominate completion, then test bounded batching; if
+   materialization breaches space, then stream private pages before final publication.
 
 4. Verify: Generate the declared offered workload, inspect correct completion,
    raw elapsed outcomes, unfinished/rejected work and scoped space peaks.
@@ -80,16 +82,10 @@ user/stakeholder. Ask the user for the offered workload and space scope instead 
 
 ## Rules of thumb
 
-- Do time through the required result, including queues inside the chosen boundary;
-  moving work after an early success response can hide the latency the user needs bounded.
-- Don't remove timeouts, rejects or unfinished work from a favorable latency story;
-  a fast successful subset does not establish the offered-work contract.
-- Do retain the percentile method and raw samples; averaging per-instance percentiles
-  cannot substitute for calculating the agreed statistic over the eligible observation set.
-- Do distinguish requested arrivals, active concurrency and completed throughput;
-  slowing the load source can hide the queueing envelope that produced the complaint.
-- Do inspect space under the actual data and concurrency envelope; a small-input
-  single-call peak cannot establish the simultaneous loaded operation's memory ceiling.
+- Do combine independent serial lookups when their round trips dominate the operation deadline; compare the batched critical path with the same required completed artifact.
+- Do overlap independent dependency waits only within the operation's space envelope; select concurrency from the latency/space tradeoff rather than treating maximum parallelism as the goal.
+- Do stream bounded pages when full materialization breaches the operation's peak-space ceiling; keep final publication dependent on the required complete result.
+- Do shorten queued service demand before increasing execution concurrency when queue time consumes the completion budget; higher dispatch throughput alone need not satisfy the operation deadline.
 
 ## Verification
 
@@ -99,6 +95,14 @@ queue time, timeouts/rejects, pending work and peak space. Record warm/cold stat
 data shape and environment. Recompute the agreed statistic from eligible outcomes;
 a profiler hotspot or an empty queue after the run alone proves no operation envelope.
 
+Apply these measurement and policy checks during verification:
+
+- Do time through the required result, including queues inside the chosen boundary; moving work after an early success response can hide the latency the user needs bounded.
+- Don't remove timeouts, rejects or unfinished work from a favorable latency story; a fast successful subset does not establish the offered-work contract.
+- Do retain the percentile method and raw samples; averaging per-instance percentiles cannot substitute for calculating the agreed statistic over the eligible observation set.
+- Do distinguish requested arrivals, active concurrency and completed throughput; slowing the load source can hide the queueing envelope that produced the complaint.
+- Do inspect space under the actual data and concurrency envelope; a small-input single-call peak cannot establish the simultaneous loaded operation's memory ceiling.
+
 ## Done checklist
 
 - [ ] Define operation/result, workload/data, environment and timing/space boundaries.
@@ -107,7 +111,8 @@ a profiler hotspot or an empty queue after the run alone proves no operation env
 - [ ] State and recompute the statistic from its eligible raw observations.
 - [ ] Check the generator actually offered the declared workload during slowdown.
 - [ ] Inspect scoped space peaks under the declared data/concurrency conditions.
-- [ ] Verify required content/correctness and disclose unmeasured boundaries.
+- [ ] Verify required content/correctness against the complete result oracle.
+- [ ] Disclose unmeasured boundaries and unresolved mixed-outcome acceptance rules.
 
 ## Failure modes
 
@@ -122,5 +127,5 @@ a profiler hotspot or an empty queue after the run alone proves no operation env
 
 - Read [operation-envelope practices](./references/design-patterns.md) when defining
   measurement/load boundaries, optimizing queues or checking space tradeoffs.
-- Read [queued-export example](./references/worked-example.md) when early acceptance
-  and a successful fast subset would hide the required end-to-end latency.
+- Read [bounded-export example](./references/worked-example.md) when batching and
+  streaming must satisfy latency, space and mixed-outcome acceptance together.

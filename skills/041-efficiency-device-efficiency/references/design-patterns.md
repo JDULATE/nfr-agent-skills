@@ -1,35 +1,39 @@
-# Resource-accounting practices
+# Resource-cost decisions
 
-Choose a correct useful output and one resource unit before comparing implementations.
+Choose an intervention for the selected device resource per useful result.
+Ask the user for that unit and the required output before choosing a plan.
 
-## Functional-unit and resource ledger
+## Decision table
 
-- Use when lower consumption might reflect less completed or lower-quality work.
-- Trade-off: validating useful results adds accounting work but keeps reduced
-  service from masquerading as a resource-per-result improvement.
-- Verify: retain correct completed outputs, attempts, failures and resource totals;
-  compute the ratio from the agreed useful-result denominator.
+| Observed evidence | Intervention | Trade-off | How to verify |
+| --- | --- | --- | --- |
+| Identical computation recurs within a report | Coalesce it under the input revision for that report | Reuse requires equivalent computation; retained values consume space | Count actual computations and total scoped resource work; compare output contents |
+| A batch shares expensive setup | Choose direct or batch execution from its resource-cost crossover | Setup and retained batches can outweigh marginal savings at small volumes | Exercise volumes on both sides with fill, cleanup and useful results included |
+| Equivalent payloads repeat structure on the wire | Pack shared structure once for the approved recipient format | Encoding work and receiver state can rise | Compare transmitted bytes per correct decoded result and separate CPU/deadline limits |
+| Storage reads unused fields for each result | Fetch the required projection or coalesce identical reads | Extra narrow calls may cost more than a reusable whole object | Compare actual storage work per result and verify the same permitted content |
 
-## Shared, idle and background allocation
+## Batch-plan sketch
 
-- Use when devices/processes serve several tasks or do work outside the request timer.
-- Trade-off: allocation is a modeling choice; excluding shared or idle consumption
-  may answer a local question while leaving whole-task resource cost unmeasured.
-- Verify: state the boundary and allocation rule, inspect background/retry work,
-  and label unobserved consumption rather than silently assigning it no cost.
+Pseudocode; inputs are measured in the same selected resource unit.
+Include setup, fill and cleanup in setup_cost before using this comparison.
 
-## Reuse and batching comparison
+~~~text
+choose_plan(volume, direct_per_item, setup_cost, batch_per_item):
+    direct = volume * direct_per_item
+    batched = setup_cost + volume * batch_per_item
+    if batched < direct:
+        return batch_plan
+    return direct_plan
+~~~
 
-- Use when repeated computation or transfers suggest cache/reuse/batch candidates.
-- Trade-off: fill, invalidation, retained state and delayed completion can move
-  resource costs or affect required results; reuse is not automatically a saving.
-- Verify: compare the declared warm/cold mix, useful outputs, foreground/background
-  resource work and required service constraints over the same accounting horizon.
+This selects only the declared resource objective. Reject either plan if it
+violates a separate accepted completion or space constraint. A latency win
+does not supply any missing resource cost.
 
-## Resource dimensions and displacement
+## Accounting needed before selection
 
-- Use when a candidate trades CPU for storage, transfers, another process or parallel work.
-- Trade-off: reducing the chosen ratio may be useful while worsening another
-  required dimension; resource units cannot be combined into an unexplained score.
-- Verify: retain each dimension and displaced work separately, with device/config
-  conditions. Do not infer energy, emissions or money without their additional evidence.
+Bound the useful-result identity, quality, resource ownership and comparison
+horizon. Shared-device allocation is a declared modeling choice, not a free saving.
+Include retries, background work, cache fill/expiry and consumption displaced
+to another process. Keep resource dimensions distinct; no unsupported conversion
+turns CPU or bytes into energy, money or lifecycle benefit.

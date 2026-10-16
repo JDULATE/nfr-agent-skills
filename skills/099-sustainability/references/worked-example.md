@@ -1,35 +1,48 @@
-# Operational report energy with lifecycle unknowns
+# Coalesced work and operational energy only
 
-This is a hypothetical measurement ledger, not meter readings or environmental
-claims about actual hardware. Report quality and required service remain unchanged.
+This is a supplied synthetic energy ledger, not meter readings from actual devices.
+All numeric values, results and targets are illustrative examples;
+confirm with the user/stakeholder before adopting them.
 
-## Illustrative functional-unit calculation
+## Filled boundary and objective
 
-Illustrative values and target; confirm with the user/stakeholder:
-Compare metered operational energy in the declared worker boundary and propose
-10% lower energy per correct report under equivalent workload and idle allocation.
+Worker profile energy-slate runs report identities R001 through R100 in a
+600-second period on unchanged device device-amber and snapshot dict-mint.
+Each output must be exactly its identity followed by :mint.
+There are no retries, missing results, remote devices or background jobs.
+The local device energy counter is the entire comparison boundary.
+The supplied source is fixture-ledger-amber; it attributes the same 0.2 kWh idle
+allocation to this run in both plans. No modeled factor converts CPU to energy.
+Every report must be correct and complete within the comparison period.
 
-| Case | Energy, kWh | Correct reports | kWh per correct report |
-| --- | ---: | ---: | ---: |
-| Baseline | 2.0 | 100 | 0.020 |
-| Candidate | 1.8 | 100 | 0.018 |
+Illustrative objective; confirm with the user/stakeholder:
+reduce operational kWh per correct report by 10% against the direct plan.
+Acquisition and retirement impact values are explicitly unknown in this ledger;
+no hardware replacement occurs and no total-lifecycle conclusion is permitted.
 
-The illustrative ratio is 10% lower; confirm with the user/stakeholder before
-adopting the target or accepting a real measured comparison.
+## Before and after coalescing
 
-## Carried boundary and tradeoffs
+The direct producer decodes the same revision twice within each report.
+The candidate decodes once per report and shares that value with both uses;
+the scope ends with that report, with no persistent cache or changed recipient.
 
-Retain the hypothetical meter source, worker boundary, period, idle allocation,
-correct-result evidence and service checks. If the candidate actually offloads
-work to an unmetered device, the whole-system saving remains unestablished.
-If replacement hardware was needed, acquisition/retirement effects remain unknown
-unless supported by separate evidence; lower running energy cannot settle them.
+| Supplied energy component | Direct kWh | Coalesced kWh |
+| --- | ---: | ---: |
+| Decode work | 0.4 | 0.2 |
+| Render and write complete output | 1.4 | 1.4 |
+| Allocated idle | 0.2 | 0.2 |
+| Total | 2.0 | 1.8 |
 
-## Requirement and interpretation
+Both ledgers end with all 100 exact outputs and no unfinished work.
+The ratios are 0.020 and 0.018 kWh per report: an illustrative 10% reduction;
+confirm with the user/stakeholder. The supplied component ledger supports this
+modeled operational comparison, not a conversion inferred from less CPU.
+A failed shortcut that emits only R001 through R080 fails the cohort contract
+regardless of its lower total energy; no consumption estimate is fabricated for it.
 
-Bind the requirement to the chosen operational objective, supported source and
-functional unit. A CPU counter is not this meter record, and no emissions factor
-is supplied. Report operational energy only, with lifecycle/conversion limits.
-For an extended-device-life objective instead, ask for usable-service and horizon
-criteria rather than automatically applying this energy comparison.
-No real energy, emissions, device-life or total-lifecycle outcome was measured here.
+## Conclusion boundary
+
+This before/after fixture supports only its local operational-energy objective.
+It provides no emissions factor, acquisition data, retirement impact or net
+environmental verdict. In a real run, an offloaded decoder would enlarge the
+boundary or leave the claimed whole-task saving unknown. No real energy trial ran.

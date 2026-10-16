@@ -1,35 +1,39 @@
-# Stewardship-evidence practices
+# Stewardship decisions
 
-Start with an explicit objective and supported evidence, not a green label or proxy alone.
+Start from an accepted operational-energy or useful-device-life objective.
+Do not select a greener label or a newer device as the objective by default.
 
-## Functional unit, boundary and horizon
+## Decision table
 
-- Use when operational or lifecycle alternatives produce different amounts of useful work.
-- Trade-off: a narrow boundary supports a limited comparison while excluding
-  effects elsewhere; a broad boundary needs evidence that may not be available.
-- Verify: retain equivalent correct outputs, service conditions, system/lifecycle
-  scope, period and excluded stages before interpreting the selected metric.
+| Observed evidence | Intervention | Trade-off | How to verify |
+| --- | --- | --- | --- |
+| Metered energy follows repeated identical computation | Coalesce that computation within the approved task scope | Retained state or setup can increase other costs | Compare complete metered energy and unchanged useful outputs over the chosen horizon |
+| Unbounded historical working state makes an otherwise usable device fail its task | Bound live working state and release unneeded completed-task buffers | Reconstruction work may grow; needed historical content must remain available | Exercise the task horizon on the retained device profile and inspect service adequacy |
+| Optional background work holds a device active between required tasks | Schedule it into approved activity windows or disable only unneeded work | Delayed background results may violate the service contract | Meter the complete period including idle time and test background deadlines |
+| A proposed replacement saves operational energy but other lifecycle stages lack evidence | Keep a conditional operational comparison and defer the net-impact decision | A decision can remain open despite a favorable running measurement | Show acquisition/retirement evidence separately and inspect continued useful service |
 
-## Measured evidence versus proxy
+## Bounded working-state sketch
 
-- Use when CPU, bills, device labels or modeled factors are proposed as impact evidence.
-- Trade-off: a proxy can guide investigation but cannot silently become a measured
-  energy or environmental result; supplied factors have their own source/context limits.
-- Verify: label metered, allocated, modeled and unknown quantities separately;
-  inspect provenance, units and scope before any supported conversion or comparison.
+Pseudocode for a device-life candidate whose completed-task buffers are disposable.
+Do not evict required durable records or violate the approved retention policy.
 
-## Idle allocation and displaced effects
+~~~text
+finish_report(report):
+    publish_required_output(report)
+    release_temporary_pages(report)
+    discard_disposable_preview(report)
+    keep_only_current_job_working_state()
+~~~
 
-- Use when a shared device, batching or an offloaded task shifts consumption.
-- Trade-off: the chosen allocation answers a specific objective; local savings
-  may coexist with increased idle or remote consumption outside the counter.
-- Verify: apply the declared allocation over the same useful-output horizon and
-  retain unmeasured destinations/time periods rather than assuming no displaced impact.
+If old outputs remain required, provide their approved retrieval route before
+discarding a preview. Verify continued task delivery through the chosen review event;
+a small working set alone is not evidence of longer useful device service.
 
-## Useful device life and lifecycle tradeoff
+## Evidence boundaries
 
-- Use when replacement, maintenance or extended device service is an option.
-- Trade-off: better operation can have acquisition/retirement effects, while keeping
-  a device can fail required service. No universal newer-or-older preference is assumed.
-- Verify: inspect useful-service adequacy and supported lifecycle stages separately;
-  leave net impact unknown where evidence does not cover replacement or retirement.
+Keep measured, allocated, modeled and unknown quantities explicit with their sources.
+Use the same functional output, idle allocation and horizon for an energy comparison.
+Include shifted devices and remote work or limit the conclusion to the local boundary.
+A CPU ratio is not a metered energy result. A conversion to emissions needs
+supported factors and source/context limits; Ask the user when those are unknown.
+Keeping a device or buying a new one has no universal lifecycle preference.
