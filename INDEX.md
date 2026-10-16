@@ -90,15 +90,15 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 ## Portability & Interoperability
 
 - [019 Compatibility](skills/019-compatibility/SKILL.md) — todo
-- [055 Installability](skills/055-installability/SKILL.md) — todo
+- [055 Installability](skills/055-installability/SKILL.md) — draft
 - [056 Integratability](skills/056-integratability/SKILL.md) — todo
 - [058 Interoperability](skills/058-interoperability/SKILL.md) — todo
-- [062 Localizability](skills/062-localizability/SKILL.md) — todo
-- [067 Mobility](skills/067-mobility/SKILL.md) — todo
-- [069 Nomadicity](skills/069-nomadicity/SKILL.md) — todo
-- [073 Portability](skills/073-portability/SKILL.md) — todo
+- [062 Localizability](skills/062-localizability/SKILL.md) — draft
+- [067 Mobility](skills/067-mobility/SKILL.md) — draft
+- [069 Nomadicity](skills/069-nomadicity/SKILL.md) — draft
+- [073 Portability](skills/073-portability/SKILL.md) — draft
 - [083 Replaceability](skills/083-replaceability/SKILL.md) — todo
-- [104 Transferability](skills/104-transferability/SKILL.md) — todo
+- [104 Transferability](skills/104-transferability/SKILL.md) — draft
 
 ## Reliability & Resilience
 
