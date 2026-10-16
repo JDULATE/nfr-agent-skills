@@ -1,0 +1,59 @@
+{
+  "id": 23,
+  "slug": "comprehensibility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?",
+  "should_trigger": [
+    {
+      "prompt": "People do not get this.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?"
+    },
+    {
+      "prompt": "Clarify this for readers.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?"
+    },
+    {
+      "prompt": "Readers interpret this requirement as allowing a different actor; clarify its actors and conditions against the source rule.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test whether the intended audience can explain the meaning of this particular error paragraph using grounded scenarios.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this code easier to read.",
+      "intended_sibling": "readability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem reading representation, visual glyph recognition, or missing conceptual explanation?"
+    },
+    {
+      "prompt": "Make the system easier to understand.",
+      "intended_sibling": "understandability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the gap a whole-system causal model, one explanation's meaning, or missing documentation topics?"
+    },
+    {
+      "prompt": "Rename confusing variables and flatten nested control flow so readers can follow the same code meaning.",
+      "intended_sibling": "readability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test a reader's cross-component predictions about why this system flow behaves as it does, not just interpretation of one paragraph.",
+      "intended_sibling": "understandability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

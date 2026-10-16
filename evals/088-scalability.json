@@ -1,0 +1,59 @@
+{
+  "id": 88,
+  "slug": "scalability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Which workload dimension grows, as opposed to merely adding a resource or meeting one fixed-load bound?",
+  "should_trigger": [
+    {
+      "prompt": "Handle more users.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which workload dimension grows, as opposed to merely adding a resource or meeting one fixed-load bound?"
+    },
+    {
+      "prompt": "Support bigger imports.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which workload dimension grows, as opposed to merely adding a resource or meeting one fixed-load bound?"
+    },
+    {
+      "prompt": "Measure acceptable service and resource response across a growing arrival-rate series, including the first unacceptable point.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare fixed-worker and added-worker capacity curves while retaining skew and coordination limits as demand grows.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "We need more capacity.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success admitting usable resources, proving behavior as workload grows, or adding a core function?"
+    },
+    {
+      "prompt": "Our tail latency needs work.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the tail complaint an absolute completion limit, variation/spread, or resource cost per useful result?"
+    },
+    {
+      "prompt": "Admit a new worker into the existing installation and verify placement, routing and usable added capacity.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the export's peak retained space below its confirmed ceiling while producing the complete required artifact at the stated load.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 61,
+  "slug": "likeability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is acceptance subjective response after use, static visual appeal, or achieved task outcomes?",
+  "should_trigger": [
+    {
+      "prompt": "Make the experience better.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance subjective response after use, static visual appeal, or achieved task outcomes?"
+    },
+    {
+      "prompt": "People do not enjoy this.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance subjective response after use, static visual appeal, or achieved task outcomes?"
+    },
+    {
+      "prompt": "After users complete the interaction, collect their subjective positive and negative judgments separately from observed task success.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare which experienced workflow people prefer, without treating visual appeal alone as the verdict.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this screen nicer.",
+      "intended_sibling": "attractiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance visual appeal, subjective response after interaction, or ability to recognize characters?"
+    },
+    {
+      "prompt": "People struggle with the app.",
+      "intended_sibling": "usability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance current task completion, ability learned through use, or subjective response after interaction?"
+    },
+    {
+      "prompt": "Compare static visual styles for aesthetic appeal to the intended audience without treating task success as the verdict.",
+      "intended_sibling": "attractiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Fix task interaction obstacles and verify the real goal, rather than judging only preference or newly acquired ability.",
+      "intended_sibling": "usability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

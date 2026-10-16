@@ -1,0 +1,59 @@
+{
+  "id": 78,
+  "slug": "readability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the problem reading representation, visual glyph recognition, or missing conceptual explanation?",
+  "should_trigger": [
+    {
+      "prompt": "Make this code easier to read.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem reading representation, visual glyph recognition, or missing conceptual explanation?"
+    },
+    {
+      "prompt": "Clean up this document.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem reading representation, visual glyph recognition, or missing conceptual explanation?"
+    },
+    {
+      "prompt": "Rename confusing variables and flatten nested control flow so readers can follow the same code meaning.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reorder and group this text to reduce reading effort while preserving its concepts, conditions and required substance.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "The text is hard to read.",
+      "intended_sibling": "legibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle visual character recognition, reading meaning/flow, or aesthetic appeal?"
+    },
+    {
+      "prompt": "Clarify this for readers.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?"
+    },
+    {
+      "prompt": "Users confuse displayed identifier characters; test transcription under the stated font, display and viewing conditions.",
+      "intended_sibling": "legibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test whether the intended audience can explain the meaning of this particular error paragraph using grounded scenarios.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

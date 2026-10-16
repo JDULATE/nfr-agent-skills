@@ -1,0 +1,59 @@
+{
+  "id": 57,
+  "slug": "integrity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this unauthorized/unintended alteration, forbidden disclosure, or partial visible commitment?",
+  "should_trigger": [
+    {
+      "prompt": "Protect these updates.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this unauthorized/unintended alteration, forbidden disclosure, or partial visible commitment?"
+    },
+    {
+      "prompt": "The stored result is wrong.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this unauthorized/unintended alteration, forbidden disclosure, or partial visible commitment?"
+    },
+    {
+      "prompt": "Reject an editor's prohibited approval-field mutation at every final writer while preserving permitted corrections.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Prevent a stale version overwriting newer approved state and compare imported contents with an independently trusted expectation.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Stop exposing this data.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance recipient disclosure permission, personal-data purpose/lifecycle, or identity unlinkability?"
+    },
+    {
+      "prompt": "The update sometimes looks wrong.",
+      "intended_sibling": "atomicity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need all-or-none visible changes, survival after acknowledgement, or service restoration?"
+    },
+    {
+      "prompt": "The recipient may read the title but not internal notes; prevent those fields reaching payloads, errors and cached exports.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Later compensation is insufficient: prevent any committed subset becoming visible between the participating effects.",
+      "intended_sibling": "atomicity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

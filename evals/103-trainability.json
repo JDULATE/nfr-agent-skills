@@ -1,0 +1,59 @@
+{
+  "id": 103,
+  "slug": "trainability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is there a structured teaching intervention, learning through product use, or a documentation coverage question?",
+  "should_trigger": [
+    {
+      "prompt": "Help staff learn the workflow.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is there a structured teaching intervention, learning through product use, or a documentation coverage question?"
+    },
+    {
+      "prompt": "Improve onboarding.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is there a structured teaching intervention, learning through product use, or a documentation coverage question?"
+    },
+    {
+      "prompt": "Create lessons and practice with feedback, then use a separate unaided assessment to test the taught task skill.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Replace the course walkthrough with exercises tied to the required performance and check transfer without instructor help.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "New users struggle with this.",
+      "intended_sibling": "learnability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are people acquiring ability through product use, receiving structured training, or simply trying to complete the task?"
+    },
+    {
+      "prompt": "Is the documentation enough?",
+      "intended_sibling": "comprehensiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are subject areas missing, is a passage unclear, or is the system model unexplained?"
+    },
+    {
+      "prompt": "Observe newcomers gaining task ability through product use, then test a later unaided attempt without introducing a course.",
+      "intended_sibling": "learnability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Broaden this guide beyond its current topics using audience questions, rather than checking members of a fixed required list.",
+      "intended_sibling": "comprehensiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

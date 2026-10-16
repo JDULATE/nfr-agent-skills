@@ -1,0 +1,59 @@
+{
+  "id": 87,
+  "slug": "safety",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Which harmful outcome and causal action or omission is in scope, rather than generic error handling or adversarial misuse?",
+  "should_trigger": [
+    {
+      "prompt": "Make deletion safe.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which harmful outcome and causal action or omission is in scope, rather than generic error handling or adversarial misuse?"
+    },
+    {
+      "prompt": "Prevent this action going wrong.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which harmful outcome and causal action or omission is in scope, rather than generic error handling or adversarial misuse?"
+    },
+    {
+      "prompt": "The stakeholder defines harmful loss from deleting held records; enforce the hazard constraint at the actual effect boundary.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Specify missing-state and late-action behavior against the identified harm paths instead of assuming stopping is always safe.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this integration secure.",
+      "intended_sibling": "security-control-and-security",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need broad adversary-to-asset control design, a disclosure-only property, or alteration protection?"
+    },
+    {
+      "prompt": "Stop overload breaking the worker.",
+      "intended_sibling": "robustness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this controlled response to adverse exposure, continued service during a component fault, or adversarial threat design?"
+    },
+    {
+      "prompt": "Map an explicit adversary's controlled values through a trust boundary to protected assets and select preventive and detective controls.",
+      "intended_sibling": "security-control-and-security",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Repeated bad inputs must release reservations and leave no forbidden partial mutation or orphaned background work.",
+      "intended_sibling": "robustness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

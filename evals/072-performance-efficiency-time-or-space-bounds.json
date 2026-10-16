@@ -1,0 +1,59 @@
+{
+  "id": 72,
+  "slug": "performance-efficiency-time-or-space-bounds",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the tail complaint an absolute completion limit, variation/spread, or resource cost per useful result?",
+  "should_trigger": [
+    {
+      "prompt": "Make this faster.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the tail complaint an absolute completion limit, variation/spread, or resource cost per useful result?"
+    },
+    {
+      "prompt": "Our tail latency needs work.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the tail complaint an absolute completion limit, variation/spread, or resource cost per useful result?"
+    },
+    {
+      "prompt": "Set an absolute completion-percentile deadline for this operation under a fixed offered workload, with errors and pending outcomes accounted for.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the export's peak retained space below its confirmed ceiling while producing the complete required artifact at the stated load.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Use fewer resources.",
+      "intended_sibling": "efficiency-device-efficiency",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you mean a device-resource ratio, an operation time/space limit, or an environmental objective?"
+    },
+    {
+      "prompt": "Stop these surprise pauses.",
+      "intended_sibling": "predictability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you want a spread/outlier rule, an absolute tail deadline, or control drift/oscillation behavior?"
+    },
+    {
+      "prompt": "Reduce CPU-seconds per correct completed report while preserving the same required output and resource boundary.",
+      "intended_sibling": "efficiency-device-efficiency",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reduce observed range by making periodic cleanup incremental, rather than merely improving a central or absolute timing number.",
+      "intended_sibling": "predictability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

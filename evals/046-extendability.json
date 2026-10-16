@@ -1,0 +1,59 @@
+{
+  "id": 46,
+  "slug": "extendability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Does an existing hook already admit the behavior, or must the core/interface first change?",
+  "should_trigger": [
+    {
+      "prompt": "Make this extensible.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does an existing hook already admit the behavior, or must the core/interface first change?"
+    },
+    {
+      "prompt": "Support another export format.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does an existing hook already admit the behavior, or must the core/interface first change?"
+    },
+    {
+      "prompt": "Build the missing extension hook through bounded core/interface edits before accepting new plugin behavior.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The existing core cannot emit this new result type; map the core owners and interface changes needed to add it.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Let people add plugins.",
+      "intended_sibling": "extensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is an adequate extension contract already present, must it be built, or is stakeholder-authored behavior the real concern?"
+    },
+    {
+      "prompt": "Give the installation more headroom.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success admitting usable resources, proving behavior as workload grows, or adding a core function?"
+    },
+    {
+      "prompt": "Register a provider against this pre-existing extension contract without per-provider core changes.",
+      "intended_sibling": "extensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Attach another storage unit and check the transition that makes its capacity usable, without claiming a workload-growth curve.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

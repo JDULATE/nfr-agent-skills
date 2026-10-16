@@ -1,0 +1,59 @@
+{
+  "id": 17,
+  "slug": "changeability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is one request's lifecycle blocked, have priorities changed, or is implementation impact the issue?",
+  "should_trigger": [
+    {
+      "prompt": "Get this work unstuck.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is one request's lifecycle blocked, have priorities changed, or is implementation impact the issue?"
+    },
+    {
+      "prompt": "We cannot seem to ship this.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is one request's lifecycle blocked, have priorities changed, or is implementation impact the issue?"
+    },
+    {
+      "prompt": "Trace this unchanged request from approval through rollout and actual adoption, identifying the blocked handoff.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The patch is merged but the approved change is not in use; follow this request's delivery and adoption evidence.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "We need to move quicker.",
+      "intended_sibling": "agility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are priorities changing, is one unchanged request stuck in delivery, or is a code edit too costly?"
+    },
+    {
+      "prompt": "How big is this update?",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?"
+    },
+    {
+      "prompt": "Feedback changed our priority order; revise the delivery plan and expose which commitments are displaced.",
+      "intended_sibling": "agility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Bound measured versus estimated effort for this named code change, including its migration and verification impact.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

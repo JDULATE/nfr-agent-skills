@@ -1,0 +1,59 @@
+{
+  "id": 35,
+  "slug": "defensibility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this active authorized containment, design-time threat coordination, or normal outage restoration?",
+  "should_trigger": [
+    {
+      "prompt": "Stop this account causing trouble.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this active authorized containment, design-time threat coordination, or normal outage restoration?"
+    },
+    {
+      "prompt": "Give responders better controls.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this active authorized containment, design-time threat coordination, or normal outage restoration?"
+    },
+    {
+      "prompt": "During this active adversarial scenario, verify that authorized revocation and queued-work controls actually stop the protected effect.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Rehearse scoped containment and clearance while preserving evidence and unrelated essential work.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this integration secure.",
+      "intended_sibling": "security-control-and-security",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need broad adversary-to-asset control design, a disclosure-only property, or alteration protection?"
+    },
+    {
+      "prompt": "Make our backups useful.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?"
+    },
+    {
+      "prompt": "Map an explicit adversary's controlled values through a trust boundary to protected assets and select preventive and detective controls.",
+      "intended_sibling": "security-control-and-security",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

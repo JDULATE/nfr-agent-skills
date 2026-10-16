@@ -1,0 +1,59 @@
+{
+  "id": 105,
+  "slug": "trustability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Which stakeholder delegation decision needs evidence and limits, rather than operational failure assurance or positive sentiment?",
+  "should_trigger": [
+    {
+      "prompt": "Can we trust this feature?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which stakeholder delegation decision needs evidence and limits, rather than operational failure assurance or positive sentiment?"
+    },
+    {
+      "prompt": "The confidence message feels wrong.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which stakeholder delegation decision needs evidence and limits, rather than operational failure assurance or positive sentiment?"
+    },
+    {
+      "prompt": "At publication delegation, show supported capability evidence and material limits while keeping actual granted authority separate.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Narrow an unsupported automatic-publication badge to the evidence-backed draft scope before the stakeholder decides reliance.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Can we rely on this release?",
+      "intended_sibling": "dependability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision combined operational failure assurance, one failure-free trial, or broader stakeholder delegation?"
+    },
+    {
+      "prompt": "People do not enjoy this.",
+      "intended_sibling": "likeability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance subjective response after use, static visual appeal, or achieved task outcomes?"
+    },
+    {
+      "prompt": "Build a combined reliance argument spanning interruptions, incorrect outcomes and harmful duplicates, with evidence for each subclaim.",
+      "intended_sibling": "dependability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare which experienced workflow people prefer, without treating visual appeal alone as the verdict.",
+      "intended_sibling": "likeability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

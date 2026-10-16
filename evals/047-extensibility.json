@@ -1,0 +1,59 @@
+{
+  "id": 47,
+  "slug": "extensibility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is an adequate extension contract already present, must it be built, or is stakeholder-authored behavior the real concern?",
+  "should_trigger": [
+    {
+      "prompt": "Let people add plugins.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is an adequate extension contract already present, must it be built, or is stakeholder-authored behavior the real concern?"
+    },
+    {
+      "prompt": "Support a new payment provider.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is an adequate extension contract already present, must it be built, or is stakeholder-authored behavior the real concern?"
+    },
+    {
+      "prompt": "Register a provider against this pre-existing extension contract without per-provider core changes.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test admission, activation and failed cleanup for a new implementation through the host hook that already supports it.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this extensible.",
+      "intended_sibling": "extendability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does an existing hook already admit the behavior, or must the core/interface first change?"
+    },
+    {
+      "prompt": "Make reports more personal.",
+      "intended_sibling": "customizability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will stakeholders author new behavior, select supported settings, or fit existing behavior to a team?"
+    },
+    {
+      "prompt": "Build the missing extension hook through bounded core/interface edits before accepting new plugin behavior.",
+      "intended_sibling": "extendability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Users need a new rule they write themselves, not just a choice among supplied settings or a team-specific preset.",
+      "intended_sibling": "customizability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

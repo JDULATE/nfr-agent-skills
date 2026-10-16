@@ -1,0 +1,59 @@
+{
+  "id": 59,
+  "slug": "learnability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are people acquiring ability through product use, receiving structured training, or simply trying to complete the task?",
+  "should_trigger": [
+    {
+      "prompt": "New users struggle with this.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are people acquiring ability through product use, receiving structured training, or simply trying to complete the task?"
+    },
+    {
+      "prompt": "Help beginners get going.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are people acquiring ability through product use, receiving structured training, or simply trying to complete the task?"
+    },
+    {
+      "prompt": "Observe newcomers gaining task ability through product use, then test a later unaided attempt without introducing a course.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Improve acquisition of the workflow through repeated use and transfer, separately from experienced-user task success.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Help staff learn the workflow.",
+      "intended_sibling": "trainability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is there a structured teaching intervention, learning through product use, or a documentation coverage question?"
+    },
+    {
+      "prompt": "People struggle with the app.",
+      "intended_sibling": "usability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance current task completion, ability learned through use, or subjective response after interaction?"
+    },
+    {
+      "prompt": "Create lessons and practice with feedback, then use a separate unaided assessment to test the taught task skill.",
+      "intended_sibling": "trainability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Fix task interaction obstacles and verify the real goal, rather than judging only preference or newly acquired ability.",
+      "intended_sibling": "usability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

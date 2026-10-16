@@ -1,0 +1,59 @@
+{
+  "id": 75,
+  "slug": "privacy",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the goal personal-data purpose/lifecycle, recipient disclosure permission, or an observer-specific unlinkability claim?",
+  "should_trigger": [
+    {
+      "prompt": "Clean up our customer data.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal personal-data purpose/lifecycle, recipient disclosure permission, or an observer-specific unlinkability claim?"
+    },
+    {
+      "prompt": "Fix how analytics handles people.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal personal-data purpose/lifecycle, recipient disclosure permission, or an observer-specific unlinkability claim?"
+    },
+    {
+      "prompt": "Limit collection and recipients to the supplied personal-data purpose and propagate withdrawal to every producer and capture path.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Apply stakeholder-approved disposal to subject records, derived profiles and restore suppression, without inventing legal duties.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Stop exposing this data.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance recipient disclosure permission, personal-data purpose/lifecycle, or identity unlinkability?"
+    },
+    {
+      "prompt": "Can we share this without exposing people?",
+      "intended_sibling": "anonymity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal observer-specific identity/linkage resistance, permitted disclosure, or approved personal-data handling?"
+    },
+    {
+      "prompt": "The recipient may read the title but not internal notes; prevent those fields reaching payloads, errors and cached exports.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Assess cross-context linkage across repeated releases under the declared observer's auxiliary knowledge, even if no name is recovered.",
+      "intended_sibling": "anonymity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

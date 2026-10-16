@@ -1,0 +1,59 @@
+{
+  "id": 41,
+  "slug": "efficiency-device-efficiency",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do you mean a device-resource ratio, an operation time/space limit, or an environmental objective?",
+  "should_trigger": [
+    {
+      "prompt": "Use fewer resources.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you mean a device-resource ratio, an operation time/space limit, or an environmental objective?"
+    },
+    {
+      "prompt": "The worker is too expensive to run.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you mean a device-resource ratio, an operation time/space limit, or an environmental objective?"
+    },
+    {
+      "prompt": "Reduce CPU-seconds per correct completed report while preserving the same required output and resource boundary.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare bytes transferred per useful decoded result before choosing the packed representation; keep output quality fixed.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this faster.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the tail complaint an absolute completion limit, variation/spread, or resource cost per useful result?"
+    },
+    {
+      "prompt": "Should we keep these devices?",
+      "intended_sibling": "sustainability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance energy or useful-device-life stewardship, rather than a device-resource ratio alone?"
+    },
+    {
+      "prompt": "Set an absolute completion-percentile deadline for this operation under a fixed offered workload, with errors and pending outcomes accounted for.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the existing device delivering its required task until the agreed review event by releasing disposable working state, with lifecycle limits explicit.",
+      "intended_sibling": "sustainability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

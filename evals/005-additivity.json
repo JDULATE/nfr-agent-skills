@@ -1,0 +1,59 @@
+{
+  "id": 5,
+  "slug": "additivity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Must combined increments preserve separately measured contributions, or is success adding a capability or assembling parts?",
+  "should_trigger": [
+    {
+      "prompt": "Do these optimizations work well together?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must combined increments preserve separately measured contributions, or is success adding a capability or assembling parts?"
+    },
+    {
+      "prompt": "Can we combine these improvements?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must combined increments preserve separately measured contributions, or is success adding a capability or assembling parts?"
+    },
+    {
+      "prompt": "Measure each improvement against the baseline and test whether their combined contribution follows the declared aggregation rule.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "These overlapping gains may be counted twice; compare isolated contributions with the combined result under an agreed interaction rule.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Add something useful to the editor.",
+      "intended_sibling": "augmentability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the addition a separately accepted supporting capability, refinement of the original result, or an existing-hook implementation?"
+    },
+    {
+      "prompt": "Give the installation more headroom.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success admitting usable resources, proving behavior as workload grows, or adding a core function?"
+    },
+    {
+      "prompt": "Add a suggestion panel with its own acceptance checks while the manual reply function remains usable in its original role.",
+      "intended_sibling": "augmentability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Attach another storage unit and check the transition that makes its capacity usable, without claiming a workload-growth curve.",
+      "intended_sibling": "expandability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

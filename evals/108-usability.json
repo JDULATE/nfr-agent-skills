@@ -1,0 +1,59 @@
+{
+  "id": 108,
+  "slug": "usability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is acceptance current task completion, ability learned through use, or subjective response after interaction?",
+  "should_trigger": [
+    {
+      "prompt": "Make checkout easier.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance current task completion, ability learned through use, or subjective response after interaction?"
+    },
+    {
+      "prompt": "People struggle with the app.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance current task completion, ability learned through use, or subjective response after interaction?"
+    },
+    {
+      "prompt": "Observe whether the stated audience completes the end-to-end task with acceptable effort, errors and recovery under the declared assistance.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Fix task interaction obstacles and verify the real goal, rather than judging only preference or newly acquired ability.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "New users struggle with this.",
+      "intended_sibling": "learnability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are people acquiring ability through product use, receiving structured training, or simply trying to complete the task?"
+    },
+    {
+      "prompt": "People do not enjoy this.",
+      "intended_sibling": "likeability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance subjective response after use, static visual appeal, or achieved task outcomes?"
+    },
+    {
+      "prompt": "Observe newcomers gaining task ability through product use, then test a later unaided attempt without introducing a course.",
+      "intended_sibling": "learnability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare which experienced workflow people prefer, without treating visual appeal alone as the verdict.",
+      "intended_sibling": "likeability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

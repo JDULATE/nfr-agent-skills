@@ -1,0 +1,59 @@
+{
+  "id": 65,
+  "slug": "maturity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do you need readiness from history, a future failure-free trial, or a combined reliance argument?",
+  "should_trigger": [
+    {
+      "prompt": "Is this release ready?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need readiness from history, a future failure-free trial, or a combined reliance argument?"
+    },
+    {
+      "prompt": "Is the old version proven enough?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need readiness from history, a future failure-free trial, or a combined reliance argument?"
+    },
+    {
+      "prompt": "Assess wider-use readiness from actual operational episodes, recurring defect history and relevant post-fix follow-up.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Separate deployment age from exercised experience when reviewing whether the new workflow has demonstrated operational history.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this more reliable.",
+      "intended_sibling": "reliability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance failure occurrence over exposure, usable-time accounting, or restoration after failure?"
+    },
+    {
+      "prompt": "Do we have enough assurance?",
+      "intended_sibling": "dependability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision combined operational failure assurance, one failure-free trial, or broader stakeholder delegation?"
+    },
+    {
+      "prompt": "Exercise continuous normal-profile work and retain each qualifying failure event even when a retry or restart restores completion.",
+      "intended_sibling": "reliability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep a critical counterexample visible when deciding operational reliance across several independent failure concerns.",
+      "intended_sibling": "dependability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

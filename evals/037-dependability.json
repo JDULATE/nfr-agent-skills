@@ -1,0 +1,59 @@
+{
+  "id": 37,
+  "slug": "dependability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the decision combined operational failure assurance, one failure-free trial, or broader stakeholder delegation?",
+  "should_trigger": [
+    {
+      "prompt": "Can we rely on this release?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision combined operational failure assurance, one failure-free trial, or broader stakeholder delegation?"
+    },
+    {
+      "prompt": "Do we have enough assurance?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the decision combined operational failure assurance, one failure-free trial, or broader stakeholder delegation?"
+    },
+    {
+      "prompt": "Build a combined reliance argument spanning interruptions, incorrect outcomes and harmful duplicates, with evidence for each subclaim.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep a critical counterexample visible when deciding operational reliance across several independent failure concerns.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this more reliable.",
+      "intended_sibling": "reliability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance failure occurrence over exposure, usable-time accounting, or restoration after failure?"
+    },
+    {
+      "prompt": "The confidence message feels wrong.",
+      "intended_sibling": "trustability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which stakeholder delegation decision needs evidence and limits, rather than operational failure assurance or positive sentiment?"
+    },
+    {
+      "prompt": "Exercise continuous normal-profile work and retain each qualifying failure event even when a retry or restart restores completion.",
+      "intended_sibling": "reliability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Narrow an unsupported automatic-publication badge to the evidence-backed draft scope before the stakeholder decides reliance.",
+      "intended_sibling": "trustability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

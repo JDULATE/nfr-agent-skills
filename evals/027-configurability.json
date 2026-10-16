@@ -1,0 +1,59 @@
+{
+  "id": 27,
+  "slug": "configurability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do you need a valid settings menu, tuning of an existing knob, or application of a changed arrangement?",
+  "should_trigger": [
+    {
+      "prompt": "Make this configurable.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need a valid settings menu, tuning of an existing knob, or application of a changed arrangement?"
+    },
+    {
+      "prompt": "Let us control its behavior.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need a valid settings menu, tuning of an existing knob, or application of a changed arrangement?"
+    },
+    {
+      "prompt": "Define the built-in options, defaults, precedence and invalid combinations without requiring source edits.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Expose the supported configuration menu and validate the effective choice, rather than tune a control or apply a stateful transition.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Let admins tweak this.",
+      "intended_sibling": "adjustability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you tuning an existing parameter, defining available settings, or changing the operating arrangement?"
+    },
+    {
+      "prompt": "Apply the new setup.",
+      "intended_sibling": "reconfigurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you applying a stateful arrangement transition, defining supported options, or tuning a scalar within the same setup?"
+    },
+    {
+      "prompt": "Tune an already exposed batch-size parameter while keeping the worker arrangement unchanged.",
+      "intended_sibling": "adjustability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Resume an interrupted configuration transition without losing or replaying in-progress work.",
+      "intended_sibling": "reconfigurability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 1,
+  "slug": "accessibility-access-control",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is this an interaction barrier, an actor/resource permission decision, or both?",
+  "should_trigger": [
+    {
+      "prompt": "Fix access to this page.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this an interaction barrier, an actor/resource permission decision, or both?"
+    },
+    {
+      "prompt": "People cannot use this screen.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this an interaction barrier, an actor/resource permission decision, or both?"
+    },
+    {
+      "prompt": "Keyboard focus disappears when a dialog closes, so users cannot finish the form.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "A team editor can call the API directly to change another team's report; enforce the object policy.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make checkout easier.",
+      "intended_sibling": "usability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance current task completion, ability learned through use, or subjective response after interaction?"
+    },
+    {
+      "prompt": "Protect the report output.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance recipient disclosure permission, personal-data purpose/lifecycle, or identity unlinkability?"
+    },
+    {
+      "prompt": "Observe whether the stated audience completes the end-to-end task with acceptable effort, errors and recovery under the declared assistance.",
+      "intended_sibling": "usability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "A cache populated for one team discloses protected contents to another; enforce the field/recipient boundary on reuse.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

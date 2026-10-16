@@ -1,0 +1,59 @@
+{
+  "id": 4,
+  "slug": "adaptability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the driver an external environment change, a choice among supported routes, or a configuration transition?",
+  "should_trigger": [
+    {
+      "prompt": "This importer needs to cope better.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the driver an external environment change, a choice among supported routes, or a configuration transition?"
+    },
+    {
+      "prompt": "The integration feels too rigid.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the driver an external environment change, a choice among supported routes, or a configuration transition?"
+    },
+    {
+      "prompt": "The supplier changed field order; preserve the accepted import result under the old and new external conditions.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Our upstream now delivers records out of order; accommodate that changed environment without losing required results.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this more flexible.",
+      "intended_sibling": "flexibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you choosing supported alternatives, accommodating an external change, or transitioning a running arrangement?"
+    },
+    {
+      "prompt": "Apply the new setup.",
+      "intended_sibling": "reconfigurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you applying a stateful arrangement transition, defining supported options, or tuning a scalar within the same setup?"
+    },
+    {
+      "prompt": "Keep manual and automated routes available for the same task and verify each supported alternative's result.",
+      "intended_sibling": "flexibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Resume an interrupted configuration transition without losing or replaying in-progress work.",
+      "intended_sibling": "reconfigurability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

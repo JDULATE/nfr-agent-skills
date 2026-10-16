@@ -1,0 +1,59 @@
+{
+  "id": 77,
+  "slug": "quality-of-service",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are independent service-class obligations competing for resources, or is this one operation bound or workload growth?",
+  "should_trigger": [
+    {
+      "prompt": "Protect checkout performance.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are independent service-class obligations competing for resources, or is this one operation bound or workload growth?"
+    },
+    {
+      "prompt": "Keep one workload from hurting another.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are independent service-class obligations competing for resources, or is this one operation bound or workload growth?"
+    },
+    {
+      "prompt": "Reserve batch progress and interactive latency independently while their explicit service classes share a constrained worker pool.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Verify per-class admission and minimum treatment under contention instead of passing an aggregate operation bound.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this faster.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the tail complaint an absolute completion limit, variation/spread, or resource cost per useful result?"
+    },
+    {
+      "prompt": "Support bigger imports.",
+      "intended_sibling": "scalability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which workload dimension grows, as opposed to merely adding a resource or meeting one fixed-load bound?"
+    },
+    {
+      "prompt": "Set an absolute completion-percentile deadline for this operation under a fixed offered workload, with errors and pending outcomes accounted for.",
+      "intended_sibling": "performance-efficiency-time-or-space-bounds",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare fixed-worker and added-worker capacity curves while retaining skew and coordination limits as demand grows.",
+      "intended_sibling": "scalability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

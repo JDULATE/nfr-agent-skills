@@ -1,0 +1,59 @@
+{
+  "id": 92,
+  "slug": "stability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the issue control drift/flapping, general outcome variation, or qualifying operational failures?",
+  "should_trigger": [
+    {
+      "prompt": "Make this stable.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the issue control drift/flapping, general outcome variation, or qualifying operational failures?"
+    },
+    {
+      "prompt": "The behavior keeps changing.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the issue control drift/flapping, general outcome variation, or qualifying operational failures?"
+    },
+    {
+      "prompt": "Stop mode reversals under held demand using an explicit transition rule while preserving response to genuine changes.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Align input, measurement and action traces to bound post-settling directional drift and coupled-controller oscillation.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Completion feels unpredictable.",
+      "intended_sibling": "predictability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you want a spread/outlier rule, an absolute tail deadline, or control drift/oscillation behavior?"
+    },
+    {
+      "prompt": "The worker keeps letting us down.",
+      "intended_sibling": "reliability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance failure occurrence over exposure, usable-time accounting, or restoration after failure?"
+    },
+    {
+      "prompt": "Narrow max-minus-min completion spread under equivalent conditions while checking the independent absolute deadline.",
+      "intended_sibling": "predictability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reproduce the sustained state progression behind recurring failures rather than repeatedly checking a newly initialized healthy process.",
+      "intended_sibling": "reliability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

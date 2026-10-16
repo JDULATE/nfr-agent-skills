@@ -1,0 +1,59 @@
+{
+  "id": 42,
+  "slug": "enhanceability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is success a refinement of the original capability, a supplementary result, or a sequence of future changes?",
+  "should_trigger": [
+    {
+      "prompt": "Improve this parser.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success a refinement of the original capability, a supplementary result, or a sequence of future changes?"
+    },
+    {
+      "prompt": "Can we upgrade this algorithm?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success a refinement of the original capability, a supplementary result, or a sequence of future changes?"
+    },
+    {
+      "prompt": "Bound the implementation surface for refining this existing computation against its unchanged acceptance criteria.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Replace this algorithm for a better result from the same capability, without adding a separately accepted supporting function.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Add something useful to the editor.",
+      "intended_sibling": "augmentability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the addition a separately accepted supporting capability, refinement of the original result, or an existing-hook implementation?"
+    },
+    {
+      "prompt": "We want room to keep improving.",
+      "intended_sibling": "evolvability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you accepting a staged future change path, one implementation edit, or a single capability refinement?"
+    },
+    {
+      "prompt": "Add a suggestion panel with its own acceptance checks while the manual reply function remains usable in its original role.",
+      "intended_sibling": "augmentability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show how this migration leaves a workable path for subsequent changes and eventual compatibility-bridge retirement.",
+      "intended_sibling": "evolvability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

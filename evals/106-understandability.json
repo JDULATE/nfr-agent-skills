@@ -1,0 +1,59 @@
+{
+  "id": 106,
+  "slug": "understandability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the gap a whole-system causal model, one explanation's meaning, or missing documentation topics?",
+  "should_trigger": [
+    {
+      "prompt": "Explain how this works.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the gap a whole-system causal model, one explanation's meaning, or missing documentation topics?"
+    },
+    {
+      "prompt": "Make the system easier to understand.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the gap a whole-system causal model, one explanation's meaning, or missing documentation topics?"
+    },
+    {
+      "prompt": "Build a source-grounded model of component responsibilities, state ownership and causal interactions so maintainers can predict behavior.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test a reader's cross-component predictions about why this system flow behaves as it does, not just interpretation of one paragraph.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "People do not get this.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?"
+    },
+    {
+      "prompt": "Is the documentation enough?",
+      "intended_sibling": "comprehensiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are subject areas missing, is a passage unclear, or is the system model unexplained?"
+    },
+    {
+      "prompt": "Readers interpret this requirement as allowing a different actor; clarify its actors and conditions against the source rule.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Broaden this guide beyond its current topics using audience questions, rather than checking members of a fixed required list.",
+      "intended_sibling": "comprehensiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

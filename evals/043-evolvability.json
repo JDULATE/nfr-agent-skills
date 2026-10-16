@@ -1,0 +1,59 @@
+{
+  "id": 43,
+  "slug": "evolvability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are you accepting a staged future change path, one implementation edit, or a single capability refinement?",
+  "should_trigger": [
+    {
+      "prompt": "Make future updates easier.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you accepting a staged future change path, one implementation edit, or a single capability refinement?"
+    },
+    {
+      "prompt": "We want room to keep improving.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you accepting a staged future change path, one implementation edit, or a single capability refinement?"
+    },
+    {
+      "prompt": "Plan successive migrations with state and bridge obligations carried from earlier releases into later stages.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show how this migration leaves a workable path for subsequent changes and eventual compatibility-bridge retirement.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make it easier to change.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?"
+    },
+    {
+      "prompt": "Can we upgrade this algorithm?",
+      "intended_sibling": "enhanceability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success a refinement of the original capability, a supplementary result, or a sequence of future changes?"
+    },
+    {
+      "prompt": "Estimate the implementation owners, contracts and ripple effects touched by this particular rule edit.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Replace this algorithm for a better result from the same capability, without adding a separately accepted supporting function.",
+      "intended_sibling": "enhanceability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

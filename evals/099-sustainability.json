@@ -1,0 +1,59 @@
+{
+  "id": 99,
+  "slug": "sustainability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is acceptance energy or useful-device-life stewardship, rather than a device-resource ratio alone?",
+  "should_trigger": [
+    {
+      "prompt": "Make this service greener.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance energy or useful-device-life stewardship, rather than a device-resource ratio alone?"
+    },
+    {
+      "prompt": "Should we keep these devices?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance energy or useful-device-life stewardship, rather than a device-resource ratio alone?"
+    },
+    {
+      "prompt": "Compare measured operational energy per correct output within the supplied boundary and horizon without inferring emissions from CPU.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep the existing device delivering its required task until the agreed review event by releasing disposable working state, with lifecycle limits explicit.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Use fewer resources.",
+      "intended_sibling": "efficiency-device-efficiency",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you mean a device-resource ratio, an operation time/space limit, or an environmental objective?"
+    },
+    {
+      "prompt": "The worker is too expensive to run.",
+      "intended_sibling": "efficiency-device-efficiency",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you mean a device-resource ratio, an operation time/space limit, or an environmental objective?"
+    },
+    {
+      "prompt": "Reduce CPU-seconds per correct completed report while preserving the same required output and resource boundary.",
+      "intended_sibling": "efficiency-device-efficiency",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Compare bytes transferred per useful decoded result before choosing the packed representation; keep output quality fixed.",
+      "intended_sibling": "efficiency-device-efficiency",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

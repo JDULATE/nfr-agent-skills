@@ -1,0 +1,59 @@
+{
+  "id": 90,
+  "slug": "self-descriptiveness",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the missing information current state/action context, feedback timing, or standalone explanation meaning?",
+  "should_trigger": [
+    {
+      "prompt": "Make the screen explain itself.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the missing information current state/action context, feedback timing, or standalone explanation meaning?"
+    },
+    {
+      "prompt": "I cannot tell what is happening.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the missing information current state/action context, feedback timing, or standalone explanation meaning?"
+    },
+    {
+      "prompt": "At the disabled action, expose the current object's state and the condition that enables the next operation.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Show action meaning and effects in the current interface context instead of sending a separate explanation or later event message.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Keep people informed.",
+      "intended_sibling": "communicativeness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the gap message timing in an interaction, current-state context, or interpretation of an explanation?"
+    },
+    {
+      "prompt": "Clarify this for readers.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem this explanation's meaning, reading structure, or a whole-system mental model?"
+    },
+    {
+      "prompt": "Notify the affected user when the export finishes, through the agreed channel while the next action is still useful.",
+      "intended_sibling": "communicativeness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test whether the intended audience can explain the meaning of this particular error paragraph using grounded scenarios.",
+      "intended_sibling": "comprehensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

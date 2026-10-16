@@ -1,0 +1,59 @@
+{
+  "id": 63,
+  "slug": "maintainability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the concern recurring upkeep, impact of one edit, or resolving a specific user support case?",
+  "should_trigger": [
+    {
+      "prompt": "Make this easier to look after.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the concern recurring upkeep, impact of one edit, or resolving a specific user support case?"
+    },
+    {
+      "prompt": "Our fixes take too much effort.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the concern recurring upkeep, impact of one edit, or resolving a specific user support case?"
+    },
+    {
+      "prompt": "Improve continuing diagnosis, repair and modification across representative recurring upkeep tasks.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reduce repeated maintenance effort while retaining the ongoing evidence and repair obligations future maintainers need.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make it easier to change.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?"
+    },
+    {
+      "prompt": "Make troubleshooting easier.",
+      "intended_sibling": "supportability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this a support encounter, ongoing code upkeep, or a delivery/adoption handoff?"
+    },
+    {
+      "prompt": "Estimate the implementation owners, contracts and ripple effects touched by this particular rule edit.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Build a case runbook with reproduction, verified resolution or escalation rather than changing the general maintenance process.",
+      "intended_sibling": "supportability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

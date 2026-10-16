@@ -1,0 +1,59 @@
+{
+  "id": 12,
+  "slug": "attractiveness",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is acceptance visual appeal, subjective response after interaction, or ability to recognize characters?",
+  "should_trigger": [
+    {
+      "prompt": "Make this screen nicer.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance visual appeal, subjective response after interaction, or ability to recognize characters?"
+    },
+    {
+      "prompt": "The page feels uninviting.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance visual appeal, subjective response after interaction, or ability to recognize characters?"
+    },
+    {
+      "prompt": "Compare static visual styles for aesthetic appeal to the intended audience without treating task success as the verdict.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Review the palette and composition using appearance judgments under the same viewing conditions.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make the experience better.",
+      "intended_sibling": "likeability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance subjective response after use, static visual appeal, or achieved task outcomes?"
+    },
+    {
+      "prompt": "Make these labels clearer.",
+      "intended_sibling": "legibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle visual character recognition, reading meaning/flow, or aesthetic appeal?"
+    },
+    {
+      "prompt": "After users complete the interaction, collect their subjective positive and negative judgments separately from observed task success.",
+      "intended_sibling": "likeability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Improve visual recognition of glyphs while keeping the text's meaning and structure unchanged.",
+      "intended_sibling": "legibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

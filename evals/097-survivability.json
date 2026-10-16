@@ -1,0 +1,59 @@
+{
+  "id": 97,
+  "slug": "survivability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Which essential mission must persist through severe disruption, rather than normal restoration or routine fault continuation?",
+  "should_trigger": [
+    {
+      "prompt": "Keep us working through a disaster.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which essential mission must persist through severe disruption, rather than normal restoration or routine fault continuation?"
+    },
+    {
+      "prompt": "We need an offline fallback.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Which essential mission must persist through severe disruption, rather than normal restoration or routine fault continuation?"
+    },
+    {
+      "prompt": "Keep the essential dispatch mission acknowledged during severe site and central-identity loss using only declared surviving resources.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Define degraded mission authority and reconcile alternate-mode actions on handback while normal optional functions remain unavailable.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Get the service back.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?"
+    },
+    {
+      "prompt": "Do not lose service when things break.",
+      "intended_sibling": "fault-failure-tolerance",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must service continue during a modeled fault, be restored afterward, or respond controllably to adverse input?"
+    },
+    {
+      "prompt": "Rehearse restoration from disruption through dependency bootstrap, coherent state replay and the verified usable business journey.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Exercise the declared network partition during ownership handoff and verify continued required service, not just a later restart.",
+      "intended_sibling": "fault-failure-tolerance",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

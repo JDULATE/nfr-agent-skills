@@ -1,0 +1,59 @@
+{
+  "id": 60,
+  "slug": "legibility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the obstacle visual character recognition, reading meaning/flow, or aesthetic appeal?",
+  "should_trigger": [
+    {
+      "prompt": "The text is hard to read.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle visual character recognition, reading meaning/flow, or aesthetic appeal?"
+    },
+    {
+      "prompt": "Make these labels clearer.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the obstacle visual character recognition, reading meaning/flow, or aesthetic appeal?"
+    },
+    {
+      "prompt": "Users confuse displayed identifier characters; test transcription under the stated font, display and viewing conditions.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Improve visual recognition of glyphs while keeping the text's meaning and structure unchanged.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this code easier to read.",
+      "intended_sibling": "readability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem reading representation, visual glyph recognition, or missing conceptual explanation?"
+    },
+    {
+      "prompt": "The page feels uninviting.",
+      "intended_sibling": "attractiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance visual appeal, subjective response after interaction, or ability to recognize characters?"
+    },
+    {
+      "prompt": "Rename confusing variables and flatten nested control flow so readers can follow the same code meaning.",
+      "intended_sibling": "readability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Review the palette and composition using appearance judgments under the same viewing conditions.",
+      "intended_sibling": "attractiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

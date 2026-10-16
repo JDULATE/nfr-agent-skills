@@ -1,0 +1,59 @@
+{
+  "id": 68,
+  "slug": "modifiability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?",
+  "should_trigger": [
+    {
+      "prompt": "Make it easier to change.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?"
+    },
+    {
+      "prompt": "How big is this update?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?"
+    },
+    {
+      "prompt": "Estimate the implementation owners, contracts and ripple effects touched by this particular rule edit.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Bound measured versus estimated effort for this named code change, including its migration and verification impact.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this easier to look after.",
+      "intended_sibling": "maintainability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the concern recurring upkeep, impact of one edit, or resolving a specific user support case?"
+    },
+    {
+      "prompt": "We cannot seem to ship this.",
+      "intended_sibling": "changeability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is one request's lifecycle blocked, have priorities changed, or is implementation impact the issue?"
+    },
+    {
+      "prompt": "Improve continuing diagnosis, repair and modification across representative recurring upkeep tasks.",
+      "intended_sibling": "maintainability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "The patch is merged but the approved change is not in use; follow this request's delivery and adoption evidence.",
+      "intended_sibling": "changeability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 8,
+  "slug": "agility",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are priorities changing, is one unchanged request stuck in delivery, or is a code edit too costly?",
+  "should_trigger": [
+    {
+      "prompt": "We need to move quicker.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are priorities changing, is one unchanged request stuck in delivery, or is a code edit too costly?"
+    },
+    {
+      "prompt": "The release process cannot keep up.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are priorities changing, is one unchanged request stuck in delivery, or is a code edit too costly?"
+    },
+    {
+      "prompt": "Feedback changed our priority order; revise the delivery plan and expose which commitments are displaced.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "A new priority supersedes planned work; shorten reprioritization-to-delivery while retaining the agreed constraints.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Get this work unstuck.",
+      "intended_sibling": "changeability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is one request's lifecycle blocked, have priorities changed, or is implementation impact the issue?"
+    },
+    {
+      "prompt": "How big is this update?",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success bounded impact of one implementation change, continuing maintenance, or request-to-adoption progress?"
+    },
+    {
+      "prompt": "Trace this unchanged request from approval through rollout and actual adoption, identifying the blocked handoff.",
+      "intended_sibling": "changeability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Bound measured versus estimated effort for this named code change, including its migration and verification impact.",
+      "intended_sibling": "modifiability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

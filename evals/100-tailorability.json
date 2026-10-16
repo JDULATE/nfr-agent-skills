@@ -1,0 +1,59 @@
+{
+  "id": 100,
+  "slug": "tailorability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Are you fitting supported behavior to a context, adding stakeholder-authored behavior, or defining the options menu?",
+  "should_trigger": [
+    {
+      "prompt": "Fit this tool to our team.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you fitting supported behavior to a context, adding stakeholder-authored behavior, or defining the options menu?"
+    },
+    {
+      "prompt": "Let departments work differently.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you fitting supported behavior to a context, adding stakeholder-authored behavior, or defining the options menu?"
+    },
+    {
+      "prompt": "Fit the already supported workflow choices to the night shift's named duties without adding user-authored behavior.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Map a department's contextual needs to available built-in options and verify the resulting task fit.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Let customers make it their own.",
+      "intended_sibling": "customizability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will stakeholders author new behavior, select supported settings, or fit existing behavior to a team?"
+    },
+    {
+      "prompt": "Let us control its behavior.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need a valid settings menu, tuning of an existing knob, or application of a changed arrangement?"
+    },
+    {
+      "prompt": "Allow customers to author their own report template beyond the built-in choices, with a bounded input and rendering contract.",
+      "intended_sibling": "customizability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Expose the supported configuration menu and validate the effective choice, rather than tune a control or apply a stateful transition.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

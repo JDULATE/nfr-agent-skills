@@ -1,0 +1,59 @@
+{
+  "id": 32,
+  "slug": "customizability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Will stakeholders author new behavior, select supported settings, or fit existing behavior to a team?",
+  "should_trigger": [
+    {
+      "prompt": "Let customers make it their own.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will stakeholders author new behavior, select supported settings, or fit existing behavior to a team?"
+    },
+    {
+      "prompt": "Make reports more personal.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Will stakeholders author new behavior, select supported settings, or fit existing behavior to a team?"
+    },
+    {
+      "prompt": "Allow customers to author their own report template beyond the built-in choices, with a bounded input and rendering contract.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Users need a new rule they write themselves, not just a choice among supplied settings or a team-specific preset.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this configurable.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need a valid settings menu, tuning of an existing knob, or application of a changed arrangement?"
+    },
+    {
+      "prompt": "Let departments work differently.",
+      "intended_sibling": "tailorability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you fitting supported behavior to a context, adding stakeholder-authored behavior, or defining the options menu?"
+    },
+    {
+      "prompt": "Define the built-in options, defaults, precedence and invalid combinations without requiring source edits.",
+      "intended_sibling": "configurability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Map a department's contextual needs to available built-in options and verify the resulting task fit.",
+      "intended_sibling": "tailorability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

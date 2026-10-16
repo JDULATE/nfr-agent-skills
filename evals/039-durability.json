@@ -1,0 +1,59 @@
+{
+  "id": 39,
+  "slug": "durability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the promise acknowledged-state preservation, all-or-none visibility, or reconstruction of usable service?",
+  "should_trigger": [
+    {
+      "prompt": "Make saves safer.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the promise acknowledged-state preservation, all-or-none visibility, or reconstruction of usable service?"
+    },
+    {
+      "prompt": "We cannot afford to lose changes.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the promise acknowledged-state preservation, all-or-none visibility, or reconstruction of usable service?"
+    },
+    {
+      "prompt": "Verify that an acknowledged version and its contents survive the specified restart using an independently retained expected-state ledger.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Align the confirmed-save response with the promised persistence condition and distinguish valid later supersession from lost state.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make these writes safer.",
+      "intended_sibling": "atomicity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need all-or-none visible changes, survival after acknowledgement, or service restoration?"
+    },
+    {
+      "prompt": "Make our backups useful.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?"
+    },
+    {
+      "prompt": "A coherent reader must see all participating owner and membership changes together or none, even after an interrupted write.",
+      "intended_sibling": "atomicity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 25,
+  "slug": "conciseness",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the goal less unnecessary representation, easier reading flow, or broader topic coverage?",
+  "should_trigger": [
+    {
+      "prompt": "Clean up this paragraph.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal less unnecessary representation, easier reading flow, or broader topic coverage?"
+    },
+    {
+      "prompt": "Tighten up the explanation.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the goal less unnecessary representation, easier reading flow, or broader topic coverage?"
+    },
+    {
+      "prompt": "Remove repeated sentences while preserving every condition, exception and obligation strength.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Shorten this representation by removing redundant wording without losing any required proposition.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Make this code easier to read.",
+      "intended_sibling": "readability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the problem reading representation, visual glyph recognition, or missing conceptual explanation?"
+    },
+    {
+      "prompt": "Is the documentation enough?",
+      "intended_sibling": "comprehensiveness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are subject areas missing, is a passage unclear, or is the system model unexplained?"
+    },
+    {
+      "prompt": "Rename confusing variables and flatten nested control flow so readers can follow the same code meaning.",
+      "intended_sibling": "readability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Broaden this guide beyond its current topics using audience questions, rather than checking members of a fixed required list.",
+      "intended_sibling": "comprehensiveness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

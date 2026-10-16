@@ -1,0 +1,59 @@
+{
+  "id": 54,
+  "slug": "immunity",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do you need mechanism-backed class exclusion, current exposure classification, or controlled behavior during exposure?",
+  "should_trigger": [
+    {
+      "prompt": "Make this input path immune.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need mechanism-backed class exclusion, current exposure classification, or controlled behavior during exposure?"
+    },
+    {
+      "prompt": "Can these payloads ever hurt us?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need mechanism-backed class exclusion, current exposure classification, or controlled behavior during exposure?"
+    },
+    {
+      "prompt": "Support a narrowly scoped claim that no reachable handler interprets caller text as commands, with mechanism and premises inspected.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Remove the enabling route for this defined fault class and reopen the exclusion claim when its configuration assumption changes.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Are we vulnerable here?",
+      "intended_sibling": "susceptibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Are you locating exposure/preconditions, supporting class exclusion, or designing controlled adverse behavior?"
+    },
+    {
+      "prompt": "Stop overload breaking the worker.",
+      "intended_sibling": "robustness",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this controlled response to adverse exposure, continued service during a component fault, or adversarial threat design?"
+    },
+    {
+      "prompt": "Classify the adverse influence's entrypoints as reachable, verified blocked or unknown using actual capability and configuration evidence.",
+      "intended_sibling": "susceptibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Repeated bad inputs must release reservations and leave no forbidden partial mutation or orphaned background work.",
+      "intended_sibling": "robustness",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

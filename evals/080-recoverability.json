@@ -1,0 +1,59 @@
+{
+  "id": 80,
+  "slug": "recoverability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?",
+  "should_trigger": [
+    {
+      "prompt": "Get the service back.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?"
+    },
+    {
+      "prompt": "Make our backups useful.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?"
+    },
+    {
+      "prompt": "Rehearse restoration from disruption through dependency bootstrap, coherent state replay and the verified usable business journey.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Survive an outage.",
+      "intended_sibling": "fault-failure-tolerance",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Must service continue during a modeled fault, be restored afterward, or respond controllably to adverse input?"
+    },
+    {
+      "prompt": "We cannot afford to lose changes.",
+      "intended_sibling": "durability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the promise acknowledged-state preservation, all-or-none visibility, or reconstruction of usable service?"
+    },
+    {
+      "prompt": "Hold a fail-stop worker fault while the alternate path continues the required business result with its state rules intact.",
+      "intended_sibling": "fault-failure-tolerance",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Align the confirmed-save response with the promised persistence condition and distinguish valid later supersession from lost state.",
+      "intended_sibling": "durability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

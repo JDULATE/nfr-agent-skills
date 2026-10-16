@@ -1,0 +1,59 @@
+{
+  "id": 102,
+  "slug": "traceability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do you need artifact lineage, independent evidentiary sufficiency, or runtime actor responsibility?",
+  "should_trigger": [
+    {
+      "prompt": "Show why this requirement passed.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need artifact lineage, independent evidentiary sufficiency, or runtime actor responsibility?"
+    },
+    {
+      "prompt": "Find what changed this decision.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need artifact lineage, independent evidentiary sufficiency, or runtime actor responsibility?"
+    },
+    {
+      "prompt": "Connect the revised requirement, implementation and observed test result with typed versioned edges and reverse impact navigation.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Keep superseded verification historical when a requirement changes, and find affected obligations when linked code is removed.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "We need a better audit trail.",
+      "intended_sibling": "auditability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Does the problem concern independent examination, actor attribution, or navigating artifact relationships?"
+    },
+    {
+      "prompt": "Tell us who did this.",
+      "intended_sibling": "accountability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need trusted runtime actor attribution, an examiner's evidence answer, or artifact history?"
+    },
+    {
+      "prompt": "Give an independent reviewer the permitted evidence view needed to reconstruct this approval without private author explanations.",
+      "intended_sibling": "auditability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Shared credentials only identify a service; preserve that limit instead of assigning a guessed human actor.",
+      "intended_sibling": "accountability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

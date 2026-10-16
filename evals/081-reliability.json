@@ -1,0 +1,59 @@
+{
+  "id": 81,
+  "slug": "reliability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is acceptance failure occurrence over exposure, usable-time accounting, or restoration after failure?",
+  "should_trigger": [
+    {
+      "prompt": "Make this more reliable.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance failure occurrence over exposure, usable-time accounting, or restoration after failure?"
+    },
+    {
+      "prompt": "The worker keeps letting us down.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance failure occurrence over exposure, usable-time accounting, or restoration after failure?"
+    },
+    {
+      "prompt": "Exercise continuous normal-profile work and retain each qualifying failure event even when a retry or restart restores completion.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reproduce the sustained state progression behind recurring failures rather than repeatedly checking a newly initialized healthy process.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Keep checkout working.",
+      "intended_sibling": "availability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance usable time, failure occurrence, continuation during a modeled fault, or restoration afterward?"
+    },
+    {
+      "prompt": "Make our backups useful.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success restored usable state, uninterrupted fault service, or preservation of already acknowledged changes?"
+    },
+    {
+      "prompt": "Measure good eligible journey time during deploys using the accepted service calendar and explicit unknown bins.",
+      "intended_sibling": "availability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Reconcile overlapping snapshot and replay identities before resuming writers and compare restored state with the agreed loss allowance.",
+      "intended_sibling": "recoverability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

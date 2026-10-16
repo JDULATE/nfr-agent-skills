@@ -1,0 +1,59 @@
+{
+  "id": 89,
+  "slug": "security-control-and-security",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Do you need broad adversary-to-asset control design, a disclosure-only property, or alteration protection?",
+  "should_trigger": [
+    {
+      "prompt": "Make this integration secure.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need broad adversary-to-asset control design, a disclosure-only property, or alteration protection?"
+    },
+    {
+      "prompt": "Protect this feature.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Do you need broad adversary-to-asset control design, a disclosure-only property, or alteration protection?"
+    },
+    {
+      "prompt": "Map an explicit adversary's controlled values through a trust boundary to protected assets and select preventive and detective controls.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Review alternate attack paths and failed controls for the declared misuse model while preserving legitimate use.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Stop exposing this data.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is acceptance recipient disclosure permission, personal-data purpose/lifecycle, or identity unlinkability?"
+    },
+    {
+      "prompt": "The stored result is wrong.",
+      "intended_sibling": "integrity",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is this unauthorized/unintended alteration, forbidden disclosure, or partial visible commitment?"
+    },
+    {
+      "prompt": "The recipient may read the title but not internal notes; prevent those fields reaching payloads, errors and cached exports.",
+      "intended_sibling": "confidentiality",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Prevent a stale version overwriting newer approved state and compare imported contents with an independently trusted expectation.",
+      "intended_sibling": "integrity",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": 14,
+  "slug": "augmentability",
+  "boundary_source": "references/disambiguation-map.md",
+  "label_policy": "Explicit cases state the intended boundary. Cases without the distinguishing fact are provisional routing leads and require clarification; they are not unconditional positive or negative truth labels.",
+  "routing_question": "Is the addition a separately accepted supporting capability, refinement of the original result, or an existing-hook implementation?",
+  "should_trigger": [
+    {
+      "prompt": "Add something useful to the editor.",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the addition a separately accepted supporting capability, refinement of the original result, or an existing-hook implementation?"
+    },
+    {
+      "prompt": "Can we give this feature a boost?",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is the addition a separately accepted supporting capability, refinement of the original result, or an existing-hook implementation?"
+    },
+    {
+      "prompt": "Add a suggestion panel with its own acceptance checks while the manual reply function remains usable in its original role.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Attach an annotation service accepted separately from the original report result and record its permitted side effects.",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ],
+  "near_miss": [
+    {
+      "prompt": "Improve this parser.",
+      "intended_sibling": "enhanceability",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is success a refinement of the original capability, a supplementary result, or a sequence of future changes?"
+    },
+    {
+      "prompt": "Support a new payment provider.",
+      "intended_sibling": "extensibility",
+      "distinguishing_fact_present": false,
+      "expected_behavior": "clarify",
+      "clarifying_question": "Is an adequate extension contract already present, must it be built, or is stakeholder-authored behavior the real concern?"
+    },
+    {
+      "prompt": "Bound the implementation surface for refining this existing computation against its unchanged acceptance criteria.",
+      "intended_sibling": "enhanceability",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    },
+    {
+      "prompt": "Test admission, activation and failed cleanup for a new implementation through the host hook that already supports it.",
+      "intended_sibling": "extensibility",
+      "distinguishing_fact_present": true,
+      "expected_behavior": "route"
+    }
+  ]
+}
