@@ -1,28 +1,11 @@
 # nfr-agent-skills
 
-Foundation for 114 Non-Functional Requirement (NFR) agent skills.
-Phase 1 contains data and tooling only; `skills/` is intentionally empty.
+A repository of 114 agent skills, one per Non-Functional Requirement (NFR).
 
-Run from this directory:
+Browse [INDEX.md](INDEX.md) to choose a skill. Each entrypoint lives at
+`skills/NNN-slug/SKILL.md`, with a three-digit id such as `015-availability`.
+Read [AGENTS.md](AGENTS.md) for guidance on choosing and using skills.
 
-```sh
-python -m unittest discover -s tests -v
-python scripts/generate_skills.py --dry-run
-python scripts/validate_skills.py
-python scripts/build_index.py
-```
-
-The scripts use the Python standard library. Generation without `--dry-run`
-creates unfinished `todo` stubs which deliberately fail content validation.
-Existing files are always preserved, regardless of catalogue or file status.
-Use `--only 15,75,78` to select catalogue ids for generation or validation.
-
-Full validation permits absent `todo` skills while work is pending; an explicit
-`--only` selection requires those files to exist. Existing stubs are checked,
-not silently skipped. Selected bodies are compared with all existing bodies.
-Citation checks activate when the Phase 2 standards allowlist exists.
-
-Frontmatter supports top-level plain, quoted, and block string fields; unsupported
-YAML constructs fail with an error. Installation and contribution docs await
-later phases. Empty `skills/` is recreated by the scripts after a fresh checkout,
-because Git does not track empty directories.
+For authoring rules, phase boundaries, quality requirements, and validation
+commands, read [CONTRIBUTING.md](CONTRIBUTING.md). The phased authoring process
+applies to repository contributions, not to applying a skill in your project.
