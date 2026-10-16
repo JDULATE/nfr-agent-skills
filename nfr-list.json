@@ -80,7 +80,7 @@
     "slug": "analyzability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -272,7 +272,7 @@
     "slug": "controllability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -299,7 +299,7 @@
     "slug": "debuggability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -584,7 +584,7 @@
     "slug": "manageability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -638,7 +638,7 @@
     "slug": "observability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -647,7 +647,7 @@
     "slug": "operability",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -768,7 +768,7 @@
     "slug": "replicability",
     "aliases": [],
     "category": "Correctness & Data Quality",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {
@@ -1036,7 +1036,7 @@
     "slug": "visibility",
     "aliases": [],
     "category": "Observability & Operability",
-    "status": "todo",
+    "status": "draft",
     "batch": 12
   },
   {

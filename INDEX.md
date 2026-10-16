@@ -24,7 +24,7 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [051 Formality](skills/051-formality/SKILL.md) — draft
 - [076 Provability](skills/076-provability/SKILL.md) — draft
 - [082 Repeatability](skills/082-repeatability/SKILL.md) — draft
-- [084 Replicability](skills/084-replicability/SKILL.md) — todo
+- [084 Replicability](skills/084-replicability/SKILL.md) — draft
 - [110 Verifiability](skills/110-verifiability/SKILL.md) — draft
 
 ## Design Structure & Flexibility
@@ -69,15 +69,15 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Observability & Operability
 
-- [009 Analyzability](skills/009-analyzability/SKILL.md) — todo
-- [030 Controllability](skills/030-controllability/SKILL.md) — todo
-- [033 Debuggability](skills/033-debuggability/SKILL.md) — todo
-- [064 Manageability](skills/064-manageability/SKILL.md) — todo
+- [009 Analyzability](skills/009-analyzability/SKILL.md) — draft
+- [030 Controllability](skills/030-controllability/SKILL.md) — draft
+- [033 Debuggability](skills/033-debuggability/SKILL.md) — draft
+- [064 Manageability](skills/064-manageability/SKILL.md) — draft
 - [066 Measurability](skills/066-measurability/SKILL.md) — draft
-- [070 Observability](skills/070-observability/SKILL.md) — todo
-- [071 Operability](skills/071-operability/SKILL.md) — todo
+- [070 Observability](skills/070-observability/SKILL.md) — draft
+- [071 Operability](skills/071-operability/SKILL.md) — draft
 - [102 Traceability](skills/102-traceability/SKILL.md) — draft
-- [113 Visibility](skills/113-visibility/SKILL.md) — todo
+- [113 Visibility](skills/113-visibility/SKILL.md) — draft
 
 ## Performance & Efficiency
 
