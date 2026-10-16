@@ -170,7 +170,7 @@
     "slug": "compatibility",
     "aliases": [],
     "category": "Portability & Interoperability",
-    "status": "todo",
+    "status": "draft",
     "batch": 14
   },
   {
@@ -344,7 +344,7 @@
     "slug": "distributivity",
     "aliases": [],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 14
   },
   {
@@ -512,7 +512,7 @@
     "slug": "integratability",
     "aliases": [],
     "category": "Portability & Interoperability",
-    "status": "todo",
+    "status": "draft",
     "batch": 14
   },
   {
@@ -530,7 +530,7 @@
     "slug": "interoperability",
     "aliases": [],
     "category": "Portability & Interoperability",
-    "status": "todo",
+    "status": "draft",
     "batch": 14
   },
   {
@@ -759,7 +759,7 @@
     "slug": "replaceability",
     "aliases": [],
     "category": "Portability & Interoperability",
-    "status": "todo",
+    "status": "draft",
     "batch": 14
   },
   {
@@ -856,7 +856,7 @@
       "Standard"
     ],
     "category": "Design Structure & Flexibility",
-    "status": "todo",
+    "status": "draft",
     "batch": 14
   },
   {

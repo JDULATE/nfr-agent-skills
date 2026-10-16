@@ -32,12 +32,12 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 - [021 Complexity/Interacting Complexity](skills/021-complexity-interacting-complexity/SKILL.md) — todo
 - [022 Composability](skills/022-composability/SKILL.md) — todo
 - [034 Decomposability](skills/034-decomposability/SKILL.md) — todo
-- [038 Distributivity](skills/038-distributivity/SKILL.md) — todo
+- [038 Distributivity](skills/038-distributivity/SKILL.md) — draft
 - [045 Expressiveness](skills/045-expressiveness/SKILL.md) — todo
 - [053 Generality](skills/053-generality/SKILL.md) — todo
 - [085 Reusability](skills/085-reusability/SKILL.md) — todo
 - [091 Simplicity](skills/091-simplicity/SKILL.md) — todo
-- [093 Standardizability/Standardization/Standard](skills/093-standardizability-standardization-standard/SKILL.md) — todo
+- [093 Standardizability/Standardization/Standard](skills/093-standardizability-standardization-standard/SKILL.md) — draft
 - [094 Structuredness](skills/094-structuredness/SKILL.md) — todo
 - [107 Uniformity](skills/107-uniformity/SKILL.md) — todo
 - [109 Variability](skills/109-variability/SKILL.md) — todo
@@ -89,15 +89,15 @@ Generated from `nfr-list.json`. Absent todo skills are pending authoring.
 
 ## Portability & Interoperability
 
-- [019 Compatibility](skills/019-compatibility/SKILL.md) — todo
+- [019 Compatibility](skills/019-compatibility/SKILL.md) — draft
 - [055 Installability](skills/055-installability/SKILL.md) — draft
-- [056 Integratability](skills/056-integratability/SKILL.md) — todo
-- [058 Interoperability](skills/058-interoperability/SKILL.md) — todo
+- [056 Integratability](skills/056-integratability/SKILL.md) — draft
+- [058 Interoperability](skills/058-interoperability/SKILL.md) — draft
 - [062 Localizability](skills/062-localizability/SKILL.md) — draft
 - [067 Mobility](skills/067-mobility/SKILL.md) — draft
 - [069 Nomadicity](skills/069-nomadicity/SKILL.md) — draft
 - [073 Portability](skills/073-portability/SKILL.md) — draft
-- [083 Replaceability](skills/083-replaceability/SKILL.md) — todo
+- [083 Replaceability](skills/083-replaceability/SKILL.md) — draft
 - [104 Transferability](skills/104-transferability/SKILL.md) — draft
 
 ## Reliability & Resilience
