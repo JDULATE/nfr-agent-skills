@@ -3,6 +3,20 @@
 Establish actual option meanings from the reader and owner before applying these
 choices. A schema is not evidence of live transition behavior.
 
+## Establish a missing runtime setting surface
+
+| Observed evidence | Intervention | Trade-off | How to verify |
+| --- | --- | --- | --- |
+| A hardcoded value has no supported change path | Give it a scoped location, the existing value as default, a domain check, and a point-of-use reader | An in-memory choice is lost on restart; persistence is an offered extension | Check default behavior, rejection without mutation, and the actual consumer's resolved value |
+| No caller or interface is specified | Reuse the existing authorized invocation path, or propose an in-process setter under the same privileges | It offers no new remote administration interface | Invoke through that boundary and check that no new server or external endpoint was added |
+| The surface exists but new values must affect active processing | Hand application timing and running-work semantics to `adjustability`; use `reconfigurability` if ownership or arrangement changes | Valid options alone cannot establish safe application | Compare resolved choice with affected work at the chosen boundary |
+
+Settle the location and who may change it before implementation. Keep any new
+authentication, persistence, server, or response headers as offered extensions
+requiring the user's yes unless already requested. Use applied-value readback
+for an unambiguous synchronous consumer; require an applied revision only when
+asynchronous or partial application needs change identity across consumers/work.
+
 ## Combination contract
 
 - **Use when:** Individually valid keys can express an unsupported combination.

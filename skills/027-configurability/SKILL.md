@@ -17,13 +17,18 @@ separate tuning an exposed control (`adjustability`), applying another arrangeme
 - Apply when supported settings are hidden, ambiguous, silently ignored, or allow
   combinations that do not express a supported operating choice.
 - Route selecting values to fit a named team's needs to `tailorability`.
-- Route application timing or running-state migration to `reconfigurability`;
-  accepting a configuration document does not prove that transition succeeded.
+- Route scalar application timing to `adjustability`; route changed arrangement
+  or in-progress ownership to `reconfigurability`. Accepting a configuration
+  document does not prove that transition succeeded.
 
 ## Workflow
 
 1. Clarify: Read setting readers, default/override code, schema docs, sample
    configurations, and consumers before defining a supported option space.
+   If no runtime setting surface exists, then first read `configurability`'s
+   [choice patterns](./references/design-patterns.md) to settle where the value
+   lives and who may change it; then apply `adjustability` to the semantics of
+   applying a new value. Do not assume a writable runtime interface already exists.
    If the requested behavior cannot be expressed by existing meanings, then Ask
    the user whether a new built-in option or `customizability` is intended.
 
@@ -34,7 +39,7 @@ separate tuning an exposed control (`adjustability`), applying another arrangeme
    ```text
    Illustrative choice contract; confirm with the user/stakeholder:
    Scope: inspected keys and documented combinations; no invented production ranges.
-   Defaults: explicit absent-key meaning at the recorded configuration revision.
+   Defaults: retain the existing constant or documented absent-key meaning at scope.
    Resolution: existing precedence made visible; conflicts lacking policy stay open.
    Example bound: 0 silently accepted unknown keys in the selected schema fixture.
    Invalid input: reject with key/reason under the proposed fixture policy.
@@ -50,10 +55,15 @@ separate tuning an exposed control (`adjustability`), applying another arrangeme
 
 3. Design/Implement: Read [choice patterns](./references/design-patterns.md) when
    defining combinations, absence semantics, or effective-choice evidence.
+   Start with the smallest requested surface: a setting read at the point of use,
+   an existing default, validation, and the existing authorized invocation path.
+   Offer authentication, persistence, a new server, and response headers as added
+   extensions needing the user's yes unless already explicitly requested.
    If values merge across sources, then resolve them with one stated rule rather
    than relying on which consumer reads which file first.
-   If applying a valid value moves running work, then separate the transition
-   contract under `reconfigurability` from schema validity here.
+   If a new value tunes a scalar within the same arrangement, then use `adjustability`
+   for its application boundary. If applying it transfers ownership or changes the
+   arrangement, then use `reconfigurability` for the transition contract.
 
 4. Verify: Exercise supported documents, invalid combinations, omitted keys,
    explicit empty values, and competing sources through the actual reader.
@@ -98,6 +108,9 @@ Use schema/combination tests, resolver inspection, and consumer integration chec
 Compare omitted, empty, false, conflicting, and overridden values at the declared
 scope. Inspect accepted-but-unused settings and resolution mismatches; successful
 parsing alone cannot establish that the documented choice is actually available.
+Use consumer-applied value readback for an unambiguous local setting. If updates
+can apply out of order or partially across consumers, then pair values with their
+applied revisions; a saved configuration revision does not establish application.
 
 ## Done checklist
 

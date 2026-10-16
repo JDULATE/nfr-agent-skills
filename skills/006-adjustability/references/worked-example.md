@@ -10,7 +10,7 @@ These values are not a throughput recommendation or a universal valid range.
 
 Propose: "Changing `{batch_cap}` to `{confirmed_records_per_batch}` shall affect
 `{next_batch_start}`, retaining `{running_batch_rule}`, evidenced by
-`{applied_revision_and_emitted_membership}` under the unchanged worker arrangement."
+`{applied_value_and_emitted_membership}` under the unchanged worker arrangement."
 
 | Fixture | Expected observation under the proposed semantics |
 | --- | --- |
@@ -24,8 +24,12 @@ The numeric memberships above are illustrative consequences of the proposed caps
 confirm with the user/stakeholder. Keep fixture records unique so duplication or
 omission does not masquerade as a batch-size effect.
 
-An operator display showing the new value is insufficient. Trace the loop's applied
-value and revision. If an override wins or a process only loads the setting at
+An operator display showing only the saved request is insufficient. For this
+sequential fixture, a loop-applied value readback paired with emitted membership
+is enough; no revision system is required. If overlapping updates, repeated-value
+history, or asynchronous consumers make change identity ambiguous, bind an applied
+revision to the affected work rather than treating a requested revision as applied.
+If an override wins or a process only loads the setting at
 startup, report that application boundary rather than claiming immediate tuning.
 
 Reject a known invalid cap using the inspected domain rule; do not invent which

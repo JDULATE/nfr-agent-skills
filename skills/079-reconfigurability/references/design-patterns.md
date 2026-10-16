@@ -3,6 +3,19 @@
 Inspect actual ownership and checkpoint semantics. None of these patterns alone
 promises interruption-free service, duplicate-free delivery, or reversible state.
 
+## Distinguish a scalar readback from transition identity
+
+If one consumer synchronously snapshots a scalar without changing arrangement or
+ownership, use `adjustability`: applied-value readback and an affected-work probe
+can suffice. Do not introduce a transition engine merely to expose that parameter.
+If old/target ownership can coexist, application is asynchronous, or recovery must
+distinguish repeated configurations, retain an applied revision or equivalent
+arrangement identity with each owner/checkpoint and its accepted work.
+Verify mixed application by delaying a target owner: a requested revision must
+not label that owner's work applied until the owner actually adopts it.
+Use existing components; offer any added authentication, persistence, server,
+or response headers separately and obtain the user's yes unless already authorized.
+
 ## Admission boundary and retained owners
 
 - **Use when:** New work can enter during a drain or transfer. Name when the old

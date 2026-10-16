@@ -50,6 +50,11 @@ scalar tuning (`adjustability`), and independent alternatives (`flexibility`).
 
 3. Design/Implement: Read [transition patterns](./references/design-patterns.md) when
    choosing admission boundaries, ownership transfer, or partial-application recovery.
+   Keep a scalar-only change under `adjustability`: a validated setting read at its
+   agreed point of use with its existing default need not gain a transition engine.
+   Use existing transition components for an actual arrangement change. Offer new
+   authentication, persistence, a server, or response headers as extensions needing
+   the user's yes unless already explicitly authorized; do not build them by default.
    If old work can finish under the old arrangement, then separate its completion
    from admitting new work to the target rather than silently reinterpreting its state.
    If reversal cannot read state already written under the target, then expose that
@@ -99,6 +104,11 @@ failure injection. Compare accepted task identities with owners and completed
 outputs at each stage. Observe stranded tasks, mixed configuration identities,
 and repeated effects separately from target readiness; exercise actual recovery
 from an intermediate state rather than restarting the fixture empty.
+An applied-value readback is enough for a single synchronous scalar consumer when
+it unambiguously identifies the value used by the probed work; use `adjustability`.
+If application is asynchronous, mixed, resumable, or can reuse the same values,
+then retain an applied revision or equivalent arrangement identity at each affected
+owner/checkpoint. Correlate it with the retained work, not just the saved target.
 
 ## Done checklist
 
